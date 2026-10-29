@@ -34,7 +34,7 @@ Esta sprint não tem histórias de usuário (US). As entregas são documentais.
 
 ## Impedimentos e riscos
 
-- `gcc` e `make` não foram encontrados no PATH da máquina de desenvolvimento em 2026-10-29. É preciso instalar o MinGW-w64 antes da Sprint 1.
+- ~~`gcc` e `make` não estavam instalados na máquina de desenvolvimento em 2026-10-29.~~ Resolvido no mesmo dia: gcc 16.2.0 e GNU Make 4.4.1 instalados via MSYS2. Os demais integrantes precisam conferir o próprio ambiente.
 - PlantUML e Mermaid não estão instalados; os diagramas foram escritos mas **não renderizados**, e precisam ser conferidos visualmente.
 - Prazo oficial de entrega ainda não confirmado.
 

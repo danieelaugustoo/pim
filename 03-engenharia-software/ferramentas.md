@@ -6,8 +6,8 @@ As versões abaixo precisam ser conferidas pelo grupo nas máquinas usadas. Onde
 
 | Ferramenta | Versão | Finalidade | Situação |
 |---|---|---|---|
-| gcc (C99; MinGW-w64 no Windows) | [VERSÃO A VERIFICAR] | Compilar o protótipo com `-std=c99 -Wall -Wextra -pedantic` | Não encontrado no PATH da máquina de desenvolvimento em 2026-10-29; instalar antes da Sprint 1 |
-| Make | [VERSÃO A VERIFICAR] | Automatizar compilação e testes (`make`, `make test`, `make clean`) | Não encontrado no PATH em 2026-10-29; `build.bat` cobre o Windows sem make |
+| gcc (C99; MinGW-w64 via MSYS2, ambiente UCRT64) | 16.2.0 (Rev6, Built by MSYS2 project) | Compilar o protótipo com `-std=c99 -Wall -Wextra -pedantic` | Instalado em 2026-10-29; teste de compilação C99 sem warnings. Demais integrantes: conferir a versão na própria máquina |
+| Make | GNU Make 4.4.1 | Automatizar compilação e testes (`make`, `make test`, `make clean`) | Instalado em 2026-10-29 (`make.exe` copiado de `mingw32-make.exe`); `build.bat` cobre o Windows sem make |
 | Git | 2.54.0.windows.1 | Controle de versão (branches, commits, tags de sprint) | Instalado |
 | GitHub | — | Repositório remoto, revisão e quadro de apoio (GitHub Projects) | A confirmar com o grupo |
 | MySQL 8 | [VERSÃO A VERIFICAR] | SGBD do modelo físico e dos scripts SQL (trocar se a disciplina usar outro) | A confirmar |
