@@ -11,6 +11,7 @@
 #include "aviso.h"
 #include "sincronizacao.h"
 #include "persistencia.h"
+#include "relatorio.h"
 
 /* Dados da portaria em memoria: vetores e matriz estaticos (tamanhos em tipos.h). */
 static Encomenda encomendas[MAX_ENCOMENDAS];
@@ -213,16 +214,6 @@ static void portaria_alternar_modo(void)
 }
 
 /*
- * portaria_em_breve
- * Objetivo: avisar que uma opcao do menu chega em outra sprint.
- * Parametros: sprint = numero da sprint prevista no PLANO.md.
- */
-static void portaria_em_breve(int sprint)
-{
-    printf("Opcao prevista para a Sprint %d. Ainda nao disponivel.\n", sprint);
-}
-
-/*
  * portaria_executar
  * Objetivo: executar a opcao escolhida no menu.
  * Parametros: opcao = numero digitado.
@@ -253,11 +244,13 @@ static void portaria_executar(int opcao)
         portaria_buscar();
         break;
     case 5:
-    case 7:
-        portaria_em_breve(3);
+        relatorio_mapa_estante(estante);
         break;
     case 6:
         portaria_menu_moradores();
+        break;
+    case 7:
+        relatorio_menu(encomendas, quantidade_encomendas, estante);
         break;
     case 8:
         portaria_sincronizar();

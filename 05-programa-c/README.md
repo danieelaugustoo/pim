@@ -40,7 +40,7 @@ bin\portaria.exe 1
 
 Sem copiar nada, o programa cria os arquivos vazios na primeira execução.
 
-## Situação (Sprints 1 e 2: US01 a US11)
+## Situação (Sprints 1 a 3: US01 a US15)
 
 | Menu | Opção | Situação |
 |---|---|---|
@@ -48,13 +48,15 @@ Sem copiar nada, o programa cria os arquivos vazios na primeira execução.
 | 2 | Registrar retirada | Pronta (US04; guarda a operação na fila) |
 | 3 | Listar pendentes | Pronta (US05) |
 | 4 | Buscar por unidade | Pronta (US05) |
-| 5 | Mapa da estante | Sprint 3 |
+| 5 | Mapa da estante | Pronta (US12: livre/ocupada por estante e prateleira, com percentual) |
 | 6 | Moradores | Pronta (US07: cadastrar e listar, com canal de aviso) |
-| 7 | Relatórios | Sprint 3 |
+| 7 | Relatórios | Pronta (US13: pendências com mais de 7 dias; US14: pico por dia de um mês; ocupação por estante) |
 | 8 | Sincronizar com a central | Pronta (US10) |
 | 9 | Alternar online/offline | Pronta (US09, simulação) |
 
-O executável `central` consolida sem duplicar (US11).
+O executável `central` consolida sem duplicar (US11) e, no relatório por portaria, mostra as pendências antigas (coluna ANTIGAS) e o dia de pico (coluna PICO).
+
+A devolução de volume (US16, opcional) não foi implementada: o prazo da devolução ainda não foi definido pelo grupo.
 
 ## Arquivos de dados
 
@@ -85,12 +87,13 @@ Nos arquivos de operação, `id_portaria` é numérico (P01 = 1). A matriz da es
 | `src/morador.c` | cadastro de moradores, validação do contato por canal e escolha de quem avisar |
 | `src/aviso.c` | aviso simulado por canal (APP, SMS, INTERFONE) e registro em arquivo |
 | `src/sincronizacao.c` | fila de operações, numeração `Pnn-NNNNNN` e envio para a rede (A4) |
-| `src/consolidacao.c` | aplicação idempotente das operações na central (A5) e relatório |
+| `src/consolidacao.c` | aplicação idempotente das operações na central (A5) e relatório por portaria |
+| `src/relatorio.c` | mapa da estante, pendências antigas, pico por dia e dados do relatório da central (A6) |
 | `src/persistencia.c` | leitura e gravação dos CSV de encomendas e moradores |
 | `src/portaria.c` | `main` e menu da portaria (só menu e chamadas) |
 | `src/central.c` | `main` da central |
-| `tests/test_*.c` | testes com `assert.h`: util, estante, código, encomenda/retirada, persistência, morador, sincronização e consolidação |
-| `algoritmos/` | pseudocódigo e fluxogramas (A4 e A5 prontos; ver `algoritmos/pseudocodigo.md`) |
+| `tests/test_*.c` | testes com `assert.h`: util, estante, código, encomenda/retirada, persistência, morador, sincronização, consolidação e relatórios (9 conjuntos) |
+| `algoritmos/` | pseudocódigo e fluxogramas de A1 a A6 (ver `algoritmos/pseudocodigo.md`; fluxogramas em Mermaid, ainda não renderizados) |
 | `dados/exemplo/` | dados fictícios de demonstração |
 
 ## Limitações
@@ -102,4 +105,6 @@ Nos arquivos de operação, `id_portaria` é numérico (P01 = 1). A matriz da es
 - A central guarda até 20 000 operações aplicadas e 5 000 encomendas (constantes em `tipos.h`) e procura ids por busca sequencial.
 - Não há resolução de conflito entre portarias, porque cada encomenda pertence a uma só portaria.
 - Prateleiras são numeradas a partir de 0, como as constantes do `PLANO.md` (volumes G ficam nas prateleiras 10 e 11).
-- Pseudocódigo e fluxogramas de A1, A2, A3 e A6 ainda não foram escritos (previstos para a Sprint 3).
+- A portaria mostra o código de retirada na tela ao registrar a encomenda, para qualquer canal de aviso (no sistema completo, só o morador o receberia). Decisão pendente do grupo; ver `07-seguranca-privacidade-acessibilidade/analise.md`.
+- O relatório de pico da portaria pergunta ano e mês; os dias de pico levam em conta a data de recebimento, não a de retirada.
+- A devolução de volume (US16) não existe: o status DEVOLVIDA só aparece quando a central recebe uma operação DEVOLUCAO.

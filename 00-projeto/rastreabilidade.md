@@ -63,15 +63,15 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
-| Algoritmos | `05-programa-c/algoritmos/pseudocodigo.md` (A1 a A6) | `06-programacao-c.md` | Em andamento |
+| Algoritmos | `05-programa-c/algoritmos/pseudocodigo.md` (A1 a A6) | `06-programacao-c.md` | Feito |
 | Fluxogramas | `05-programa-c/algoritmos/fluxogramas/` (A1 a A6, `.mmd` + PNG) | `06-programacao-c.md` | Em andamento |
-| Pseudocódigo | `05-programa-c/algoritmos/pseudocodigo.md` | `06-programacao-c.md` | Em andamento |
-| Implementação em C | `05-programa-c/src/` + `05-programa-c/include/` | `06-programacao-c.md` | Em andamento |
-| Estruturas condicionais | `05-programa-c/src/` (validações, regra de tamanho do volume, `switch` do menu) | `06-programacao-c.md` | Em andamento |
-| Estruturas de repetição | `05-programa-c/src/` (varredura da matriz, leitura de arquivos linha a linha, laço do menu) | `06-programacao-c.md` | Em andamento |
-| Funções | `05-programa-c/src/` (todos os módulos, prefixo `modulo_`) | `06-programacao-c.md` | Em andamento |
-| Vetores e matrizes | `05-programa-c/src/` (vetores de encomendas e moradores, contagem por dia, matriz `estante[NUM_ESTANTES][NUM_PRATELEIRAS]`) | `06-programacao-c.md` | Em andamento |
-| Manipulação de arquivos | `05-programa-c/src/persistencia.c` + `sincronizacao.c` + `consolidacao.c` | `06-programacao-c.md` | Em andamento |
+| Pseudocódigo | `05-programa-c/algoritmos/pseudocodigo.md` | `06-programacao-c.md` | Feito |
+| Implementação em C | `05-programa-c/src/` + `05-programa-c/include/` | `06-programacao-c.md` | Feito |
+| Estruturas condicionais | `05-programa-c/src/` (validações, regra de tamanho do volume, `switch` do menu) | `06-programacao-c.md` | Feito |
+| Estruturas de repetição | `05-programa-c/src/` (varredura da matriz, leitura de arquivos linha a linha, laço do menu) | `06-programacao-c.md` | Feito |
+| Funções | `05-programa-c/src/` (todos os módulos, prefixo `modulo_`) | `06-programacao-c.md` | Feito |
+| Vetores e matrizes | `05-programa-c/src/` (vetores de encomendas e moradores, contagem por dia, matriz `estante[NUM_ESTANTES][NUM_PRATELEIRAS]`) | `06-programacao-c.md` | Feito |
+| Manipulação de arquivos | `05-programa-c/src/persistencia.c` + `sincronizacao.c` + `consolidacao.c` | `06-programacao-c.md` | Feito |
 
 ## Etapa 6: Redes de computadores e sistemas distribuídos
 
@@ -92,24 +92,24 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
-| Acessibilidade | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Pendente |
-| Inclusão digital | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Pendente |
-| Privacidade | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Pendente |
-| Proteção de dados | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Pendente |
-| Segurança da informação | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Pendente |
-| Impactos sociais | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Pendente |
-| Aspectos éticos | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Pendente |
-| Direitos humanos | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Pendente |
+| Acessibilidade | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Feito |
+| Inclusão digital | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Feito |
+| Privacidade | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Feito |
+| Proteção de dados | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Feito |
+| Segurança da informação | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Feito |
+| Impactos sociais | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Feito |
+| Aspectos éticos | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Feito |
+| Direitos humanos | `07-seguranca-privacidade-acessibilidade/analise.md` | `08-seguranca-privacidade-acessibilidade.md` | Feito |
 
 ## Etapa 8: Integração da solução
 
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
-| Como os componentes se integram | `08-integracao/integracao.md` + `08-integracao/diagramas/fluxo-ponta-a-ponta.mmd` | `09-integracao.md` | Pendente |
-| Implantação | `08-integracao/implantacao.md` | `09-integracao.md` | Pendente |
-| Benefícios esperados para a organização | `08-integracao/beneficios-e-indicadores.md` | `09-integracao.md` | Pendente |
-| Limitações da solução | `08-integracao/limitacoes-e-evolucao.md` | `09-integracao.md` | Pendente |
-| Possibilidades de evolução futura | `08-integracao/limitacoes-e-evolucao.md` | `09-integracao.md` | Pendente |
+| Como os componentes se integram | `08-integracao/integracao.md` + `08-integracao/diagramas/fluxo-ponta-a-ponta.mmd` | `09-integracao.md` | Feito |
+| Implantação | `08-integracao/implantacao.md` | `09-integracao.md` | Feito |
+| Benefícios esperados para a organização | `08-integracao/beneficios-e-indicadores.md` | `09-integracao.md` | Feito |
+| Limitações da solução | `08-integracao/limitacoes-e-evolucao.md` | `09-integracao.md` | Feito |
+| Possibilidades de evolução futura | `08-integracao/limitacoes-e-evolucao.md` | `09-integracao.md` | Feito |
 | Conclusão geral | `documento-final/capitulos/10-conclusao.md` (escrita pelo grupo) | `10-conclusao.md` | Pendente |
 
 ## Documento final (seção 11)

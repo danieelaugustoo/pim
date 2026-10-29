@@ -1,0 +1,17 @@
+%% A1 - Alocar posicao na estante (matriz)
+flowchart TD
+    I(["Inicio"]) --> B["preferida = posicao do bloco no alfabeto<br/>MOD NUM_ESTANTES (0 se nao for letra)"]
+    B --> T{"Tamanho = G?"}
+    T -- Sim --> T1["faixa = prateleiras 10 a 11"]
+    T -- Nao --> T2["faixa = prateleiras 0 a 9"]
+    T1 --> K["k = 0"]
+    T2 --> K
+    K --> C{"k < NUM_ESTANTES?"}
+    C -- Nao --> N["Retornar: sem vaga"]
+    N --> F(["Fim"])
+    C -- Sim --> D["candidata = (preferida + k) MOD NUM_ESTANTES"]
+    D --> E{"Ha prateleira da faixa<br/>com estante[candidata][prateleira] = 0?"}
+    E -- Sim --> G["Gravar id_encomenda na celula<br/>Retornar (candidata, prateleira)"]
+    G --> F
+    E -- Nao --> H["k = k + 1"]
+    H --> C

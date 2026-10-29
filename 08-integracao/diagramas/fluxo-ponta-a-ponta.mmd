@@ -1,0 +1,34 @@
+%% Fluxo ponta a ponta de uma encomenda (Etapa 8)
+flowchart TD
+    subgraph PORTARIA["Portaria (funciona sem internet)"]
+        A["1. Porteiro registra a encomenda<br/>US01, validacao de entrada"] --> B["2. Sistema escolhe a posicao na estante<br/>A1, matriz"]
+        B --> C["3. Sistema gera o codigo unico<br/>A2"]
+        C --> D["4. Grava em arquivo (prototipo)<br/>ou banco (sistema completo)"]
+        D --> E["5. Aviso ao morador<br/>app, SMS ou interfone (US08)"]
+        D --> F["6. Operacao REGISTRO entra na fila<br/>US09, ADR-003"]
+    end
+
+    subgraph REDE["Rede"]
+        G{"Ha conexao?"}
+        F --> G
+        G -- Nao --> H["Fila espera<br/>portaria continua trabalhando"]
+        H --> G
+        G -- Sim --> I["Envio da fila<br/>A4, VPN + HTTPS no sistema completo"]
+    end
+
+    subgraph CENTRAL["Central (nuvem)"]
+        I --> J{"id da operacao<br/>ja foi aplicado?"}
+        J -- Sim --> K["Ignora<br/>ADR-003"]
+        J -- Nao --> L["Aplica a operacao<br/>A5"]
+        L --> M["Consolidado e relatorios<br/>A6, US12 a US14"]
+    end
+
+    E --> N["7. Morador chega e informa o codigo"]
+    N --> O{"Codigo confere?<br/>ate 3 tentativas"}
+    O -- Nao --> P["Retirada negada<br/>encomenda continua pendente"]
+    O -- Sim --> Q["8. Retirada registrada<br/>A3, posicao liberada"]
+    Q --> R["Operacao RETIRADA entra na fila"]
+    R --> G
+
+    M --> S["Indicador: tempo entre chegada e retirada,<br/>pendencias antigas, extravios"]
+    S --> T["Responde a pergunta de pesquisa<br/>(beneficios-e-indicadores.md)"]

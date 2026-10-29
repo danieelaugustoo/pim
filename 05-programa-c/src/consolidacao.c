@@ -3,6 +3,7 @@
 
 #include "tipos.h"
 #include "util.h"
+#include "relatorio.h"
 #include "encomenda.h"
 #include "sincronizacao.h"
 #include "consolidacao.h"
@@ -341,34 +342,42 @@ int consolidacao_salvar_estado(const EstadoCentral *estado, const char *caminho_
 
 /*
  * consolidacao_gerar_relatorio
- * Objetivo: gravar o relatorio consolidado por portaria.
+ * Objetivo: gravar o relatorio consolidado por portaria (US11 e US14).
  * Parametros: estado = estado da central; caminho = arquivo do relatorio.
  * Retorno: 1 se gravou; 0 se falhou.
  * Logica: para cada portaria de 1 a MAX_PORTARIAS conta as encomendas por
- *   status e escreve uma linha se a portaria tem alguma encomenda; no fim
+ *   status, as pendencias antigas (mais de DIAS_ALERTA dias) e acha o dia de
+ *   pico; escreve uma linha se a portaria tem alguma encomenda; no fim
  *   escreve os totais.
  */
 int consolidacao_gerar_relatorio(const EstadoCentral *estado, const char *caminho)
 {
     FILE *arq = fopen(caminho, "w");
     char agora[TAM_DATA];
+    char pico[TAM_DATA];
+    char texto_pico[TAM_DATA + 8];
     int p;
     int i;
     int pendentes;
     int retiradas;
     int devolvidas;
+    int antigas;
+    int registros_pico;
     int total_pendentes = 0;
     int total_retiradas = 0;
     int total_devolvidas = 0;
+    int total_antigas = 0;
 
     if (arq == NULL) {
         return 0;
     }
     util_data_hora_atual(agora, TAM_DATA);
     fprintf(arq, "RELATORIO CONSOLIDADO - Administradora Morada Central\n");
-    fprintf(arq, "Gerado em: %s\n\n", agora);
-    fprintf(arq, "%-8s %-12s %-10s %-10s %-10s\n", "PORTARIA", "REGISTRADAS", "PENDENTES",
-            "RETIRADAS", "DEVOLVIDAS");
+    fprintf(arq, "Gerado em: %s\n", agora);
+    fprintf(arq, "ANTIGAS = pendentes ha mais de %d dias. PICO = dia com mais registros.\n\n",
+            DIAS_ALERTA);
+    fprintf(arq, "%-8s %-12s %-10s %-10s %-10s %-8s %s\n", "PORTARIA", "REGISTRADAS", "PENDENTES",
+            "RETIRADAS", "DEVOLVIDAS", "ANTIGAS", "PICO");
     for (p = 1; p <= MAX_PORTARIAS; p++) {
         pendentes = 0;
         retiradas = 0;
@@ -384,16 +393,25 @@ int consolidacao_gerar_relatorio(const EstadoCentral *estado, const char *caminh
                 }
             }
         }
+        antigas = relatorio_contar_antigas_consolidadas(estado->consolidadas,
+                                                        estado->qtd_consolidadas, p, agora);
         if (pendentes + retiradas + devolvidas > 0) {
-            fprintf(arq, "P%02d      %-12d %-10d %-10d %-10d\n", p, pendentes + retiradas + devolvidas,
-                    pendentes, retiradas, devolvidas);
+            texto_pico[0] = '\0';
+            if (relatorio_pico_consolidado(estado->consolidadas, estado->qtd_consolidadas, p, pico,
+                                           TAM_DATA, &registros_pico)) {
+                snprintf(texto_pico, sizeof texto_pico, "%s (%d)", pico, registros_pico);
+            }
+            fprintf(arq, "P%02d      %-12d %-10d %-10d %-10d %-8d %s\n", p,
+                    pendentes + retiradas + devolvidas, pendentes, retiradas, devolvidas, antigas,
+                    texto_pico);
         }
         total_pendentes += pendentes;
         total_retiradas += retiradas;
         total_devolvidas += devolvidas;
+        total_antigas += antigas;
     }
-    fprintf(arq, "%-8s %-12d %-10d %-10d %-10d\n", "TOTAL",
+    fprintf(arq, "%-8s %-12d %-10d %-10d %-10d %-8d\n", "TOTAL",
             total_pendentes + total_retiradas + total_devolvidas, total_pendentes, total_retiradas,
-            total_devolvidas);
+            total_devolvidas, total_antigas);
     return fclose(arq) == 0;
 }

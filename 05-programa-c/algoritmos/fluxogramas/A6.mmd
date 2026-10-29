@@ -1,0 +1,44 @@
+%% A6 - Relatorios (mapa, pendencias antigas, pico por dia, consolidado)
+flowchart TD
+    I(["Inicio: porteiro escolhe o relatorio"]) --> M{"Qual relatorio?"}
+
+    M -- "Mapa da estante" --> M1["Para cada estante e prateleira:<br/>X se celula diferente de 0, senao ."]
+    M1 --> M2["ocupadas = celulas diferentes de 0<br/>percentual = ocupadas / total x 100"]
+    M2 --> M3["Mostrar mapa, ocupadas, total e percentual"]
+    M3 --> F(["Fim"])
+
+    M -- "Pendencias antigas" --> A1["total = 0"]
+    A1 --> A2{"Ha outra encomenda?"}
+    A2 -- Nao --> A5{"total = 0?"}
+    A5 -- Sim --> A6["Mostrar: nao ha alertas"]
+    A5 -- Nao --> A7["Mostrar o total"]
+    A6 --> F
+    A7 --> F
+    A2 -- Sim --> A3{"PENDENTE e dias parados<br/>maiores que DIAS_ALERTA (7)?"}
+    A3 -- Sim --> A4["Mostrar unidade, destinatario,<br/>data e dias<br/>total = total + 1"]
+    A4 --> A2
+    A3 -- Nao --> A2
+
+    M -- "Pico por dia" --> P1["Ler ano e mes<br/>contagem[1..31] = 0"]
+    P1 --> P2{"Ha outra encomenda?"}
+    P2 -- Sim --> P3{"Ano e mes da data de<br/>recebimento = periodo?"}
+    P3 -- Sim --> P4["contagem[dia] = contagem[dia] + 1"]
+    P4 --> P2
+    P3 -- Nao --> P2
+    P2 -- Nao --> P5["pico = dia de maior contagem<br/>(empate: o mais cedo)"]
+    P5 --> P6{"pico = 0?"}
+    P6 -- Sim --> P7["Mostrar: nenhum registro"]
+    P6 -- Nao --> P8["Mostrar contagem por dia e o dia de pico"]
+    P7 --> F
+    P8 --> F
+
+    M -- "Consolidado (central)" --> C1["p = 1"]
+    C1 --> C2{"p <= MAX_PORTARIAS?"}
+    C2 -- Nao --> C6["Escrever a linha TOTAL"]
+    C6 --> F
+    C2 -- Sim --> C3["Contar por status, antigas<br/>e dia de pico da portaria p"]
+    C3 --> C4{"p tem encomendas?"}
+    C4 -- Sim --> C5["Escrever a linha de p"]
+    C5 --> C7["p = p + 1"]
+    C4 -- Nao --> C7
+    C7 --> C2

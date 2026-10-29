@@ -54,7 +54,7 @@ Modelos de equipamento, preços, quantidade de câmeras, provedor de nuvem e alg
 
 ## O que não foi entregue / fica para depois
 
-- Pseudocódigo e fluxogramas de A1, A2, A3 e A6: previstos para a Sprint 3 pelo `PLANO.md` (a definição de pronto os pede por história; decisão do grupo pendente).
+- Pseudocódigo e fluxogramas de A1, A2, A3 e A6: previstos para a Sprint 3 pelo `PLANO.md`; foram feitos na Sprint 3 (ver `sprint-03.md`).
 - Operação DEVOLUCAO gerada pela portaria (US16, opcional, Sprint 3): a central já a entende.
 - Aviso e rede reais: seguem simulados.
 - Tag `v0.2.0` ao fim da sprint: depende da revisão e do commit.

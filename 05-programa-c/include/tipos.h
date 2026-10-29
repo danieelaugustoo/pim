@@ -24,6 +24,7 @@
 #define MAX_TENTATIVAS 3         /* tentativas de codigo numa retirada */
 #define DIAS_ALERTA 7            /* dias a partir dos quais uma pendencia e antiga */
 #define APARTAMENTO_MAX 9999     /* maior numero de apartamento aceito */
+#define DIAS_NO_MES 31           /* maior numero de dias de um mes (relatorio de pico) */
 
 /* ---------- Tamanhos de texto (incluem o '\0') ---------- */
 #define TAM_NOME 41

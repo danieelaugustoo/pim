@@ -13,12 +13,12 @@ EXE =
 endif
 
 # Modulos compartilhados (um .c por modulo em src/)
-MODULOS = util estante codigo encomenda retirada persistencia morador aviso sincronizacao consolidacao
+MODULOS = util estante codigo encomenda retirada persistencia morador aviso sincronizacao consolidacao relatorio
 OBJ_MODULOS = $(patsubst %,bin/%.o,$(MODULOS))
 
 PROGRAMAS = bin/portaria$(EXE) bin/central$(EXE)
 
-TESTES = test_util test_estante test_codigo test_encomenda test_persistencia test_morador test_sincronizacao test_consolidacao
+TESTES = test_util test_estante test_codigo test_encomenda test_persistencia test_morador test_sincronizacao test_consolidacao test_relatorio
 EXE_TESTES = $(patsubst %,bin/%$(EXE),$(TESTES))
 RODAR_TESTES = $(patsubst %,rodar-%,$(TESTES))
 

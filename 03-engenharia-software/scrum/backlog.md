@@ -17,11 +17,11 @@
 | US09 | Registrar sem internet | RF09 | 2 | Feito (falta revisão) |
 | US10 | Sincronizar quando a conexão voltar | RF10 | 2 | Feito (falta revisão) |
 | US11 | Consolidar sem duplicidade | RF10 | 2 | Feito (falta revisão) |
-| US12 | Mapa de ocupação da estante | RF07 | 3 | A fazer |
-| US13 | Alerta de volumes parados há mais de 7 dias | RF11 | 3 | A fazer |
-| US14 | Relatórios de pico e ocupação | RF12 | 3 | A fazer |
-| US15 | Testes automatizados | RNF05 (apoio) | 3 | A fazer |
-| US16 | (Opcional) Marcar volume como devolvido | — | 3 | A fazer |
+| US12 | Mapa de ocupação da estante | RF07 | 3 | Feito (falta revisão) |
+| US13 | Alerta de volumes parados há mais de 7 dias | RF11 | 3 | Feito (falta revisão) |
+| US14 | Relatórios de pico e ocupação | RF12 | 3 | Feito (falta revisão) |
+| US15 | Testes automatizados | RNF05 (apoio) | 3 | Feito (falta revisão) |
+| US16 | (Opcional) Marcar volume como devolvido | — | 3 | Não iniciada (prazo da devolução a definir) |
 
 ## Sprint 1: portaria funcionando
 

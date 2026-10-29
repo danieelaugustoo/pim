@@ -1,0 +1,12 @@
+%% A2 - Gerar codigo unico
+flowchart TD
+    I(["Inicio"]) --> A["tentativa = 1"]
+    A --> B{"tentativa <= 1000?"}
+    B -- Nao --> Z["Retornar 0<br/>(o registro e recusado)"]
+    Z --> F(["Fim"])
+    B -- Sim --> C["codigo = sortear de 100000 a 999999"]
+    C --> D{"Alguma encomenda PENDENTE<br/>tem esse codigo?"}
+    D -- Nao --> R["Retornar codigo"]
+    R --> F
+    D -- Sim --> E["tentativa = tentativa + 1"]
+    E --> B

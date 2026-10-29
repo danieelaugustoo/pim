@@ -1,0 +1,23 @@
+%% A3 - Registrar retirada
+flowchart TD
+    I(["Inicio"]) --> U["Ler bloco e apartamento"]
+    U --> P{"A unidade tem<br/>encomenda pendente?"}
+    P -- Nao --> F(["Fim: nada a retirar"])
+    P -- Sim --> L["Listar as pendentes da unidade"]
+    L --> ID["Ler o id da encomenda"]
+    ID --> V{"O id e pendente<br/>DESSA unidade?"}
+    V -- Nao --> V1["Informar que o id nao serve"]
+    V1 --> F
+    V -- Sim --> T["tentativa = 1"]
+    T --> C{"tentativa <= MAX_TENTATIVAS (3)?"}
+    C -- Nao --> N["Informar: retirada negada<br/>(encomenda continua PENDENTE)"]
+    N --> F
+    C -- Sim --> D["Ler o codigo digitado"]
+    D --> Q{"Codigo = codigo da encomenda?"}
+    Q -- Nao --> Q1["Informar: codigo incorreto<br/>tentativa = tentativa + 1"]
+    Q1 --> C
+    Q -- Sim --> NM["Ler o nome de quem retira"]
+    NM --> S["status = RETIRADA<br/>retirada_em = data e hora atuais<br/>retirado_por = nome"]
+    S --> LB["Liberar a posicao na matriz<br/>estante[linha][coluna] = 0"]
+    LB --> OP["Portaria salva o arquivo<br/>e enfileira a operacao RETIRADA"]
+    OP --> F2(["Fim: retirada registrada"])
