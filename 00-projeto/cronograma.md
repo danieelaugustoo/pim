@@ -3,7 +3,7 @@
 > **Modelo para o grupo preencher.** Só entram datas informadas pelo grupo ou reais do repositório. As sprints são de 1 semana (`PLANO.md`, seção 10); ajustar a duração ao prazo real.
 
 **Data de entrega no sistema da UNIP:** sábado, 14/11/2026, até as 23h59 (informado pelo grupo em 2026-10-29)
-**Data da cópia impressa ao coordenador:** [A DEFINIR]
+**Data da cópia impressa ao coordenador:** mesmo prazo da postagem (informado pelo grupo em 2026-10-29)
 **Dias disponíveis até a entrega:** 16 dias a partir de 29/10/2026 (2 semanas e 2 dias)
 
 ## Sprints

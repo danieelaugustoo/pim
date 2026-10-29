@@ -38,7 +38,7 @@ Os demais fluxogramas (A2, A3, A4, A6) podem ir em apêndice ou só no repositó
 - [ ] Compilar e rodar no computador de cada integrante (o grupo precisa dominar o código).
 - [ ] Tirar os prints (menu, mapa, relatórios, `make test`).
 - [ ] Renderizar os fluxogramas e exportar os PNG.
-- [ ] Decidir se o código completo vai em apêndice ou só como link (confirmar com o professor se o apêndice conta nas páginas).
+- [x] Código completo: só o link do GitHub, sem apêndice (decisão do grupo, 2026-10-29).
 - [x] Código de retirada na tela do porteiro: manter e declarar a limitação (decisão de 2026-10-29, `07-.../analise.md`).
 - [ ] Revisão por outro integrante.
 

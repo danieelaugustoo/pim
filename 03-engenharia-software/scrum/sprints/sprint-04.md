@@ -56,8 +56,12 @@
 | VPN IPsec | Só no diagrama, sem configurar no Packet Tracer |
 | Idioma do abstract | Inglês |
 | Retenção dos dados | Não será 12 meses; prazo `[A DEFINIR]` |
-| Dados do protótipo | Uso de dados simulados (fictícios) `[A CONFIRMAR o alcance da decisão]` |
-| Modelo conceitual | Em brModelo só se o professor pedir; SGBD MySQL 8 |
+| Dados do protótipo e dos indicadores | Dados simulados (fictícios), **sempre rotulados como simulação** no texto; nunca apresentados como dado medido nem como pesquisa |
+| Modelo conceitual | Sem brModelo; SGBD MySQL 8 |
+| Código no documento | Apenas o link do GitHub, sem apêndice; trechos curtos no capítulo 6 |
+| Cópia impressa | Mesmo prazo da postagem (14/11/2026) |
+| Integrantes | 5 (nomes e RA em `00-projeto/integrantes.md`); e-mail não registrado |
+| Packet Tracer | `[A CONFIRMAR]`: o grupo disse "vamos fazer sem" (sem a VPN ou sem o simulador?) |
 
 ## Impedimentos e riscos
 

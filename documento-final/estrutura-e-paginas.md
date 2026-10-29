@@ -98,4 +98,4 @@ Fluxogramas A2, A3, A4 e A6 ficam em apêndice ou só no repositório.
 
 ## 7. Código no documento
 
-Trechos principais no capítulo 6; código completo no repositório (link) ou em apêndice. Decisão pendente com o professor.
+Trechos principais no capítulo 6; código completo apenas pelo link do repositório no GitHub, sem apêndice (decisão do grupo, 2026-10-29).

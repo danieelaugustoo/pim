@@ -2,19 +2,23 @@
 
 > **Modelo para o grupo preencher.** Nomes, RA e papéis são do grupo: nada aqui foi inventado. O manual permite trabalho individual ou até **6 integrantes** do mesmo curso e turma; **só o líder faz a postagem** e cadastra os demais.
 
-**Curso / turma / polo:** [A DEFINIR]
-**Professor orientador / disciplina:** [A DEFINIR]
+**Curso:** Análise e Desenvolvimento de Sistemas (UNIP)
+**Campus:** Anchieta
+**Turma:** R/S
+**Professor orientador:** Prof.ª Eliana
+**Disciplina:** PIM II `[A CONFIRMAR o nome oficial no modelo da UNIP]`
+
+> O e-mail dos integrantes não será registrado (decisão do grupo). Se o repositório ficar **público** no GitHub, nomes e RA ficam visíveis a qualquer pessoa: considerem manter o repositório privado ou remover esta tabela antes de publicar.
 
 ## Integrantes
 
 | # | Nome completo | RA | E-mail | Papel no Scrum | Líder (postagem)? |
 |---|---|---|---|---|---|
-| 1 | Lucas Ribeiro Tomiossi Kribely | [A DEFINIR] | [A DEFINIR] | Time de desenvolvimento | [x] |
-| 2 | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [ ] |
-| 3 | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [ ] |
-| 4 | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [ ] |
-| 5 | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [ ] |
-| 6 | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [ ] |
+| 1 | Daniel Augusto Amarante da Silva | H900BA8 | não informado | Time de desenvolvimento `[PO/SM a definir]` | [ ] |
+| 2 | Lucas Ribeiro Tomiossi Kribely | R990648 | não informado | Líder (postagem) `[PO/SM a definir]` | [x] |
+| 3 | Pedro Urquisa Rocha | R310337 | não informado | Time de desenvolvimento `[PO/SM a definir]` | [ ] |
+| 4 | Adilson Batista do Nascimento de Lima | R129IB1 | não informado | Time de desenvolvimento `[PO/SM a definir]` | [ ] |
+| 5 | Ysaac de Souza França | R3000I4 | não informado | Time de desenvolvimento `[PO/SM a definir]` | [ ] |
 
 Papéis do Scrum (ver `03-engenharia-software/scrum/papeis-e-cerimonias.md`): Product Owner, Scrum Master e time de desenvolvimento.
 
