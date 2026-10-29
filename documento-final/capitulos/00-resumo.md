@@ -1,0 +1,32 @@
+# Resumo (roteiro)
+
+> **ROTEIRO, não é o texto.** Os tópicos abaixo organizam o que o resumo precisa conter. O grupo escreve o resumo com as próprias palavras e **substitui** este conteúdo na seção "Texto do grupo". Escrever por último, depois de fechar os demais capítulos.
+
+**Exigência do manual:** resumo conciso e objetivo, com o conteúdo principal, os pontos relevantes e as conclusões, em **até 500 palavras**, seguido das palavras-chave.
+
+## Roteiro (uma ideia por frase ou bloco curto)
+
+1. **Contexto e problema:** gestão de encomendas em condomínios por caderno; extravios, entregas erradas e sobrecarga dos porteiros (P1 a P7 em `01-organizacao/caracterizacao.md`).
+2. **Objetivo:** objetivo geral de `02-pesquisa/problema-e-objetivos.md`.
+3. **Método:** pesquisa bibliográfica e de campo (somente se foi aplicada), Scrum em sprints, protótipo em C, modelagem relacional, projeto de rede.
+4. **Solução:** nó de portaria que funciona sem internet + central que consolida sem duplicar; aviso ao morador por app, SMS ou interfone.
+5. **O que foi feito:** o que existe de fato (protótipo em C testado, modelo e scripts SQL executados, projeto de rede, análise de segurança e acessibilidade).
+6. **Resultados:** apenas o que foi **medido ou verificado**. Não incluir percentuais de melhoria sem dados reais.
+7. **Conclusão:** principais pontos e limitações (aviso e rede simulados).
+
+## Palavras-chave (sugestões a revisar)
+
+Encomendas; condomínios; sistemas distribuídos; operação offline; banco de dados relacional.
+
+## Checklist
+
+- [ ] Até 500 palavras (conferir a contagem).
+- [ ] Palavras-chave logo após o texto, no padrão do modelo da UNIP.
+- [ ] Sem citações diretas e sem números que não estejam no corpo do trabalho.
+- [ ] Coerente com a conclusão (capítulo 10).
+
+---
+
+## Texto do grupo
+
+*(escrever aqui)*

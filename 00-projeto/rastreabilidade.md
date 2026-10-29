@@ -110,19 +110,19 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 | Benefícios esperados para a organização | `08-integracao/beneficios-e-indicadores.md` | `09-integracao.md` | Feito |
 | Limitações da solução | `08-integracao/limitacoes-e-evolucao.md` | `09-integracao.md` | Feito |
 | Possibilidades de evolução futura | `08-integracao/limitacoes-e-evolucao.md` | `09-integracao.md` | Feito |
-| Conclusão geral | `documento-final/capitulos/10-conclusao.md` (escrita pelo grupo) | `10-conclusao.md` | Pendente |
+| Conclusão geral | `documento-final/capitulos/10-conclusao.md` (escrita pelo grupo) | `10-conclusao.md` | Em andamento |
 
 ## Documento final (seção 11)
 
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
-| Capa, Resumo, Abstract, Sumário, Introdução, Desenvolvimento, Conclusão e Referências | `documento-final/` | Todos | Pendente |
-| Resumo conciso e objetivo, com conteúdo principal, pontos relevantes e conclusões, em até 500 palavras, seguido das palavras-chave | `documento-final/capitulos/00-resumo.md` | `00-resumo.md` | Pendente |
-| Abstract em inglês (ou espanhol ou francês), com as palavras-chave no mesmo idioma | `documento-final/capitulos/00-abstract.md` | `00-abstract.md` | Pendente |
-| Introdução com objetivo da pesquisa, metodologia, breve apresentação da empresa e visão geral da proposta | `documento-final/capitulos/01-introducao.md` | `01-introducao.md` | Pendente |
-| Desenvolvimento entre 20 e 30 páginas, em capítulos e subcapítulos, apresentando pesquisa, fundamentação, métodos, materiais, resultados e discussão | `documento-final/capitulos/` (capítulos 2 a 9) + `documento-final/estrutura-e-paginas.md` | `02` a `09` | Pendente |
-| Conclusão que apresenta os resultados de forma clara, relaciona os resultados aos objetivos, retoma a proposta inicial e destaca os principais pontos encontrados | `documento-final/capitulos/10-conclusao.md` | `10-conclusao.md` | Pendente |
+| Capa, Resumo, Abstract, Sumário, Introdução, Desenvolvimento, Conclusão e Referências | `documento-final/` | Todos | Em andamento |
+| Resumo conciso e objetivo, com conteúdo principal, pontos relevantes e conclusões, em até 500 palavras, seguido das palavras-chave | `documento-final/capitulos/00-resumo.md` | `00-resumo.md` | Em andamento |
+| Abstract em inglês (ou espanhol ou francês), com as palavras-chave no mesmo idioma | `documento-final/capitulos/00-abstract.md` | `00-abstract.md` | Em andamento |
+| Introdução com objetivo da pesquisa, metodologia, breve apresentação da empresa e visão geral da proposta | `documento-final/capitulos/01-introducao.md` | `01-introducao.md` | Em andamento |
+| Desenvolvimento entre 20 e 30 páginas, em capítulos e subcapítulos, apresentando pesquisa, fundamentação, métodos, materiais, resultados e discussão | `documento-final/capitulos/` (capítulos 2 a 9) + `documento-final/estrutura-e-paginas.md` | `02` a `09` | Em andamento |
+| Conclusão que apresenta os resultados de forma clara, relaciona os resultados aos objetivos, retoma a proposta inicial e destaca os principais pontos encontrados | `documento-final/capitulos/10-conclusao.md` | `10-conclusao.md` | Em andamento |
 | Referências de todas as fontes usadas, em ABNT | `documento-final/referencias.md` | Referências | Pendente |
 | Citações conforme a ABNT; todo trecho reproduzido diretamente com a fonte citada no texto e a obra referenciada | `documento-final/capitulos/` (todos) + `documento-final/referencias.md` | Todos | Pendente |
-| Formatação da seção 2 (A4, margens, espaçamento, fonte, recuo, numeração) | `documento-final/checklist-abnt-e-entrega.md` | — | Pendente |
-| Entrega pelo sistema de trabalhos acadêmicos da UNIP dentro do prazo, cópia impressa ao coordenador do PIM e postagem feita pelo líder | `documento-final/checklist-abnt-e-entrega.md` | — | Pendente |
+| Formatação da seção 2 (A4, margens, espaçamento, fonte, recuo, numeração) | `documento-final/checklist-abnt-e-entrega.md` | — | Feito |
+| Entrega pelo sistema de trabalhos acadêmicos da UNIP dentro do prazo, cópia impressa ao coordenador do PIM e postagem feita pelo líder | `documento-final/checklist-abnt-e-entrega.md` | — | Feito |
