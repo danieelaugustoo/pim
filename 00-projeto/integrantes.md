@@ -9,7 +9,7 @@
 
 | # | Nome completo | RA | E-mail | Papel no Scrum | Líder (postagem)? |
 |---|---|---|---|---|---|
-| 1 | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [ ] |
+| 1 | Lucas Ribeiro Tomiossi Kribely | [A DEFINIR] | [A DEFINIR] | Time de desenvolvimento | [x] |
 | 2 | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [ ] |
 | 3 | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [ ] |
 | 4 | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [A DEFINIR] | [ ] |

@@ -9,7 +9,7 @@
 | Product Owner | Priorizar o backlog e decidir o que entra em cada sprint | [A DEFINIR] |
 | Scrum Master | Facilitar as cerimônias e remover impedimentos | [A DEFINIR] |
 | Time de desenvolvimento | Entregar as histórias de cada sprint | [A DEFINIR] (todos os integrantes) |
-| Líder do grupo | Fazer a postagem final e cadastrar os demais no sistema da UNIP | [A DEFINIR] |
+| Líder do grupo | Fazer a postagem final e cadastrar os demais no sistema da UNIP | Lucas Ribeiro Tomiossi Kribely |
 
 O Claude Code apoia o time de desenvolvimento, mas não ocupa nenhum papel.
 
@@ -19,8 +19,8 @@ O Claude Code apoia o time de desenvolvimento, mas não ocupa nenhum papel.
 |---|---|---|---|
 | Planejamento da sprint | Início da sprint | 30 minutos | Meta e histórias em `sprints/sprint-NN.md` |
 | Daily assíncrona | Todo dia útil, no grupo de mensagens | Poucas linhas por pessoa: o que fiz, o que farei, impedimentos | Não precisa de arquivo |
-| Revisão da sprint | Fim da sprint | [A DEFINIR] | O que foi entregue e o que não foi, em `sprint-NN.md` |
-| Retrospectiva | Fim da sprint | [A DEFINIR] | O que melhorar, em `sprint-NN.md` |
+| Revisão da sprint | Fim da sprint, às sextas, 19h | [A DEFINIR] | O que foi entregue e o que não foi, em `sprint-NN.md` |
+| Retrospectiva | Fim da sprint, às sextas, 19h | [A DEFINIR] | O que melhorar, em `sprint-NN.md` |
 
 ## Quadro de apoio
 

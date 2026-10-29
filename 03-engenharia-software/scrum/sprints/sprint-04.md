@@ -42,6 +42,23 @@
 6. Redigir os capítulos; depois introdução, conclusão, resumo e abstract.
 7. Referências, revisão ABNT e de similaridade, postagem e impressão.
 
+## Decisões do grupo (2026-10-29)
+
+| Tema | Decisão |
+|---|---|
+| Prazo | Sábado, 14/11/2026, até as 23h59 (sistema da UNIP) |
+| Líder | Lucas Ribeiro Tomiossi Kribely |
+| Product Owner e Scrum Master | O solicitante assume um e outro integrante assume o outro `[A DEFINIR]` |
+| Cerimônias | Revisão e retrospectiva às sextas, 19h |
+| Levantamento de campo | Dispensado (não é obrigatório) |
+| Código de retirada na tela do porteiro | Manter no protótipo e declarar a limitação |
+| US16 (devolução) | Não implementar; fica como evolução futura |
+| VPN IPsec | Só no diagrama, sem configurar no Packet Tracer |
+| Idioma do abstract | Inglês |
+| Retenção dos dados | Não será 12 meses; prazo `[A DEFINIR]` |
+| Dados do protótipo | Uso de dados simulados (fictícios) `[A CONFIRMAR o alcance da decisão]` |
+| Modelo conceitual | Em brModelo só se o professor pedir; SGBD MySQL 8 |
+
 ## Impedimentos e riscos
 
 - Prazo oficial de entrega ainda não confirmado.

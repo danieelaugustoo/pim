@@ -62,7 +62,7 @@
 | Segurança da rede | VLANs, ACL, VPN IPsec, HTTPS/TLS, 2FA no painel, backup 3-2-1 | Projeto em `06-redes/seguranca-infraestrutura.md`; ACL a testar no Packet Tracer |
 | Entrada de dados validada | `fgets` com conversão validada; recusa texto com `;` e acento | No protótipo |
 
-**Limitação que o grupo deve discutir (ponto honesto):** no protótipo, ao registrar uma encomenda a tela do porteiro mostra o código de retirada **para todos os canais**, e o código fica em texto nos arquivos de dados. Isso contraria o RNF04 (código não exibido a terceiros) no caso de app e SMS, em que só o morador deveria conhecê-lo. No sistema completo o fluxo muda: o código vai apenas na mensagem ao morador, o porteiro digita o código que o morador informa e o sistema confere o hash. Decisão do grupo: manter o protótipo assim e declarar a limitação, ou ajustar a tela do porteiro `[A DECIDIR]`.
+**Limitação que o grupo deve discutir (ponto honesto):** no protótipo, ao registrar uma encomenda a tela do porteiro mostra o código de retirada **para todos os canais**, e o código fica em texto nos arquivos de dados. Isso contraria o RNF04 (código não exibido a terceiros) no caso de app e SMS, em que só o morador deveria conhecê-lo. No sistema completo o fluxo muda: o código vai apenas na mensagem ao morador, o porteiro digita o código que o morador informa e o sistema confere o hash. Decisão do grupo (2026-10-29): manter o protótipo assim e declarar a limitação.
 
 ---
 

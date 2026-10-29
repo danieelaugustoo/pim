@@ -25,7 +25,7 @@
 
 - [ ] **Conferir as leis nos textos oficiais** (LGPD, Lei nº 13.709/2018; Lei Brasileira de Inclusão, Lei nº 13.146/2015, art. 63) e as diretrizes WCAG, e só então citar `[FONTE A VERIFICAR]`.
 - [ ] Decidir o **prazo de retenção** e quem atende pedidos de titulares `[A DEFINIR]`.
-- [ ] Decidir o tratamento do **código de retirada na tela do porteiro** (ajustar o programa ou declarar a limitação).
+- [x] Código de retirada na tela do porteiro: decisão do grupo (2026-10-29) de manter e declarar a limitação.
 - [ ] Cortar para caber em cerca de 2 páginas: priorizar o que é específico do projeto.
 
 ## Cuidados

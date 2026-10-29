@@ -39,7 +39,7 @@ Os demais fluxogramas (A2, A3, A4, A6) podem ir em apêndice ou só no repositó
 - [ ] Tirar os prints (menu, mapa, relatórios, `make test`).
 - [ ] Renderizar os fluxogramas e exportar os PNG.
 - [ ] Decidir se o código completo vai em apêndice ou só como link (confirmar com o professor se o apêndice conta nas páginas).
-- [ ] Decidir sobre o **código de retirada exibido na tela do porteiro** (limitação registrada em `07-.../analise.md`).
+- [x] Código de retirada na tela do porteiro: manter e declarar a limitação (decisão de 2026-10-29, `07-.../analise.md`).
 - [ ] Revisão por outro integrante.
 
 ## Cuidados

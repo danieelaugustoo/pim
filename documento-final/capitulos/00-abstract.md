@@ -13,7 +13,7 @@
 
 ## Checklist
 
-- [ ] Idioma escolhido pelo grupo: `[A DEFINIR]`.
+- [x] Idioma escolhido pelo grupo: inglês (decisão de 2026-10-29).
 - [ ] Mesmo conteúdo e mesmo tamanho aproximado do resumo.
 - [ ] Palavras-chave no mesmo idioma.
 - [ ] Revisão de um integrante com bom domínio do idioma.

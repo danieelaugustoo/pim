@@ -65,7 +65,7 @@ Todas as marcações abaixo estão no repositório (`grep -rn "A DEFINIR\|A PREE
 - [ ] Fontes de `02-pesquisa/fontes.md` verificadas
 - [ ] Fluxogramas e diagramas renderizados e exportados
 - [ ] Revisão por outro integrante de cada história e de cada capítulo
-- [ ] Decisão sobre o código de retirada exibido na tela do porteiro
+- [x] Decisão sobre o código de retirada exibido na tela do porteiro (manter e declarar a limitação)
 
 ## 7. Entrega
 
