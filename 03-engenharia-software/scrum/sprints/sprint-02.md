@@ -29,6 +29,21 @@ Critérios de aceitação em `scrum/backlog.md`. "Feito" significa implementado,
   - **Privacidade:** o arquivo `Pnn-avisos.txt` não contém o código de retirada.
 - O relatório da central bate com as consultas do banco de exemplo.
 
+## Redes (Etapa 6, Prompt 7)
+
+Entregue junto com a sprint (o plano reparte a Etapa 6 entre as Sprints 2 e 3):
+
+| Entrega | Situação |
+|---|---|
+| `06-redes/`: arquitetura e topologia, equipamentos, endereçamento, VLANs, nuvem e sistemas distribuídos, segurança da infraestrutura e diagrama de topologia | Feito (falta revisão do grupo; diagrama não renderizado) |
+| Tabelas completas de endereçamento (sede e 10 condomínios, 4 VLANs cada, mais a nuvem) | Feito, geradas por script |
+| Roteiro passo a passo do Packet Tracer (`packet-tracer/roteiro.md`) | Feito, **comandos não executados no simulador** |
+| Montagem no Packet Tracer, testes e prints | **Do grupo**, ainda não feitos |
+
+Verificação feita no lugar da execução: um script gerou as 44 redes e conferiu que nenhuma se sobrepõe, que todo gateway pertence à sua rede e que todas as faixas (fixos `.10` a `.49`, DHCP `.100` a `.199`) cabem no `/24`; outro script leu os 8 blocos de comandos do roteiro e conferiu endereços, subinterfaces, ACL, DHCP e rotas contra a tabela. A lógica das ACL foi relida contra os 15 testes esperados. Isso **não substitui** montar no Packet Tracer.
+
+Modelos de equipamento, preços, quantidade de câmeras, provedor de nuvem e algoritmos de VPN ficaram como `[A DEFINIR]`/`[A COTAR]`. As regras de firewall e o endereçamento do laboratório (`203.0.113.0/24`) são propostas a validar com o grupo.
+
 ## O que foi entregue
 
 - Módulos novos `morador`, `aviso`, `sincronizacao` e `consolidacao`, e o executável `central` (`src/central.c`).
@@ -47,6 +62,7 @@ Critérios de aceitação em `scrum/backlog.md`. "Feito" significa implementado,
 ## Impedimentos e riscos
 
 - Apagar `Pnn-sequencia.txt` sem apagar o log da rede faz a portaria repetir ids de operações já aplicadas, e a central as ignora. Está nas limitações do README; no sistema completo, a chave primária e a API tratam isso.
+- O Cisco Packet Tracer não está instalado na máquina de desenvolvimento: os comandos do roteiro precisam ser testados pelo grupo, que também decide se faz a VPN IPsec (opcional).
 - Prazo oficial de entrega ainda não confirmado.
 
 ## Retrospectiva (a preencher pelo grupo)

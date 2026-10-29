@@ -77,16 +77,16 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
-| Arquitetura da rede | `06-redes/arquitetura-e-topologia.md` | `07-redes.md` | Pendente |
-| Topologia | `06-redes/arquitetura-e-topologia.md` + `06-redes/diagramas/topologia.mmd` + print do Packet Tracer em `06-redes/packet-tracer/` | `07-redes.md` | Pendente |
-| Equipamentos | `06-redes/equipamentos.md` | `07-redes.md` | Pendente |
-| Endereçamento IP | `06-redes/enderecamento-ip.md` | `07-redes.md` | Pendente |
-| VLANs | `06-redes/vlans.md` | `07-redes.md` | Pendente |
-| Comunicação entre serviços | `06-redes/nuvem-e-sistemas-distribuidos.md` | `07-redes.md` | Pendente |
-| Computação em nuvem | `06-redes/nuvem-e-sistemas-distribuidos.md` | `07-redes.md` | Pendente |
-| Arquitetura distribuída | `06-redes/nuvem-e-sistemas-distribuidos.md` | `07-redes.md` | Pendente |
-| Escalabilidade | `06-redes/nuvem-e-sistemas-distribuidos.md` | `07-redes.md` | Pendente |
-| Segurança da infraestrutura | `06-redes/seguranca-infraestrutura.md` | `07-redes.md` | Pendente |
+| Arquitetura da rede | `06-redes/arquitetura-e-topologia.md` | `07-redes.md` | Feito |
+| Topologia | `06-redes/arquitetura-e-topologia.md` + `06-redes/diagramas/topologia.mmd` + print do Packet Tracer em `06-redes/packet-tracer/` | `07-redes.md` | Em andamento |
+| Equipamentos | `06-redes/equipamentos.md` | `07-redes.md` | Feito |
+| Endereçamento IP | `06-redes/enderecamento-ip.md` | `07-redes.md` | Feito |
+| VLANs | `06-redes/vlans.md` | `07-redes.md` | Feito |
+| Comunicação entre serviços | `06-redes/nuvem-e-sistemas-distribuidos.md` | `07-redes.md` | Feito |
+| Computação em nuvem | `06-redes/nuvem-e-sistemas-distribuidos.md` | `07-redes.md` | Feito |
+| Arquitetura distribuída | `06-redes/nuvem-e-sistemas-distribuidos.md` | `07-redes.md` | Feito |
+| Escalabilidade | `06-redes/nuvem-e-sistemas-distribuidos.md` | `07-redes.md` | Feito |
+| Segurança da infraestrutura | `06-redes/seguranca-infraestrutura.md` | `07-redes.md` | Feito |
 
 ## Etapa 7: Direitos humanos, inclusão e segurança (versão curta)
 

@@ -1,0 +1,54 @@
+%% Topologia - estrela em cada local, hub-and-spoke entre locais e nuvem
+flowchart TB
+    subgraph NUVEM["Nuvem - 172.16.0.0/16"]
+        direction LR
+        API["API central<br/>VM ou conteiner<br/>172.16.1.0/24"]
+        BD[("MySQL gerenciado<br/>172.16.2.0/24")]
+        AV["Servico de avisos<br/>(app ou SMS)"]
+        BKP[("Backup")]
+        API --- BD
+        API --> AV
+        BD --- BKP
+    end
+
+    subgraph SEDE["Sede - 10.0.Y.0/24"]
+        direction TB
+        RS["Roteador/firewall"]
+        SWS["Switch 24 portas<br/>VLANs 10, 20, 30, 99"]
+        APS["Ponto de acesso<br/>Wi-Fi visitantes"]
+        PCA["PCs administrativo<br/>VLAN 10"]
+        PCT["PCs atendimento<br/>VLAN 20"]
+        RS --- SWS
+        SWS --- APS
+        SWS --- PCA
+        SWS --- PCT
+    end
+
+    subgraph C1["Condominio 1 - 10.1.Y.0/24"]
+        direction TB
+        R1["Roteador/firewall"]
+        S1["Switch PoE 16 portas<br/>VLANs 10, 20, 30, 99"]
+        AP1["Ponto de acesso<br/>Wi-Fi visitantes"]
+        PC1["PC da portaria + impressora termica<br/>VLAN 10"]
+        CF1["Gravador e cameras<br/>VLAN 20"]
+        R1 --- S1
+        S1 --- AP1
+        S1 --- PC1
+        S1 --- CF1
+    end
+
+    subgraph C2["Condominio 2 - 10.2.Y.0/24"]
+        direction TB
+        R2["Roteador/firewall"]
+        S2["Switch PoE"]
+        D2["PC da portaria, CFTV, Wi-Fi"]
+        R2 --- S2
+        S2 --- D2
+    end
+
+    CN["Condominios 3 a 10<br/>mesma estrutura<br/>10.X.Y.0/24"]
+
+    RS == "VPN IPsec" ==> API
+    R1 == "VPN IPsec" ==> API
+    R2 == "VPN IPsec" ==> API
+    CN == "VPN IPsec" ==> API
