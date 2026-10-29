@@ -1,6 +1,6 @@
 # Sprint 0: base do projeto
 
-**Datas:** [DATA A DEFINIR]
+**Datas:** 29/10/2026 (ciclo único registrado no repositório; ver `00-projeto/cronograma.md`)
 **Meta:** deixar a base do projeto pronta: estrutura do repositório, regras, glossário e rastreabilidade; Etapa 1; problema, objetivos e metodologia (Etapa 2); requisitos, casos de uso, ADRs e backlog (Etapa 3).
 
 ## Histórias

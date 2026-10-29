@@ -61,9 +61,9 @@ Este capítulo apresenta o protótipo desenvolvido em linguagem C, que implement
 
 O protótipo é composto por dois executáveis. O `portaria` representa o nó de uma portaria: abre-se com o número da portaria (por exemplo, `portaria 1`), apresenta um menu e permite registrar encomendas e retiradas, listar e buscar pendências, ver o mapa da estante, cadastrar moradores, gerar relatórios e sincronizar com a central, além de alternar entre os modos online e offline para simulação. O `central` lê os registros enviados pelas portarias, aplica cada operação uma única vez e gera um relatório consolidado.
 
-O código está dividido em módulos, cada um com seu arquivo de cabeçalho e de implementação, conforme o Quadro 6.
+O código está dividido em módulos, cada um com seu arquivo de cabeçalho e de implementação, conforme o Quadro 9.
 
-**Quadro 6 – Módulos do protótipo**
+**Quadro 9 – Módulos do protótipo**
 
 | Módulo | Responsabilidade |
 |---|---|
@@ -82,7 +82,7 @@ Fonte: elaborado pelos autores (2026).
 
 ## 6.2 Padrões adotados
 
-O código segue o padrão C99 e usa apenas a biblioteca padrão, compilado com as opções `-Wall -Wextra -pedantic`, sem nenhum aviso. A programação é estruturada: funções pequenas, com o nome do módulo como prefixo (por exemplo, `estante_alocar_posicao`), vetores e matrizes estáticos cujos tamanhos estão em constantes de um único arquivo (`tipos.h`), e uma função principal que contém apenas o menu e as chamadas. A entrada do teclado é lida por `fgets` e convertida com validação, sem uso de `scanf` para textos. Os textos do programa e dos arquivos de dados são escritos em ASCII, sem acentos. Toda função tem um comentário em português com objetivo, parâmetros, retorno e lógica.
+O código segue o padrão C99 e usa apenas a biblioteca padrão, compilado com as opções `-Wall -Wextra -pedantic`, sem nenhum aviso. A programação é estruturada: funções pequenas, com o nome do módulo como prefixo (por exemplo, `estante_alocar_posicao`), vetores e matrizes estáticos cujos tamanhos estão em constantes de um único arquivo (`tipos.h`), e uma função principal que contém apenas o menu e as chamadas. A entrada do teclado é lida por `fgets` e convertida com validação, sem uso de `scanf` para textos. Os textos do programa e dos arquivos de dados são escritos em ASCII, sem acentos. Toda função tem um comentário em português com objetivo, parâmetros, retorno e lógica. A linguagem C e os conceitos de lógica e de estruturas de controle seguem a bibliografia da disciplina (DEITEL; DEITEL, 2011; FORBELLONE; EBERSPÄCHER, 2005).
 
 ## 6.3 Estruturas de programação
 
@@ -98,9 +98,9 @@ O código segue o padrão C99 e usa apenas a biblioteca padrão, compilado com a
 
 ## 6.4 Algoritmos
 
-Seis algoritmos foram documentados com pseudocódigo e fluxograma (Quadro 7).
+Seis algoritmos foram documentados com pseudocódigo e fluxograma (Quadro 10).
 
-**Quadro 7 – Algoritmos principais**
+**Quadro 10 – Algoritmos principais**
 
 | ID | Algoritmo | Função no código |
 |---|---|---|
@@ -145,9 +145,9 @@ O protótipo tem nove conjuntos de testes automatizados, executados por um únic
 
 ## 6.6 Demonstração
 
-A demonstração usa dados fictícios. Ao executar a central duas vezes sobre os mesmos registros, a primeira aplicou 17 operações e consolidou 14 encomendas; na segunda, nenhuma foi aplicada e as 17 foram reconhecidas como já aplicadas, e os arquivos permaneceram idênticos. O relatório produzido está no Quadro 8.
+A demonstração usa dados fictícios. Ao executar a central duas vezes sobre os mesmos registros, a primeira aplicou 17 operações e consolidou 14 encomendas; na segunda, nenhuma foi aplicada e as 17 foram reconhecidas como já aplicadas, e os arquivos permaneceram idênticos. O relatório produzido está no Quadro 11.
 
-**Quadro 8 – Relatório consolidado com dados de exemplo (fictícios)**
+**Quadro 11 – Relatório consolidado com dados de exemplo (fictícios)**
 
 | Portaria | Registradas | Pendentes | Retiradas | Devolvidas | Antigas | Dia de pico |
 |---|---|---|---|---|---|---|

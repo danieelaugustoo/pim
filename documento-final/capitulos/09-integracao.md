@@ -63,9 +63,9 @@ Para mostrar a integração, acompanha-se uma encomenda fictícia que chega à p
 
 Os componentes são o nó da portaria, a fila de sincronização, a rede, a central, o banco de dados e o serviço de aviso. Três decisões de arquitetura os conectam: o armazenamento em CSV do protótipo, a sincronização assíncrona com operações idempotentes e o endereçamento de rede 10.X.Y.0/24 (capítulo 4).
 
-O Quadro 11 deixa claro o que foi efetivamente construído e o que é simulado ou projetado.
+O Quadro 16 deixa claro o que foi efetivamente construído e o que é simulado ou projetado.
 
-**Quadro 11 – O que é real e o que é simulado**
+**Quadro 16 – O que é real e o que é simulado**
 
 | Parte | Situação |
 |---|---|
@@ -88,9 +88,9 @@ O treinamento dos porteiros é curto e prático, com uma cartilha de uma página
 
 Os benefícios abaixo são esperados, e não resultados medidos. Esperam-se menos extravios e entregas erradas, graças ao registro, à posição e ao código; menos tempo de busca e de registro; moradores avisados mais rápido; operação contínua mesmo sem internet; visão única dos dez condomínios; cobrança de retirada por meio dos alertas de pendências antigas; e melhor dimensionamento da equipe, pelo dia de pico e pela ocupação.
 
-Os indicadores propostos estão no Quadro 12. Como não foi realizado levantamento de campo, a linha de base ("antes") não existe hoje e seria medida no piloto; as metas ("depois") ainda precisam ser definidas e devem ser apresentadas como metas.
+Os indicadores propostos estão no Quadro 17. Como não foi realizado levantamento de campo, a linha de base ("antes") não existe hoje e seria medida no piloto; as metas ("depois") ainda precisam ser definidas e devem ser apresentadas como metas.
 
-**Quadro 12 – Indicadores propostos**
+**Quadro 17 – Indicadores propostos**
 
 | Indicador | Como medir | Antes | Meta |
 |---|---|---|---|
@@ -114,9 +114,9 @@ A solução tem limitações que precisam ser declaradas. No protótipo, a rede 
 
 ## 9.6 Evolução futura
 
-O Quadro 13 relaciona evoluções possíveis e seus pré-requisitos.
+O Quadro 18 relaciona evoluções possíveis e seus pré-requisitos.
 
-**Quadro 13 – Evoluções possíveis**
+**Quadro 18 – Evoluções possíveis**
 
 | Evolução | Pré-requisito |
 |---|---|

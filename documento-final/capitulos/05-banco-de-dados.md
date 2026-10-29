@@ -53,7 +53,7 @@ Este capítulo apresenta a modelagem do banco de dados da solução, da análise
 
 ## 5.1 Escolha do modelo relacional
 
-O banco central precisa guardar entidades estáveis e muito relacionadas (condomínio, bloco, unidade, morador, encomenda, retirada) e garantir regras que o sistema não pode violar, como uma única retirada por encomenda e uma única aplicação de cada operação de sincronização. O modelo relacional atende a esses requisitos por meio de chaves primárias, chaves estrangeiras, restrições de unicidade e de valor `[FONTE A VERIFICAR: referência sobre bancos de dados relacionais]`. Por isso foi adotado o MySQL 8 (decisão ADR-001). O armazenamento em arquivos CSV do protótipo (ADR-002) é uma simplificação deliberada, restrita à demonstração.
+O banco central precisa guardar entidades estáveis e muito relacionadas (condomínio, bloco, unidade, morador, encomenda, retirada) e garantir regras que o sistema não pode violar, como uma única retirada por encomenda e uma única aplicação de cada operação de sincronização. O modelo relacional atende a esses requisitos por meio de chaves primárias, chaves estrangeiras, restrições de unicidade e de valor (ELMASRI; NAVATHE, 2011). Por isso foi adotado o MySQL 8 (decisão ADR-001). O armazenamento em arquivos CSV do protótipo (ADR-002) é uma simplificação deliberada, restrita à demonstração.
 
 ## 5.2 Modelo conceitual
 
@@ -65,7 +65,7 @@ Seis regras de negócio orientam o modelo: o canal de aviso é aplicativo, SMS o
 
 ## 5.3 Normalização
 
-A normalização partiu de uma página do caderno da portaria, que registra em texto livre um volume por linha, com dados misturados: "Bloco A apto 12" em um só campo, transportadora e tamanho juntos, telefone repetido a cada volume da mesma unidade e retirada misturada ao registro de chegada. Os dados usados são fictícios. O processo seguiu as formas normais `[FONTE A VERIFICAR: referência sobre normalização]`:
+A normalização partiu de uma página do caderno da portaria, que registra em texto livre um volume por linha, com dados misturados: "Bloco A apto 12" em um só campo, transportadora e tamanho juntos, telefone repetido a cada volume da mesma unidade e retirada misturada ao registro de chegada. Os dados usados são fictícios. O processo seguiu as formas normais (HEUSER, 2009; ELMASRI; NAVATHE, 2011):
 
 - **Primeira forma normal (1FN):** separação de bloco e apartamento, de transportadora e tamanho, e criação de campos próprios para canal de aviso e contato. Cada linha passou a ser identificada pela chave composta formada pela portaria e pelo número local da encomenda.
 - **Segunda forma normal (2FN):** o nome e a cidade do condomínio dependiam apenas da portaria, e foram movidos para as tabelas de condomínio e portaria.
@@ -75,7 +75,7 @@ Por decisão semântica, os dados da retirada ficaram em uma tabela separada, co
 
 ## 5.4 Modelo lógico e modelo físico
 
-No modelo lógico, cada tabela tem uma chave primária (numérica na maioria; na portaria, o código de P01 a P10; e, na tabela de operações, o próprio código da operação, como "P01-000123") e chaves estrangeiras para as tabelas de que depende. A tabela de encomenda guarda o código de retirada apenas como resumo criptográfico (hash SHA-256 em hexadecimal, 64 caracteres), e não o número em si, o que protege o código caso o banco seja acessado indevidamente `[FONTE A VERIFICAR: referência sobre SHA-256]`. O dicionário de dados descreve cada coluna, seu tipo e suas restrições.
+No modelo lógico, cada tabela tem uma chave primária (numérica na maioria; na portaria, o código de P01 a P10; e, na tabela de operações, o próprio código da operação, como "P01-000123") e chaves estrangeiras para as tabelas de que depende. A tabela de encomenda guarda o código de retirada apenas como resumo criptográfico (hash SHA-256 em hexadecimal, 64 caracteres), e não o número em si, o que protege o código caso o banco seja acessado indevidamente. O SHA-256 é especificado no padrão de resumos criptográficos do NIST (NATIONAL INSTITUTE OF STANDARDS AND TECHNOLOGY, 2015). O dicionário de dados descreve cada coluna, seu tipo e suas restrições.
 
 O modelo físico foi escrito em MySQL 8 e contém, no total, onze tabelas e 44 restrições nomeadas, com prefixos que indicam o tipo (`pk_`, `fk_`, `uq_` e `ck_`). Três soluções merecem destaque:
 
@@ -87,9 +87,9 @@ O modelo físico foi escrito em MySQL 8 e contém, no total, onze tabelas e 44 r
 
 Os scripts estão organizados em quatro arquivos, executados em ordem: criação das tabelas, carga de dados fictícios (dois condomínios e duas portarias), consultas, e visões com índices. Foram executados em um servidor MySQL 8.4.13, em contêiner Docker, sem erros. As consultas cobrem as necessidades de relatório do sistema: pendências por condomínio, pendências com mais de 7 dias, tempo médio entre chegada e retirada, dia de pico, ocupação da estante, histórico de uma unidade, auditoria de quem registrou e de quem entregou, verificação de consistência dos dados, e a aplicação idempotente de uma operação de sincronização.
 
-Com os dados de exemplo e a data de referência fixada em 29/10/2026, as consultas devolveram os resultados do Quadro 5, que coincidem com os do relatório gerado pelo programa em C a partir dos mesmos dados.
+Com os dados de exemplo e a data de referência fixada em 29/10/2026, as consultas devolveram os resultados do Quadro 8, que coincidem com os do relatório gerado pelo programa em C a partir dos mesmos dados.
 
-**Quadro 5 – Resultados de consultas com dados de exemplo (fictícios)**
+**Quadro 8 – Resultados de consultas com dados de exemplo (fictícios)**
 
 | Consulta | Resultado |
 |---|---|
@@ -104,7 +104,7 @@ Também foram criadas duas visões, uma de pendências e outra de indicadores po
 
 ## 5.6 Discussão sobre bancos NoSQL
 
-Para comparar, foram considerados o modelo relacional (MySQL), o de documentos (por exemplo, MongoDB) e o de chave-valor (por exemplo, Redis) `[FONTE A VERIFICAR: referências sobre NoSQL]`. As entidades do sistema são muito relacionadas e as regras de integridade são essenciais, o que favorece o modelo relacional, com transações e restrições garantidas pelo próprio banco. As consultas de relatório (agregações, junções e janelas de tempo) também são naturais em SQL.
+Para comparar, foram considerados o modelo relacional (MySQL), o de documentos (por exemplo, MongoDB) e o de chave-valor (por exemplo, Redis) (SADALAGE; FOWLER, 2013). As entidades do sistema são muito relacionadas e as regras de integridade são essenciais, o que favorece o modelo relacional, com transações e restrições garantidas pelo próprio banco. As consultas de relatório (agregações, junções e janelas de tempo) também são naturais em SQL.
 
 Um banco de documentos poderia ser útil, em uma evolução futura, para o histórico de avisos, porque os campos variam conforme o canal (um aviso de aplicativo guarda um identificador do dispositivo, enquanto um SMS guarda o provedor e o identificador da mensagem). Para esse caso foi elaborado um exemplo de documento JSON. Um banco chave-valor serviria como apoio a dados temporários, como o controle de tentativas de código, mas não é necessário no escopo atual. A adoção de um segundo banco exigiria operá-lo e protegê-lo, e só se justificaria se o volume e a variedade dos avisos aumentassem. Os dados pessoais nos avisos seguiriam as mesmas regras de privacidade e retenção do banco relacional (capítulo 8).
 

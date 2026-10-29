@@ -56,7 +56,7 @@ Este capítulo apresenta o projeto da rede que sustenta a solução: a arquitetu
 
 ## 7.1 Arquitetura e topologia
 
-A rede tem três tipos de local: a sede (local 0), os dez condomínios (locais 1 a 10) e a nuvem. Dentro de cada local a topologia é em estrela: um roteador com função de firewall, um switch gerenciável com VLANs (padrão 802.1Q) e um ponto de acesso Wi-Fi, com todos os equipamentos ligados ao switch `[FONTE A VERIFICAR: referência sobre topologias de rede]`. O roteador é o gateway de cada VLAN, faz o roteamento entre elas, aplica as regras de acesso e é a ponta da rede privada virtual (VPN). Nos condomínios, os equipamentos finais são o computador da portaria, a impressora térmica, o gravador e as câmeras de CFTV; na sede, os computadores e a impressora do administrativo e do atendimento.
+A rede tem três tipos de local: a sede (local 0), os dez condomínios (locais 1 a 10) e a nuvem. Dentro de cada local a topologia é em estrela: um roteador com função de firewall, um switch gerenciável com VLANs (padrão 802.1Q) e um ponto de acesso Wi-Fi, com todos os equipamentos ligados ao switch (TANENBAUM; WETHERALL, 2011; KUROSE; ROSS, 2013). O roteador é o gateway de cada VLAN, faz o roteamento entre elas, aplica as regras de acesso e é a ponta da rede privada virtual (VPN). Nos condomínios, os equipamentos finais são o computador da portaria, a impressora térmica, o gravador e as câmeras de CFTV; na sede, os computadores e a impressora do administrativo e do atendimento.
 
 Entre os locais, a topologia é hub-and-spoke: a nuvem é o centro e cada local é uma ponta, ligada por uma VPN IPsec sobre a internet do próprio local, o que dá onze túneis. Os locais só precisam falar com a nuvem, e os dados de moradores e de encomendas não trafegam em claro. Um novo condomínio é apenas mais uma ponta, com uma nova faixa de endereços e uma nova VPN, sem mudança no código (escalabilidade). A Figura 13 mostra a topologia.
 
@@ -74,9 +74,9 @@ O endereçamento segue o padrão `10.X.Y.0/24`, em que X identifica o local (0 p
 
 ## 7.4 VLANs
 
-As VLANs separam o tráfego conforme o risco (Quadro 14). O número da VLAN é igual em todos os locais. O roteamento entre VLANs é feito pelo roteador, com uma subinterface por VLAN em um enlace tronco com o switch (router-on-a-stick).
+As VLANs separam o tráfego conforme o risco (Quadro 12). O número da VLAN é igual em todos os locais. O roteamento entre VLANs é feito pelo roteador, com uma subinterface por VLAN em um enlace tronco com o switch (router-on-a-stick).
 
-**Quadro 14 – VLANs**
+**Quadro 12 – VLANs**
 
 | VLAN | Condomínios | Sede | Motivo da separação |
 |---|---|---|---|
@@ -89,15 +89,15 @@ Fonte: elaborado pelos autores (2026).
 
 ## 7.5 Computação em nuvem e sistemas distribuídos
 
-O projeto considerou os modelos IaaS, PaaS e SaaS `[FONTE A VERIFICAR: referência sobre computação em nuvem]`. A proposta é usar o banco MySQL como serviço gerenciado (PaaS), a API central em máquina virtual ou contêiner, e o aviso por SMS ou aplicativo como serviço de terceiros (SaaS). Em comparação com um servidor próprio na sede, a nuvem oferece redundância, manutenção parcialmente gerenciada, escalabilidade sob demanda e um ponto comum para os dez condomínios; o servidor próprio dá mais controle físico, mas exige investimento, energia, manutenção e depende da conexão da sede. Como a administradora não tem equipe de infraestrutura, a nuvem foi a opção proposta; o provedor e o custo ainda não foram definidos.
+O projeto considerou os modelos de serviço IaaS, PaaS e SaaS (MELL; GRANCE, 2011). A proposta é usar o banco MySQL como serviço gerenciado (PaaS), a API central em máquina virtual ou contêiner, e o aviso por SMS ou aplicativo como serviço de terceiros (SaaS). Em comparação com um servidor próprio na sede, a nuvem oferece redundância, manutenção parcialmente gerenciada, escalabilidade sob demanda e um ponto comum para os dez condomínios; o servidor próprio dá mais controle físico, mas exige investimento, energia, manutenção e depende da conexão da sede. Como a administradora não tem equipe de infraestrutura, a nuvem foi a opção proposta; o provedor e o custo ainda não foram definidos.
 
-A solução é um sistema distribuído: nós de portaria independentes e uma central que consolida os dados. A comunicação segue o fluxo: o nó envia à API, por HTTPS dentro da VPN, lotes de operações da fila; a API grava no banco, aplicando cada operação uma única vez; e aciona o serviço de avisos. O contrato do lote de envio foi esboçado como proposta, não implementada. O principal desafio de sistemas distribuídos aqui é a consistência com conexões instáveis, tratado pela sincronização assíncrona com operações idempotentes (capítulo 4).
+A solução é um sistema distribuído (TANENBAUM; VAN STEEN, 2007): nós de portaria independentes e uma central que consolida os dados. A comunicação segue o fluxo: o nó envia à API, por HTTPS dentro da VPN, lotes de operações da fila; a API grava no banco, aplicando cada operação uma única vez; e aciona o serviço de avisos. O contrato do lote de envio foi esboçado como proposta, não implementada. O principal desafio de sistemas distribuídos aqui é a consistência com conexões instáveis, tratado pela sincronização assíncrona com operações idempotentes (capítulo 4).
 
 ## 7.6 Segurança da infraestrutura
 
-A segurança segue os princípios do menor privilégio, da defesa em camadas, do padrão "negar" e do registro de eventos. As regras principais, que são proposta do projeto, estão no Quadro 15.
+A segurança segue os princípios do menor privilégio, da defesa em camadas, do padrão "negar" e do registro de eventos. As regras principais, que são proposta do projeto, estão no Quadro 13.
 
-**Quadro 15 – Regras de acesso principais**
+**Quadro 13 – Regras de acesso principais**
 
 | Origem | Pode acessar | Não pode acessar |
 |---|---|---|
@@ -113,7 +113,7 @@ Complementam essas regras a VPN IPsec entre cada local e a nuvem, o HTTPS/TLS na
 
 ## 7.7 Laboratório no Packet Tracer
 
-O laboratório reproduz a sede, dois condomínios representativos (1 e 3) e um servidor que representa a nuvem, com um switch simulando a internet entre os roteadores, em uma faixa de endereços reservada para documentação (203.0.113.0/24) `[FONTE A VERIFICAR: RFC 5737]`. Ele inclui VLANs, roteamento entre VLANs, DHCP, as listas de acesso e as rotas, e um roteiro passo a passo com os comandos de cada equipamento e quinze testes de verificação. Os comandos do roteiro foram conferidos por script quanto aos endereços e às regras, mas **ainda não foram executados no simulador**.
+O laboratório reproduz a sede, dois condomínios representativos (1 e 3) e um servidor que representa a nuvem, com um switch simulando a internet entre os roteadores, em uma faixa de endereços reservada para documentação (203.0.113.0/24), definida na RFC 5737 (ARKKO; COTTON; VEGODA, 2010). Ele inclui VLANs, roteamento entre VLANs, DHCP, as listas de acesso e as rotas, e um roteiro passo a passo com os comandos de cada equipamento e quinze testes de verificação. Os comandos do roteiro foram conferidos por script quanto aos endereços e às regras, mas **ainda não foram executados no simulador**.
 
 ## 7.8 Resultados dos testes
 

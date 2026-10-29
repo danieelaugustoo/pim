@@ -1,6 +1,6 @@
 # Sprint 2: sistema distribuído
 
-**Datas:** [DATA A DEFINIR]
+**Datas:** 29/10/2026 (ciclo único registrado no repositório; ver `00-projeto/cronograma.md`)
 **Meta:** a portaria cadastra moradores, avisa pelo canal de cada um, continua trabalhando sem internet e envia as operações à central, que as consolida sem duplicar (US07 a US11).
 
 ## Histórias

@@ -59,9 +59,9 @@ Este capítulo descreve como a solução de gestão de encomendas foi especifica
 
 O levantamento partiu do cenário da Administradora Morada Central, organização fictícia descrita no capítulo 2, e dos sete problemas identificados nele: extravios e entregas à pessoa errada (P1), falta de rastreabilidade (P2), sobrecarga do porteiro nos períodos de pico (P3), aviso falho ao morador (P4), acúmulo de volumes (P5), ausência de dados para a sede planejar equipe e espaço (P6) e internet instável em parte das portarias (P7). Como não foi realizado levantamento de campo, os requisitos derivam do cenário e da análise do processo atual, e não de entrevistas com usuários reais. Essa é uma limitação do trabalho.
 
-Foram definidos 12 requisitos funcionais e 8 não funcionais. Os funcionais estão no Quadro 1.
+Foram definidos 12 requisitos funcionais e 8 não funcionais. Os funcionais estão no Quadro 4.
 
-**Quadro 1 – Requisitos funcionais**
+**Quadro 4 – Requisitos funcionais**
 
 | ID | Requisito |
 |---|---|
@@ -98,9 +98,9 @@ A modelagem usou a UML `[FONTE A VERIFICAR: referência sobre UML]`. O modelo de
 
 O sistema completo foi projetado em duas partes. Em cada condomínio funciona um nó da portaria, capaz de operar sem internet, com armazenamento local e uma fila de sincronização. Um servidor central, com API e banco relacional, recebe as operações em lotes e guarda os dados de todos os condomínios, e um painel da administradora consulta relatórios. O protótipo desenvolvido representa essas partes com dois executáveis, `portaria` e `central`, e com arquivos no lugar do banco e da rede. O nó da portaria é organizado em camadas: interface de console, regras de negócio, persistência e fila de sincronização, e cada camada só chama a de baixo.
 
-As principais decisões foram registradas como decisões de arquitetura (ADR), resumidas no Quadro 2.
+As principais decisões foram registradas como decisões de arquitetura (ADR), resumidas no Quadro 5.
 
-**Quadro 2 – Decisões de arquitetura**
+**Quadro 5 – Decisões de arquitetura**
 
 | ADR | Decisão |
 |---|---|
@@ -117,11 +117,11 @@ A decisão de maior impacto é a ADR-003. Como parte das portarias tem internet 
 
 ## 4.5 Processo de desenvolvimento
 
-O desenvolvimento seguiu o Scrum, em versão simplificada `[FONTE A VERIFICAR: referência sobre Scrum]`. O trabalho foi organizado em sprints, com backlog de histórias de usuário e critérios de aceitação no formato Dado, Quando, Então. As sprints 0 a 3 produziram, respectivamente, a base do projeto, a portaria funcionando, o sistema distribuído e os relatórios com a qualidade; as sprints 4 e 5 são dedicadas ao documento e à entrega `[DATAS DAS SPRINTS A CONFIRMAR]`. O grupo tem cinco integrantes, com líder responsável pela postagem final, e os papéis de Product Owner e Scrum Master foram adotados de forma simplificada `[TITULARES A DEFINIR]`. A revisão e a retrospectiva de cada sprint são registradas por mensagem escrita no grupo, às sextas-feiras, e consolidadas no arquivo de cada sprint.
+O desenvolvimento seguiu o Scrum, em versão simplificada. O Scrum organiza o trabalho em ciclos iterativos e incrementais, com inspeção e adaptação constantes, e define os papéis de Product Owner, Scrum Master e Developers (SCHWABER; SUTHERLAND, 2020). O trabalho foi organizado em sprints, com backlog de histórias de usuário e critérios de aceitação no formato Dado, Quando, Então. As sprints 0 a 3 produziram, respectivamente, a base do projeto, a portaria funcionando, o sistema distribuído e os relatórios com a qualidade; as sprints 4 e 5 são dedicadas ao documento e à entrega `[DATAS DAS SPRINTS A CONFIRMAR]`. O grupo tem cinco integrantes, com líder responsável pela postagem final, e os papéis de Product Owner e Scrum Master foram adotados de forma simplificada `[TITULARES A DEFINIR]`. A revisão e a retrospectiva de cada sprint são registradas por mensagem escrita no grupo, às sextas-feiras, e consolidadas no arquivo de cada sprint.
 
-O backlog reúne 16 histórias de usuário (US01 a US16). As 15 primeiras foram implementadas; a US16, opcional, que trata da devolução de volumes, ficou como evolução futura por depender de um prazo ainda não definido. O Quadro 3 resume a entrega por sprint.
+O backlog reúne 16 histórias de usuário (US01 a US16). As 15 primeiras foram implementadas; a US16, opcional, que trata da devolução de volumes, ficou como evolução futura por depender de um prazo ainda não definido. O Quadro 6 resume a entrega por sprint.
 
-**Quadro 3 – Histórias por sprint**
+**Quadro 6 – Histórias por sprint**
 
 | Sprint | Meta | Histórias |
 |---|---|---|
@@ -139,9 +139,9 @@ O protótipo possui nove conjuntos de testes automatizados, escritos com a bibli
 
 ## 4.7 Ferramentas e tecnologias
 
-O Quadro 4 relaciona os materiais utilizados.
+O Quadro 7 relaciona os materiais utilizados.
 
-**Quadro 4 – Ferramentas e tecnologias**
+**Quadro 7 – Ferramentas e tecnologias**
 
 | Ferramenta | Finalidade |
 |---|---|

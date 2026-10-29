@@ -99,3 +99,29 @@ Fluxogramas A2, A3, A4 e A6 ficam em apêndice ou só no repositório.
 ## 7. Código no documento
 
 Trechos principais no capítulo 6; código completo apenas pelo link do repositório no GitHub, sem apêndice (decisão do grupo, 2026-10-29).
+
+## 8. Tamanho dos rascunhos (conferência de 2026-10-29)
+
+Contagem de palavras da seção "Texto do grupo" de cada rascunho (inclui o aviso do topo, títulos, tabelas e marcas de figura, então é um pouco maior que o texto corrido). Estimativa grosseira: com Times 12, espaçamento 1,5 e as margens do manual, cabem cerca de 300 a 350 palavras por página; **a paginação real só se vê no Word**.
+
+| Capítulo | Palavras | Meta de páginas | Situação |
+|---|---|---|---|
+| 1 Introdução | 459 | ~2 | dentro |
+| 2 Organização | 1.001 | 3 | acima |
+| 3 Pesquisa | 1.297 | 3 | acima |
+| 4 Engenharia de software | 1.699 | 4 | acima |
+| 5 Banco de dados | 1.385 | 4 | um pouco acima |
+| 6 Programação em C | 1.944 | 4 | bem acima |
+| 7 Redes | 1.488 | 4 | acima |
+| 8 Segurança e acessibilidade | 1.134 | 2 | bem acima |
+| 9 Integração | 1.406 | 2 | bem acima |
+| 10 Conclusão | 561 | ~1,5 | dentro |
+
+O desenvolvimento (capítulos 2 a 9) soma cerca de **11.350 palavras**, o que daria aproximadamente 32 a 38 páginas só de texto, **mais** as figuras. A meta é de 20 a 30 páginas. É preciso cortar, e a decisão sobre o que cortar é do grupo, depois de ver a paginação real.
+
+**Plano de cortes sugerido (do que menos prejudica ao que mais prejudica):**
+1. Tirar das tabelas o que repete o texto (por exemplo, Quadro 5 de ADRs, Quadro 7 de ferramentas, Quadro 15 de riscos, Quadro 18 de evoluções): manter no repositório e citar.
+2. Reduzir figuras: manter as de maior valor (organograma, casos de uso, DER, fluxograma do A1, topologia, os dois prints do Packet Tracer, fluxo ponta a ponta) e juntar ou cortar as demais.
+3. Resumir os capítulos 6, 8 e 9 em subseções de um parágrafo cada.
+4. No capítulo 4, deixar o histórico das sprints em uma frase e remeter ao repositório.
+5. Se a Introdução e a Conclusão não contarem no limite (confirmar com a Prof.ª Eliana), o ajuste necessário é menor.

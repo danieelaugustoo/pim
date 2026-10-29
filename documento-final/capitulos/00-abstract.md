@@ -22,4 +22,10 @@
 
 ## Texto do grupo
 
-*(escrever aqui)*
+> **Draft** written from the Portuguese summary (authorized by Prof. Eliana). The group reviews and adjusts it, and a member with good English should proofread it.
+
+**ABSTRACT**
+
+This work addresses parcel management at the front desks of residential condominiums, based on a fictional scenario: an administrator of ten condominiums whose front desks record parcels in a paper notebook, which leads to lost parcels, deliveries to the wrong person, lack of traceability and an overloaded staff, in addition to unstable internet access at some desks. The goal was to develop and document a computational solution that reduces these problems through offline operation and central synchronization. The methodology combined a literature review, an analysis of the scenario, Scrum-based development and verification by tests, without a field survey with users. The proposed solution has two parts: a front desk node, which records the parcel, suggests a shelf position, generates a unique pickup code, notifies the resident through the chosen channel (app, SMS or intercom with a printed code) and works without internet; and a central server, which applies each operation sent by the desks exactly once and produces consolidated reports. The work produced the requirements and models, a relational MySQL database with eleven tables, a C language prototype with six documented algorithms and nine automated test suites, a network design with VLANs, access rules and a cloud, and an analysis of privacy, security and accessibility. The prototype tests passed, and consolidation does not duplicate records when the same data is processed twice. The network and the resident notification are simulated, and the expected benefits, such as fewer lost parcels, depend on a pilot to be measured. It is concluded that the solution is technically feasible and that its real effects remain to be evaluated.
+
+**Keywords:** parcels; condominiums; distributed systems; offline operation; relational database.

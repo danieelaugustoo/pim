@@ -92,7 +92,7 @@ A análise do processo atual levou a sete problemas, apresentados no Quadro 1.
 
 Fonte: elaborado pelos autores (2026).
 
-Esses problemas são o cenário do trabalho. Como não foi realizado levantamento de campo, o texto não afirma a frequência com que ocorrem. Qualquer número do setor, como o percentual do turno gasto com encomendas, só pode ser citado com fonte verificada `[FONTE A VERIFICAR: dados do setor de condomínios e do crescimento das entregas]`.
+Esses problemas são o cenário do trabalho. Como não foi realizado levantamento de campo, o texto não afirma a frequência com que ocorrem. A literatura do setor associa períodos como a Black Friday e o fim de ano ao aumento das entregas e à pressão sobre as portarias (MACK, 2024). Qualquer número do setor, como o percentual do turno gasto com encomendas, só pode ser citado com fonte verificada `[FONTE A VERIFICAR: dados do setor]`.
 
 ## 2.7 Justificativa e processo proposto
 

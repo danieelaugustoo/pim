@@ -1,6 +1,6 @@
 # Sprint 4: documento e entrega
 
-**Datas:** [DATA A DEFINIR]
+**Datas:** 29/10/2026 a 06/11/2026 (retrospectiva por mensagem escrita na sexta, 06/11, 19h)
 **Meta:** conferir o repositório contra a rastreabilidade, deixar os roteiros dos capítulos prontos e entregar o trabalho no prazo (capítulos redigidos pelo grupo, revisão ABNT, postagem pelo líder e cópia impressa).
 
 ## Entregas desta sprint (parte do repositório)
@@ -41,6 +41,14 @@
 5. Revisão por pares do código e dos documentos técnicos.
 6. Redigir os capítulos; depois introdução, conclusão, resumo e abstract.
 7. Referências, revisão ABNT e de similaridade, postagem e impressão.
+
+## Rascunhos e fontes (2026-10-29)
+
+- **Rascunhos de todos os capítulos** (resumo, abstract, 1 a 10) escritos na seção "Texto do grupo" de `documento-final/capitulos/`, a partir dos roteiros e do repositório, com base na autorização de uso de IA informada pelo grupo. Marcas de pendência: figuras a inserir, prints, resultados do Packet Tracer, fontes ainda sem verificação, titulares do Scrum.
+- **Fontes verificadas** por ferramenta de web (registro em `02-pesquisa/fontes.md`, seção 4): LGPD e LBI (textos oficiais), RFC 5737, Guia do Scrum 2020, WCAG 2.2, NIST SP 800-145 e FIPS 180-4 (existência), artigo F05, e dados bibliográficos dos livros B01 a B11 em catálogos. **Nenhum livro foi aberto**: o grupo precisa conferir os trechos. F02, F03 e F04 não puderam ser lidos.
+- **`documento-final/referencias.md`** criado só com as fontes verificadas e citadas.
+- **Tamanho:** o desenvolvimento está acima do limite (cerca de 11.350 palavras); plano de cortes em `documento-final/estrutura-e-paginas.md`, seção 8.
+- **Quadros** numerados de 1 a 18 na ordem de aparição; as figuras seguem a numeração de `estrutura-e-paginas.md`.
 
 ## Decisões do grupo (2026-10-29)
 

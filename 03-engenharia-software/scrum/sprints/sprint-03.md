@@ -1,6 +1,6 @@
 # Sprint 3: relatórios e qualidade
 
-**Datas:** [DATA A DEFINIR]
+**Datas:** 29/10/2026 (ciclo único registrado no repositório; ver `00-projeto/cronograma.md`)
 **Meta:** o porteiro vê o mapa da estante, o supervisor recebe alertas de pendências antigas e relatórios de pico e ocupação, os algoritmos A1 a A6 ficam documentados e as Etapas 7 e 8 têm roteiro (US12 a US15; US16 opcional).
 
 ## Histórias

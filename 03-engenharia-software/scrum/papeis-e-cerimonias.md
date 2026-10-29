@@ -37,10 +37,11 @@ Quadro Kanban (GitHub Projects ou Trello, a escolher) com as colunas **A fazer �
 
 | Sprint | Meta | Datas |
 |---|---|---|
-| 0 | Base do projeto | [DATA A DEFINIR] |
-| 1 | Portaria funcionando | [DATA A DEFINIR] |
-| 2 | Sistema distribuído | [DATA A DEFINIR] |
-| 3 | Relatórios e qualidade | [DATA A DEFINIR] |
-| 4 | Documento e entrega | [DATA A DEFINIR] |
+| 0 | Base do projeto | 29/10/2026 (ciclo único) |
+| 1 | Portaria funcionando | 29/10/2026 (ciclo único) |
+| 2 | Sistema distribuído | 29/10/2026 (ciclo único) |
+| 3 | Relatórios e qualidade | 29/10/2026 (ciclo único) |
+| 4 | Fontes, Packet Tracer, diagramas e capítulos | 29/10/2026 a 06/11/2026 |
+| 5 | Revisão, ABNT, similaridade e entrega | 07/11/2026 a 13/11/2026 (reserva em 14/11) |
 
-As datas dependem do prazo oficial de entrega, ainda a confirmar (`PLANO.md`, seção 13).
+O prazo é sábado, 14/11/2026, às 23h59 (`00-projeto/cronograma.md`). As sprints 0 a 3 foram executadas em um ciclo único registrado no histórico do Git.

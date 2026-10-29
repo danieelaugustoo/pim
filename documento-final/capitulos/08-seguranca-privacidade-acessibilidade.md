@@ -45,9 +45,9 @@ Este capítulo analisa a solução quanto à privacidade e proteção de dados, 
 
 ## 8.1 Privacidade e proteção de dados
 
-O tratamento de dados pessoais no Brasil é regido pela Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018) `[FONTE A VERIFICAR: princípios e artigos que forem citados]`. A solução trata dados do morador (nome, bloco e apartamento, canal de aviso e, quando o canal exige, o contato), o nome do destinatário da encomenda e o nome de quem a retirou, com data e hora (Quadro 9). A finalidade é única: entregar a encomenda certa à pessoa certa.
+O tratamento de dados pessoais no Brasil é regido pela Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018) (BRASIL, 2018). Entre seus princípios estão a finalidade, a adequação e a necessidade, esta entendida como a "limitação do tratamento ao mínimo necessário" para cumprir as finalidades (BRASIL, 2018, art. 6º, I a III). A solução trata dados do morador (nome, bloco e apartamento, canal de aviso e, quando o canal exige, o contato), o nome do destinatário da encomenda e o nome de quem a retirou, com data e hora (Quadro 14). A finalidade é única: entregar a encomenda certa à pessoa certa.
 
-**Quadro 9 – Dados pessoais tratados e finalidade**
+**Quadro 14 – Dados pessoais tratados e finalidade**
 
 | Dado | Titular | Finalidade |
 |---|---|---|
@@ -58,7 +58,7 @@ O tratamento de dados pessoais no Brasil é regido pela Lei Geral de Proteção 
 
 Fonte: elaborado pelos autores (2026).
 
-Aplicou-se o princípio da minimização: o sistema não registra o conteúdo da encomenda nem o remetente, apenas a transportadora, e não guarda contato quando o canal de aviso é o interfone. O acesso, no sistema completo, seria por perfil: o porteiro vê apenas a sua portaria, o supervisor vê os relatórios dos condomínios que acompanha e o administrador gerencia usuários. Para a retenção, o grupo definiu que os dados pessoais seriam mantidos por 90 dias após a retirada da encomenda e, depois, anonimizados, preservando apenas números para os indicadores. Trata-se de uma decisão de projeto, e eventuais prazos legais aplicáveis precisam ser verificados `[FONTE A VERIFICAR]`. Os caminhos para o titular consultar, corrigir ou pedir a eliminação de seus dados, assim como a definição de um encarregado, dependem de decisão da administradora. Todos os dados usados no trabalho são fictícios.
+Aplicou-se o princípio da minimização: o sistema não registra o conteúdo da encomenda nem o remetente, apenas a transportadora, e não guarda contato quando o canal de aviso é o interfone. O acesso, no sistema completo, seria por perfil: o porteiro vê apenas a sua portaria, o supervisor vê os relatórios dos condomínios que acompanha e o administrador gerencia usuários. Para a retenção, o grupo definiu que os dados pessoais seriam mantidos por 90 dias após a retirada da encomenda e, depois, anonimizados, preservando apenas números para os indicadores. Trata-se de uma decisão de projeto: a lei prevê que os dados sejam eliminados após o término do tratamento, com exceções como o cumprimento de obrigação legal (BRASIL, 2018, art. 16), e eventuais prazos legais específicos precisam ser verificados `[FONTE A VERIFICAR]`. A lei também assegura ao titular direitos como a confirmação do tratamento, o acesso e a correção dos dados (art. 18) e exige que o controlador indique um encarregado (art. 41); os caminhos práticos para exercer esses direitos e a indicação do encarregado dependem de decisão da administradora. Todos os dados usados no trabalho são fictícios.
 
 ## 8.2 Segurança da informação
 
@@ -68,15 +68,15 @@ O protótipo tem limitações que devem ser declaradas: não possui login nem pe
 
 ## 8.3 Acessibilidade e inclusão digital
 
-A solução considera moradores que não usam smartphone. O canal interfone permite que o porteiro avise por telefone interno e entregue o código impresso, e o canal de aviso é escolhido pelo morador no cadastro, sem exigir aplicativo. A retirada exige o mesmo código para todos, com ou sem smartphone, o que garante tratamento igual. Esse cuidado dialoga com a Lei Brasileira de Inclusão da Pessoa com Deficiência (Lei nº 13.146/2015) `[FONTE A VERIFICAR: artigo sobre acessibilidade em sítios eletrônicos]`.
+A solução considera moradores que não usam smartphone. O canal interfone permite que o porteiro avise por telefone interno e entregue o código impresso, e o canal de aviso é escolhido pelo morador no cadastro, sem exigir aplicativo. A retirada exige o mesmo código para todos, com ou sem smartphone, o que garante tratamento igual. Esse cuidado dialoga com a Lei Brasileira de Inclusão da Pessoa com Deficiência (Lei nº 13.146/2015), cujo art. 63 torna obrigatória a acessibilidade nos sítios da internet mantidos por empresas com sede ou representação comercial no País (BRASIL, 2015).
 
-Para as telas do sistema completo, recomenda-se seguir as diretrizes de acessibilidade para conteúdo web (WCAG) `[FONTE A VERIFICAR: versão e nível]`: contraste adequado, fonte ampliável, navegação por teclado, compatibilidade com leitores de tela e avisos que não dependam apenas de cor ou som. O protótipo, por ser de console, não implementa esses recursos, mas já adota mensagens de erro que dizem ao usuário o que fazer. Como o aviso por aplicativo ou SMS depende da nuvem, ele não sai com a internet caída, e o interfone cobre essa falha.
+Para as telas do sistema completo, recomenda-se seguir as diretrizes de acessibilidade para conteúdo web (WCAG), do W3C, que definem os níveis de conformidade A, AA e AAA (WORLD WIDE WEB CONSORTIUM, 2024) `[definir o nível adotado]`: contraste adequado, fonte ampliável, navegação por teclado, compatibilidade com leitores de tela e avisos que não dependam apenas de cor ou som. O protótipo, por ser de console, não implementa esses recursos, mas já adota mensagens de erro que dizem ao usuário o que fazer. Como o aviso por aplicativo ou SMS depende da nuvem, ele não sai com a internet caída, e o interfone cobre essa falha.
 
 ## 8.4 Ética, impactos sociais e direitos humanos
 
-São impactos positivos esperados, e portanto hipóteses a confirmar em um piloto: menos conflitos por encomendas extraviadas ou entregues à pessoa errada, carga de trabalho mais previsível para o porteiro e um comprovante de entrega que protege morador e funcionário. Os riscos e o tratamento previsto estão no Quadro 10.
+São impactos positivos esperados, e portanto hipóteses a confirmar em um piloto: menos conflitos por encomendas extraviadas ou entregues à pessoa errada, carga de trabalho mais previsível para o porteiro e um comprovante de entrega que protege morador e funcionário. Os riscos e o tratamento previsto estão no Quadro 15.
 
-**Quadro 10 – Riscos éticos e tratamento**
+**Quadro 15 – Riscos éticos e tratamento**
 
 | Risco | Tratamento |
 |---|---|

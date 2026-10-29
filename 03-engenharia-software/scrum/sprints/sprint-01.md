@@ -1,6 +1,6 @@
 # Sprint 1: portaria funcionando
 
-**Datas:** [DATA A DEFINIR]
+**Datas:** 29/10/2026 (ciclo único registrado no repositório; ver `00-projeto/cronograma.md`)
 **Meta:** o nó da portaria registra, localiza e entrega encomendas, guardando os dados em arquivo (US01 a US06).
 
 ## Histórias

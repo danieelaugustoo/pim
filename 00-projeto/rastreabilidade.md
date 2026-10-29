@@ -122,7 +122,7 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 | Introdução com objetivo da pesquisa, metodologia, breve apresentação da empresa e visão geral da proposta | `documento-final/capitulos/01-introducao.md` | `01-introducao.md` | Em andamento |
 | Desenvolvimento entre 20 e 30 páginas, em capítulos e subcapítulos, apresentando pesquisa, fundamentação, métodos, materiais, resultados e discussão | `documento-final/capitulos/` (capítulos 2 a 9) + `documento-final/estrutura-e-paginas.md` | `02` a `09` | Em andamento |
 | Conclusão que apresenta os resultados de forma clara, relaciona os resultados aos objetivos, retoma a proposta inicial e destaca os principais pontos encontrados | `documento-final/capitulos/10-conclusao.md` | `10-conclusao.md` | Em andamento |
-| Referências de todas as fontes usadas, em ABNT | `documento-final/referencias.md` | Referências | Pendente |
-| Citações conforme a ABNT; todo trecho reproduzido diretamente com a fonte citada no texto e a obra referenciada | `documento-final/capitulos/` (todos) + `documento-final/referencias.md` | Todos | Pendente |
+| Referências de todas as fontes usadas, em ABNT | `documento-final/referencias.md` | Referências | Em andamento |
+| Citações conforme a ABNT; todo trecho reproduzido diretamente com a fonte citada no texto e a obra referenciada | `documento-final/capitulos/` (todos) + `documento-final/referencias.md` | Todos | Em andamento |
 | Formatação da seção 2 (A4, margens, espaçamento, fonte, recuo, numeração) | `documento-final/checklist-abnt-e-entrega.md` | — | Feito |
 | Entrega pelo sistema de trabalhos acadêmicos da UNIP dentro do prazo, cópia impressa ao coordenador do PIM e postagem feita pelo líder | `documento-final/checklist-abnt-e-entrega.md` | — | Feito |
