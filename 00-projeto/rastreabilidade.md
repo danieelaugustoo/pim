@@ -51,13 +51,13 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
-| Modelo conceitual | `04-banco-de-dados/modelo-conceitual.md` (+ brModelo, se o professor pedir a notação de Chen) | `05-banco-de-dados.md` | Pendente |
-| Diagrama Entidade-Relacionamento (DER) | `04-banco-de-dados/diagramas/der.mmd` + PNG | `05-banco-de-dados.md` | Pendente |
-| Modelo lógico | `04-banco-de-dados/modelo-logico.md` | `05-banco-de-dados.md` | Pendente |
-| Normalização | `04-banco-de-dados/normalizacao.md` | `05-banco-de-dados.md` | Pendente |
-| Modelo físico | `04-banco-de-dados/sql/01-criacao-tabelas.sql` | `05-banco-de-dados.md` | Pendente |
-| Principais comandos SQL | `04-banco-de-dados/sql/02-carga-exemplo.sql` + `03-consultas.sql` + `04-views-indices.sql` | `05-banco-de-dados.md` | Pendente |
-| Discussão sobre o uso de bancos NoSQL | `04-banco-de-dados/nosql/comparativo.md` + `04-banco-de-dados/nosql/exemplo-aviso.json` | `05-banco-de-dados.md` | Pendente |
+| Modelo conceitual | `04-banco-de-dados/modelo-conceitual.md` (+ brModelo, se o professor pedir a notação de Chen) | `05-banco-de-dados.md` | Feito |
+| Diagrama Entidade-Relacionamento (DER) | `04-banco-de-dados/diagramas/der.mmd` + PNG | `05-banco-de-dados.md` | Feito |
+| Modelo lógico | `04-banco-de-dados/modelo-logico.md` | `05-banco-de-dados.md` | Feito |
+| Normalização | `04-banco-de-dados/normalizacao.md` | `05-banco-de-dados.md` | Feito |
+| Modelo físico | `04-banco-de-dados/sql/01-criacao-tabelas.sql` | `05-banco-de-dados.md` | Feito |
+| Principais comandos SQL | `04-banco-de-dados/sql/02-carga-exemplo.sql` + `03-consultas.sql` + `04-views-indices.sql` | `05-banco-de-dados.md` | Feito |
+| Discussão sobre o uso de bancos NoSQL | `04-banco-de-dados/nosql/comparativo.md` + `04-banco-de-dados/nosql/exemplo-aviso.json` | `05-banco-de-dados.md` | Feito |
 
 ## Etapa 5: Programação estruturada em C
 

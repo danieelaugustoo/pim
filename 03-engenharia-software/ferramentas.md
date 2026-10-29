@@ -10,7 +10,8 @@ As versões abaixo precisam ser conferidas pelo grupo nas máquinas usadas. Onde
 | Make | GNU Make 4.4.1 | Automatizar compilação e testes (`make`, `make test`, `make clean`) | Instalado em 2026-10-29 (`make.exe` copiado de `mingw32-make.exe`); `build.bat` cobre o Windows sem make |
 | Git | 2.54.0.windows.1 | Controle de versão (branches, commits, tags de sprint) | Instalado |
 | GitHub | — | Repositório remoto, revisão e quadro de apoio (GitHub Projects) | A confirmar com o grupo |
-| MySQL 8 | [VERSÃO A VERIFICAR] | SGBD do modelo físico e dos scripts SQL (trocar se a disciplina usar outro) | A confirmar |
+| MySQL 8 | 8.4.13 (testado em contêiner Docker `mysql:8.4`) | SGBD do modelo físico e dos scripts SQL (trocar se a disciplina usar outro) | Scripts executados com sucesso em 2026-10-29; exige 8.0.16 ou superior (CHECK). Confirmar a versão da disciplina |
+| Docker Desktop | 4.88.1 (motor 29.7.2) | Rodar um MySQL descartável para testar os scripts, sem instalar o MySQL | Em uso na máquina de desenvolvimento; opcional para o grupo |
 | MySQL Workbench | [VERSÃO A VERIFICAR] | Executar e testar os scripts SQL | A confirmar |
 | PlantUML | [VERSÃO A VERIFICAR] | Diagramas UML (`.puml`) | Não encontrado no PATH em 2026-10-29; exportar por extensão do VS Code ou pelo site oficial |
 | Mermaid | [VERSÃO A VERIFICAR] | Fluxogramas, organograma, DER e rascunhos (`.mmd`) | Idem |
