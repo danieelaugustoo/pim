@@ -25,7 +25,7 @@
 
 - **Rede não testada em simulador:** o roteiro do Packet Tracer foi conferido por script quanto a endereços e regras, mas os comandos **não foram executados**; o grupo precisa montar, testar e tirar os prints (`06-redes/packet-tracer/`).
 - **Equipamentos, preços e provedor de nuvem** estão como `[A DEFINIR]` e `[A COTAR]`.
-- **Pesquisa de campo não aplicada** até a data deste roteiro: não há dados reais sobre o problema nem sobre o uso de smartphone.
+- **Sem levantamento de campo** (dispensado pelo grupo): não há dados reais sobre a frequência do problema nem sobre o uso de smartphone pelos moradores; o problema vem do cenário fictício e da bibliografia.
 - **Banco de dados:** os scripts foram executados em um MySQL de teste, mas o protótipo em C não se conecta a ele.
 - **Revisão por pares:** as histórias estão "feitas, falta revisão do grupo"; a definição de pronto exige revisão por outro integrante.
 - **Diagramas** (UML, DER, topologia, fluxogramas) estão como código e **ainda não foram renderizados**.

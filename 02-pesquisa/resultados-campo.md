@@ -2,7 +2,7 @@
 
 > **Estrutura vazia de propósito.** O questionário ainda não foi aplicado. Nenhum número, percentual ou resposta pode ser preenchido sem coleta real. Dados de exemplo ou estimativas não entram aqui.
 
-**Status:** aguardando aplicação (Sprint 1, conforme o `PLANO.md`, seção 10).
+**Status:** **dispensado pelo grupo (2026-10-29)**; não será aplicado. Este arquivo só seria preenchido se o grupo mudasse de ideia.
 
 ## 1. Dados da aplicação
 

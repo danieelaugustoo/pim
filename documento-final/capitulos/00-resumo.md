@@ -8,7 +8,7 @@
 
 1. **Contexto e problema:** gestão de encomendas em condomínios por caderno; extravios, entregas erradas e sobrecarga dos porteiros (P1 a P7 em `01-organizacao/caracterizacao.md`).
 2. **Objetivo:** objetivo geral de `02-pesquisa/problema-e-objetivos.md`.
-3. **Método:** pesquisa bibliográfica e de campo (somente se foi aplicada), Scrum em sprints, protótipo em C, modelagem relacional, projeto de rede.
+3. **Método:** pesquisa bibliográfica e análise do cenário (sem levantamento de campo), Scrum em sprints, protótipo em C, modelagem relacional, projeto de rede.
 4. **Solução:** nó de portaria que funciona sem internet + central que consolida sem duplicar; aviso ao morador por app, SMS ou interfone.
 5. **O que foi feito:** o que existe de fato (protótipo em C testado, modelo e scripts SQL executados, projeto de rede, análise de segurança e acessibilidade).
 6. **Resultados:** apenas o que foi **medido ou verificado**. Não incluir percentuais de melhoria sem dados reais.

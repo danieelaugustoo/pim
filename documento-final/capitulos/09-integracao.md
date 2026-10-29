@@ -27,7 +27,7 @@
 
 ## O que depende do grupo
 
-- [ ] Preencher o "antes" dos indicadores com a **pesquisa de campo** (hoje `[A PREENCHER]`).
+- [ ] Apresentar o "antes" dos indicadores como linha de base a medir no piloto (não há levantamento de campo).
 - [ ] Definir metas realistas, sempre rotuladas como meta ou estimativa.
 - [ ] Decidir piloto, prazos e responsáveis, ou apresentar a implantação como proposta genérica.
 - [ ] Preencher a comparação com trabalhos relacionados (depende de fontes verificadas).

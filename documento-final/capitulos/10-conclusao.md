@@ -12,7 +12,7 @@
 | Objetivo específico (`02-pesquisa/problema-e-objetivos.md`) | Onde o resultado aparece | Resultado a relatar |
 |---|---|---|
 | 1. Caracterizar o processo atual | Capítulo 2 | `[o grupo descreve]` |
-| 2. Levantar requisitos com pesquisa bibliográfica e de campo | Capítulos 3 e 4 | depende da pesquisa de campo |
+| 2. Levantar requisitos com pesquisa bibliográfica e análise do cenário | Capítulos 3 e 4 | requisitos, casos de uso e histórias (sem levantamento de campo) |
 | 3. Modelar o banco relacional e avaliar NoSQL | Capítulo 5 | modelo, scripts executados e comparativo |
 | 4. Implementar em C o núcleo da portaria e a consolidação | Capítulo 6 | protótipo testado (9 conjuntos de testes) |
 | 5. Projetar a infraestrutura de rede e a arquitetura distribuída | Capítulo 7 | projeto; testes do Packet Tracer dependem do grupo |

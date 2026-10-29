@@ -22,7 +22,7 @@ Pontos para o grupo desenvolver:
 | # | Objetivo | Onde é atendido |
 |---|---|---|
 | 1 | Caracterizar o processo atual de encomendas e seus problemas | `01-organizacao/` |
-| 2 | Levantar requisitos com pesquisa bibliográfica e de campo | `02-pesquisa/`, `03-engenharia-software/requisitos.md` |
+| 2 | Levantar requisitos com pesquisa bibliográfica e análise do cenário (levantamento de campo dispensado) | `02-pesquisa/`, `03-engenharia-software/requisitos.md` |
 | 3 | Modelar o banco de dados relacional e avaliar o uso de NoSQL | `04-banco-de-dados/` |
 | 4 | Implementar em C o núcleo da portaria e a consolidação central | `05-programa-c/` |
 | 5 | Projetar a infraestrutura de rede e a arquitetura distribuída | `06-redes/` |

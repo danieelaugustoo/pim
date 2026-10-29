@@ -8,7 +8,9 @@
 |---|---|
 | Natureza | Aplicada |
 | Objetivo | Exploratória |
-| Abordagem | Qualitativa, com alguns dados quantitativos simples |
+| Abordagem | Qualitativa; os dados quantitativos vêm dos testes e das verificações do protótipo |
+
+> **Decisão do grupo (2026-10-29): o levantamento de campo foi dispensado**, porque não é obrigatório no PIM. O problema vem do cenário descrito em `01-organizacao/` (P1 a P7) e da pesquisa bibliográfica. Consequências: os requisitos não têm dados de respondentes, e os indicadores "antes" são medidos no piloto (ver `08-integracao/beneficios-e-indicadores.md`). O questionário permanece em `questionario-campo.md` como material opcional.
 
 Confirmar com o professor se a classificação precisa de referência metodológica; se precisar, a fonte entra em `fontes.md` como `[FONTE A VERIFICAR]`.
 
@@ -17,10 +19,14 @@ Confirmar com o professor se a classificação precisa de referência metodológ
 | Procedimento | O que é | Onde fica |
 |---|---|---|
 | Pesquisa bibliográfica | Leitura e fichamento das fontes sobre os temas da fundamentação | `fundamentacao.md`, `fontes.md` |
-| Levantamento de campo | Questionário curto para porteiros e síndicos | `questionario-campo.md`, `resultados-campo.md` |
+| Análise do cenário | Descrição do processo atual e dos problemas P1 a P7 da organização (fictícia) | `01-organizacao/` |
 | Desenvolvimento de protótipo com Scrum | Sprints de 1 semana, com registro em `sprint-NN.md` | `03-engenharia-software/scrum/` |
+| Verificação do protótipo | Testes automatizados, execução com dados fictícios, scripts SQL executados e testes de rede | `05-programa-c/tests/`, `04-banco-de-dados/sql/`, `06-redes/packet-tracer/` |
+| Levantamento de campo (**dispensado**) | Questionário curto para porteiros e síndicos, opcional | `questionario-campo.md`, `resultados-campo.md` |
 
-## 3. Levantamento de campo
+## 3. Levantamento de campo (dispensado, material opcional)
+
+> **Não será aplicado.** Esta seção fica registrada para o caso de o grupo mudar de ideia. Se aplicar, preencher a tabela abaixo e `resultados-campo.md`, e voltar os indicadores "antes" para a pesquisa.
 
 | Item | Definição |
 |---|---|
@@ -39,12 +45,14 @@ Cuidados:
 
 ## 4. Análise dos dados
 
-- Respostas fechadas: contagem simples e percentuais, em tabela.
-- Respostas abertas: agrupar por tema e citar exemplos sem identificar o respondente.
-- Os resultados alimentam os requisitos e os indicadores do "antes" (`08-integracao/beneficios-e-indicadores.md`).
+- Fundamentação: fichamento das fontes verificadas, com as ideias escritas pelo grupo.
+- Protótipo: resultados dos testes, das consultas SQL e dos testes de rede, apresentados nos capítulos 5, 6 e 7.
+- Indicadores: definidos em `08-integracao/beneficios-e-indicadores.md`, com a linha de base a medir no piloto.
+- Se o levantamento de campo for aplicado: respostas fechadas por contagem e percentual; respostas abertas agrupadas por tema, sem identificar o respondente.
 
 ## 5. Limitações a declarar
 
-- Amostra pequena e não probabilística (a confirmar, conforme o resultado da aplicação).
-- Organização do estudo é fictícia; o campo ouve porteiros e síndicos reais de contextos semelhantes.
+- **Sem levantamento de campo:** o problema vem do cenário fictício e da bibliografia, não de dados de usuários reais. O trabalho deve dizer isso com clareza e não afirmar frequência de extravios nem preferências dos moradores.
+- Organização do estudo é fictícia.
 - Protótipo com rede e aviso simulados.
+- Os benefícios são esperados e só seriam medidos em um piloto.

@@ -40,7 +40,7 @@ Baseado no `PLANO.md`, seção 11. O Desenvolvimento deve ficar **entre 20 e 30 
 | Pesquisa e fundamentação | Capítulo 3 |
 | Métodos | Metodologia (capítulo 3) e processo Scrum (capítulo 4) |
 | Materiais | Ferramentas e tecnologias (capítulo 4, seção 4.9) |
-| Resultados | Pesquisa de campo (3), consultas SQL (5), testes e telas do protótipo (6), testes do Packet Tracer (7) |
+| Resultados | Consultas SQL (5), testes e telas do protótipo (6), testes do Packet Tracer (7); sem levantamento de campo |
 | Discussão | Benefícios, limitações e comparação com trabalhos relacionados (9) |
 
 ## 4. Lista de figuras
@@ -66,7 +66,7 @@ Numeração em ordem de aparição. Arquivos finais em `figuras/figura-NN-descri
 | 15 | Print do teste T6 (visitantes não alcançam a portaria) | 7 | Packet Tracer | **grupo** |
 | 16 | Fluxo ponta a ponta | 9 | `08-integracao/diagramas/fluxo-ponta-a-ponta.mmd` | renderizar |
 
-Gráficos de resultados do questionário (capítulo 3) entram quando a pesquisa for aplicada. Fluxogramas A2, A3, A4 e A6 ficam em apêndice ou só no repositório.
+Fluxogramas A2, A3, A4 e A6 ficam em apêndice ou só no repositório.
 
 ## 5. Lista de tabelas (principais)
 
@@ -91,7 +91,7 @@ Gráficos de resultados do questionário (capítulo 3) entram quando a pesquisa 
 
 1. Capítulos 4, 5 e 6 (o grupo domina o material e ele está pronto).
 2. Capítulo 7, depois de montar o Packet Tracer.
-3. Capítulos 2, 3 (depois da pesquisa de campo), 8 e 9.
+3. Capítulos 2, 3 (depois de verificar as fontes), 8 e 9.
 4. Introdução e Conclusão.
 5. Resumo e Abstract (por último).
 6. Referências, conferindo citação × lista.

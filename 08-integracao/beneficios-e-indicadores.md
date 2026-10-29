@@ -1,6 +1,6 @@
 # Benefícios esperados e indicadores (Etapa 8)
 
-> **Roteiro de tópicos** para o capítulo 9. Os benefícios abaixo são **esperados** (hipóteses de projeto), não resultados medidos. Nenhum número real foi coletado: a pesquisa de campo (`02-pesquisa/resultados-campo.md`) ainda não foi aplicada, e o piloto não existe. Onde há valor, ele é `[A PREENCHER]`.
+> **Roteiro de tópicos** para o capítulo 9. Os benefícios abaixo são **esperados** (hipóteses de projeto), não resultados medidos. Nenhum número real foi coletado: o levantamento de campo foi dispensado (`02-pesquisa/metodologia.md`) e o piloto não existe. A linha de base ("antes") seria medida no piloto, nas primeiras semanas, com o caderno ainda em uso.
 
 ## 1. Pergunta de pesquisa que os indicadores respondem
 
@@ -22,15 +22,15 @@
 
 ## 3. Indicadores
 
-O "antes" vem da pesquisa de campo; o "depois" é **meta ou estimativa** e precisa ser apresentado como tal no trabalho, nunca como resultado.
+Sem levantamento de campo, o "antes" **não existe hoje**: ele é a linha de base a medir no piloto (com o caderno), e o "depois" é **meta ou estimativa**. O trabalho deve apresentar os dois como planejamento, nunca como resultado.
 
-| Indicador | Como medir | Fonte do dado | Antes | Meta / depois |
+| Indicador | Como medir | Fonte do dado | Antes (linha de base) | Meta / depois |
 |---|---|---|---|---|
-| Extravios por mês | Encomendas registradas como não localizadas ÷ mês | Relato da administradora (antes); registros do sistema (depois) | `[A PREENCHER após a pesquisa]` | `[A DEFINIR]` |
-| Tempo médio entre chegada e retirada | Média de (`retirada_em` − `recebida_em`) das retiradas do mês | Registros do sistema | `[A PREENCHER após a pesquisa]` | `[A DEFINIR]` |
-| Moradores avisados em até 15 minutos | Avisos enviados até 15 min após o registro ÷ registros | Registro de avisos | `[A PREENCHER após a pesquisa]` | `[A DEFINIR]` |
-| Tempo de registro por encomenda | Cronometragem de amostra de registros (RNF02: cerca de 30 segundos) | Observação no piloto | `[A PREENCHER após a pesquisa]` | cerca de 30 s (RNF02) |
-| Pendências com mais de 7 dias | Pendências antigas no relatório (US13) | Relatório de pendências antigas | `[A PREENCHER após a pesquisa]` | `[A DEFINIR]` |
+| Extravios por mês | Encomendas registradas como não localizadas ÷ mês | Contagem no piloto (antes e depois) | A medir no piloto | `[A DEFINIR]` |
+| Tempo médio entre chegada e retirada | Média de (`retirada_em` − `recebida_em`) das retiradas do mês | Registros do sistema | A medir no piloto | `[A DEFINIR]` |
+| Moradores avisados em até 15 minutos | Avisos enviados até 15 min após o registro ÷ registros | Registro de avisos | A medir no piloto | `[A DEFINIR]` |
+| Tempo de registro por encomenda | Cronometragem de amostra de registros (RNF02: cerca de 30 segundos) | Observação no piloto | A medir no piloto | cerca de 30 s (RNF02) |
+| Pendências com mais de 7 dias | Pendências antigas no relatório (US13) | Relatório de pendências antigas | A medir no piloto | `[A DEFINIR]` |
 
 **Como o protótipo já produz parte desses dados:**
 - pendências com mais de 7 dias: opção 7 → 1 do menu, e coluna ANTIGAS do relatório da central;
@@ -43,7 +43,7 @@ Os indicadores "extravios por mês" e "avisados em 15 minutos" dependem do siste
 
 - Separar sempre **medido** (protótipo, testes), **estimado** (meta) e **a medir** (piloto).
 - Não afirmar redução percentual sem o "antes" e o "depois" coletados.
-- Ligar cada indicador a uma pergunta do questionário de campo (`02-pesquisa/questionario-campo.md`), para o "antes" sair da pesquisa do grupo.
+- Dizer com clareza que não houve levantamento de campo e que a linha de base ficaria para o piloto (`08-integracao/implantacao.md`).
 - Citar trabalhos relacionados só depois de verificados (`02-pesquisa/fontes.md`, `[FONTE A VERIFICAR]`).
 
 ## 5. Custos e retorno

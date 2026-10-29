@@ -25,8 +25,8 @@
 
 ## Pendências do projeto que afetam este capítulo
 
-- Nome do curso, turma, integrantes e orientador para a capa: `[A DEFINIR]` (`00-projeto/integrantes.md` ainda não existe).
-- Se a pesquisa de campo foi aplicada e com quantos respondentes (aparece na metodologia).
+- Nome do curso, turma, integrantes e orientador para a capa: `[A DEFINIR]` (preencher `00-projeto/integrantes.md`).
+- Deixar claro, na metodologia, que não houve levantamento de campo.
 
 ---
 

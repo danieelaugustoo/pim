@@ -27,7 +27,8 @@ Implantação **em ondas**, começando por um piloto, para aprender com poucos u
 **Dados iniciais:**
 - [ ] cadastrar os moradores e o canal de aviso de cada um (US07), com o consentimento e o aviso de privacidade da seção 5;
 - [ ] **no primeiro dia, cadastrar as pendências que ainda estão no caderno**, para a estante e o sistema começarem iguais;
-- [ ] conferir a estante física com o mapa do sistema.
+- [ ] conferir a estante física com o mapa do sistema;
+- [ ] **medir a linha de base** nos primeiros dias, ainda com o caderno (extravios, tempo de registro, pendências antigas), para comparar com os indicadores de `beneficios-e-indicadores.md`.
 
 ## 3. Treinamento dos porteiros
 

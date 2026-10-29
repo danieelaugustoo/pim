@@ -120,7 +120,7 @@
 - Código de retirada em texto nos arquivos e visível na tela do porteiro (seção 2).
 - Retenção, direitos do titular e encarregado dependem de decisão da administradora.
 - Nenhuma auditoria jurídica foi feita; o texto é uma análise acadêmica, não parecer legal.
-- A pesquisa de campo (`02-pesquisa/`) ainda não foi aplicada, então não há dado real sobre uso de smartphone pelos moradores `[A PREENCHER após a pesquisa]`.
+- Sem levantamento de campo (dispensado pelo grupo), não há dado real sobre o uso de smartphone pelos moradores; o canal interfone é uma salvaguarda de projeto, não uma resposta a dados coletados.
 
 ## 6. O que o grupo precisa fazer
 

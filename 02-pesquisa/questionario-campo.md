@@ -1,6 +1,6 @@
 # Questionário de campo (Etapa 2)
 
-> Rascunho para o grupo revisar e aplicar. Perguntas na ordem do `PLANO.md` (seção 9.2). Nada aqui foi aplicado ainda.
+> **Material opcional: o grupo decidiu dispensar o levantamento de campo (2026-10-29).** Fica aqui para o caso de aplicarem mesmo assim. Perguntas na ordem do `PLANO.md` (seção 9.2). Nada aqui foi aplicado.
 
 ## Texto de abertura (sugestão de conteúdo)
 

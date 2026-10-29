@@ -50,7 +50,7 @@ Critérios de aceitação em `scrum/backlog.md`. "Feito" significa implementado,
 ## Impedimentos e riscos
 
 - **Código de retirada visível na tela do porteiro** para qualquer canal: contraria o RNF04 para app e SMS. Está em `07-.../analise.md` (seção 2) e no README do programa; o grupo decide se ajusta ou declara como limitação.
-- **Pesquisa de campo ainda não aplicada:** os indicadores de `08-integracao/beneficios-e-indicadores.md` não têm "antes" real.
+- **Levantamento de campo dispensado pelo grupo (decidido depois desta sprint, em 2026-10-29):** os indicadores de `08-integracao/beneficios-e-indicadores.md` não têm "antes" medido; a linha de base fica para o piloto.
 - Leis e normas citadas na Etapa 7 estão marcadas `[FONTE A VERIFICAR]` e precisam ser conferidas nos textos oficiais.
 - **Incidente de processo (sem impacto no resultado):** durante a sprint, uma edição por script deixou `src/consolidacao.c` vazio por engano; o arquivo foi restaurado do último commit e a alteração refeita com a ferramenta de edição. Os testes foram todos executados depois disso.
 - Prazo oficial de entrega ainda não confirmado.

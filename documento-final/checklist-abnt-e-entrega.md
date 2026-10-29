@@ -60,7 +60,7 @@ Todas as marcações abaixo estão no repositório (`grep -rn "A DEFINIR\|A PREE
 
 - [ ] Prazo de entrega confirmado
 - [ ] Integrantes, RA, líder, Product Owner e Scrum Master definidos
-- [ ] Pesquisa de campo aplicada e `02-pesquisa/resultados-campo.md` preenchido
+- [ ] Texto declara que o levantamento de campo foi dispensado (`02-pesquisa/metodologia.md`)
 - [ ] Packet Tracer montado, testes T1 a T15 executados e prints salvos
 - [ ] Fontes de `02-pesquisa/fontes.md` verificadas
 - [ ] Fluxogramas e diagramas renderizados e exportados

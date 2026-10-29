@@ -23,7 +23,7 @@
 | Etapa | Situação | O que falta (e quem faz) |
 |---|---|---|
 | 1 Organização | Arquivos prontos | Revisão por outro integrante; renderizar organograma e processos; redigir cap. 2 (grupo) |
-| 2 Pesquisa | Em andamento | **Aplicar o questionário e preencher `resultados-campo.md`**; verificar fontes F01 a F05 e B01 a B13; fichas de fundamentação; trabalhos relacionados com fonte; redigir cap. 3 (grupo) |
+| 2 Pesquisa | Em andamento (levantamento de campo dispensado em 2026-10-29) | Verificar fontes F01 a F05 e B01 a B13; fichas de fundamentação; trabalhos relacionados com fonte; redigir cap. 3 (grupo) |
 | 3 Engenharia de software | Arquivos prontos | Integrantes e papéis do Scrum; datas e retrospectivas das sprints; revisão por pares; renderizar PlantUML; redigir cap. 4 (grupo) |
 | 4 Banco de dados | Arquivos prontos e scripts executados em MySQL 8.4.13 | Confirmar SGBD e brModelo com o professor; renderizar o DER; print de consulta; redigir cap. 5 (grupo) |
 | 5 Programação em C | Código, testes e A1 a A6 prontos | Revisão por pares do código; renderizar os fluxogramas; prints; decidir o código na tela do porteiro; US16 opcional; redigir cap. 6 (grupo) |
@@ -35,7 +35,7 @@
 ## Pendências que bloqueiam outras (ordem sugerida)
 
 1. Confirmar o **prazo** e preencher `integrantes.md` e `cronograma.md`.
-2. **Aplicar a pesquisa de campo** e **verificar as fontes** (alimentam os capítulos 2, 3, 4 e 9).
+2. **Verificar as fontes** e pesquisar os trabalhos relacionados (alimentam os capítulos 2, 3, 4 e 9).
 3. **Montar o Packet Tracer** (alimenta o capítulo 7).
 4. **Renderizar os diagramas** e tirar os prints do protótipo.
 5. Revisão por pares do código e dos documentos técnicos.
@@ -45,7 +45,7 @@
 ## Impedimentos e riscos
 
 - Prazo oficial de entrega ainda não confirmado.
-- Pesquisa de campo não aplicada: sem ela, resultados, indicadores "antes" e comparação com trabalhos relacionados ficam sem dado real.
+- Sem levantamento de campo (dispensado): o problema vem do cenário e da bibliografia, e os indicadores "antes" ficam como linha de base a medir no piloto. A comparação com trabalhos relacionados depende de fontes verificadas.
 - Packet Tracer, Mermaid e PlantUML não estão instalados na máquina de desenvolvimento: nada disso foi renderizado ou executado lá.
 - Risco de passar de 30 páginas com 16 figuras (ver `documento-final/estrutura-e-paginas.md`).
 - Uso de IA: confirmar com o professor se a UNIP tem orientação; os capítulos são do grupo (regra 9 do `CLAUDE.md`).

@@ -22,7 +22,6 @@
 
 | Marco | Data | Responsável |
 |---|---|---|
-| Aplicar o questionário de campo | [A DEFINIR] | [A DEFINIR] |
 | Verificar as fontes bibliográficas | [A DEFINIR] | [A DEFINIR] |
 | Montar e testar o Packet Tracer | [A DEFINIR] | [A DEFINIR] |
 | Revisar o código e rodar `make test` em cada máquina | [A DEFINIR] | [A DEFINIR] |

@@ -23,7 +23,7 @@ Papéis do Scrum (ver `03-engenharia-software/scrum/papeis-e-cerimonias.md`): Pr
 | Etapa | Responsável pela redação | Revisor |
 |---|---|---|
 | 1 Organização (cap. 2) | [A DEFINIR] | [A DEFINIR] |
-| 2 Pesquisa e campo (cap. 3) | [A DEFINIR] | [A DEFINIR] |
+| 2 Pesquisa bibliográfica e trabalhos relacionados (cap. 3) | [A DEFINIR] | [A DEFINIR] |
 | 3 Engenharia de software (cap. 4) | [A DEFINIR] | [A DEFINIR] |
 | 4 Banco de dados (cap. 5) | [A DEFINIR] | [A DEFINIR] |
 | 5 Programação em C (cap. 6) | [A DEFINIR] | [A DEFINIR] |

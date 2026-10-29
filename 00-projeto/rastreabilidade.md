@@ -27,7 +27,7 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 |---|---|---|---|
 | Problema de pesquisa | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Feito |
 | Objetivos | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Feito |
-| Metodologia | `02-pesquisa/metodologia.md` + `02-pesquisa/questionario-campo.md` + `02-pesquisa/resultados-campo.md` | `03-pesquisa.md` | Em andamento |
+| Metodologia (levantamento de campo dispensado) | `02-pesquisa/metodologia.md` | `03-pesquisa.md` | Feito |
 | Fundamentação bibliográfica | `02-pesquisa/fundamentacao.md` + `02-pesquisa/fontes.md` | `03-pesquisa.md` | Em andamento |
 | Trabalhos relacionados | `02-pesquisa/trabalhos-relacionados.md` | `03-pesquisa.md` | Em andamento |
 | Justificativa científica | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Em andamento |

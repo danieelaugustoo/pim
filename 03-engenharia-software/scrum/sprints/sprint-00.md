@@ -29,7 +29,7 @@ Esta sprint não tem histórias de usuário (US). As entregas são documentais.
 
 ## O que não foi entregue
 
-- Verificação das fontes de `02-pesquisa/fontes.md` (todas `[FONTE A VERIFICAR]`) e preenchimento de fichamentos, trabalhos relacionados e resultados de campo.
+- Verificação das fontes de `02-pesquisa/fontes.md` (todas `[FONTE A VERIFICAR]`) e preenchimento de fichamentos e trabalhos relacionados. O levantamento de campo foi dispensado pelo grupo em 2026-10-29 (ver `02-pesquisa/metodologia.md`).
 - Datas das sprints, integrantes e papéis do Scrum (dependem do grupo).
 
 ## Impedimentos e riscos
