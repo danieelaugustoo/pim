@@ -63,9 +63,9 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
-| Algoritmos | `05-programa-c/algoritmos/pseudocodigo.md` (A1 a A6) | `06-programacao-c.md` | Pendente |
-| Fluxogramas | `05-programa-c/algoritmos/fluxogramas/` (A1 a A6, `.mmd` + PNG) | `06-programacao-c.md` | Pendente |
-| Pseudocódigo | `05-programa-c/algoritmos/pseudocodigo.md` | `06-programacao-c.md` | Pendente |
+| Algoritmos | `05-programa-c/algoritmos/pseudocodigo.md` (A1 a A6) | `06-programacao-c.md` | Em andamento |
+| Fluxogramas | `05-programa-c/algoritmos/fluxogramas/` (A1 a A6, `.mmd` + PNG) | `06-programacao-c.md` | Em andamento |
+| Pseudocódigo | `05-programa-c/algoritmos/pseudocodigo.md` | `06-programacao-c.md` | Em andamento |
 | Implementação em C | `05-programa-c/src/` + `05-programa-c/include/` | `06-programacao-c.md` | Em andamento |
 | Estruturas condicionais | `05-programa-c/src/` (validações, regra de tamanho do volume, `switch` do menu) | `06-programacao-c.md` | Em andamento |
 | Estruturas de repetição | `05-programa-c/src/` (varredura da matriz, leitura de arquivos linha a linha, laço do menu) | `06-programacao-c.md` | Em andamento |
