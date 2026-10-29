@@ -1,0 +1,34 @@
+# Executaveis e objetos (gerados por make / build.bat)
+05-programa-c/bin/*
+!05-programa-c/bin/README.md
+*.o
+*.exe
+*.out
+
+# Dados gerados na execucao (as pastas continuam versionadas por README.md e .gitkeep)
+05-programa-c/dados/portarias/*
+!05-programa-c/dados/portarias/README.md
+!05-programa-c/dados/portarias/.gitkeep
+05-programa-c/dados/rede/*
+!05-programa-c/dados/rede/README.md
+!05-programa-c/dados/rede/.gitkeep
+05-programa-c/dados/central/*
+!05-programa-c/dados/central/README.md
+!05-programa-c/dados/central/.gitkeep
+
+# Versoes finais do trabalho (.docx e .pdf)
+documento-final/versoes/*
+!documento-final/versoes/README.md
+
+# Arquivos temporarios do Office
+~$*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e ferramentas locais
+.vscode/
+.idea/
+.claude/settings.local.json
