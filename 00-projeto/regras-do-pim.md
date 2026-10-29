@@ -19,7 +19,8 @@ Resumo do manual do PIM II que vale para todo o projeto (`PLANO.md`, seção 2).
 
 Regra do grupo, derivada da regra de autoria.
 
-- O Claude gera código, scripts, diagramas e documentação técnica.
-- Os capítulos do trabalho são redigidos pelo grupo. O Claude pode montar roteiros de tópicos e revisar os textos.
+- O Claude gera código, scripts, diagramas, documentação técnica e, a partir dos roteiros, os rascunhos dos capítulos.
+- O grupo revisa, ajusta e responde pelo conteúdo, e precisa saber explicar o que está no trabalho.
 - Nunca inventar fontes, autores, dados ou estatísticas.
-- Confirmar com o professor se a UNIP tem orientação específica sobre o uso de IA.
+- **Uso de IA:** em 2026-10-29 o grupo informou que a Prof.ª Eliana autorizou o uso de IA e que não é necessário declarar o uso. Guardar o registro dessa autorização (mensagem ou e-mail).
+- O manual exige trabalho autoral e inédito, e a UNIP usa software de similaridade: o texto final deve passar pela revisão do grupo.

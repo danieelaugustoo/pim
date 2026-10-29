@@ -14,7 +14,7 @@ Projeto acadêmico do PIM II (curso de ADS da UNIP), feito em grupo. Organizaç�
 6. Entrada do teclado com `fgets` e conversão validada. Nunca `scanf("%s")`.
 7. Toda função tem comentário em português com objetivo, parâmetros, retorno e lógica. O grupo precisa explicar o código na apresentação.
 8. Nunca invente referências, autores, estatísticas ou dados. Onde faltar fonte, escreva `[FONTE A VERIFICAR]`.
-9. Os capítulos do trabalho (`documento-final/capitulos/`) são redigidos pelo grupo, porque o manual exige texto autoral. Você pode criar roteiros de tópicos, revisar e sugerir, mas não redige o texto final.
+9. Os capítulos do trabalho (`documento-final/capitulos/`) podem ser redigidos pelo Claude a partir dos roteiros, na seção "Texto do grupo" de cada arquivo. Em 2026-10-29 o grupo informou que a Prof.ª Eliana autorizou o uso de IA e que não é preciso declarar o uso. O grupo revisa, ajusta e responde pelo conteúdo. A regra 8 continua valendo: nenhum texto pode ter fonte, número ou resultado inventado.
 10. Dados de exemplo são sempre fictícios.
 11. Quando alguém do grupo disser que quer aprender ou fazer uma parte sozinho, explique o conceito e dê pistas antes de entregar código pronto.
 12. Ao concluir uma tarefa, atualize `00-projeto/rastreabilidade.md` e a `sprint-NN.md` da sprint atual.
