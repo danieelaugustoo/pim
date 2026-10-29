@@ -19,8 +19,8 @@ O Claude Code apoia o time de desenvolvimento, mas não ocupa nenhum papel.
 |---|---|---|---|
 | Planejamento da sprint | Início da sprint | 30 minutos | Meta e histórias em `sprints/sprint-NN.md` |
 | Daily assíncrona | Todo dia útil, no grupo de mensagens | Poucas linhas por pessoa: o que fiz, o que farei, impedimentos | Não precisa de arquivo |
-| Revisão da sprint | Fim da sprint, às sextas, 19h | [A DEFINIR] | O que foi entregue e o que não foi, em `sprint-NN.md` |
-| Retrospectiva | Fim da sprint, às sextas, 19h | [A DEFINIR] | O que melhorar, em `sprint-NN.md` |
+| Revisão da sprint | Fim da sprint, às sextas, 19h, por mensagem escrita no grupo | Uma mensagem | O que foi entregue e o que não foi, em `sprint-NN.md` |
+| Retrospectiva | Fim da sprint, às sextas, 19h, por mensagem escrita no grupo | Uma mensagem | O que melhorar, em `sprint-NN.md` |
 
 ## Quadro de apoio
 

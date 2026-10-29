@@ -48,20 +48,20 @@
 |---|---|
 | Prazo | Sábado, 14/11/2026, até as 23h59 (sistema da UNIP) |
 | Líder | Lucas Ribeiro Tomiossi Kribely |
-| Product Owner e Scrum Master | O solicitante assume um e outro integrante assume o outro `[A DEFINIR]` |
-| Cerimônias | Revisão e retrospectiva às sextas, 19h |
+| Product Owner e Scrum Master | Os dois papéis existem, de forma simplificada; titulares `[A DEFINIR]` (um deles fica com o solicitante) |
+| Cerimônias | Revisão e retrospectiva por mensagem escrita no grupo, às sextas, 19h (sem reunião) |
 | Levantamento de campo | Dispensado (não é obrigatório) |
 | Código de retirada na tela do porteiro | Manter no protótipo e declarar a limitação |
 | US16 (devolução) | Não implementar; fica como evolução futura |
 | VPN IPsec | Só no diagrama, sem configurar no Packet Tracer |
 | Idioma do abstract | Inglês |
-| Retenção dos dados | Não será 12 meses; prazo `[A DEFINIR]` |
+| Retenção dos dados | 90 dias após a retirada; depois, anonimização |
 | Dados do protótipo e dos indicadores | Dados simulados (fictícios), **sempre rotulados como simulação** no texto; nunca apresentados como dado medido nem como pesquisa |
 | Modelo conceitual | Sem brModelo; SGBD MySQL 8 |
 | Código no documento | Apenas o link do GitHub, sem apêndice; trechos curtos no capítulo 6 |
 | Cópia impressa | Mesmo prazo da postagem (14/11/2026) |
 | Integrantes | 5 (nomes e RA em `00-projeto/integrantes.md`); e-mail não registrado |
-| Packet Tracer | `[A CONFIRMAR]`: o grupo disse "vamos fazer sem" (sem a VPN ou sem o simulador?) |
+| Packet Tracer | Será feito, sem a VPN |
 
 ## Impedimentos e riscos
 

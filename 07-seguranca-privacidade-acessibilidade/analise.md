@@ -40,7 +40,7 @@
 
 **Acesso por perfil (sistema completo):** porteiro vê só a própria portaria; supervisor vê os relatórios dos condomínios que acompanha; administrador gerencia usuários. O protótipo não tem login (limitação, seção 5).
 
-**Retenção:** guardar os registros por prazo definido e, depois, anonimizar (apagar nome e contato, manter só números para os indicadores). Prazo: **[A DEFINIR pelo grupo; o plano sugere 12 meses como exemplo]**.
+**Retenção:** guardar os registros por prazo definido e, depois, anonimizar (apagar nome e contato, manter só números para os indicadores). Prazo: **90 dias após a retirada** (decisão do grupo, 2026-10-29), depois anonimizar. É decisão do projeto, não parecer jurídico `[FONTE A VERIFICAR: se há prazo legal mínimo ou máximo aplicável]`.
 
 **Direitos do titular (pontos a tratar no texto):** confirmação de que há tratamento, acesso, correção e eliminação de dados quando cabível. Cada um precisa de um caminho concreto na administradora (por exemplo, pedido à gerência) `[A DEFINIR]`.
 
@@ -125,6 +125,6 @@
 ## 6. O que o grupo precisa fazer
 
 - [ ] Conferir as leis citadas nos textos oficiais e preencher `fontes.md`.
-- [ ] Decidir o prazo de retenção e quem atende pedidos de titulares.
+- [x] Prazo de retenção definido: 90 dias após a retirada. Falta definir quem atende pedidos de titulares.
 - [ ] Decidir o ajuste (ou a declaração de limitação) do código na tela do porteiro.
 - [ ] Redigir o capítulo com texto próprio (cerca de 2 páginas).

@@ -58,7 +58,7 @@ Em todos os casos, o que não aparece como permitido é negado.
 | Disponibilidade | Nobreak em cada local; configuração dos equipamentos salva | Ver `equipamentos.md` |
 | Backup | **Regra 3-2-1** | Seção 4 |
 | Manutenção | Atualização periódica de roteadores, switches, pontos de acesso, PC da portaria e API | Janela de atualização combinada com a sede |
-| Auditoria | Logs de auditoria: quem registrou, quem retirou, quem acessou o painel (RNF07) | Retenção definida com a LGPD [A DEFINIR] |
+| Auditoria | Logs de auditoria: quem registrou, quem retirou, quem acessou o painel (RNF07) | Retenção dos dados pessoais: 90 dias após a retirada (decisão do grupo); prazo dos logs [A DEFINIR] |
 | CFTV | Isolado na VLAN 20, sem saída para a internet | Acesso remoto às câmeras não está previsto [A DEFINIR] |
 
 ## 4. Backup (regra 3-2-1)
