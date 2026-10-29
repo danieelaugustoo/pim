@@ -6,12 +6,12 @@
 
 | ID | História | Requisitos | Sprint | Estado |
 |---|---|---|---|---|
-| US01 | Registrar encomenda | RF01 | 1 | A fazer |
-| US02 | Indicar posição na estante | RF02 | 1 | A fazer |
-| US03 | Código único de retirada | RF03 | 1 | A fazer |
-| US04 | Registrar retirada conferindo o código | RF05 | 1 | A fazer |
-| US05 | Listar pendências e buscar por unidade | RF06 | 1 | A fazer |
-| US06 | Dados salvos em arquivo | RF09 (base) | 1 | A fazer |
+| US01 | Registrar encomenda | RF01 | 1 | Feito (falta revisão) |
+| US02 | Indicar posição na estante | RF02 | 1 | Feito (falta revisão) |
+| US03 | Código único de retirada | RF03 | 1 | Feito (falta revisão) |
+| US04 | Registrar retirada conferindo o código | RF05 | 1 | Feito (falta revisão) |
+| US05 | Listar pendências e buscar por unidade | RF06 | 1 | Feito (falta revisão) |
+| US06 | Dados salvos em arquivo | RF09 (base) | 1 | Feito (falta revisão) |
 | US07 | Cadastrar moradores com canal de aviso | RF08 | 2 | A fazer |
 | US08 | Aviso pelo canal do morador | RF04 | 2 | A fazer |
 | US09 | Registrar sem internet | RF09 | 2 | A fazer |

@@ -1,0 +1,9 @@
+id;bloco;apartamento;destinatario;transportadora;tamanho;recebida_em;estante;prateleira;codigo;status;retirada_em;retirado_por
+1;A;12;Maria Souza;Transp Alfa;P;2026-10-20 09:15;0;0;482913;PENDENTE;;
+2;A;12;Joao Souza;Transp Beta;M;2026-10-27 14:40;0;1;731256;PENDENTE;;
+3;B;101;Carla Mendes;Transp Gama;G;2026-10-28 10:05;1;10;150847;PENDENTE;;
+4;B;203;Paulo Lima;Transp Alfa;M;2026-10-15 16:30;1;0;906124;PENDENTE;;
+5;C;34;Ana Ribeiro;Transp Beta;P;2026-10-26 11:20;2;0;264781;PENDENTE;;
+6;D;7;Rafael Costa;Transp Gama;P;2026-10-10 08:45;3;0;377415;RETIRADA;2026-10-11 18:20;Rafael Costa
+7;D;15;Beatriz Alves;Transp Alfa;G;2026-10-05 13:10;3;10;845209;DEVOLVIDA;;
+8;A;45;Lucas Pereira;Transp Beta;M;2026-10-29 08:50;0;2;619734;PENDENTE;;
