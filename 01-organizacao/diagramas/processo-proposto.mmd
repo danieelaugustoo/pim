@@ -1,0 +1,22 @@
+%% Processo proposto de encomendas (portaria com operação offline + central)
+flowchart TD
+    A(["Encomenda chega à portaria"]) --> B["Porteiro registra:<br/>unidade, destinatário, transportadora, tamanho"]
+    B --> C["Sistema indica posição livre na estante"]
+    C --> D["Sistema gera código de retirada (6 dígitos)"]
+    D --> E["Sistema avisa o morador<br/>pelo canal cadastrado"]
+    E --> F{"Canal"}
+    F -- "APP ou SMS" --> G["Aviso enviado ao morador"]
+    F -- INTERFONE --> H["Código impresso entregue<br/>ou informado pelo porteiro"]
+    G --> I["Morador informa o código na retirada"]
+    H --> I
+    I --> J{"Código confere?<br/>(até 3 tentativas)"}
+    J -- Sim --> K["Sistema registra retirada:<br/>data, hora e quem retirou"]
+    J -- Não --> L(["Retirada negada"])
+    K --> M["Operação entra na fila de sincronização"]
+    B --> M
+    M --> N{"Portaria online?"}
+    N -- Não --> O["Operações aguardam na fila"]
+    O --> N
+    N -- Sim --> P["Fila é enviada à central"]
+    P --> Q["Central consolida sem duplicar"]
+    Q --> R(["Relatórios consolidados"])

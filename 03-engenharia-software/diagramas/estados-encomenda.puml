@@ -1,0 +1,22 @@
+@startuml estados-encomenda
+title Estados da encomenda
+
+[*] --> PENDENTE : registrar (UC01)
+
+PENDENTE --> RETIRADA : retirar com codigo correto (UC03)
+PENDENTE --> DEVOLVIDA : devolver apos o prazo (US16, opcional)
+PENDENTE --> PENDENTE : codigo errado (ate 3 tentativas)
+
+RETIRADA --> [*]
+DEVOLVIDA --> [*]
+
+note right of PENDENTE
+  Ocupa uma posicao na estante.
+  Alerta quando passa de 7 dias (RF11).
+end note
+
+note right of RETIRADA
+  Posicao liberada.
+  Guarda data, hora e quem retirou.
+end note
+@enduml

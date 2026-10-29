@@ -1,0 +1,16 @@
+%% Organograma da Administradora Morada Central (fictícia)
+flowchart TD
+    DIR["Diretoria"]
+    OPS["Gerência de Operações<br/>(1 gerente)"]
+    ADM["Administrativo-Financeiro<br/>(2 analistas)"]
+    SUP["Supervisores<br/>(2, 5 condomínios cada)"]
+    ATD["Atendimento ao Morador<br/>(3 atendentes)"]
+    POR["Porteiros<br/>(40, 4 por condomínio)"]
+    SIN(["Síndicos<br/>(eleitos pelos condôminos)"])
+
+    DIR --> OPS
+    DIR --> ADM
+    OPS --> SUP
+    OPS --> ATD
+    SUP --> POR
+    SIN -. "interlocução (relação externa)" .- OPS

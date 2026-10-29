@@ -11,15 +11,15 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
-| Identificação da organização | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Pendente |
-| Ramo de atuação | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Pendente |
-| Missão | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Pendente |
-| Produtos/serviços | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Pendente |
-| Estrutura organizacional | `01-organizacao/caracterizacao.md` + `01-organizacao/diagramas/organograma.mmd` | `02-organizacao.md` | Pendente |
-| Processos de negócio | `01-organizacao/processos.md` + `01-organizacao/diagramas/processo-atual.mmd` e `processo-proposto.mmd` | `02-organizacao.md` | Pendente |
-| Público-alvo | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Pendente |
-| Problemas encontrados (P1 a P7) | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Pendente |
-| Justificativa da solução proposta | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Pendente |
+| Identificação da organização | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Feito |
+| Ramo de atuação | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Feito |
+| Missão | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Feito |
+| Produtos/serviços | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Feito |
+| Estrutura organizacional | `01-organizacao/caracterizacao.md` + `01-organizacao/diagramas/organograma.mmd` | `02-organizacao.md` | Feito |
+| Processos de negócio | `01-organizacao/processos.md` + `01-organizacao/diagramas/processo-atual.mmd` e `processo-proposto.mmd` | `02-organizacao.md` | Feito |
+| Público-alvo | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Feito |
+| Problemas encontrados (P1 a P7) | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Feito |
+| Justificativa da solução proposta | `01-organizacao/caracterizacao.md` | `02-organizacao.md` | Feito |
 
 ## Etapa 2: Pesquisa científica e inovação
 
@@ -37,15 +37,15 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
-| Requisitos funcionais | `03-engenharia-software/requisitos.md` | `04-engenharia-software.md` | Pendente |
-| Requisitos não funcionais | `03-engenharia-software/requisitos.md` | `04-engenharia-software.md` | Pendente |
-| Casos de uso | `03-engenharia-software/casos-de-uso.md` | `04-engenharia-software.md` | Pendente |
-| Backlog do produto | `03-engenharia-software/scrum/backlog.md` | `04-engenharia-software.md` | Pendente |
-| Arquitetura do sistema | `03-engenharia-software/arquitetura.md` + `03-engenharia-software/decisoes/` | `04-engenharia-software.md` | Pendente |
-| Diagrama de casos de uso | `03-engenharia-software/diagramas/casos-de-uso.puml` | `04-engenharia-software.md` | Pendente |
-| Diagrama de classes (quando aplicável) | `03-engenharia-software/diagramas/classes-dominio.puml` | `04-engenharia-software.md` | Pendente |
-| Diagrama de atividades ou de sequência | `03-engenharia-software/diagramas/atividade-registrar-encomenda.puml` + `atividade-retirar-encomenda.puml` + `sequencia-sincronizacao.puml` (+ `estados-encomenda.puml`) | `04-engenharia-software.md` | Pendente |
-| Planejamento com Scrum, XP ou Kanban | `03-engenharia-software/scrum/` (papéis, cerimônias, sprints e definição de pronto) | `04-engenharia-software.md` | Pendente |
+| Requisitos funcionais | `03-engenharia-software/requisitos.md` | `04-engenharia-software.md` | Feito |
+| Requisitos não funcionais | `03-engenharia-software/requisitos.md` | `04-engenharia-software.md` | Feito |
+| Casos de uso | `03-engenharia-software/casos-de-uso.md` | `04-engenharia-software.md` | Feito |
+| Backlog do produto | `03-engenharia-software/scrum/backlog.md` | `04-engenharia-software.md` | Feito |
+| Arquitetura do sistema | `03-engenharia-software/arquitetura.md` + `03-engenharia-software/decisoes/` | `04-engenharia-software.md` | Feito |
+| Diagrama de casos de uso | `03-engenharia-software/diagramas/casos-de-uso.puml` | `04-engenharia-software.md` | Feito |
+| Diagrama de classes (quando aplicável) | `03-engenharia-software/diagramas/classes-dominio.puml` | `04-engenharia-software.md` | Feito |
+| Diagrama de atividades ou de sequência | `03-engenharia-software/diagramas/atividade-registrar-encomenda.puml` + `atividade-retirar-encomenda.puml` + `sequencia-sincronizacao.puml` (+ `estados-encomenda.puml`) | `04-engenharia-software.md` | Feito |
+| Planejamento com Scrum, XP ou Kanban | `03-engenharia-software/scrum/` (papéis, cerimônias, sprints e definição de pronto) | `04-engenharia-software.md` | Feito |
 
 ## Etapa 4: Banco de dados
 

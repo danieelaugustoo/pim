@@ -1,0 +1,15 @@
+%% Processo atual de encomendas (caderno)
+flowchart TD
+    A(["Entregador chega à portaria"]) --> B["Porteiro anota no caderno:<br/>data, nome, bloco/apto, transportadora"]
+    B --> C["Pacote vai para sala ou armário<br/>(sem posição definida)"]
+    C --> D{"Porteiro consegue<br/>avisar pelo interfone?"}
+    D -- Sim --> E["Morador é avisado"]
+    D -- Não --> F["Morador não é avisado<br/>(descobre depois)"]
+    E --> G["Morador retira o pacote"]
+    F --> G
+    G --> H{"Assina o caderno?"}
+    H -- Sim --> I(["Retirada registrada"])
+    H -- "Nem sempre" --> J["Retirada sem registro"]
+    J --> K["Extravio ou reclamação<br/>por telefone ou WhatsApp para a sede"]
+    I --> L(["Fim"])
+    K --> L

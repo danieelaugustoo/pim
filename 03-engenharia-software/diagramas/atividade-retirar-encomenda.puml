@@ -1,0 +1,28 @@
+@startuml atividade-retirar-encomenda
+title Atividade - Retirar encomenda (UC03 / A3)
+
+start
+:Porteiro informa a unidade (bloco e apartamento);
+:Sistema lista as pendencias da unidade;
+if (Ha pendencias?) then (sim)
+  :Porteiro escolhe a encomenda;
+  :tentativas = 0;
+  repeat
+    :Porteiro informa o codigo dito pelo morador;
+    :tentativas = tentativas + 1;
+    backward :Informa que o codigo nao confere;
+  repeat while (Codigo errado e tentativas < 3?) is (sim) not (nao)
+  if (Codigo confere?) then (sim)
+    :Porteiro informa o nome de quem retira;
+    :Marca a encomenda como RETIRADA, com data e hora;
+    :Libera a posicao na estante;
+    :Acrescenta operacao RETIRADA na fila;
+  else (nao)
+    :Nega a retirada;
+    :Encomenda continua PENDENTE;
+  endif
+else (nao)
+  :Informa que nao ha pendencias;
+endif
+stop
+@enduml

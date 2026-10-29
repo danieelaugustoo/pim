@@ -1,0 +1,39 @@
+@startuml sequencia-sincronizacao
+title Sequencia - Sincronizacao e consolidacao (UC06, UC07 / A4 e A5)
+
+actor Porteiro
+participant "Portaria\n(executavel portaria)" as Portaria
+database "Fila\n(Pnn-fila.csv)" as Fila
+participant "Rede simulada\n(dados/rede/Pnn.log)" as Rede
+participant "Central\n(executavel central)" as Central
+database "Consolidado\n(dados/central)" as Consolidado
+
+Porteiro -> Portaria : sincronizar
+Portaria -> Fila : contar operacoes pendentes
+alt portaria offline
+  Portaria --> Porteiro : N operacoes aguardando
+else portaria online
+  loop para cada operacao da fila
+    Portaria -> Rede : copia operacao (id unico)
+  end
+  Portaria -> Fila : esvazia a fila
+  Portaria --> Porteiro : N operacoes enviadas
+end
+
+... depois ...
+
+Porteiro -> Central : executar consolidacao
+loop para cada portaria de P01 a P10
+  Central -> Rede : le Pnn.log (se existir)
+  loop para cada operacao
+    Central -> Consolidado : id ja aplicado?
+    alt ja aplicado
+      Central -> Central : ignora
+    else nao aplicado
+      Central -> Consolidado : aplica a operacao
+      Central -> Consolidado : registra id como aplicado
+    end
+  end
+end
+Central --> Porteiro : relatorio consolidado
+@enduml

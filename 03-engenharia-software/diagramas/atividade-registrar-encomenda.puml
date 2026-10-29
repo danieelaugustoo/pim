@@ -1,0 +1,31 @@
+@startuml atividade-registrar-encomenda
+title Atividade - Registrar encomenda (UC01 / A1 e A2)
+
+start
+:Porteiro informa bloco, apartamento, destinatario,
+transportadora e tamanho (P, M ou G);
+if (Dados validos?) then (sim)
+  :Sistema escolhe a estante preferida do bloco;
+  if (Tamanho e G?) then (sim)
+    :Procura posicao livre a partir da prateleira 10;
+  else (nao)
+    :Procura posicao livre nas prateleiras anteriores a 10;
+  endif
+  if (Estante preferida sem posicao livre?) then (sim)
+    :Procura posicao livre nas outras estantes;
+  endif
+  if (Alguma posicao livre?) then (sim)
+    :Sistema gera codigo de 6 digitos
+    diferente dos codigos pendentes (A2);
+    :Grava encomenda como PENDENTE;
+    :Acrescenta operacao REGISTRO na fila;
+    :Avisa o morador pelo canal cadastrado (UC02);
+    :Mostra posicao e codigo ao porteiro;
+  else (nao)
+    :Avisa o porteiro: estante cheia;
+  endif
+else (nao)
+  :Pede o dado novamente;
+endif
+stop
+@enduml

@@ -1,0 +1,35 @@
+@startuml casos-de-uso
+title Casos de uso - Gestao de encomendas
+left to right direction
+
+actor "Porteiro" as Porteiro
+actor "Morador" as Morador
+actor "Supervisor" as Supervisor
+actor "Central" as Central <<sistema>>
+actor "Servico de avisos" as Avisos <<sistema externo>>
+
+rectangle "Sistema de gestao de encomendas" {
+  usecase "UC01 Registrar encomenda" as UC01
+  usecase "UC02 Avisar morador" as UC02
+  usecase "UC03 Retirar encomenda" as UC03
+  usecase "UC04 Consultar pendencias" as UC04
+  usecase "UC05 Manter moradores" as UC05
+  usecase "UC06 Sincronizar com a central" as UC06
+  usecase "UC07 Consolidar operacoes" as UC07
+  usecase "UC08 Emitir relatorios" as UC08
+}
+
+Porteiro --> UC01
+Porteiro --> UC03
+Porteiro --> UC04
+Porteiro --> UC05
+Porteiro --> UC06
+Morador --> UC03
+Supervisor --> UC07
+Supervisor --> UC08
+Central --> UC07
+Central --> UC06
+Avisos --> UC02
+
+UC01 ..> UC02 : <<include>>
+@enduml

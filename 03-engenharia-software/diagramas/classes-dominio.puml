@@ -1,0 +1,121 @@
+@startuml classes-dominio
+title Modelo de dominio - Gestao de encomendas
+skinparam classAttributeIconSize 0
+
+enum StatusEncomenda {
+  PENDENTE
+  RETIRADA
+  DEVOLVIDA
+}
+
+enum CanalAviso {
+  APP
+  SMS
+  INTERFONE
+}
+
+enum TipoOperacao {
+  REGISTRO
+  RETIRADA
+  DEVOLUCAO
+}
+
+class Condominio {
+  id_condominio
+  nome
+  cidade
+}
+
+class Bloco {
+  id_bloco
+  nome
+}
+
+class Unidade {
+  id_unidade
+  numero
+}
+
+class Morador {
+  id_morador
+  nome
+  contato
+  ativo
+}
+
+class Funcionario {
+  id_funcionario
+  nome
+  funcao
+}
+
+class Portaria {
+  id_portaria
+  descricao
+}
+
+class PosicaoEstante {
+  id_posicao
+  estante
+  prateleira
+  tipo_volume
+}
+
+class Encomenda {
+  id_encomenda
+  id_local
+  destinatario
+  transportadora
+  tamanho
+  recebida_em
+  codigo_retirada
+  status
+}
+
+class Retirada {
+  id_retirada
+  retirado_por
+  retirada_em
+}
+
+class Aviso {
+  id_aviso
+  enviado_em
+  situacao
+}
+
+class OperacaoSincronizacao {
+  id_operacao
+  tipo
+  id_local
+  data_hora_origem
+  aplicada_em
+}
+
+Condominio "1" -- "1..*" Bloco
+Bloco "1" -- "1..*" Unidade
+Unidade "1" -- "0..*" Morador
+Condominio "1" -- "1..*" Portaria
+Condominio "1" -- "0..*" Funcionario
+Portaria "1" -- "1..*" PosicaoEstante
+Unidade "1" -- "0..*" Encomenda
+Portaria "1" -- "0..*" Encomenda : recebe
+PosicaoEstante "0..1" -- "0..1" Encomenda : guarda
+Funcionario "1" -- "0..*" Encomenda : registra
+Encomenda "1" -- "0..1" Retirada
+Funcionario "1" -- "0..*" Retirada : atende
+Encomenda "1" -- "0..*" Aviso
+Morador "1" -- "0..*" Aviso : recebe
+Portaria "1" -- "0..*" OperacaoSincronizacao : gera
+
+Encomenda --> StatusEncomenda
+Morador --> CanalAviso : canal_aviso
+Aviso --> CanalAviso : canal
+OperacaoSincronizacao --> TipoOperacao
+
+note bottom of Encomenda
+  No programa em C, as classes viram
+  structs (Morador, Encomenda, Operacao)
+  e modulos (estante, codigo, retirada...).
+end note
+@enduml
