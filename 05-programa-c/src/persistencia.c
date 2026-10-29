@@ -4,13 +4,17 @@
 #include "tipos.h"
 #include "util.h"
 #include "encomenda.h"
+#include "morador.h"
 #include "persistencia.h"
 
 #define NUM_CAMPOS_ENCOMENDA 13
+#define NUM_CAMPOS_MORADOR 7
 
 static const char CABECALHO_ENCOMENDAS[] =
     "id;bloco;apartamento;destinatario;transportadora;tamanho;recebida_em;"
     "estante;prateleira;codigo;status;retirada_em;retirado_por";
+
+static const char CABECALHO_MORADORES[] = "id;nome;bloco;apartamento;canal;contato;ativo";
 
 /*
  * persistencia_montar_caminho
@@ -23,6 +27,19 @@ static const char CABECALHO_ENCOMENDAS[] =
 void persistencia_montar_caminho(char *dest, int tam, int id_portaria, const char *sufixo)
 {
     snprintf(dest, (size_t)tam, "dados/portarias/P%02d-%s", id_portaria, sufixo);
+}
+
+/*
+ * persistencia_montar_caminho_rede
+ * Objetivo: montar o nome do log da "rede" simulada de uma portaria.
+ * Parametros: dest = recebe o caminho; tam = tamanho de dest; id_portaria =
+ *   numero da portaria.
+ * Retorno: nenhum.
+ * Logica: formata "dados/rede/P01.log", por exemplo.
+ */
+void persistencia_montar_caminho_rede(char *dest, int tam, int id_portaria)
+{
+    snprintf(dest, (size_t)tam, "dados/rede/P%02d.log", id_portaria);
 }
 
 /*
@@ -67,19 +84,50 @@ static int persistencia_ler_linha_encomenda(char *linha, Encomenda *e)
 }
 
 /*
+ * persistencia_ler_linha_morador (auxiliar interna)
+ * Objetivo: converter uma linha do CSV em um Morador, validando cada campo.
+ * Parametros: linha = texto da linha (e alterado); m = recebe os dados.
+ * Retorno: 1 se a linha e valida; 0 se esta mal formada.
+ * Logica: divide em 7 campos; confere id, nome, unidade, canal, contato (que
+ *   precisa servir para o canal) e a marca de ativo (0 ou 1).
+ */
+static int persistencia_ler_linha_morador(char *linha, Morador *m)
+{
+    char *campos[NUM_CAMPOS_MORADOR];
+
+    if (util_dividir_campos(linha, ';', campos, NUM_CAMPOS_MORADOR) != NUM_CAMPOS_MORADOR) {
+        return 0;
+    }
+    if (!util_converter_inteiro(campos[0], 1, 999999, &m->id) ||
+        campos[1][0] == '\0' || strlen(campos[1]) >= TAM_NOME ||
+        strlen(campos[2]) != 1 || campos[2][0] < 'A' || campos[2][0] > 'Z' ||
+        !util_converter_inteiro(campos[3], 1, APARTAMENTO_MAX, &m->apartamento) ||
+        !morador_canal_de_texto(campos[4], &m->canal) ||
+        strlen(campos[5]) >= TAM_CONTATO ||
+        !morador_contato_valido(m->canal, campos[5]) ||
+        !util_converter_inteiro(campos[6], 0, 1, &m->ativo)) {
+        return 0;
+    }
+    m->bloco = campos[2][0];
+    util_copiar_texto(m->nome, TAM_NOME, campos[1]);
+    util_copiar_texto(m->contato, TAM_CONTATO, campos[5]);
+    return 1;
+}
+
+/*
  * persistencia_criar_arquivo (auxiliar interna)
- * Objetivo: criar um arquivo de encomendas vazio, so com o cabecalho.
- * Parametros: caminho = arquivo a criar.
+ * Objetivo: criar um arquivo CSV vazio, so com o cabecalho.
+ * Parametros: caminho = arquivo a criar; cabecalho = primeira linha.
  * Retorno: PERSIST_OK ou PERSIST_ERRO.
  */
-static int persistencia_criar_arquivo(const char *caminho)
+static int persistencia_criar_arquivo(const char *caminho, const char *cabecalho)
 {
     FILE *arq = fopen(caminho, "w");
 
     if (arq == NULL) {
         return PERSIST_ERRO;
     }
-    fprintf(arq, "%s\n", CABECALHO_ENCOMENDAS);
+    fprintf(arq, "%s\n", cabecalho);
     return fclose(arq) == 0 ? PERSIST_OK : PERSIST_ERRO;
 }
 
@@ -104,7 +152,7 @@ int persistencia_carregar_encomendas(const char *caminho, Encomenda encomendas[]
     *quantidade = 0;
     arq = fopen(caminho, "r");
     if (arq == NULL) {
-        return persistencia_criar_arquivo(caminho);
+        return persistencia_criar_arquivo(caminho, CABECALHO_ENCOMENDAS);
     }
     if (fgets(linha, TAM_LINHA, arq) == NULL) {
         fclose(arq);
@@ -154,6 +202,76 @@ int persistencia_salvar_encomendas(const char *caminho, const Encomenda encomend
                 e->apartamento, e->destinatario, e->transportadora, e->tamanho, e->recebida_em,
                 e->estante, e->prateleira, TAM_CODIGO, e->codigo,
                 encomenda_status_texto(e->status), e->retirada_em, e->retirado_por);
+    }
+    return fclose(arq) == 0 ? PERSIST_OK : PERSIST_ERRO;
+}
+
+/*
+ * persistencia_carregar_moradores
+ * Objetivo: ler os moradores gravados (US07).
+ * Parametros: caminho = arquivo CSV; moradores = vetor que recebe os dados;
+ *   maximo = capacidade do vetor; quantidade = recebe quantos foram lidos.
+ * Retorno: PERSIST_OK ou PERSIST_ERRO (nao foi possivel abrir nem criar).
+ * Logica: igual a carga de encomendas: cria o arquivo na primeira execucao,
+ *   pula o cabecalho e ignora (com aviso) as linhas invalidas.
+ */
+int persistencia_carregar_moradores(const char *caminho, Morador moradores[], int maximo,
+                                    int *quantidade)
+{
+    FILE *arq;
+    char linha[TAM_LINHA];
+    int numero_linha = 1;
+
+    *quantidade = 0;
+    arq = fopen(caminho, "r");
+    if (arq == NULL) {
+        return persistencia_criar_arquivo(caminho, CABECALHO_MORADORES);
+    }
+    if (fgets(linha, TAM_LINHA, arq) == NULL) {
+        fclose(arq);
+        return PERSIST_OK;
+    }
+    while (fgets(linha, TAM_LINHA, arq) != NULL) {
+        numero_linha++;
+        util_aparar(linha);
+        if (linha[0] == '\0') {
+            continue;
+        }
+        if (*quantidade >= maximo) {
+            printf("Aviso: limite de %d moradores; restante de %s ignorado.\n", maximo, caminho);
+            break;
+        }
+        if (persistencia_ler_linha_morador(linha, &moradores[*quantidade])) {
+            (*quantidade)++;
+        } else {
+            printf("Aviso: linha %d de %s ignorada (formato invalido).\n", numero_linha, caminho);
+        }
+    }
+    fclose(arq);
+    return PERSIST_OK;
+}
+
+/*
+ * persistencia_salvar_moradores
+ * Objetivo: gravar todos os moradores no arquivo CSV.
+ * Parametros: caminho = arquivo; moradores = vetor; quantidade = tamanho usado.
+ * Retorno: PERSIST_OK ou PERSIST_ERRO.
+ * Logica: reescreve o arquivo com o cabecalho e uma linha por morador.
+ */
+int persistencia_salvar_moradores(const char *caminho, const Morador moradores[], int quantidade)
+{
+    FILE *arq = fopen(caminho, "w");
+    int i;
+    const Morador *m;
+
+    if (arq == NULL) {
+        return PERSIST_ERRO;
+    }
+    fprintf(arq, "%s\n", CABECALHO_MORADORES);
+    for (i = 0; i < quantidade; i++) {
+        m = &moradores[i];
+        fprintf(arq, "%d;%s;%c;%d;%s;%s;%d\n", m->id, m->nome, m->bloco, m->apartamento,
+                morador_canal_texto(m->canal), m->contato, m->ativo);
     }
     return fclose(arq) == 0 ? PERSIST_OK : PERSIST_ERRO;
 }

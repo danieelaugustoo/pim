@@ -1,8 +1,7 @@
 # Makefile do PIM II - rodar dentro de 05-programa-c/
-#   make         compila bin/portaria
+#   make         compila bin/portaria e bin/central
 #   make test    compila e roda os testes
 #   make clean   apaga executaveis e objetos
-# A central (bin/central) entra na Sprint 2.
 
 CC = gcc
 CFLAGS = -std=c99 -Wall -Wextra -pedantic -Iinclude
@@ -14,12 +13,12 @@ EXE =
 endif
 
 # Modulos compartilhados (um .c por modulo em src/)
-MODULOS = util estante codigo encomenda retirada persistencia
+MODULOS = util estante codigo encomenda retirada persistencia morador aviso sincronizacao consolidacao
 OBJ_MODULOS = $(patsubst %,bin/%.o,$(MODULOS))
 
-PROGRAMAS = bin/portaria$(EXE)
+PROGRAMAS = bin/portaria$(EXE) bin/central$(EXE)
 
-TESTES = test_util test_estante test_codigo test_encomenda test_persistencia
+TESTES = test_util test_estante test_codigo test_encomenda test_persistencia test_morador test_sincronizacao test_consolidacao
 EXE_TESTES = $(patsubst %,bin/%$(EXE),$(TESTES))
 RODAR_TESTES = $(patsubst %,rodar-%,$(TESTES))
 
@@ -28,6 +27,9 @@ RODAR_TESTES = $(patsubst %,rodar-%,$(TESTES))
 all: $(PROGRAMAS)
 
 bin/portaria$(EXE): bin/portaria.o $(OBJ_MODULOS)
+	$(CC) $(CFLAGS) -o $@ $^
+
+bin/central$(EXE): bin/central.o $(OBJ_MODULOS)
 	$(CC) $(CFLAGS) -o $@ $^
 
 bin/%.o: src/%.c $(wildcard include/*.h)
@@ -52,7 +54,7 @@ else
 LIMPAR = del /Q bin\*.o bin\*.exe 2>nul
 endif
 else
-LIMPAR = rm -f bin/*.o bin/portaria bin/test_*
+LIMPAR = rm -f bin/*.o bin/portaria bin/central bin/test_*
 endif
 
 clean:

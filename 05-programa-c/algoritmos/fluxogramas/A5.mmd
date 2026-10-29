@@ -1,0 +1,25 @@
+%% A5 - Consolidar (central, idempotente)
+flowchart TD
+    I(["Inicio"]) --> A["Carregar operacoes aplicadas<br/>e encomendas consolidadas"]
+    A --> B["p = 1"]
+    B --> C{"p <= MAX_PORTARIAS?"}
+    C -- Nao --> S["Salvar encomendas consolidadas<br/>e depois os ids aplicados"]
+    S --> R["Gerar relatorio consolidado"]
+    R --> F(["Fim"])
+    C -- Sim --> D{"Existe dados/rede/Pnn.log?"}
+    D -- Nao --> N["p = p + 1"]
+    N --> C
+    D -- Sim --> E{"Ha outra linha no log?"}
+    E -- Nao --> N
+    E -- Sim --> G{"Linha valida e<br/>da portaria p?"}
+    G -- Nao --> G1["Contar invalida"]
+    G1 --> E
+    G -- Sim --> H{"id_operacao ja esta<br/>nas aplicadas?"}
+    H -- Sim --> H1["Contar ja aplicada<br/>(ignorar, nada muda)"]
+    H1 --> E
+    H -- Nao --> X["Aplicar o efeito:<br/>REGISTRO cria, RETIRADA e DEVOLUCAO marcam"]
+    X --> J{"Efeito aceito?"}
+    J -- Sim --> J1["Registrar id como aplicado<br/>Contar aplicada"]
+    J1 --> E
+    J -- Nao --> J2["Contar rejeitada<br/>(id NAO e registrado)"]
+    J2 --> E

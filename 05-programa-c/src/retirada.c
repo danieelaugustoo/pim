@@ -83,7 +83,8 @@ static int retirada_pedir_codigo(int esperado)
  * retirada_registrar (algoritmo A3, interativo)
  * Objetivo: registrar a retirada de uma encomenda pelo morador.
  * Parametros: encomendas = vetor; quantidade = tamanho usado; estante =
- *   matriz de posicoes.
+ *   matriz de posicoes; indice = recebe a posicao da encomenda retirada no
+ *   vetor (para o chamador enfileirar a operacao).
  * Retorno: 1 se a retirada foi registrada (o chamador deve salvar); 0 caso
  *   contrario.
  * Logica: pede a unidade e lista as pendentes dela; pede o id da encomenda;
@@ -91,11 +92,12 @@ static int retirada_pedir_codigo(int esperado)
  *   retira e aplica a retirada. Depois de todas as tentativas erradas, nega a
  *   retirada e a encomenda continua PENDENTE.
  */
-int retirada_registrar(Encomenda encomendas[], int quantidade, int estante[][NUM_PRATELEIRAS])
+int retirada_registrar(Encomenda encomendas[], int quantidade, int estante[][NUM_PRATELEIRAS],
+                       int *indice)
 {
     char bloco;
     int apartamento;
-    int indice;
+    int escolhida;
     char nome[TAM_NOME];
 
     printf("\n--- Registrar retirada ---\n");
@@ -105,19 +107,20 @@ int retirada_registrar(Encomenda encomendas[], int quantidade, int estante[][NUM
     if (encomenda_buscar_por_unidade(encomendas, quantidade, bloco, apartamento) == 0) {
         return 0;
     }
-    indice = retirada_escolher(encomendas, quantidade, bloco, apartamento);
-    if (indice < 0) {
+    escolhida = retirada_escolher(encomendas, quantidade, bloco, apartamento);
+    if (escolhida < 0) {
         return 0;
     }
-    if (!retirada_pedir_codigo(encomendas[indice].codigo)) {
+    if (!retirada_pedir_codigo(encomendas[escolhida].codigo)) {
         printf("Retirada negada. A encomenda continua pendente.\n");
         return 0;
     }
     if (!util_ler_texto("Nome de quem retira: ", nome, TAM_NOME)) {
         return 0;
     }
-    retirada_efetuar(&encomendas[indice], estante, nome);
-    printf("Retirada registrada: encomenda %d, em %s, por %s.\n", encomendas[indice].id,
-           encomendas[indice].retirada_em, encomendas[indice].retirado_por);
+    retirada_efetuar(&encomendas[escolhida], estante, nome);
+    printf("Retirada registrada: encomenda %d, em %s, por %s.\n", encomendas[escolhida].id,
+           encomendas[escolhida].retirada_em, encomendas[escolhida].retirado_por);
+    *indice = escolhida;
     return 1;
 }

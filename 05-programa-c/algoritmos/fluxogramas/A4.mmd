@@ -1,0 +1,19 @@
+%% A4 - Sincronizar (portaria)
+flowchart TD
+    I(["Inicio"]) --> P["pendentes = contar operacoes da fila"]
+    P --> O{"Portaria online?"}
+    O -- Nao --> O1["Informar: N operacoes aguardando<br/>(fila intacta)"]
+    O1 --> F(["Fim"])
+    O -- Sim --> V{"pendentes = 0?"}
+    V -- Sim --> V1["Informar: nenhuma operacao pendente"]
+    V1 --> F
+    V -- Nao --> G["Garantir que o log da rede existe<br/>(criar com cabecalho se faltar)"]
+    G --> C{"Ha outra linha na fila?"}
+    C -- Sim --> C1["Copiar a linha para o fim do log da rede"]
+    C1 --> C
+    C -- Nao --> E{"Gravacao do log deu certo?"}
+    E -- Nao --> E1["Informar erro<br/>(fila preservada)"]
+    E1 --> F
+    E -- Sim --> Z["Esvaziar a fila<br/>(deixar so o cabecalho)"]
+    Z --> R["Informar: N operacoes enviadas"]
+    R --> F

@@ -1,0 +1,9 @@
+id;nome;bloco;apartamento;canal;contato;ativo
+1;Maria Souza;A;12;APP;app-0001;1
+2;Joao Souza;A;12;SMS;11900000002;1
+3;Carla Mendes;B;101;INTERFONE;;1
+4;Paulo Lima;B;203;SMS;11900000004;1
+5;Ana Ribeiro;C;34;APP;app-0005;1
+6;Rafael Costa;D;7;INTERFONE;;1
+7;Beatriz Alves;D;15;SMS;11900000007;1
+8;Lucas Pereira;A;45;APP;app-0008;1

@@ -14,6 +14,8 @@
 #define NUM_PRATELEIRAS 12       /* colunas da matriz */
 #define PRATELEIRA_INICIAL_G 10  /* prateleiras 10 e 11 ficam reservadas a volumes G */
 #define MAX_PORTARIAS 10         /* portarias lidas pela central */
+#define MAX_OPERACOES 20000      /* ids de operacoes ja aplicadas, guardados pela central */
+#define MAX_CONSOLIDADAS (MAX_PORTARIAS * MAX_ENCOMENDAS) /* encomendas no consolidado */
 
 /* ---------- Regras de negocio ---------- */
 #define TAM_CODIGO 6             /* digitos do codigo de retirada */
@@ -91,5 +93,16 @@ typedef struct {
     char bloco;
     int apartamento;
 } Operacao;
+
+/* Encomenda como a central a conhece, montada so a partir das operacoes. */
+typedef struct {
+    int id_portaria;             /* 1 a MAX_PORTARIAS (P01 = 1) */
+    int id_encomenda;            /* id da encomenda no arquivo da portaria */
+    char bloco;
+    int apartamento;
+    StatusEncomenda status;
+    char recebida_em[TAM_DATA];
+    char retirada_em[TAM_DATA];  /* vazio enquanto pendente ou devolvida */
+} EncomendaConsolidada;
 
 #endif /* TIPOS_H */

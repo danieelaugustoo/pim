@@ -1,7 +1,7 @@
 @echo off
 rem build.bat - compila o PIM II no Windows sem make (requer gcc do MinGW-w64 no PATH).
 rem Rodar dentro de 05-programa-c\
-rem   build.bat         compila bin\portaria.exe
+rem   build.bat         compila bin\portaria.exe e bin\central.exe
 rem   build.bat test    compila e roda os testes
 setlocal
 
@@ -12,7 +12,7 @@ if errorlevel 1 (
 )
 
 set FLAGS=-std=c99 -Wall -Wextra -pedantic -Iinclude
-set MODULOS=src\util.c src\estante.c src\codigo.c src\encomenda.c src\retirada.c src\persistencia.c
+set MODULOS=src\util.c src\estante.c src\codigo.c src\encomenda.c src\retirada.c src\persistencia.c src\morador.c src\aviso.c src\sincronizacao.c src\consolidacao.c
 
 if not exist bin mkdir bin
 
@@ -20,11 +20,13 @@ if /I "%1"=="test" goto testes
 
 gcc %FLAGS% -o bin\portaria.exe src\portaria.c %MODULOS%
 if errorlevel 1 goto erro
-echo Compilado: bin\portaria.exe
+gcc %FLAGS% -o bin\central.exe src\central.c %MODULOS%
+if errorlevel 1 goto erro
+echo Compilado: bin\portaria.exe e bin\central.exe
 exit /b 0
 
 :testes
-for %%T in (test_util test_estante test_codigo test_encomenda test_persistencia) do (
+for %%T in (test_util test_estante test_codigo test_encomenda test_persistencia test_morador test_sincronizacao test_consolidacao) do (
     gcc %FLAGS% -o bin\%%T.exe tests\%%T.c %MODULOS%
     if errorlevel 1 goto erro
     bin\%%T.exe
