@@ -1,0 +1,96 @@
+%% DER - Gestao de encomendas (modelo logico simplificado, notacao pe de galinha)
+erDiagram
+    CONDOMINIO ||--o{ BLOCO : possui
+    BLOCO ||--o{ UNIDADE : possui
+    UNIDADE ||--o{ MORADOR : abriga
+    CONDOMINIO ||--o{ FUNCIONARIO : emprega
+    CONDOMINIO ||--o{ PORTARIA : tem
+    PORTARIA ||--o{ POSICAO_ESTANTE : tem
+    PORTARIA ||--o{ ENCOMENDA : recebe
+    UNIDADE ||--o{ ENCOMENDA : destino
+    POSICAO_ESTANTE ||--o{ ENCOMENDA : guarda
+    FUNCIONARIO ||--o{ ENCOMENDA : "registra recebimento"
+    ENCOMENDA ||--o| RETIRADA : tem
+    FUNCIONARIO ||--o{ RETIRADA : entrega
+    ENCOMENDA ||--o{ AVISO : gera
+    MORADOR ||--o{ AVISO : recebe
+    PORTARIA ||--o{ OPERACAO_SINCRONIZACAO : origina
+
+    CONDOMINIO {
+        int id_condominio PK
+        string nome
+        string cidade
+    }
+    BLOCO {
+        int id_bloco PK
+        int id_condominio FK
+        string nome
+    }
+    UNIDADE {
+        int id_unidade PK
+        int id_bloco FK
+        int numero
+    }
+    MORADOR {
+        int id_morador PK
+        int id_unidade FK
+        string nome
+        string canal_aviso
+        string contato
+        boolean ativo
+    }
+    FUNCIONARIO {
+        int id_funcionario PK
+        int id_condominio FK
+        string nome
+        string funcao
+    }
+    PORTARIA {
+        string id_portaria PK
+        int id_condominio FK
+        string descricao
+    }
+    POSICAO_ESTANTE {
+        int id_posicao PK
+        string id_portaria FK
+        int estante
+        int prateleira
+        string tipo_volume
+    }
+    ENCOMENDA {
+        int id_encomenda PK
+        string id_portaria FK
+        int id_local
+        int id_unidade FK
+        int id_posicao FK
+        int id_funcionario_recebimento FK
+        string destinatario
+        string transportadora
+        string tamanho
+        datetime recebida_em
+        string codigo_retirada_hash
+        string status
+    }
+    RETIRADA {
+        int id_retirada PK
+        int id_encomenda FK
+        int id_funcionario FK
+        string retirado_por
+        datetime retirada_em
+    }
+    AVISO {
+        int id_aviso PK
+        int id_encomenda FK
+        int id_morador FK
+        string canal
+        datetime enviado_em
+        string situacao
+    }
+    OPERACAO_SINCRONIZACAO {
+        string id_operacao PK
+        string id_portaria FK
+        string tipo
+        int id_local
+        datetime data_hora_origem
+        datetime aplicada_em
+    }
