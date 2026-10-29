@@ -25,13 +25,13 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
-| Problema de pesquisa | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Pendente |
-| Objetivos | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Pendente |
-| Metodologia | `02-pesquisa/metodologia.md` + `02-pesquisa/questionario-campo.md` + `02-pesquisa/resultados-campo.md` | `03-pesquisa.md` | Pendente |
-| Fundamentação bibliográfica | `02-pesquisa/fundamentacao.md` + `02-pesquisa/fontes.md` | `03-pesquisa.md` | Pendente |
-| Trabalhos relacionados | `02-pesquisa/trabalhos-relacionados.md` | `03-pesquisa.md` | Pendente |
-| Justificativa científica | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Pendente |
-| Diferenciais inovadores | `02-pesquisa/diferenciais.md` | `03-pesquisa.md` | Pendente |
+| Problema de pesquisa | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Feito |
+| Objetivos | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Feito |
+| Metodologia | `02-pesquisa/metodologia.md` + `02-pesquisa/questionario-campo.md` + `02-pesquisa/resultados-campo.md` | `03-pesquisa.md` | Em andamento |
+| Fundamentação bibliográfica | `02-pesquisa/fundamentacao.md` + `02-pesquisa/fontes.md` | `03-pesquisa.md` | Em andamento |
+| Trabalhos relacionados | `02-pesquisa/trabalhos-relacionados.md` | `03-pesquisa.md` | Em andamento |
+| Justificativa científica | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Em andamento |
+| Diferenciais inovadores | `02-pesquisa/diferenciais.md` | `03-pesquisa.md` | Feito |
 
 ## Etapa 3: Engenharia de Software
 

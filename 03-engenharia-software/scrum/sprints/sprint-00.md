@@ -18,7 +18,7 @@ Esta sprint não tem histórias de usuário (US). As entregas são documentais.
 | Etapa 3: seis ADRs | Feito (falta revisão do grupo) | `03-engenharia-software/decisoes/` |
 | Etapa 3: backlog, papéis, cerimônias e definição de pronto | Feito (falta revisão do grupo) | `03-engenharia-software/scrum/` |
 | Etapa 3: diagramas PlantUML | Feito, sem renderização conferida | `03-engenharia-software/diagramas/` |
-| Etapa 2: problema, objetivos e metodologia | Não iniciado (Prompt 3) | `02-pesquisa/` |
+| Etapa 2: roteiros de problema, objetivos, metodologia, questionário, fundamentação, trabalhos relacionados, diferenciais e fontes | Feito como roteiro (falta revisão do grupo); fichamentos, comparação e resultados de campo dependem de leitura e de aplicação | `02-pesquisa/` |
 | `cronograma.md` e `integrantes.md` | Não iniciado; dependem do prazo e dos nomes do grupo | `00-projeto/` |
 
 ## O que foi entregue
@@ -29,7 +29,7 @@ Esta sprint não tem histórias de usuário (US). As entregas são documentais.
 
 ## O que não foi entregue
 
-- Arquivos de `02-pesquisa/`.
+- Verificação das fontes de `02-pesquisa/fontes.md` (todas `[FONTE A VERIFICAR]`) e preenchimento de fichamentos, trabalhos relacionados e resultados de campo.
 - Datas das sprints, integrantes e papéis do Scrum (dependem do grupo).
 
 ## Impedimentos e riscos
