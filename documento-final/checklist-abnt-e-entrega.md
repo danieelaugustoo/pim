@@ -40,7 +40,7 @@ Itens que o manual deixa em aberto ou que o grupo deve confirmar no modelo da UN
 - [ ] Toda tabela numerada, com título e fonte
 - [ ] Figuras legíveis no tamanho impresso (prints de terminal e de Packet Tracer com letra legível)
 - [ ] Arquivos em `figuras/figura-NN-descricao.png`, na mesma ordem de `estrutura-e-paginas.md`
-- [ ] Diagramas renderizados a partir do código-fonte (PlantUML e Mermaid ainda não foram renderizados)
+- [ ] Diagramas renderizados a partir do código-fonte (Mermaid renderizado em 2026-10-31, falta conferir; PlantUML ainda não foi renderizado)
 - [ ] Trechos de código curtos, com fonte monoespaçada e explicação no texto
 
 ## 5. Autoria, citações e referências

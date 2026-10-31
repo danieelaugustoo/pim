@@ -75,7 +75,7 @@
 
 - Prazo oficial de entrega ainda não confirmado.
 - Sem levantamento de campo (dispensado): o problema vem do cenário e da bibliografia, e os indicadores "antes" ficam como linha de base a medir no piloto. A comparação com trabalhos relacionados depende de fontes verificadas.
-- Packet Tracer, Mermaid e PlantUML não estão instalados na máquina de desenvolvimento: nada disso foi renderizado ou executado lá.
+- Packet Tracer não está instalado: nada foi executado nele. Em 2026-10-31 os diagramas Mermaid foram renderizados em PNG (mermaid-cli 11.4.2, em ambiente de nuvem). O PlantUML **ainda não foi renderizado** (cinco `.puml`); o grupo exporta pela extensão do VS Code ou pelo site oficial, ou roda `plantuml -tpng` com o `.jar` e Graphviz.
 - Risco de passar de 30 páginas com 16 figuras (ver `documento-final/estrutura-e-paginas.md`).
 - Uso de IA: confirmar com o professor se a UNIP tem orientação; os capítulos são do grupo (regra 9 do `CLAUDE.md`).
 
