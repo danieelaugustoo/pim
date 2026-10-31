@@ -13,7 +13,7 @@
 | A5 | Consolidar (central, idempotente) | **Pronto** | [`A5.mmd`](fluxogramas/A5.mmd) | `consolidacao_processar_portaria` |
 | A6 | Relatórios | **Pronto** | [`A6.mmd`](fluxogramas/A6.mmd) | `relatorio_*` em `src/relatorio.c` |
 
-Os fluxogramas estão em Mermaid e **ainda não foram renderizados** (o Mermaid não está instalado na máquina de desenvolvimento): o grupo exporta os PNG para `documento-final/figuras/`.
+Os fluxogramas estão em Mermaid e foram renderizados em PNG em 2026-10-31 (`fluxogramas/A1.png` a `A6.png`; A1 e A5 também em `documento-final/figuras/`). O grupo confere o resultado visualmente.
 
 ---
 

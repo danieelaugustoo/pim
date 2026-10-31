@@ -64,7 +64,7 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
 | Algoritmos | `05-programa-c/algoritmos/pseudocodigo.md` (A1 a A6) | `06-programacao-c.md` | Feito |
-| Fluxogramas | `05-programa-c/algoritmos/fluxogramas/` (A1 a A6, `.mmd` + PNG) | `06-programacao-c.md` | Em andamento |
+| Fluxogramas | `05-programa-c/algoritmos/fluxogramas/` (A1 a A6, `.mmd` + PNG renderizado em 2026-10-31; falta conferência do grupo) | `06-programacao-c.md` | Feito |
 | Pseudocódigo | `05-programa-c/algoritmos/pseudocodigo.md` | `06-programacao-c.md` | Feito |
 | Implementação em C | `05-programa-c/src/` + `05-programa-c/include/` | `06-programacao-c.md` | Feito |
 | Estruturas condicionais | `05-programa-c/src/` (validações, regra de tamanho do volume, `switch` do menu) | `06-programacao-c.md` | Feito |

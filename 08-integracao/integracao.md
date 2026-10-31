@@ -1,6 +1,6 @@
 # Integração da solução (Etapa 8)
 
-> **Roteiro de tópicos** para o capítulo 9. O grupo redige o texto final. A ideia é seguir **uma encomenda do começo ao fim** e mostrar onde cada disciplina do PIM aparece. O diagrama está em [`diagramas/fluxo-ponta-a-ponta.mmd`](diagramas/fluxo-ponta-a-ponta.mmd) (Mermaid, ainda não renderizado).
+> **Roteiro de tópicos** para o capítulo 9. O grupo redige o texto final. A ideia é seguir **uma encomenda do começo ao fim** e mostrar onde cada disciplina do PIM aparece. O diagrama está em [`diagramas/fluxo-ponta-a-ponta.mmd`](diagramas/fluxo-ponta-a-ponta.mmd) (Mermaid; PNG em `documento-final/figuras/figura-16-fluxo-ponta-a-ponta.png`).
 
 ## 1. A encomenda de exemplo
 
