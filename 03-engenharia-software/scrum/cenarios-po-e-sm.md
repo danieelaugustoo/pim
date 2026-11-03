@@ -115,7 +115,7 @@ Exemplo de como a retrospectiva por mensagem escrita fica. As retrospectivas de 
 >
 > **Continuar:** daily curta no grupo; revisão por pares antes de fechar cada capítulo; registrar decisões no `sprint-NN.md`.
 > **Parar:** deixar a verificação das fontes para o fim; acumular rascunhos sem revisar.
-> **Começar:** definir um responsável e um revisor por capítulo desde o início; rodar `make test` em cada máquina antes de gravar a demonstração; reservar um dia só para ABNT e similaridade.
+> **Começar:** definir um responsável e um revisor por capítulo desde o início; rodar `make test` no computador da apresentação antes de gravar a demonstração; reservar um dia só para ABNT e similaridade.
 > **Ação para a próxima sprint:** cada integrante confirma no grupo, até segunda, o seu capítulo e o seu revisor.
 
 ### Cenário SM-5: proteger a meta da sprint
