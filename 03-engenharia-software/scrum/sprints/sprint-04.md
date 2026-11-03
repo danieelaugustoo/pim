@@ -56,7 +56,7 @@
 |---|---|
 | Prazo | Sábado, 14/11/2026, até as 23h59 (sistema da UNIP) |
 | Líder | Lucas Ribeiro Tomiossi Kribely |
-| Product Owner e Scrum Master | Os dois papéis existem, de forma simplificada; titulares `[A DEFINIR]` (um deles fica com o solicitante) |
+| Product Owner e Scrum Master | Os dois papéis existem, de forma simplificada; PO: Lucas Ribeiro Tomiossi Kribely; SM: Daniel Augusto Amarante da Silva (indicados em 2026-11-03); cenários ilustrativos **simulados** em `scrum/cenarios-po-e-sm.md` |
 | Cerimônias | Revisão e retrospectiva por mensagem escrita no grupo, às sextas, 19h (sem reunião) |
 | Levantamento de campo | Dispensado (não é obrigatório) |
 | Código de retirada na tela do porteiro | Manter no protótipo e declarar a limitação |
