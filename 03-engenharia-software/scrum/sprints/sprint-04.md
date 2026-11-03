@@ -48,6 +48,7 @@
 - **Fontes verificadas** por ferramenta de web (registro em `02-pesquisa/fontes.md`, seção 4): LGPD e LBI (textos oficiais), RFC 5737, Guia do Scrum 2020, WCAG 2.2, NIST SP 800-145 e FIPS 180-4 (existência), artigo F05, e dados bibliográficos dos livros B01 a B11 em catálogos. **Nenhum livro foi aberto**: o grupo precisa conferir os trechos. F02, F03 e F04 não puderam ser lidos.
 - **`documento-final/referencias.md`** criado só com as fontes verificadas e citadas.
 - **Tamanho:** em 2026-11-03 os capítulos 2 a 9 foram reescritos de forma mais curta, sem tirar fatos nem números (cerca de 11.350 para 8.690 palavras; quadros renumerados de 1 a 7). Detalhes e cortes ainda possíveis em `documento-final/estrutura-e-paginas.md`, seção 8. A paginação real depende do Word.
+- **Revisão de coerência (2026-11-03):** introdução, resumo, abstract e conclusão conferidos contra os capítulos 2 a 9 e contra o repositório (11 tabelas, 44 restrições, 12 RF e 8 RNF, 8 UC, 16 US, 9 conjuntos de testes, 44 redes, 15 testes T1 a T15, capacidades do `tipos.h`, dados do cenário e equipamentos da sede). Nenhuma divergência; uma marca de atualização acrescentada na introdução sobre o Packet Tracer.
 - **Quadros** numerados na ordem de aparição (renumerados de 1 a 7 após os cortes de 2026-11-03); as figuras seguem a numeração de `estrutura-e-paginas.md`.
 
 ## Decisões do grupo (2026-10-29)
