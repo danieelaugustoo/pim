@@ -5,7 +5,7 @@ Baseado em `00-projeto/regras-do-pim.md` (resumo do manual do PIM II). **Se algo
 ## 1. Estrutura obrigatória
 
 - [ ] Capa (modelo da UNIP)
-- [ ] Resumo (até 500 palavras) + palavras-chave
+- [ ] Resumo (até 500 palavras) + palavras-chave (rascunho com cerca de 280 palavras, conferido em 2026-11-03; recontar no editor final)
 - [ ] Abstract (inglês, espanhol ou francês) + palavras-chave no mesmo idioma
 - [ ] Sumário (gerado pelo editor, com os títulos de capítulo e subcapítulo)
 - [ ] Introdução: objetivo da pesquisa, metodologia, breve apresentação da empresa, visão geral da proposta
@@ -48,7 +48,7 @@ Itens que o manual deixa em aberto ou que o grupo deve confirmar no modelo da UN
 - [ ] Texto **autoral e inédito**, escrito pelo grupo com as próprias palavras
 - [ ] Nenhum trecho copiado de fonte, de colega ou de ferramenta de IA sem reescrita e sem citação (a UNIP usa software de similaridade: plágio integral, parcial, conceitual e autoplágio são proibidos)
 - [ ] Todo trecho reproduzido diretamente entre aspas (ou recuado, se longo), com **autor, ano e página**
-- [ ] Toda citação no texto tem a obra em `referencias.md` e toda obra listada foi citada
+- [ ] Toda citação no texto tem a obra em `referencias.md` e toda obra listada foi citada (conferido por script em 2026-11-03 sobre os rascunhos após os cortes: 24 citações com referência e as 16 referências citadas; refazer após a revisão do grupo)
 - [ ] Todas as marcações `[FONTE A VERIFICAR]` resolvidas: fonte conferida e citada, ou a afirmação removida
 - [ ] Referências em ordem alfabética, no padrão ABNT, sem invenção de autor, ano, editora ou página
 - [ ] Leis citadas (LGPD, LBI) conferidas no texto oficial
