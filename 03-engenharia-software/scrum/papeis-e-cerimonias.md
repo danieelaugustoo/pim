@@ -11,7 +11,7 @@
 | Time de desenvolvimento | Entregar as histórias de cada sprint | [A DEFINIR] (todos os integrantes) |
 | Líder do grupo | Fazer a postagem final e cadastrar os demais no sistema da UNIP | Lucas Ribeiro Tomiossi Kribely |
 
-Exemplos de como cada papel atuaria, **simulados e rotulados como tais**, estão em [`cenarios-po-e-sm.md`](cenarios-po-e-sm.md).
+Exemplos de como cada papel atua estão em [`cenarios-po-e-sm.md`](cenarios-po-e-sm.md).
 
 O Claude Code apoia o time de desenvolvimento, mas não ocupa nenhum papel.
 

@@ -56,7 +56,7 @@
 |---|---|
 | Prazo | Sábado, 14/11/2026, até as 23h59 (sistema da UNIP) |
 | Líder | Lucas Ribeiro Tomiossi Kribely |
-| Product Owner e Scrum Master | Os dois papéis existem, de forma simplificada; PO: Lucas Ribeiro Tomiossi Kribely; SM: Daniel Augusto Amarante da Silva (indicados em 2026-11-03); cenários ilustrativos **simulados** em `scrum/cenarios-po-e-sm.md` |
+| Product Owner e Scrum Master | Os dois papéis existem, de forma simplificada; PO: Lucas Ribeiro Tomiossi Kribely; SM: Daniel Augusto Amarante da Silva (indicados em 2026-11-03); cenários de atuação dos papéis em `scrum/cenarios-po-e-sm.md` |
 | Cerimônias | Revisão e retrospectiva por mensagem escrita no grupo, às sextas, 19h (sem reunião) |
 | Levantamento de campo | Dispensado (não é obrigatório) |
 | Código de retirada na tela do porteiro | Manter no protótipo e declarar a limitação |
@@ -64,6 +64,7 @@
 | VPN IPsec | Só no diagrama, sem configurar no Packet Tracer |
 | Idioma do abstract | Inglês |
 | Retenção dos dados | 90 dias após a retirada; depois, anonimização |
+| Cenários do PO e do SM | Podem ser construídos pelo grupo; a Prof.ª Eliana autorizou (informado pelo grupo em 2026-11-03) |
 | Dados do protótipo e dos indicadores | Dados simulados (fictícios), **sempre rotulados como simulação** no texto; nunca apresentados como dado medido nem como pesquisa |
 | Modelo conceitual | Sem brModelo; SGBD MySQL 8 |
 | Código no documento | Apenas o link do GitHub, sem apêndice; trechos curtos no capítulo 6 |

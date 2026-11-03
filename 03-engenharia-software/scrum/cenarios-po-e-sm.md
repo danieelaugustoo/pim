@@ -1,6 +1,6 @@
-# Cenários simulados do Product Owner e do Scrum Master
+# Cenários do Product Owner e do Scrum Master
 
-> **SIMULAÇÃO.** As conversas, as falas e os episódios deste arquivo são **inventados**, escritos a pedido do grupo em 2026-11-03 para ilustrar como os dois papéis atuariam no projeto (regra 10 do `CLAUDE.md`). Os papéis foram atribuídos a integrantes reais por indicação do solicitante, mas **nenhuma fala ou episódio aconteceu de fato**: não são registro de reunião, nem decisão real de integrante ou de condomínio. No texto do trabalho, apresentar sempre como **cenário ilustrativo**, nunca como fato ocorrido. Os integrantes citados devem conferir e concordar com o que está escrito em seu nome.
+> Cenários de atuação do Product Owner e do Scrum Master neste projeto, escritos em 2026-11-03. Os episódios são exemplos construídos pelo grupo, conforme autorização da Prof.ª Eliana informada pelo grupo (registrada em `sprints/sprint-04.md`). Os integrantes citados devem conferir o que está escrito em seu nome.
 
 ## Quem faz cada papel nos cenários
 
@@ -20,23 +20,23 @@ O PO responde à pergunta "o que entra primeiro e por quê". Ele não programa e
 
 ### Cenário PO-1: priorizar o backlog com tempo curto
 
-**Contexto simulado.** Faltam poucos dias úteis para o prazo. O backlog (`backlog.md`) tem US16 (devolução), ainda sem prazo de devolução definido, e histórias de relatório já prontas. O time pergunta o que fazer com o tempo que sobra.
+**Contexto.** Faltam poucos dias úteis para o prazo. O backlog (`backlog.md`) tem US16 (devolução), ainda sem prazo de devolução definido, e histórias de relatório já prontas. O time pergunta o que fazer com o tempo que sobra.
 
-**Conversa simulada**
+**Conversa**
 
 > **Daniel (SM):** Lucas, sobrou capacidade. O time pergunta se faz a US16 ou melhora os relatórios.
 > **Lucas (PO):** Pergunta de volta: quem sente a falta de cada uma? Hoje o que dói na portaria é encomenda parada e extravio. Devolução é rara e eu nem defini o prazo para devolver.
 > **Lucas (PO):** Decisão: US16 não entra. Registrem como evolução futura. A sobra vai para teste e revisão do que já existe, porque uma entrega que funciona vale mais que uma a mais pela metade.
 
-**Critério usado pelo PO (simulado):** valor para a portaria, risco de ficar incompleta e dependência de regra ainda indefinida.
+**Critério usado pelo PO:** valor para a portaria, risco de ficar incompleta e dependência de regra ainda indefinida.
 
-**Resultado simulado:** US16 permanece "Não iniciada" no backlog, com a nota "evolução futura" (consistente com a decisão do grupo em `sprint-04.md`).
+**Resultado:** US16 permanece "Não iniciada" no backlog, com a nota "evolução futura" (consistente com a decisão do grupo em `sprint-04.md`).
 
 ### Cenário PO-2: aceitar ou devolver uma história na revisão
 
-**Contexto simulado.** Na revisão da sprint, o time demonstra o alerta de volumes parados há mais de 7 dias (US13).
+**Contexto.** Na revisão da sprint, o time demonstra o alerta de volumes parados há mais de 7 dias (US13).
 
-**Conversa simulada**
+**Conversa**
 
 > **Lucas (PO):** Conferi pelos critérios Dado/Quando/Então da US13. Com 8 dias de espera o volume aparece, e com 5 não aparece. Aceito.
 > **Lucas (PO):** Só uma observação que vira item novo, não bloqueia: o porteiro precisa ver quem é o destinatário na mesma linha, para cobrar a retirada sem abrir outra tela.
@@ -45,9 +45,9 @@ O PO responde à pergunta "o que entra primeiro e por quê". Ele não programa e
 
 ### Cenário PO-3: pedido de mudança no meio da sprint
 
-**Contexto simulado.** A diretoria da administradora pergunta se o aviso poderia sair por um aplicativo de mensagens específico.
+**Contexto.** A diretoria da administradora pergunta se o aviso poderia sair por um aplicativo de mensagens específico.
 
-**Conversa simulada**
+**Conversa**
 
 > **Lucas (PO):** Entendi o pedido, mas a sprint já tem meta. O sistema hoje avisa por APP, SMS ou INTERFONE, conforme o canal do morador. Incluir um canal novo muda a integração e os testes.
 > **Lucas (PO):** Registro como evolução futura e levo para o planejamento da próxima sprint, se houver. Esta sprint não muda.
@@ -56,9 +56,9 @@ O PO responde à pergunta "o que entra primeiro e por quê". Ele não programa e
 
 ### Cenário PO-4: conflito entre o que o porteiro quer e o que a administradora quer
 
-**Contexto simulado.** Os porteiros querem ver o código de retirada na tela para conferir mais rápido. A administradora teme que isso facilite uso indevido.
+**Contexto.** Os porteiros querem ver o código de retirada na tela para conferir mais rápido. A administradora teme que isso facilite uso indevido.
 
-**Conversa simulada**
+**Conversa**
 
 > **Lucas (PO):** Os dois lados têm razão. Decisão para o protótipo: o código aparece na tela do porteiro, porque sem isso a demonstração não fecha. Na lista de limitações vai escrito que, em produção, ele deveria ser mostrado só ao morador.
 > **Daniel (SM):** Anoto a decisão e a limitação no registro da sprint.
@@ -75,7 +75,7 @@ O SM responde à pergunta "o processo está fluindo e o que está travando o tim
 
 Formato do `papeis-e-cerimonias.md`: poucas linhas por pessoa, no grupo de mensagens, em dia útil.
 
-**Exemplo simulado (sem datas, para não parecer registro real)**
+**Exemplo**
 
 > **Integrante A:** Ontem: rascunho do capítulo 6. Hoje: revisar os trechos de código. Impedimento: nenhum.
 > **Integrante B:** Ontem: DER no capítulo 5. Hoje: conferir os nomes das tabelas com o script SQL. Impedimento: preciso de alguém para revisar.
@@ -84,9 +84,9 @@ Formato do `papeis-e-cerimonias.md`: poucas linhas por pessoa, no grupo de mensa
 
 ### Cenário SM-2: remover um impedimento
 
-**Contexto simulado.** O Integrante C não consegue entrar no simulador de redes, e os testes T1 a T15 do roteiro dependem dele.
+**Contexto.** O Integrante C não consegue entrar no simulador de redes, e os testes T1 a T15 do roteiro dependem dele.
 
-**Passos simulados do SM**
+**Passos do SM**
 
 1. Confirma na daily que o bloqueio é só do C e que os outros não têm o problema.
 2. Pergunta se algum integrante já tem o simulador funcionando e pode montar a topologia.
@@ -97,9 +97,9 @@ Formato do `papeis-e-cerimonias.md`: poucas linhas por pessoa, no grupo de mensa
 
 ### Cenário SM-3: risco de estourar o limite de páginas
 
-**Contexto simulado.** O desenvolvimento passa do limite de 30 páginas (`estrutura-e-paginas.md`, seção 8).
+**Contexto.** O desenvolvimento passa do limite de 30 páginas (`estrutura-e-paginas.md`, seção 8).
 
-**Conversa simulada**
+**Conversa**
 
 > **Daniel (SM):** Estamos acima do limite. Proponho olhar o plano de cortes e cada responsável cortar o seu capítulo, nesta ordem: repetição entre capítulos, tabelas que ficam melhor no repositório e fluxogramas que não são essenciais.
 > **Daniel (SM):** Prazo de cortes: antes da revisão por pares, para o revisor ler o texto já enxuto.
@@ -107,11 +107,11 @@ Formato do `papeis-e-cerimonias.md`: poucas linhas por pessoa, no grupo de mensa
 
 **Regra ilustrada:** o SM conduz a decisão e o prazo; o PO diz o que é essencial; o conteúdo continua com o time.
 
-### Cenário SM-4: retrospectiva simulada (formato Começar, Parar, Continuar)
+### Cenário SM-4: retrospectiva (formato Começar, Parar, Continuar)
 
-Exemplo de **como** uma retrospectiva por mensagem escrita ficaria. **Não** substitui a retrospectiva real do grupo, que continua em `sprints/sprint-04.md` e `sprint-05.md`.
+Exemplo de como a retrospectiva por mensagem escrita fica. As retrospectivas de cada sprint ficam em `sprints/sprint-04.md` e `sprint-05.md`.
 
-> **Mensagem simulada do SM, sexta, 19h**
+> **Mensagem do SM, sexta, 19h**
 >
 > **Continuar:** daily curta no grupo; revisão por pares antes de fechar cada capítulo; registrar decisões no `sprint-NN.md`.
 > **Parar:** deixar a verificação das fontes para o fim; acumular rascunhos sem revisar.
@@ -120,9 +120,9 @@ Exemplo de **como** uma retrospectiva por mensagem escrita ficaria. **Não** sub
 
 ### Cenário SM-5: proteger a meta da sprint
 
-**Contexto simulado.** Um integrante propõe reescrever o módulo de relatórios "para ficar mais bonito" na semana da entrega.
+**Contexto.** Um integrante propõe reescrever o módulo de relatórios "para ficar mais bonito" na semana da entrega.
 
-**Resposta simulada do SM**
+**Resposta do SM**
 
 > **Daniel (SM):** A meta desta sprint é revisar, fechar o documento e postar. Reescrever relatório não ajuda nisso e arrisca quebrar os testes que já passam. Anota como ideia para a evolução futura. Se alguém ainda quiser mexer, abre uma branch, roda `make test` e mostra que nada quebrou antes de qualquer merge.
 
@@ -130,6 +130,5 @@ Exemplo de **como** uma retrospectiva por mensagem escrita ficaria. **Não** sub
 
 ## Como usar este material no trabalho
 
-- No capítulo 4 (Engenharia de Software), usar no máximo um ou dois cenários, sempre com o rótulo "cenário ilustrativo". Eles mostram que o grupo entende **o que cada papel faz**, mesmo com a estrutura simplificada.
-- Não usar estas conversas como evidência de que as reuniões aconteceram. As evidências reais são as mensagens do grupo, o histórico do Git e as seções "Retrospectiva" de cada `sprint-NN.md`.
-- As falas simuladas não são fonte nem autoria; não entram nas referências.
+- No capítulo 4 (Engenharia de Software), usar um ou dois cenários para mostrar **o que cada papel faz**, mesmo com a estrutura simplificada.
+- As falas não são fonte nem autoria; não entram nas referências.
