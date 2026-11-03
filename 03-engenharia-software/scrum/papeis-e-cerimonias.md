@@ -6,10 +6,12 @@
 
 | Papel | Responsabilidade | Quem |
 |---|---|---|
-| Product Owner | Priorizar o backlog e decidir o que entra em cada sprint | [A DEFINIR] |
-| Scrum Master | Facilitar as cerimônias e remover impedimentos | [A DEFINIR] |
+| Product Owner | Priorizar o backlog e decidir o que entra em cada sprint | Lucas Ribeiro Tomiossi Kribely (indicado em 2026-11-03) |
+| Scrum Master | Facilitar as cerimônias e remover impedimentos | Daniel Augusto Amarante da Silva (indicado em 2026-11-03) |
 | Time de desenvolvimento | Entregar as histórias de cada sprint | [A DEFINIR] (todos os integrantes) |
 | Líder do grupo | Fazer a postagem final e cadastrar os demais no sistema da UNIP | Lucas Ribeiro Tomiossi Kribely |
+
+Exemplos de como cada papel atuaria, **simulados e rotulados como tais**, estão em [`cenarios-po-e-sm.md`](cenarios-po-e-sm.md).
 
 O Claude Code apoia o time de desenvolvimento, mas não ocupa nenhum papel.
 
