@@ -60,9 +60,9 @@ Acompanha-se uma encomenda fictícia que chega à unidade A-12 de um condomínio
 
 **[Figura 16 – Fluxo ponta a ponta de uma encomenda. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-16-fluxo-ponta-a-ponta.png`]**
 
-O Quadro 10 deixa claro o que foi construído e o que é simulado ou projetado.
+O Quadro 6 deixa claro o que foi construído e o que é simulado ou projetado.
 
-**Quadro 10 – O que é real e o que é simulado**
+**Quadro 6 – O que é real e o que é simulado**
 
 | Parte | Situação |
 |---|---|
@@ -82,9 +82,9 @@ O treinamento dos porteiros é curto, com uma cartilha de uma página: registrar
 
 ## 9.3 Benefícios esperados e indicadores
 
-Os benefícios são esperados, não medidos: menos extravios e entregas erradas, menos tempo de busca e de registro, moradores avisados mais rápido, operação contínua sem internet, visão única dos dez condomínios, cobrança de retirada pelos alertas de pendências antigas e melhor dimensionamento da equipe. Os indicadores propostos estão no Quadro 11. Sem levantamento de campo, a linha de base ("antes") seria medida no piloto, e as metas ainda precisam ser definidas.
+Os benefícios são esperados, não medidos: menos extravios e entregas erradas, menos tempo de busca e de registro, moradores avisados mais rápido, operação contínua sem internet, visão única dos dez condomínios, cobrança de retirada pelos alertas de pendências antigas e melhor dimensionamento da equipe. Os indicadores propostos estão no Quadro 7. Sem levantamento de campo, a linha de base ("antes") seria medida no piloto, e as metas ainda precisam ser definidas.
 
-**Quadro 11 – Indicadores propostos**
+**Quadro 7 – Indicadores propostos**
 
 | Indicador | Como medir | Antes | Meta |
 |---|---|---|---|

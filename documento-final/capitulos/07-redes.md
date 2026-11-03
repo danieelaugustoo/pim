@@ -82,9 +82,9 @@ A solução é um sistema distribuído (TANENBAUM; VAN STEEN, 2007): nós de por
 
 ## 7.5 Segurança da infraestrutura
 
-A segurança segue o menor privilégio, a defesa em camadas, o padrão "negar" e o registro de eventos. As regras principais, que são proposta do projeto, estão no Quadro 8.
+A segurança segue o menor privilégio, a defesa em camadas, o padrão "negar" e o registro de eventos. As regras principais, que são proposta do projeto, estão no Quadro 5.
 
-**Quadro 8 – Regras de acesso principais**
+**Quadro 5 – Regras de acesso principais**
 
 | Origem | Pode acessar | Não pode acessar |
 |---|---|---|

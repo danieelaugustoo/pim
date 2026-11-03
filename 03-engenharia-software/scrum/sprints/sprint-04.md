@@ -47,8 +47,8 @@
 - **Rascunhos de todos os capítulos** (resumo, abstract, 1 a 10) escritos na seção "Texto do grupo" de `documento-final/capitulos/`, a partir dos roteiros e do repositório, com base na autorização de uso de IA informada pelo grupo. Marcas de pendência: figuras a inserir, prints, resultados do Packet Tracer, fontes ainda sem verificação, titulares do Scrum.
 - **Fontes verificadas** por ferramenta de web (registro em `02-pesquisa/fontes.md`, seção 4): LGPD e LBI (textos oficiais), RFC 5737, Guia do Scrum 2020, WCAG 2.2, NIST SP 800-145 e FIPS 180-4 (existência), artigo F05, e dados bibliográficos dos livros B01 a B11 em catálogos. **Nenhum livro foi aberto**: o grupo precisa conferir os trechos. F02, F03 e F04 não puderam ser lidos.
 - **`documento-final/referencias.md`** criado só com as fontes verificadas e citadas.
-- **Tamanho:** o desenvolvimento está acima do limite (cerca de 11.350 palavras); plano de cortes em `documento-final/estrutura-e-paginas.md`, seção 8.
-- **Quadros** numerados de 1 a 18 na ordem de aparição; as figuras seguem a numeração de `estrutura-e-paginas.md`.
+- **Tamanho:** em 2026-11-03 os capítulos 2 a 9 foram reescritos de forma mais curta, sem tirar fatos nem números (cerca de 11.350 para 8.690 palavras; quadros renumerados de 1 a 7). Detalhes e cortes ainda possíveis em `documento-final/estrutura-e-paginas.md`, seção 8. A paginação real depende do Word.
+- **Quadros** numerados na ordem de aparição (renumerados de 1 a 7 após os cortes de 2026-11-03); as figuras seguem a numeração de `estrutura-e-paginas.md`.
 
 ## Decisões do grupo (2026-10-29)
 

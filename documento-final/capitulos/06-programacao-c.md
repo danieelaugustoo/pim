@@ -105,9 +105,9 @@ O protótipo tem nove conjuntos de testes automatizados (`make test`, ou `build.
 
 ## 6.6 Demonstração
 
-A demonstração usa dados fictícios. Ao executar a central duas vezes sobre os mesmos registros, a primeira aplicou 17 operações e consolidou 14 encomendas; na segunda, nenhuma foi aplicada e as 17 foram reconhecidas como já aplicadas, com arquivos idênticos. O relatório está no Quadro 9.
+A demonstração usa dados fictícios. Ao executar a central duas vezes sobre os mesmos registros, a primeira aplicou 17 operações e consolidou 14 encomendas; na segunda, nenhuma foi aplicada e as 17 foram reconhecidas como já aplicadas, com arquivos idênticos. O relatório está no Quadro 4.
 
-**Quadro 9 – Relatório consolidado com dados de exemplo (fictícios)**
+**Quadro 4 – Relatório consolidado com dados de exemplo (fictícios)**
 
 | Portaria | Registradas | Pendentes | Retiradas | Devolvidas | Antigas | Dia de pico |
 |---|---|---|---|---|---|---|
