@@ -64,6 +64,7 @@
 | VPN IPsec | Só no diagrama, sem configurar no Packet Tracer |
 | Idioma do abstract | Inglês |
 | Retenção dos dados | 90 dias após a retirada; depois, anonimização |
+| Demonstração do programa | Será feita no computador de Daniel, levado à apresentação; não é preciso rodar `make test` nas demais máquinas (informado em 2026-11-03) |
 | Cenários do PO e do SM | Podem ser construídos pelo grupo; a Prof.ª Eliana autorizou (informado pelo grupo em 2026-11-03) |
 | Dados do protótipo e dos indicadores | Dados simulados (fictícios), **sempre rotulados como simulação** no texto; nunca apresentados como dado medido nem como pesquisa |
 | Modelo conceitual | Sem brModelo; SGBD MySQL 8 |
