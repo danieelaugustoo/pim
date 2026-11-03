@@ -20,6 +20,8 @@
 
 "Entregue" refere-se ao que o repositório já contém. As sprints 0 a 3 foram executadas em um ciclo único em 29/10/2026 (datas do histórico do Git); o Scrum com datas separadas começa na Sprint 4. A revisão por pares é do grupo.
 
+> O passo a passo das pendências, por pessoa e por dia, está em [`plano-de-pendencias.md`](plano-de-pendencias.md).
+
 ## Marcos do grupo (datas propostas a partir do prazo de 14/11/2026)
 
 As datas são **propostas** do assistente para caber no prazo, com margem de revisão e de impressão. O grupo ajusta e define os responsáveis.
