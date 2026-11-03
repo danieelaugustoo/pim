@@ -59,9 +59,9 @@ Este capítulo descreve como a solução foi especificada, projetada e organizad
 
 O levantamento partiu do cenário da Administradora Morada Central (capítulo 2) e dos sete problemas identificados nele: extravios e entregas à pessoa errada (P1), falta de rastreabilidade (P2), sobrecarga do porteiro nos picos (P3), aviso falho ao morador (P4), acúmulo de volumes (P5), ausência de dados para a sede planejar equipe e espaço (P6) e internet instável em parte das portarias (P7). Como não houve levantamento de campo, os requisitos derivam do cenário e da análise do processo atual, não de entrevistas com usuários reais, o que é uma limitação do trabalho.
 
-Foram definidos 12 requisitos funcionais (Quadro 4) e 8 não funcionais.
+Foram definidos 12 requisitos funcionais (Quadro 2) e 8 não funcionais.
 
-**Quadro 4 – Requisitos funcionais**
+**Quadro 2 – Requisitos funcionais**
 
 | ID | Requisito |
 |---|---|

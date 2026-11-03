@@ -75,9 +75,9 @@ O modelo físico, em MySQL 8, tem onze tabelas e 44 restrições nomeadas com pr
 
 ## 5.5 Comandos SQL e resultados
 
-Os scripts, executados em ordem, criam as tabelas, carregam dados fictícios (dois condomínios e duas portarias), reúnem as consultas e criam visões e índices. Foram executados em um servidor MySQL 8.4.13, em contêiner Docker, sem erros. As consultas cobrem pendências por condomínio, pendências com mais de 7 dias, tempo médio entre chegada e retirada, dia de pico, ocupação da estante, histórico de uma unidade, auditoria, verificação de consistência e a aplicação idempotente de uma operação de sincronização. Com os dados de exemplo e a data de referência fixada em 29/10/2026, os resultados do Quadro 5 coincidem com os do relatório do programa em C.
+Os scripts, executados em ordem, criam as tabelas, carregam dados fictícios (dois condomínios e duas portarias), reúnem as consultas e criam visões e índices. Foram executados em um servidor MySQL 8.4.13, em contêiner Docker, sem erros. As consultas cobrem pendências por condomínio, pendências com mais de 7 dias, tempo médio entre chegada e retirada, dia de pico, ocupação da estante, histórico de uma unidade, auditoria, verificação de consistência e a aplicação idempotente de uma operação de sincronização. Com os dados de exemplo e a data de referência fixada em 29/10/2026, os resultados do Quadro 3 coincidem com os do relatório do programa em C.
 
-**Quadro 5 – Resultados de consultas com dados de exemplo (fictícios)**
+**Quadro 3 – Resultados de consultas com dados de exemplo (fictícios)**
 
 | Consulta | Resultado |
 |---|---|

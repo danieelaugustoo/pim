@@ -39,7 +39,7 @@ Baseado no `PLANO.md`, seção 11. O Desenvolvimento deve ficar **entre 20 e 30 
 |---|---|
 | Pesquisa e fundamentação | Capítulo 3 |
 | Métodos | Metodologia (capítulo 3) e processo Scrum (capítulo 4) |
-| Materiais | Ferramentas e tecnologias (capítulo 4, seção 4.9) |
+| Materiais | Ferramentas e tecnologias (capítulo 4, seção 4.7) |
 | Resultados | Consultas SQL (5), testes e telas do protótipo (6), testes do Packet Tracer (7); sem levantamento de campo |
 | Discussão | Benefícios, limitações e comparação com trabalhos relacionados (9) |
 
@@ -68,24 +68,21 @@ Numeração em ordem de aparição. Arquivos finais em `figuras/figura-NN-descri
 
 Fluxogramas A2, A3, A4 e A6 ficam em apêndice ou só no repositório.
 
-## 5. Lista de tabelas (principais)
+## 5. Lista de quadros
 
-| Tabela | Capítulo | Origem |
+Numeração em ordem de aparição (renumerados em 2026-11-03, após os cortes).
+
+| Quadro | Capítulo | Origem |
 |---|---|---|
-| Problemas P1 a P7 | 2 | `01-organizacao/caracterizacao.md` |
-| Matriz de trabalhos relacionados | 3 | `02-pesquisa/trabalhos-relacionados.md` |
-| Requisitos e rastreabilidade | 4 | `03-engenharia-software/requisitos.md` |
-| ADRs resumidos | 4 | `03-engenharia-software/decisoes/` |
-| Sprints, metas e entregas | 4 | `scrum/sprints/` |
-| Entidades do modelo lógico | 5 | `04-banco-de-dados/modelo-logico.md` |
-| Consulta SQL com resultado | 5 | `04-banco-de-dados/sql/03-consultas.sql` |
-| SQL × NoSQL | 5 | `04-banco-de-dados/nosql/comparativo.md` |
-| Módulos e algoritmos A1 a A6 | 6 | `05-programa-c/README.md`, `algoritmos/pseudocodigo.md` |
-| Endereçamento, VLANs e matriz de fluxos | 7 | `06-redes/` |
-| Testes T1 a T15 (esperado × obtido) | 7 | `06-redes/packet-tracer/roteiro.md` |
-| Dados pessoais × finalidade | 8 | `07-seguranca-privacidade-acessibilidade/analise.md` |
-| Indicadores | 9 | `08-integracao/beneficios-e-indicadores.md` |
-| Resultados × objetivos | 10 | `02-pesquisa/problema-e-objetivos.md` |
+| 1 Problemas do processo atual (P1 a P7) | 2 | `01-organizacao/caracterizacao.md` |
+| 2 Requisitos funcionais | 4 | `03-engenharia-software/requisitos.md` |
+| 3 Resultados de consultas SQL (dados fictícios) | 5 | `04-banco-de-dados/sql/03-consultas.sql` |
+| 4 Relatório consolidado (dados fictícios) | 6 | `05-programa-c/` (central) |
+| 5 Regras de acesso principais | 7 | `06-redes/seguranca-infraestrutura.md` |
+| 6 O que é real e o que é simulado | 9 | `08-integracao/` |
+| 7 Indicadores propostos | 9 | `08-integracao/beneficios-e-indicadores.md` |
+
+Ficam só no repositório, citados no texto: matriz de trabalhos relacionados (`02-pesquisa/trabalhos-relacionados.md`), ADRs, módulos e algoritmos, VLANs, testes T1 a T15 (se couberem, entram no capítulo 7 com o resultado esperado × obtido) e dados pessoais × finalidade.
 
 ## 6. Ordem sugerida de escrita
 
@@ -100,28 +97,26 @@ Fluxogramas A2, A3, A4 e A6 ficam em apêndice ou só no repositório.
 
 Trechos principais no capítulo 6; código completo apenas pelo link do repositório no GitHub, sem apêndice (decisão do grupo, 2026-10-29).
 
-## 8. Tamanho dos rascunhos (conferência de 2026-10-29)
+## 8. Tamanho dos rascunhos (conferência de 2026-11-03, após os cortes)
 
-Contagem de palavras da seção "Texto do grupo" de cada rascunho (inclui o aviso do topo, títulos, tabelas e marcas de figura, então é um pouco maior que o texto corrido). Estimativa grosseira: com Times 12, espaçamento 1,5 e as margens do manual, cabem cerca de 300 a 350 palavras por página; **a paginação real só se vê no Word**.
+Contagem de palavras da seção "Texto do grupo" de cada capítulo (inclui o aviso do topo, títulos, tabelas, marcas de figura e pseudocódigo, então é um pouco maior que o texto corrido). Estimativa grosseira: com Times 12, espaçamento 1,5 e as margens do manual, cabem cerca de 300 a 350 palavras por página; **a paginação real só se vê no Word**.
 
-| Capítulo | Palavras | Meta de páginas | Situação |
+| Capítulo | Antes dos cortes (2026-10-29) | Depois dos cortes (2026-11-03) | Meta de páginas |
 |---|---|---|---|
-| 1 Introdução | 459 | ~2 | dentro |
-| 2 Organização | 1.001 | 3 | acima |
-| 3 Pesquisa | 1.297 | 3 | acima |
-| 4 Engenharia de software | 1.699 | 4 | acima |
-| 5 Banco de dados | 1.385 | 4 | um pouco acima |
-| 6 Programação em C | 1.944 | 4 | bem acima |
-| 7 Redes | 1.488 | 4 | acima |
-| 8 Segurança e acessibilidade | 1.134 | 2 | bem acima |
-| 9 Integração | 1.406 | 2 | bem acima |
-| 10 Conclusão | 561 | ~1,5 | dentro |
+| 1 Introdução | 459 | 463 | ~2 |
+| 2 Organização | 1.001 | 818 | 3 |
+| 3 Pesquisa | 1.297 | 1.049 | 3 |
+| 4 Engenharia de software | 1.699 | 1.279 | 4 |
+| 5 Banco de dados | 1.385 | 1.129 | 4 |
+| 6 Programação em C | 1.944 | 1.258 | 4 |
+| 7 Redes | 1.488 | 1.208 | 4 |
+| 8 Segurança e acessibilidade | 1.134 | 866 | 2 |
+| 9 Integração | 1.406 | 1.079 | 2 |
+| 10 Conclusão | 561 | 565 | ~1,5 |
 
-O desenvolvimento (capítulos 2 a 9) soma cerca de **11.350 palavras**, o que daria aproximadamente 32 a 38 páginas só de texto, **mais** as figuras. A meta é de 20 a 30 páginas. É preciso cortar, e a decisão sobre o que cortar é do grupo, depois de ver a paginação real.
+O desenvolvimento (capítulos 2 a 9) passou de cerca de **11.350** para cerca de **8.690 palavras** (aproximadamente 26 a 29 páginas de texto, **mais** as figuras). Ainda pode passar de 30 páginas depois de inseridas as 16 figuras: confirmar no Word. Nos cortes, o texto dos capítulos foi reescrito de forma mais curta, **sem tirar fatos nem números**, e cinco quadros que repetiam o que está no repositório viraram frase (módulos e algoritmos do cap. 6, ADRs, sprints e ferramentas do cap. 4, VLANs e riscos e dados pessoais do cap. 8, matriz de trabalhos relacionados do cap. 3 e evoluções do cap. 9). Os quadros foram renumerados de 1 a 7. Nenhuma figura foi retirada.
 
-**Plano de cortes sugerido (do que menos prejudica ao que mais prejudica):**
-1. Tirar das tabelas o que repete o texto (por exemplo, Quadro 5 de ADRs, Quadro 7 de ferramentas, Quadro 15 de riscos, Quadro 18 de evoluções): manter no repositório e citar.
-2. Reduzir figuras: manter as de maior valor (organograma, casos de uso, DER, fluxograma do A1, topologia, os dois prints do Packet Tracer, fluxo ponta a ponta) e juntar ou cortar as demais.
-3. Resumir os capítulos 6, 8 e 9 em subseções de um parágrafo cada.
-4. No capítulo 4, deixar o histórico das sprints em uma frase e remeter ao repositório.
-5. Se a Introdução e a Conclusão não contarem no limite (confirmar com a Prof.ª Eliana), o ajuste necessário é menor.
+**Cortes ainda possíveis, se o Word mostrar mais de 30 páginas (decisão do grupo):**
+1. Reduzir figuras: manter as de maior valor (organograma, casos de uso, DER, fluxograma do A1, topologia, os dois prints do Packet Tracer, fluxo ponta a ponta) e juntar ou cortar as demais, renumerando as figuras restantes.
+2. Resumir os capítulos 6 e 9 em subseções de um parágrafo cada.
+3. Se a Introdução e a Conclusão não contarem no limite (confirmar com a Prof.ª Eliana), o ajuste necessário é menor.
