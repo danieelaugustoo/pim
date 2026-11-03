@@ -41,55 +41,38 @@
 
 # 8 DIREITOS HUMANOS, INCLUSÃO E SEGURANÇA
 
-Este capítulo analisa a solução quanto à privacidade e proteção de dados, à segurança da informação, à acessibilidade e inclusão digital e aos aspectos éticos, sociais e de direitos humanos. A análise é acadêmica e não constitui parecer jurídico.
+Este capítulo analisa a solução quanto à privacidade e proteção de dados, à segurança da informação, à acessibilidade e inclusão digital e aos aspectos éticos e sociais. A análise é acadêmica e não constitui parecer jurídico.
 
 ## 8.1 Privacidade e proteção de dados
 
-O tratamento de dados pessoais no Brasil é regido pela Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018) (BRASIL, 2018). Entre seus princípios estão a finalidade, a adequação e a necessidade, esta entendida como a "limitação do tratamento ao mínimo necessário" para cumprir as finalidades (BRASIL, 2018, art. 6º, I a III). A solução trata dados do morador (nome, bloco e apartamento, canal de aviso e, quando o canal exige, o contato), o nome do destinatário da encomenda e o nome de quem a retirou, com data e hora (Quadro 14). A finalidade é única: entregar a encomenda certa à pessoa certa.
+O tratamento de dados pessoais no Brasil é regido pela Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018) (BRASIL, 2018). Entre seus princípios estão a finalidade, a adequação e a necessidade, entendida como a "limitação do tratamento ao mínimo necessário" (BRASIL, 2018, art. 6º, I a III). A solução trata o nome, o bloco, o apartamento e o canal de aviso do morador (com o contato, quando o canal exige), o nome do destinatário e o de quem retirou a encomenda, com data e hora. A finalidade é única: entregar a encomenda certa à pessoa certa.
 
-**Quadro 14 – Dados pessoais tratados e finalidade**
-
-| Dado | Titular | Finalidade |
-|---|---|---|
-| Nome, bloco e apartamento | Morador | Saber a quem avisar |
-| Canal de aviso e contato | Morador | Enviar o aviso de chegada |
-| Nome do destinatário | Morador ou visitante | Identificar o volume |
-| Nome de quem retirou, data e hora | Quem retira | Comprovar a entrega |
-
-Fonte: elaborado pelos autores (2026).
-
-Aplicou-se o princípio da minimização: o sistema não registra o conteúdo da encomenda nem o remetente, apenas a transportadora, e não guarda contato quando o canal de aviso é o interfone. O acesso, no sistema completo, seria por perfil: o porteiro vê apenas a sua portaria, o supervisor vê os relatórios dos condomínios que acompanha e o administrador gerencia usuários. Para a retenção, o grupo definiu que os dados pessoais seriam mantidos por 90 dias após a retirada da encomenda e, depois, anonimizados, preservando apenas números para os indicadores. Trata-se de uma decisão de projeto: a lei prevê que os dados sejam eliminados após o término do tratamento, com exceções como o cumprimento de obrigação legal (BRASIL, 2018, art. 16), e eventuais prazos legais específicos precisam ser verificados `[FONTE A VERIFICAR]`. A lei também assegura ao titular direitos como a confirmação do tratamento, o acesso e a correção dos dados (art. 18) e exige que o controlador indique um encarregado (art. 41); os caminhos práticos para exercer esses direitos e a indicação do encarregado dependem de decisão da administradora. Todos os dados usados no trabalho são fictícios.
+Pela minimização, o sistema não registra o conteúdo da encomenda nem o remetente, só a transportadora, e não guarda contato quando o canal é o interfone. No sistema completo, o acesso seria por perfil: o porteiro vê apenas a sua portaria, o supervisor vê os relatórios dos condomínios que acompanha e o administrador gerencia usuários. O grupo definiu que os dados pessoais seriam mantidos por 90 dias após a retirada e depois anonimizados, preservando só números para os indicadores. É uma decisão de projeto: a lei prevê a eliminação dos dados após o término do tratamento, com exceções como o cumprimento de obrigação legal (BRASIL, 2018, art. 16), e prazos legais específicos precisam ser verificados `[FONTE A VERIFICAR]`. A lei também assegura ao titular a confirmação do tratamento, o acesso e a correção (art. 18) e exige um encarregado (art. 41); os caminhos práticos dependem de decisão da administradora. Todos os dados usados no trabalho são fictícios.
 
 ## 8.2 Segurança da informação
 
-A principal medida é o código de retirada de seis dígitos, de uso único, que só vale enquanto a encomenda está pendente, com limite de três tentativas por retirada. No sistema completo, o código seguiria apenas na mensagem ao morador, e o banco guardaria somente o seu resumo criptográfico (hash), nunca o número. Cada operação do sistema recebe um identificador único, data e hora, o que garante rastreabilidade, e a entrada de dados é validada para recusar caracteres que quebrariam os arquivos. A segurança da rede, tratada no capítulo 7, inclui segmentação por VLAN, listas de controle de acesso, rede privada virtual, criptografia das comunicações, autenticação em dois fatores no painel e cópias de segurança.
+A principal medida é o código de retirada de seis dígitos, de uso único, válido só enquanto a encomenda está pendente, com limite de três tentativas. No sistema completo, o código seguiria apenas na mensagem ao morador e o banco guardaria somente o seu resumo criptográfico (hash). Cada operação recebe identificador único, data e hora, o que garante rastreabilidade, e a entrada é validada. A segurança da rede (capítulo 7) inclui segmentação por VLAN, listas de controle de acesso, VPN, criptografia, autenticação em dois fatores no painel e cópias de segurança.
 
-O protótipo tem limitações que devem ser declaradas: não possui login nem perfis, os arquivos de dados não são criptografados e, ao registrar uma encomenda, a tela do porteiro mostra o código de retirada para qualquer canal de aviso, o que contraria o requisito de que o código não seja exibido a terceiros. O grupo decidiu manter essa característica no protótipo e declará-la como limitação; no sistema completo, o porteiro digitaria o código informado pelo morador e o sistema o conferiria pelo hash.
+O protótipo tem limitações declaradas: não possui login nem perfis, os arquivos não são criptografados e a tela do porteiro mostra o código de retirada ao registrar a encomenda, o que contraria o requisito de que ele não seja exibido a terceiros. O grupo manteve essa característica e a declara como limitação.
 
 ## 8.3 Acessibilidade e inclusão digital
 
-A solução considera moradores que não usam smartphone. O canal interfone permite que o porteiro avise por telefone interno e entregue o código impresso, e o canal de aviso é escolhido pelo morador no cadastro, sem exigir aplicativo. A retirada exige o mesmo código para todos, com ou sem smartphone, o que garante tratamento igual. Esse cuidado dialoga com a Lei Brasileira de Inclusão da Pessoa com Deficiência (Lei nº 13.146/2015), cujo art. 63 torna obrigatória a acessibilidade nos sítios da internet mantidos por empresas com sede ou representação comercial no País (BRASIL, 2015).
+A solução considera moradores sem smartphone: o canal interfone permite que o porteiro avise por telefone interno e entregue o código impresso, e o canal é escolhido pelo morador no cadastro. A retirada exige o mesmo código de todos, o que garante tratamento igual. Isso dialoga com a Lei Brasileira de Inclusão (Lei nº 13.146/2015), cujo art. 63 torna obrigatória a acessibilidade nos sítios da internet mantidos por empresas com sede ou representação comercial no País (BRASIL, 2015).
 
-Para as telas do sistema completo, recomenda-se seguir as diretrizes de acessibilidade para conteúdo web (WCAG), do W3C, que definem os níveis de conformidade A, AA e AAA (WORLD WIDE WEB CONSORTIUM, 2024) `[definir o nível adotado]`: contraste adequado, fonte ampliável, navegação por teclado, compatibilidade com leitores de tela e avisos que não dependam apenas de cor ou som. O protótipo, por ser de console, não implementa esses recursos, mas já adota mensagens de erro que dizem ao usuário o que fazer. Como o aviso por aplicativo ou SMS depende da nuvem, ele não sai com a internet caída, e o interfone cobre essa falha.
+Para as telas do sistema completo, recomenda-se seguir as diretrizes WCAG, do W3C, que definem os níveis A, AA e AAA (WORLD WIDE WEB CONSORTIUM, 2024) `[definir o nível adotado]`: contraste adequado, fonte ampliável, navegação por teclado, compatibilidade com leitores de tela e avisos que não dependam só de cor ou som. O protótipo, de console, não implementa esses recursos. Como o aviso por aplicativo ou SMS depende da nuvem, o interfone cobre a falha de internet.
 
 ## 8.4 Ética, impactos sociais e direitos humanos
 
-São impactos positivos esperados, e portanto hipóteses a confirmar em um piloto: menos conflitos por encomendas extraviadas ou entregues à pessoa errada, carga de trabalho mais previsível para o porteiro e um comprovante de entrega que protege morador e funcionário. Os riscos e o tratamento previsto estão no Quadro 15.
+São impactos esperados, e portanto hipóteses a confirmar em um piloto: menos conflitos por encomendas extraviadas ou entregues à pessoa errada, carga de trabalho mais previsível para o porteiro e um comprovante que protege morador e funcionário. Os principais riscos e o tratamento previsto são:
 
-**Quadro 15 – Riscos éticos e tratamento**
+- **vigilância do porteiro:** os registros servem para rastrear encomendas e os relatórios são por condomínio, sem ranking de funcionários;
+- **vazamento de dados:** minimização, acesso por perfil, comunicação criptografada e cópias de segurança;
+- **exclusão de quem não usa tecnologia:** canal interfone e código impresso;
+- **dependência da tecnologia:** funcionamento offline e plano de contingência em papel;
+- **câmeras do condomínio:** ficam em rede isolada, fora do tratamento de dados da solução.
 
-| Risco | Tratamento |
-|---|---|
-| Uso dos registros para vigiar o porteiro | Os registros servem para rastrear encomendas; os relatórios são por condomínio, sem ranking de funcionários |
-| Vazamento de dados de moradores | Minimização, acesso por perfil, comunicação criptografada e cópias de segurança |
-| Exclusão de quem não usa tecnologia | Canal interfone e código impresso |
-| Dependência da tecnologia | Funcionamento offline e plano de contingência em papel |
-| Câmeras do condomínio | Ficam em rede isolada e fora do tratamento de dados da solução |
-
-Fonte: elaborado pelos autores (2026).
-
-Do ponto de vista ético, a solução busca transparência (o morador sabe quais dados são guardados e para quê), proporcionalidade (só o necessário), igualdade de tratamento e respeito ao trabalhador, tratado como usuário da ferramenta e não como alvo de controle. Esses pontos se relacionam com direitos como a privacidade, a dignidade no trabalho e a não discriminação no acesso ao serviço `[FONTE A VERIFICAR: documentos a citar]`.
+A solução busca transparência (o morador sabe quais dados são guardados e para quê), proporcionalidade, igualdade de tratamento e respeito ao trabalhador, tratado como usuário da ferramenta e não como alvo de controle, o que se relaciona com a privacidade, a dignidade no trabalho e a não discriminação `[FONTE A VERIFICAR: documentos a citar]`.
 
 ## 8.5 Limitações
 
-Esta análise não substitui uma avaliação jurídica. Retenção, direitos do titular e encarregado dependem de decisão da administradora, e, sem levantamento de campo, não há dados reais sobre o uso de smartphone pelos moradores; o canal interfone é uma salvaguarda de projeto, e não uma resposta a dados coletados.
+A análise não substitui avaliação jurídica. Retenção, direitos do titular e encarregado dependem da administradora e, sem levantamento de campo, não há dados reais sobre o uso de smartphone pelos moradores: o canal interfone é uma salvaguarda de projeto, não uma resposta a dados coletados.
