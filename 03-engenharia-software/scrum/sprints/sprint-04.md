@@ -47,8 +47,9 @@
 - **Rascunhos de todos os capítulos** (resumo, abstract, 1 a 10) escritos na seção "Texto do grupo" de `documento-final/capitulos/`, a partir dos roteiros e do repositório, com base na autorização de uso de IA informada pelo grupo. Marcas de pendência: figuras a inserir, prints, resultados do Packet Tracer, fontes ainda sem verificação, titulares do Scrum.
 - **Fontes verificadas** por ferramenta de web (registro em `02-pesquisa/fontes.md`, seção 4): LGPD e LBI (textos oficiais), RFC 5737, Guia do Scrum 2020, WCAG 2.2, NIST SP 800-145 e FIPS 180-4 (existência), artigo F05, e dados bibliográficos dos livros B01 a B11 em catálogos. **Nenhum livro foi aberto**: o grupo precisa conferir os trechos. F02, F03 e F04 não puderam ser lidos.
 - **`documento-final/referencias.md`** criado só com as fontes verificadas e citadas.
-- **Tamanho:** o desenvolvimento está acima do limite (cerca de 11.350 palavras); plano de cortes em `documento-final/estrutura-e-paginas.md`, seção 8.
-- **Quadros** numerados de 1 a 18 na ordem de aparição; as figuras seguem a numeração de `estrutura-e-paginas.md`.
+- **Tamanho:** em 2026-11-03 os capítulos 2 a 9 foram reescritos de forma mais curta, sem tirar fatos nem números (cerca de 11.350 para 8.690 palavras; quadros renumerados de 1 a 7). Detalhes e cortes ainda possíveis em `documento-final/estrutura-e-paginas.md`, seção 8. A paginação real depende do Word.
+- **Revisão de coerência (2026-11-03):** introdução, resumo, abstract e conclusão conferidos contra os capítulos 2 a 9 e contra o repositório (11 tabelas, 44 restrições, 12 RF e 8 RNF, 8 UC, 16 US, 9 conjuntos de testes, 44 redes, 15 testes T1 a T15, capacidades do `tipos.h`, dados do cenário e equipamentos da sede). Nenhuma divergência; uma marca de atualização acrescentada na introdução sobre o Packet Tracer.
+- **Quadros** numerados na ordem de aparição (renumerados de 1 a 7 após os cortes de 2026-11-03); as figuras seguem a numeração de `estrutura-e-paginas.md`.
 
 ## Decisões do grupo (2026-10-29)
 
@@ -56,7 +57,7 @@
 |---|---|
 | Prazo | Sábado, 14/11/2026, até as 23h59 (sistema da UNIP) |
 | Líder | Lucas Ribeiro Tomiossi Kribely |
-| Product Owner e Scrum Master | Os dois papéis existem, de forma simplificada; titulares `[A DEFINIR]` (um deles fica com o solicitante) |
+| Product Owner e Scrum Master | Os dois papéis existem, de forma simplificada; PO: Lucas Ribeiro Tomiossi Kribely; SM: Daniel Augusto Amarante da Silva (indicados em 2026-11-03); cenários de atuação dos papéis em `scrum/cenarios-po-e-sm.md` |
 | Cerimônias | Revisão e retrospectiva por mensagem escrita no grupo, às sextas, 19h (sem reunião) |
 | Levantamento de campo | Dispensado (não é obrigatório) |
 | Código de retirada na tela do porteiro | Manter no protótipo e declarar a limitação |
@@ -64,6 +65,8 @@
 | VPN IPsec | Só no diagrama, sem configurar no Packet Tracer |
 | Idioma do abstract | Inglês |
 | Retenção dos dados | 90 dias após a retirada; depois, anonimização |
+| Demonstração do programa | Será feita no computador de Daniel, levado à apresentação; não é preciso rodar `make test` nas demais máquinas (informado em 2026-11-03) |
+| Cenários do PO e do SM | Podem ser construídos pelo grupo; a Prof.ª Eliana autorizou (informado pelo grupo em 2026-11-03) |
 | Dados do protótipo e dos indicadores | Dados simulados (fictícios), **sempre rotulados como simulação** no texto; nunca apresentados como dado medido nem como pesquisa |
 | Modelo conceitual | Sem brModelo; SGBD MySQL 8 |
 | Código no documento | Apenas o link do GitHub, sem apêndice; trechos curtos no capítulo 6 |
@@ -75,7 +78,7 @@
 
 - Prazo oficial de entrega ainda não confirmado.
 - Sem levantamento de campo (dispensado): o problema vem do cenário e da bibliografia, e os indicadores "antes" ficam como linha de base a medir no piloto. A comparação com trabalhos relacionados depende de fontes verificadas.
-- Packet Tracer, Mermaid e PlantUML não estão instalados na máquina de desenvolvimento: nada disso foi renderizado ou executado lá.
+- Packet Tracer não está instalado: nada foi executado nele. Em 2026-10-31 os diagramas Mermaid foram renderizados em PNG (mermaid-cli 11.4.2, em ambiente de nuvem). O PlantUML **ainda não foi renderizado** (cinco `.puml`); o grupo exporta pela extensão do VS Code ou pelo site oficial, ou roda `plantuml -tpng` com o `.jar` e Graphviz.
 - Risco de passar de 30 páginas com 16 figuras (ver `documento-final/estrutura-e-paginas.md`).
 - Uso de IA: confirmar com o professor se a UNIP tem orientação; os capítulos são do grupo (regra 9 do `CLAUDE.md`).
 

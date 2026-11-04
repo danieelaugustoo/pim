@@ -93,7 +93,7 @@ Nos arquivos de operação, `id_portaria` é numérico (P01 = 1). A matriz da es
 | `src/portaria.c` | `main` e menu da portaria (só menu e chamadas) |
 | `src/central.c` | `main` da central |
 | `tests/test_*.c` | testes com `assert.h`: util, estante, código, encomenda/retirada, persistência, morador, sincronização, consolidação e relatórios (9 conjuntos) |
-| `algoritmos/` | pseudocódigo e fluxogramas de A1 a A6 (ver `algoritmos/pseudocodigo.md`; fluxogramas em Mermaid, ainda não renderizados) |
+| `algoritmos/` | pseudocódigo e fluxogramas de A1 a A6 (ver `algoritmos/pseudocodigo.md`; fluxogramas em Mermaid, com PNG renderizado) |
 | `dados/exemplo/` | dados fictícios de demonstração |
 
 ## Limitações

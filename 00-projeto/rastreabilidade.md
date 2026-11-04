@@ -45,7 +45,7 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 | Diagrama de casos de uso | `03-engenharia-software/diagramas/casos-de-uso.puml` | `04-engenharia-software.md` | Feito |
 | Diagrama de classes (quando aplicável) | `03-engenharia-software/diagramas/classes-dominio.puml` | `04-engenharia-software.md` | Feito |
 | Diagrama de atividades ou de sequência | `03-engenharia-software/diagramas/atividade-registrar-encomenda.puml` + `atividade-retirar-encomenda.puml` + `sequencia-sincronizacao.puml` (+ `estados-encomenda.puml`) | `04-engenharia-software.md` | Feito |
-| Planejamento com Scrum, XP ou Kanban | `03-engenharia-software/scrum/` (papéis, cerimônias, sprints e definição de pronto) | `04-engenharia-software.md` | Feito |
+| Planejamento com Scrum, XP ou Kanban | `03-engenharia-software/scrum/` (papéis, cerimônias, sprints, definição de pronto e `cenarios-po-e-sm.md`) | `04-engenharia-software.md` | Feito |
 
 ## Etapa 4: Banco de dados
 
@@ -64,7 +64,7 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
 | Algoritmos | `05-programa-c/algoritmos/pseudocodigo.md` (A1 a A6) | `06-programacao-c.md` | Feito |
-| Fluxogramas | `05-programa-c/algoritmos/fluxogramas/` (A1 a A6, `.mmd` + PNG) | `06-programacao-c.md` | Em andamento |
+| Fluxogramas | `05-programa-c/algoritmos/fluxogramas/` (A1 a A6, `.mmd` + PNG renderizado em 2026-10-31; falta conferência do grupo) | `06-programacao-c.md` | Feito |
 | Pseudocódigo | `05-programa-c/algoritmos/pseudocodigo.md` | `06-programacao-c.md` | Feito |
 | Implementação em C | `05-programa-c/src/` + `05-programa-c/include/` | `06-programacao-c.md` | Feito |
 | Estruturas condicionais | `05-programa-c/src/` (validações, regra de tamanho do volume, `switch` do menu) | `06-programacao-c.md` | Feito |

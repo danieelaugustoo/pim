@@ -14,8 +14,8 @@
 
 | # | Nome completo | RA | E-mail | Papel no Scrum | Líder (postagem)? |
 |---|---|---|---|---|---|
-| 1 | Daniel Augusto Amarante da Silva | H900BA8 | não informado | Time de desenvolvimento `[PO/SM a definir]` | [ ] |
-| 2 | Lucas Ribeiro Tomiossi Kribely | R990648 | não informado | Líder (postagem) `[PO/SM a definir]` | [x] |
+| 1 | Daniel Augusto Amarante da Silva | H900BA8 | não informado | Scrum Master (indicado em 2026-11-03) | [ ] |
+| 2 | Lucas Ribeiro Tomiossi Kribely | R990648 | não informado | Líder (postagem) e Product Owner (indicado em 2026-11-03) | [x] |
 | 3 | Pedro Urquisa Rocha | R310337 | não informado | Time de desenvolvimento `[PO/SM a definir]` | [ ] |
 | 4 | Adilson Batista do Nascimento de Lima | R129IB1 | não informado | Time de desenvolvimento `[PO/SM a definir]` | [ ] |
 | 5 | Ysaac de Souza França | R3000I4 | não informado | Time de desenvolvimento `[PO/SM a definir]` | [ ] |

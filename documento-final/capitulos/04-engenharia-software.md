@@ -53,15 +53,15 @@
 
 # 4 ENGENHARIA DE SOFTWARE
 
-Este capítulo descreve como a solução de gestão de encomendas foi especificada, projetada e organizada para o desenvolvimento. São apresentados os requisitos, os casos de uso, a modelagem, a arquitetura e as decisões que a sustentam, o processo ágil adotado, as histórias de usuário e as ferramentas empregadas.
+Este capítulo descreve como a solução foi especificada, projetada e organizada para o desenvolvimento: requisitos, casos de uso, modelagem, arquitetura, processo ágil, qualidade e ferramentas.
 
 ## 4.1 Requisitos
 
-O levantamento partiu do cenário da Administradora Morada Central, organização fictícia descrita no capítulo 2, e dos sete problemas identificados nele: extravios e entregas à pessoa errada (P1), falta de rastreabilidade (P2), sobrecarga do porteiro nos períodos de pico (P3), aviso falho ao morador (P4), acúmulo de volumes (P5), ausência de dados para a sede planejar equipe e espaço (P6) e internet instável em parte das portarias (P7). Como não foi realizado levantamento de campo, os requisitos derivam do cenário e da análise do processo atual, e não de entrevistas com usuários reais. Essa é uma limitação do trabalho.
+O levantamento partiu do cenário da Administradora Morada Central (capítulo 2) e dos sete problemas identificados nele: extravios e entregas à pessoa errada (P1), falta de rastreabilidade (P2), sobrecarga do porteiro nos picos (P3), aviso falho ao morador (P4), acúmulo de volumes (P5), ausência de dados para a sede planejar equipe e espaço (P6) e internet instável em parte das portarias (P7). Como não houve levantamento de campo, os requisitos derivam do cenário e da análise do processo atual, não de entrevistas com usuários reais, o que é uma limitação do trabalho.
 
-Foram definidos 12 requisitos funcionais e 8 não funcionais. Os funcionais estão no Quadro 4.
+Foram definidos 12 requisitos funcionais (Quadro 2) e 8 não funcionais.
 
-**Quadro 4 – Requisitos funcionais**
+**Quadro 2 – Requisitos funcionais**
 
 | ID | Requisito |
 |---|---|
@@ -80,81 +80,42 @@ Foram definidos 12 requisitos funcionais e 8 não funcionais. Os funcionais est�
 
 Fonte: elaborado pelos autores (2026).
 
-Os requisitos não funcionais tratam de disponibilidade (a portaria não depende de internet), usabilidade (registro em cerca de 30 segundos), privacidade e segurança (dados mínimos, acesso por perfil e código de uso único), portabilidade (compilação com gcc em C99), escalabilidade (incluir um condomínio sem alterar o código), rastreabilidade (toda operação tem identificador único, data e hora) e acessibilidade (aviso alternativo para quem não usa smartphone). A meta de 30 segundos ainda não foi medida com usuários, e a portabilidade foi verificada apenas em Windows. Cada requisito foi ligado aos problemas que trata, aos casos de uso e às histórias de usuário em uma matriz de rastreabilidade mantida no repositório.
+Os não funcionais tratam de disponibilidade (a portaria não depende de internet), usabilidade (registro em cerca de 30 segundos, ainda não medido), privacidade e segurança, portabilidade (C99 com gcc, verificada em Windows e Linux), escalabilidade (incluir um condomínio sem alterar o código), rastreabilidade (toda operação tem identificador, data e hora) e acessibilidade (aviso alternativo para quem não usa smartphone). Uma matriz no repositório liga cada requisito aos problemas, casos de uso e histórias.
 
 ## 4.2 Casos de uso
 
-Os requisitos foram agrupados em oito casos de uso: registrar encomenda (UC01), avisar morador (UC02), retirar encomenda (UC03), consultar pendências (UC04), manter moradores (UC05), sincronizar com a central (UC06), consolidar operações (UC07) e emitir relatórios (UC08). O registro de encomenda inclui o aviso ao morador. Os atores são o porteiro, que opera a portaria, o morador, que recebe o aviso e retira o volume com o código, o supervisor da administradora, que consulta relatórios, e dois sistemas: a central, que consolida os dados, e o serviço de avisos. A Figura 4 apresenta o diagrama.
+Os requisitos foram agrupados em oito casos de uso: registrar encomenda (UC01), avisar morador (UC02), retirar encomenda (UC03), consultar pendências (UC04), manter moradores (UC05), sincronizar com a central (UC06), consolidar operações (UC07) e emitir relatórios (UC08). Os atores são o porteiro, o morador, o supervisor da administradora e dois sistemas: a central e o serviço de avisos (Figura 4).
 
 **[Figura 4 – Diagrama de casos de uso. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-04-casos-de-uso.png`]**
 
 ## 4.3 Modelagem
 
-A modelagem usou a UML `[FONTE A VERIFICAR: referência sobre UML]`. O modelo de domínio (Figura 5) organiza as entidades condomínio, bloco, unidade, morador, funcionário e encomenda, com três enumerações: o status da encomenda (pendente, retirada ou devolvida), o canal de aviso (aplicativo, SMS ou interfone) e o tipo de operação (registro, retirada ou devolução). O diagrama de atividade do registro (Figura 6) mostra o fluxo desde a entrada dos dados até a gravação: validação, escolha da posição na estante conforme o tamanho do volume, geração do código, gravação com status pendente, inclusão da operação na fila de sincronização e aviso ao morador. O diagrama de sequência (Figura 7) mostra a sincronização: a portaria copia as operações da fila para a rede apenas quando está online, e a central aplica cada operação uma única vez. A encomenda passa por um ciclo de vida simples: nasce pendente, ocupa uma posição na estante e termina retirada (com a posição liberada) ou devolvida.
+A modelagem usou a UML `[FONTE A VERIFICAR: referência sobre UML]`. O modelo de domínio (Figura 5) organiza condomínio, bloco, unidade, morador, funcionário e encomenda, com três enumerações: status (pendente, retirada ou devolvida), canal de aviso (aplicativo, SMS ou interfone) e tipo de operação (registro, retirada ou devolução). O diagrama de atividade (Figura 6) mostra o registro: validação, escolha da posição pelo tamanho do volume, geração do código, gravação como pendente, inclusão na fila de sincronização e aviso ao morador. O de sequência (Figura 7) mostra que a portaria só envia a fila quando está online e que a central aplica cada operação uma única vez.
 
-**[Figura 5 – Modelo de domínio. Figura 6 – Atividade: registrar encomenda. Figura 7 – Sequência: sincronização e consolidação. Fonte: elaboradas pelos autores (2026). Arquivos: `figuras/figura-05-classes-dominio.png`, `figura-06-atividade-registro.png`, `figura-07-sequencia-sincronizacao.png`]**
+**[Figura 5 – Modelo de domínio. Figura 6 – Atividade: registrar encomenda. Figura 7 – Sequência: sincronização e consolidação. Fonte: elaboradas pelos autores (2026). Arquivos: `figuras/figura-05-classes-dominio.png`, `figura-06-atividade-registrar-encomenda.png`, `figura-07-sequencia-sincronizacao.png`]**
 
 ## 4.4 Arquitetura e decisões
 
-O sistema completo foi projetado em duas partes. Em cada condomínio funciona um nó da portaria, capaz de operar sem internet, com armazenamento local e uma fila de sincronização. Um servidor central, com API e banco relacional, recebe as operações em lotes e guarda os dados de todos os condomínios, e um painel da administradora consulta relatórios. O protótipo desenvolvido representa essas partes com dois executáveis, `portaria` e `central`, e com arquivos no lugar do banco e da rede. O nó da portaria é organizado em camadas: interface de console, regras de negócio, persistência e fila de sincronização, e cada camada só chama a de baixo.
+O sistema completo tem duas partes: em cada condomínio, um nó de portaria capaz de operar sem internet, com armazenamento local e fila de sincronização; e um servidor central, com API e banco relacional, que recebe as operações em lotes e alimenta o painel da administradora. O protótipo representa essas partes com dois executáveis, `portaria` e `central`, e arquivos no lugar do banco e da rede. O nó é organizado em camadas (console, regras de negócio, persistência e fila), e cada camada só chama a de baixo.
 
-As principais decisões foram registradas como decisões de arquitetura (ADR), resumidas no Quadro 5.
-
-**Quadro 5 – Decisões de arquitetura**
-
-| ADR | Decisão |
-|---|---|
-| ADR-001 | Banco relacional (MySQL 8) no servidor central; bancos NoSQL apenas discutidos |
-| ADR-002 | Dados do protótipo em arquivos CSV separados por ponto e vírgula, em ASCII |
-| ADR-003 | Sincronização assíncrona com fila de operações idempotentes, identificadas por código único |
-| ADR-004 | Scrum com sprints curtas e cerimônias simplificadas |
-| ADR-005 | Diagramas escritos como código (PlantUML e Mermaid) |
-| ADR-006 | Endereçamento de rede 10.X.Y.0/24 |
-
-Fonte: elaborado pelos autores (2026).
-
-A decisão de maior impacto é a ADR-003. Como parte das portarias tem internet instável (P7), a portaria não pode parar quando a conexão cai. Cada evento vira uma operação com identificador único, guardada na fila, e a central ignora qualquer identificador que já tenha aplicado. Assim, reenviar um lote não duplica registros.
+As decisões estão registradas como ADR no repositório: banco MySQL 8 no servidor central (ADR-001), arquivos CSV em ASCII no protótipo (ADR-002), sincronização assíncrona com operações idempotentes (ADR-003), Scrum simplificado (ADR-004), diagramas como código (ADR-005) e endereçamento 10.X.Y.0/24 (ADR-006). A de maior impacto é a ADR-003: como parte das portarias tem internet instável (P7), cada evento vira uma operação com identificador único, guardada na fila, e a central ignora qualquer identificador já aplicado, de modo que reenviar um lote não duplica registros.
 
 ## 4.5 Processo de desenvolvimento
 
-O desenvolvimento seguiu o Scrum, em versão simplificada. O Scrum organiza o trabalho em ciclos iterativos e incrementais, com inspeção e adaptação constantes, e define os papéis de Product Owner, Scrum Master e Developers (SCHWABER; SUTHERLAND, 2020). O trabalho foi organizado em sprints, com backlog de histórias de usuário e critérios de aceitação no formato Dado, Quando, Então. As sprints 0 a 3 produziram, respectivamente, a base do projeto, a portaria funcionando, o sistema distribuído e os relatórios com a qualidade; as sprints 4 e 5 são dedicadas ao documento e à entrega `[DATAS DAS SPRINTS A CONFIRMAR]`. O grupo tem cinco integrantes, com líder responsável pela postagem final, e os papéis de Product Owner e Scrum Master foram adotados de forma simplificada `[TITULARES A DEFINIR]`. A revisão e a retrospectiva de cada sprint são registradas por mensagem escrita no grupo, às sextas-feiras, e consolidadas no arquivo de cada sprint.
+O desenvolvimento seguiu o Scrum simplificado, que organiza o trabalho em ciclos iterativos com inspeção e adaptação e define os papéis de Product Owner, Scrum Master e Developers (SCHWABER; SUTHERLAND, 2020). O grupo tem cinco integrantes: Lucas Ribeiro Tomiossi Kribely é o Product Owner e também o líder responsável pela postagem final, Daniel Augusto Amarante da Silva é o Scrum Master, e os demais integram o time de desenvolvimento. A revisão e a retrospectiva de cada sprint são por mensagem escrita no grupo, às sextas, 19h, e consolidadas no arquivo da sprint.
 
-O backlog reúne 16 histórias de usuário (US01 a US16). As 15 primeiras foram implementadas; a US16, opcional, que trata da devolução de volumes, ficou como evolução futura por depender de um prazo ainda não definido. O Quadro 6 resume a entrega por sprint.
+As sprints 0 a 3 foram executadas em um ciclo único em 29/10/2026 (datas do histórico do Git) e produziram a base do projeto, a portaria funcionando, o sistema distribuído e os relatórios com os testes; a sprint 4 vai de 29/10 a 06/11 e a sprint 5, de 07/11 a 13/11, ambas dedicadas ao documento e à entrega. O backlog tem 16 histórias de usuário com critérios Dado, Quando, Então; as 15 primeiras foram implementadas, e a US16, opcional (devolução de volumes), ficou como evolução futura por depender de um prazo ainda não definido.
 
-**Quadro 6 – Histórias por sprint**
-
-| Sprint | Meta | Histórias |
-|---|---|---|
-| 1 | Portaria funcionando | US01 a US06: registrar, indicar posição, gerar código, retirar, listar e buscar, salvar em arquivo |
-| 2 | Sistema distribuído | US07 a US11: moradores, aviso, registro sem internet, sincronização e consolidação sem duplicidade |
-| 3 | Relatórios e qualidade | US12 a US15: mapa da estante, pendências antigas, pico e ocupação, testes automatizados |
-
-Fonte: elaborado pelos autores (2026).
-
-A definição de pronto exige: compilação sem avisos com as opções `-Wall -Wextra -pedantic`, testes passando, funções comentadas, algoritmos principais com pseudocódigo e fluxograma, critérios de aceitação atendidos, rastreabilidade atualizada e revisão por outro integrante. Até o momento, as histórias estão implementadas e testadas, mas a revisão por pares ainda não foi concluída `[ATUALIZAR após a revisão]`.
+A definição de pronto exige compilação sem avisos com `-Wall -Wextra -pedantic`, testes passando, funções comentadas, algoritmos com pseudocódigo e fluxograma, critérios de aceitação atendidos, rastreabilidade atualizada e revisão por outro integrante. As histórias estão implementadas e testadas, mas a revisão por pares ainda não foi concluída `[ATUALIZAR após a revisão]`.
 
 ## 4.6 Qualidade e testes
 
-O protótipo possui nove conjuntos de testes automatizados, escritos com a biblioteca `assert.h`, que cobrem utilitários de entrada e datas, alocação na estante, geração e conferência do código, registro e retirada, persistência em arquivo, cadastro de moradores, sincronização, consolidação e relatórios. O comando `make test` compila e executa todos; uma asserção que falha interrompe o comando com erro e indica o teste. Na última verificação, a compilação não gerou avisos e os nove conjuntos passaram. A consolidação tem um teste específico que processa o mesmo arquivo de operações duas vezes e confirma que nada é duplicado, o que comprova o comportamento esperado da ADR-003.
+O protótipo tem nove conjuntos de testes automatizados, com `assert.h`, que cobrem entrada e datas, estante, código, retirada, persistência, moradores, sincronização, consolidação e relatórios. O `make test` compila e executa todos, e uma asserção que falha interrompe o comando. Na última verificação, a compilação não gerou avisos e os nove conjuntos passaram. Um teste específico processa o mesmo arquivo de operações duas vezes e confirma que nada é duplicado, o que comprova o comportamento da ADR-003.
 
 ## 4.7 Ferramentas e tecnologias
 
-O Quadro 7 relaciona os materiais utilizados.
-
-**Quadro 7 – Ferramentas e tecnologias**
-
-| Ferramenta | Finalidade |
-|---|---|
-| Linguagem C (padrão C99) e compilador gcc 16.2.0 | Desenvolvimento do protótipo |
-| GNU Make 4.4.1 e script `build.bat` | Compilação e execução dos testes |
-| Git 2.54.0 | Controle de versão |
-| MySQL 8.4.13 (contêiner Docker) | Execução dos scripts do banco de dados |
-| PlantUML e Mermaid | Diagramas como código |
-| Cisco Packet Tracer | Simulação da topologia de rede `[VERSÃO A CONFIRMAR]` |
-| Claude Code | Assistente de programação usado no desenvolvimento `[CONFIRMAR se o grupo quer mencionar]` |
-
-Fonte: elaborado pelos autores (2026).
+O protótipo foi desenvolvido em C (padrão C99) com gcc 16.2.0 e GNU Make 4.4.1, com o script `build.bat` no Windows. Usaram-se Git 2.54.0 para versionamento, MySQL 8.4.13 em contêiner Docker para executar os scripts do banco, PlantUML e Mermaid para os diagramas e o Cisco Packet Tracer para a rede `[VERSÃO A CONFIRMAR]`. O Claude Code foi usado como assistente de programação, com autorização da Prof.ª Eliana `[CONFIRMAR se o grupo quer mencionar]`.
 
 ## 4.8 Considerações do capítulo
 
-A especificação partiu de um cenário fictício, sem levantamento de campo, e produziu requisitos, casos de uso, modelos e decisões de arquitetura rastreáveis até as histórias implementadas. A principal decisão técnica, a sincronização assíncrona com operações idempotentes, permite que a portaria funcione sem internet. As pendências são a revisão por pares das histórias e a definição formal dos papéis do Scrum.
+A especificação partiu de um cenário fictício, sem levantamento de campo, e produziu requisitos, casos de uso, modelos e decisões rastreáveis até as histórias implementadas. A principal decisão técnica, a sincronização assíncrona com operações idempotentes, permite que a portaria funcione sem internet. Restam a revisão por pares das histórias e a conferência dos papéis do Scrum.

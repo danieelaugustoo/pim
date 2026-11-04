@@ -41,81 +41,54 @@
 
 # 2 CARACTERIZAÇÃO DA ORGANIZAÇÃO
 
-Este capítulo apresenta a organização escolhida como cenário do trabalho, seus serviços, sua estrutura, o processo atual de tratamento de encomendas e os problemas que justificam a solução proposta. A organização é fictícia, criada para este trabalho, e todos os números apresentados são hipóteses de cenário, mantidas coerentes entre código, banco de dados, rede e texto.
+Este capítulo apresenta a organização escolhida como cenário do trabalho, sua estrutura, o processo atual de tratamento de encomendas e os problemas que justificam a solução. A organização é fictícia, criada para este trabalho, e todos os números são hipóteses de cenário, mantidas coerentes entre código, banco de dados, rede e texto.
 
-## 2.1 Identificação e ramo de atuação
+## 2.1 Identificação, ramo e serviços
 
-A Administradora Morada Central Ltda. é uma empresa fictícia sediada em São Paulo (SP) que atua na administração condominial e na gestão de equipes de portaria para condomínios residenciais. Sua missão é administrar condomínios residenciais com organização, transparência e segurança, oferecendo a moradores e funcionários rotinas claras e confiáveis.
+A Administradora Morada Central Ltda. é uma empresa fictícia sediada em São Paulo (SP) que atua na administração condominial e na gestão de equipes de portaria para condomínios residenciais. Sua missão é administrar condomínios residenciais com organização, transparência e segurança, oferecendo a moradores e funcionários rotinas claras e confiáveis. Seus serviços são a administração financeira e a prestação de contas aos condôminos, a gestão das equipes de portaria (contratação, escalas e treinamento), a gestão de manutenção e de fornecedores e o atendimento ao morador com registro de ocorrências.
 
-## 2.2 Produtos e serviços
+## 2.2 Porte, estrutura e público-alvo
 
-A administradora oferece administração financeira e prestação de contas aos condôminos, gestão das equipes de portaria (contratação, escalas e treinamento), gestão de manutenção e de fornecedores, e atendimento ao morador com registro de ocorrências.
-
-## 2.3 Porte e estrutura organizacional
-
-No cenário, a empresa administra 10 condomínios, com 2 a 4 blocos cada, somando cerca de 960 unidades. Cada condomínio tem quatro porteiros em escala 12x36, o que totaliza 40 porteiros. A sede conta com um gerente de operações, dois supervisores (cada um responsável por cinco condomínios), três atendentes e dois analistas administrativo-financeiros. O síndico de cada condomínio é eleito pelos condôminos e é o interlocutor da administradora, aparecendo como relação externa no organograma (Figura 1). A estrutura é composta por uma diretoria, a gerência de operações, que coordena os supervisores, os porteiros e o atendimento ao morador, e o setor administrativo-financeiro.
+No cenário, a empresa administra 10 condomínios, com 2 a 4 blocos cada, somando cerca de 960 unidades. Cada condomínio tem quatro porteiros em escala 12x36, totalizando 40 porteiros. A sede tem um gerente de operações, dois supervisores (cinco condomínios cada), três atendentes e dois analistas administrativo-financeiros, sob uma diretoria. O síndico de cada condomínio, eleito pelos condôminos, é o interlocutor da administradora e aparece como relação externa no organograma (Figura 1).
 
 **[Figura 1 – Organograma da Administradora Morada Central (fictícia). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-01-organograma.png`]**
 
-## 2.4 Público-alvo
+O público-alvo são os moradores, de perfis variados, incluindo idosos e quem não usa smartphone, os síndicos, os porteiros e a equipe da sede. A diversidade dos moradores importa para o canal de aviso, que não pode depender só de aplicativo.
 
-O trabalho considera quatro grupos: os moradores, com perfis variados, incluindo idosos e pessoas que não usam smartphone; os síndicos; os porteiros; e a equipe da sede. A diversidade de perfis dos moradores é relevante para o canal de aviso da solução, que não pode depender apenas de aplicativo.
+## 2.3 Processo atual de encomendas
 
-## 2.5 Processo atual de encomendas
-
-Hoje, o tratamento de encomendas nas portarias depende de um caderno. O processo, representado na Figura 2, segue seis passos:
-
-1. o entregador chega à portaria;
-2. o porteiro anota no caderno a data, o nome, o bloco e apartamento e a transportadora;
-3. o pacote vai para uma sala ou armário, sem posição definida;
-4. o morador é avisado pelo interfone, quando o porteiro consegue;
-5. o morador retira o pacote e, nem sempre, assina o caderno;
-6. extravios e reclamações chegam à sede por telefone ou aplicativo de mensagens.
+Hoje, as encomendas dependem de um caderno (Figura 2): o entregador chega à portaria; o porteiro anota data, nome, bloco e apartamento e transportadora; o pacote vai para uma sala ou armário, sem posição definida; o morador é avisado pelo interfone, quando o porteiro consegue; o morador retira o pacote e, nem sempre, assina o caderno; e extravios e reclamações chegam à sede por telefone ou aplicativo de mensagens.
 
 **[Figura 2 – Processo atual de encomendas (caderno). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-02-processo-atual.png`]**
 
-## 2.6 Problemas encontrados
+## 2.4 Problemas encontrados
 
-A análise do processo atual levou a sete problemas, apresentados no Quadro 1.
+A análise do processo levou a sete problemas (Quadro 1).
 
 **Quadro 1 – Problemas do processo atual**
 
-| ID | Problema | Passo do processo em que aparece |
-|---|---|---|
-| P1 | Extravios e entregas à pessoa errada | Guarda sem posição definida; retirada sem conferência |
-| P2 | Falta de rastreabilidade (quem recebeu, onde está, quem retirou) | Registro livre no caderno; assinatura nem sempre feita |
-| P3 | Tempo do porteiro consumido por encomendas, com picos em novembro e dezembro | Registro e atendimento manuais |
-| P4 | Aviso ao morador falho ou inexistente | Dependência do interfone |
-| P5 | Acúmulo de volumes e falta de espaço | Guarda sem controle de ocupação |
-| P6 | Nenhum dado para a sede planejar equipe e espaço | Informações só no caderno de cada portaria |
-| P7 | Internet instável em parte das portarias | Inviabiliza uma solução que só funcione online |
+| ID | Problema |
+|---|---|
+| P1 | Extravios e entregas à pessoa errada (guarda sem posição, retirada sem conferência) |
+| P2 | Falta de rastreabilidade: quem recebeu, onde está, quem retirou |
+| P3 | Tempo do porteiro consumido por encomendas, com picos em novembro e dezembro |
+| P4 | Aviso ao morador falho ou inexistente, por dependência do interfone |
+| P5 | Acúmulo de volumes e falta de espaço, sem controle de ocupação |
+| P6 | Nenhum dado para a sede planejar equipe e espaço |
+| P7 | Internet instável em parte das portarias, o que inviabiliza uma solução só online |
 
 Fonte: elaborado pelos autores (2026).
 
-Esses problemas são o cenário do trabalho. Como não foi realizado levantamento de campo, o texto não afirma a frequência com que ocorrem. A literatura do setor associa períodos como a Black Friday e o fim de ano ao aumento das entregas e à pressão sobre as portarias (MACK, 2024). Qualquer número do setor, como o percentual do turno gasto com encomendas, só pode ser citado com fonte verificada `[FONTE A VERIFICAR: dados do setor]`.
+Esses problemas são o cenário do trabalho. Como não houve levantamento de campo, o texto não afirma a frequência com que ocorrem. A literatura do setor associa períodos como a Black Friday e o fim de ano ao aumento das entregas e à pressão sobre as portarias (MACK, 2024); qualquer número do setor só pode ser citado com fonte verificada `[FONTE A VERIFICAR: dados do setor]`.
 
-## 2.7 Justificativa e processo proposto
+## 2.5 Justificativa e processo proposto
 
-O problema se repete nos 10 condomínios e depende de registro, rastreabilidade e comunicação, funções em que uma solução computacional ajuda ao padronizar o processo, reduzir erros e gerar dados. A operação offline atende às portarias com internet instável (P7), e a consolidação central dá à administradora a visão de todos os condomínios (P6).
+O problema se repete nos 10 condomínios e depende de registro, rastreabilidade e comunicação, em que uma solução computacional ajuda ao padronizar o processo, reduzir erros e gerar dados. A operação offline atende às portarias com internet instável (P7) e a consolidação central dá à administradora a visão de todos os condomínios (P6).
 
-O processo proposto (Figura 3) segue o fluxo: registrar a encomenda, alocar posição na estante, gerar o código, avisar o morador, retirar com o código, sincronizar com a central e gerar relatórios. O Quadro 2 compara os dois processos.
-
-**Quadro 2 – Processo atual e processo proposto**
-
-| Aspecto | Atual (caderno) | Proposto |
-|---|---|---|
-| Registro | Texto livre, sem padrão | Campos obrigatórios e validados |
-| Localização do volume | Sem posição definida | Posição na estante indicada pelo sistema |
-| Identificação na retirada | Assinatura, nem sempre | Código de uso único |
-| Aviso ao morador | Interfone, quando possível | Canal cadastrado, com alternativa para quem não usa smartphone |
-| Rastreabilidade | Depende do caderno | Registro com data, hora e autor |
-| Funcionamento sem internet | Independe de internet | Mantido: a portaria opera offline e sincroniza depois |
-| Visão da sede | Telefone e mensagens | Consolidação e relatórios dos 10 condomínios |
-
-Fonte: elaborado pelos autores (2026).
+O processo proposto (Figura 3) segue o fluxo: registrar a encomenda, alocar posição na estante, gerar o código, avisar o morador, retirar com o código, sincronizar com a central e gerar relatórios. Em relação ao caderno, o registro passa a ter campos obrigatórios e validados; o volume ganha posição na estante; a retirada exige um código de uso único; o aviso usa o canal cadastrado, com alternativa para quem não usa smartphone; cada operação tem data, hora e autor; a portaria continua operando sem internet; e a sede ganha a consolidação e os relatórios dos 10 condomínios.
 
 **[Figura 3 – Processo proposto. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-03-processo-proposto.png`]**
 
-## 2.8 Considerações do capítulo
+## 2.6 Considerações do capítulo
 
-A Administradora Morada Central é um cenário fictício de 10 condomínios cujo processo manual de encomendas gera sete problemas, desde extravios até a falta de dados para a sede. O processo proposto troca o caderno por um fluxo registrado, rastreável e que funciona sem internet, objeto dos capítulos seguintes.
+A Administradora Morada Central é um cenário fictício de 10 condomínios cujo processo manual de encomendas gera sete problemas, de extravios à falta de dados para a sede. O processo proposto troca o caderno por um fluxo registrado, rastreável e que funciona sem internet, objeto dos capítulos seguintes.
