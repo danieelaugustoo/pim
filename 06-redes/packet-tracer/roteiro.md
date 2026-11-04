@@ -15,7 +15,7 @@ A **VPN IPsec** aparece só no diagrama (`../diagramas/topologia.mmd`). No simul
 
 ## 2. Dispositivos
 
-Modelos sugeridos; **confira a disponibilidade na versão instalada** (versão do grupo: [A DEFINIR]) e troque por equivalentes se faltar algum.
+Modelos sugeridos; **confira a disponibilidade na versão instalada** (versão do grupo: 9.0.1, informada em 2026-11-04) e troque por equivalentes se faltar algum.
 
 | Nome | Tipo no Packet Tracer | Local |
 |---|---|---|

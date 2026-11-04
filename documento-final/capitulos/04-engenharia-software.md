@@ -114,7 +114,7 @@ O protótipo tem nove conjuntos de testes automatizados, com `assert.h`, que cob
 
 ## 4.7 Ferramentas e tecnologias
 
-O protótipo foi desenvolvido em C (padrão C99) com gcc 16.2.0 e GNU Make 4.4.1, com o script `build.bat` no Windows. Usaram-se Git 2.54.0 para versionamento, MySQL 8.4.13 em contêiner Docker para executar os scripts do banco, PlantUML e Mermaid para os diagramas e o Cisco Packet Tracer para a rede `[VERSÃO A CONFIRMAR]`. O Claude Code foi usado como assistente de programação, com autorização da Prof.ª Eliana `[CONFIRMAR se o grupo quer mencionar]`.
+O protótipo foi desenvolvido em C (padrão C99) com gcc 16.2.0 e GNU Make 4.4.1, com o script `build.bat` no Windows. Usaram-se Git 2.54.0 para versionamento, MySQL 8.4.13 em contêiner Docker para executar os scripts do banco, PlantUML e Mermaid para os diagramas e o Cisco Packet Tracer 9.0.1 para a rede. O Claude Code foi usado como assistente de programação, com autorização da Prof.ª Eliana `[CONFIRMAR se o grupo quer mencionar]`.
 
 ## 4.8 Considerações do capítulo
 
