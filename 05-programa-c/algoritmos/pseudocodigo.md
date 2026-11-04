@@ -100,32 +100,35 @@ FIM
 
 **Objetivo.** Entregar o volume somente a quem informa o código correto, registrando quem retirou e quando, e liberando a posição na estante (RF05, US04, US05).
 
-**Entradas.** Unidade, id da encomenda, código digitado (até `MAX_TENTATIVAS` = 3 vezes) e nome de quem retira.
+**Entradas.** Código de retirada digitado (até `MAX_TENTATIVAS` = 3 vezes), a confirmação do porteiro (S ou N) e o nome de quem retira. O porteiro **não digita o id** da encomenda: o código a localiza.
 
-**Saídas.** Encomenda RETIRADA com data, hora e nome, e posição liberada; ou retirada negada, com a encomenda ainda PENDENTE.
+**Saídas.** Encomenda RETIRADA com data, hora e nome, e posição liberada; ou retirada negada ou cancelada, com a encomenda ainda PENDENTE.
 
 ```
 ALGORITMO A3 - Registrar retirada
 INICIO
-    ler a unidade (bloco e apartamento)
-    SE a unidade nao tem encomenda pendente ENTAO
-        ENCERRAR                                       // nada a retirar
-    FIM SE
-    listar as pendentes da unidade
-    ler o id da encomenda
-    SE o id nao e uma pendente DESSA unidade ENTAO
-        informar e ENCERRAR
+    SE nao ha encomenda pendente na portaria ENTAO
+        informar e ENCERRAR                             // nada a retirar
     FIM SE
     PARA tentativa DE 1 ATE MAX_TENTATIVAS FACA
         ler o codigo digitado
-        SE codigo digitado = codigo da encomenda ENTAO
-            ir para CONFIRMADO
+        achar <- numero de pendentes com esse codigo     // codigo_localizar_pendente
+        SE achar = 1 ENTAO
+            ir para ACHADA
         FIM SE
-        informar "codigo incorreto (tentativa de MAX_TENTATIVAS)"
+        SE achar > 1 ENTAO                               // nao deveria ocorrer (A2 evita)
+            informar "codigo repetido (erro nos dados)" e ENCERRAR
+        FIM SE
+        informar "nenhuma encomenda pendente com esse codigo (tentativa de MAX_TENTATIVAS)"
     FIM PARA
-    informar "retirada negada"                          // a encomenda continua PENDENTE
+    informar "retirada negada"                           // nada foi alterado
     ENCERRAR
-    CONFIRMADO:
+    ACHADA:
+        mostrar unidade, destinatario e posicao (sem o codigo)
+        ler S ou N: "confirme com o morador; entregar esta encomenda?"
+        SE resposta = N ENTAO
+            informar "retirada cancelada" e ENCERRAR     // a encomenda continua PENDENTE
+        FIM SE
         ler o nome de quem retira
         status <- RETIRADA
         retirada_em <- data e hora atuais
@@ -136,14 +139,16 @@ FIM
 ```
 
 **Pontos para explicar na apresentação.**
-- A conferência do código é o que impede a entrega ao morador errado (o problema do caderno). Três erros negam a retirada; o morador pode tentar de novo depois.
-- O id só vale se a encomenda é **pendente e da unidade informada**: ninguém retira o volume de outra unidade digitando o id dele.
+- O morador não precisa saber o id: ele mostra o código recebido no aviso (aplicativo ou SMS) ou impresso (interfone), e o sistema acha a encomenda **entre as pendentes**. O código de uma encomenda já retirada é ignorado, porque o A2 pode reutilizá-lo.
+- **Por que há confirmação.** O código tem 6 dígitos (900.000 valores) e vale para todas as pendentes da portaria. Um código errado pode, por acaso, ser o de **outra** encomenda: com 100 pendentes, a chance de um palpite acertar alguma é de cerca de 100 em 900.000. Por isso o programa mostra a encomenda achada e o porteiro confirma a unidade e o destinatário com o morador antes de entregar. Recusar (N) encerra o atendimento.
+- Três códigos sem encomenda pendente negam a retirada e nada é alterado; o morador pode tentar de novo depois (limitação declarada: o limite vale por atendimento).
+
 - A função separa a parte interativa (`retirada_registrar`) da regra (`retirada_efetuar`), o que permite testar a regra sem teclado.
 - A fila de sincronização só recebe a operação depois de a retirada ser aplicada, e o arquivo de encomendas é salvo antes (A4 cuida do envio).
 
-**Onde está no código.** `retirada_registrar` e `retirada_efetuar` em `src/retirada.c`; chamada na opção 2 de `src/portaria.c`.
+**Onde está no código.** `retirada_registrar` (interativa, com as auxiliares `retirada_buscar_codigo` e `retirada_confirmar`) e `retirada_efetuar` em `src/retirada.c`; a busca é `codigo_localizar_pendente` em `src/codigo.c`; chamada na opção 2 de `src/portaria.c`.
 
-**Testes.** `tests/test_encomenda.c` cobre a regra (`retirada_efetuar`: status, data, nome, posição liberada, recusa de encomenda que não está pendente) e `tests/test_codigo.c` cobre a conferência do código. A parte interativa (três tentativas, id de outra unidade) não tem teste automatizado, porque lê o teclado; foi conferida em execução manual: o id de outra unidade foi recusado e, após três códigos errados, a retirada foi negada e a encomenda continuou pendente.
+**Testes.** `tests/test_encomenda.c` cobre a regra (`retirada_efetuar`: status, data, nome, posição liberada, recusa de encomenda que não está pendente) e o fluxo pelo código sem teclado (`testar_retirada_por_codigo`); `tests/test_codigo.c` cobre a busca (`codigo_localizar_pendente`: código certo, inexistente, de encomenda já retirada, fora da faixa, vetor vazio e duplicado). A parte interativa (três tentativas e confirmação S/N) não tem teste automatizado, porque lê o teclado; foi conferida em execução manual com os dados de exemplo (2026-11-04): três códigos sem encomenda pendente negaram a retirada sem alterar nada; o código de uma encomenda já retirada foi recusado; com N a retirada foi cancelada e a encomenda continuou pendente; com S a retirada foi registrada, a posição `A/0` foi liberada, a operação `RETIRADA` entrou na fila e a central a consolidou; e sem nenhuma pendente o programa avisou e voltou ao menu.
 
 ---
 

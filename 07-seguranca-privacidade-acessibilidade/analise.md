@@ -54,7 +54,7 @@
 
 | Medida | Como aparece no projeto | Situação |
 |---|---|---|
-| Código de retirada de 6 dígitos, para uso único | A2 gera, A3 confere; vale só para a encomenda pendente; após a retirada o código não serve mais | No protótipo |
+| Código de retirada de 6 dígitos, para uso único | A2 gera, A3 localiza a encomenda pelo código e o porteiro confirma com o morador; vale só para a encomenda pendente; após a retirada o código não serve mais | No protótipo |
 | Limite de tentativas | Três códigos errados negam a retirada (`MAX_TENTATIVAS`) | No protótipo |
 | Código não exibido a terceiros | No sistema completo vai só na mensagem ao morador, e o banco guarda apenas o **hash** (`SHA2`) | Sistema completo; ver limitação abaixo |
 | Rastreabilidade | Toda operação tem id único (`P01-000123`), data e hora; a central ignora repetições | No protótipo (RNF07) |

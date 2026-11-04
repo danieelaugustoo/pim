@@ -23,4 +23,12 @@ int codigo_gerar_unico(const Encomenda encomendas[], int quantidade);
 /* Retorna 1 se o codigo digitado confere com o da encomenda. */
 int codigo_conferir(int digitado, int esperado);
 
+/* Resultados de codigo_localizar_pendente (alem do indice, que e >= 0). */
+#define CODIGO_NAO_ENCONTRADO (-1)
+#define CODIGO_DUPLICADO (-2)
+
+/* A3: indice da unica encomenda PENDENTE com o codigo; CODIGO_NAO_ENCONTRADO se nao houver
+   nenhuma; CODIGO_DUPLICADO se houver mais de uma (nao deveria ocorrer). */
+int codigo_localizar_pendente(const Encomenda encomendas[], int quantidade, int codigo);
+
 #endif /* CODIGO_H */

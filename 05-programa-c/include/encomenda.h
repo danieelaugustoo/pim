@@ -26,6 +26,9 @@ int encomenda_proximo_id(const Encomenda encomendas[], int quantidade);
 /* Indice da encomenda com o id, ou -1. */
 int encomenda_localizar(const Encomenda encomendas[], int quantidade, int id);
 
+/* Conta todas as encomendas pendentes. */
+int encomenda_contar_pendentes(const Encomenda encomendas[], int quantidade);
+
 /* Conta as pendentes de uma unidade. */
 int encomenda_contar_pendentes_unidade(const Encomenda encomendas[], int quantidade,
                                        char bloco, int apartamento);
@@ -42,6 +45,9 @@ int encomenda_registrar(Encomenda encomendas[], int *quantidade, int estante[][N
 
 /* Mostra todas as pendentes. Retorna quantas mostrou. */
 int encomenda_listar_pendentes(const Encomenda encomendas[], int quantidade);
+
+/* Mostra uma encomenda (cabecalho e linha), sem o codigo de retirada. */
+void encomenda_mostrar_uma(const Encomenda *e);
 
 /* Mostra as pendentes de uma unidade. Retorna quantas mostrou. */
 int encomenda_buscar_por_unidade(const Encomenda encomendas[], int quantidade,
