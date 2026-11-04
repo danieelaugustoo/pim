@@ -57,9 +57,9 @@ O banco central guarda entidades estáveis e muito relacionadas (condomínio, bl
 
 ## 5.2 Modelo conceitual
 
-O modelo tem onze entidades: condomínio, bloco, unidade, morador, funcionário, portaria, posição de estante, encomenda, retirada, aviso e operação de sincronização. Um condomínio possui blocos, que possuem unidades, que abrigam moradores. Cada condomínio tem uma portaria, que recebe as encomendas, possui posições de estante e origina as operações de sincronização. Uma encomenda tem destino em uma unidade, ocupa uma posição enquanto pendente, tem no máximo uma retirada e pode gerar vários avisos (Figura 9).
+O modelo tem onze entidades: condomínio, bloco, unidade, morador, funcionário, portaria, posição de estante, encomenda, retirada, aviso e operação de sincronização. Um condomínio possui blocos, que possuem unidades, que abrigam moradores. Cada condomínio tem uma portaria, que recebe as encomendas, possui posições de estante e origina as operações de sincronização. Uma encomenda tem destino em uma unidade, ocupa uma posição enquanto pendente, tem no máximo uma retirada e pode gerar vários avisos (Figura 8).
 
-**[Figura 9 – Diagrama entidade-relacionamento (DER). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-09-der.png`]**
+**[Figura 8 – Diagrama entidade-relacionamento (DER). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-08-der.png`]**
 
 Seis regras orientam o modelo: o canal de aviso é aplicativo, SMS ou interfone (os dois primeiros exigem contato); o status é pendente, retirada ou devolvida; uma encomenda tem no máximo uma retirada; uma posição guarda no máximo uma encomenda pendente; o identificador da encomenda é único dentro da portaria; e cada operação de sincronização é aplicada uma única vez.
 

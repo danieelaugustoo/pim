@@ -14,11 +14,11 @@
 > **Atenção na demonstração:** a coluna **Antigas** do relatório (e a lista de pendências antigas) depende da **data do computador**. Em 29/10 os dados de exemplo davam 2 antigas (P01) e 0 (P02); rodando em 04/11 deu 4 e 4 (total 8). O capítulo 6 já informa isso, mas na apresentação os números vão diferir do Quadro 4. Os demais valores (registradas, pendentes, retiradas, devolvidas, dia de pico, 17 operações e 14 encomendas) não mudam. Conferido em 04/11 por execução do `bin/central`.
 
 - [ ] Atualizar o repositório na branch `claude/jolly-johnson-cue2j0` (`git pull`).
-- [ ] **Print do `make test` com outro integrante.** Em 2026-11-04, no notebook do Daniel, o `.\build.bat test` foi **bloqueado pelo Device Guard** do Windows (política da organização; `test_util` e `test_estante` passaram, e `test_codigo.exe` foi bloqueado; o mesmo bloqueio intermitente já tinha sido registrado no `sprint-01.md`). O programa (`portaria` e `central`) roda normalmente nessa máquina. Qualquer integrante pode tirar o print em outra máquina: rodar `make test` (ou `.\build.bat test`) e capturar a linha "Todos os testes passaram" → capítulo 6, seção 6.5. Se nenhuma máquina do grupo rodar, declarar a limitação no capítulo 6.
+- [x] **Print do `make test` feito em 2026-11-04** (Figura 11, `figura-11-testes-automatizados.png`): no notebook do Daniel o Device Guard bloqueou o `test_codigo.exe` em algumas tentativas, e repetir o `.\build.bat test` em laço (até 10 vezes) fez os 9 testes passarem. O bloqueio é intermitente (já registrado no `sprint-01.md`). Se acontecer ao vivo na apresentação, não rodar os testes: mostrar o print.
 - [ ] (original, se o Device Guard não bloquear) Dentro de `05-programa-c/`, rodar `make test` (no Windows, `build.bat`). Tirar o **print do resultado** ("Todos os testes passaram") → entra no capítulo 6, seção 6.5. Se algum teste falhar na sua máquina, copiar a mensagem e mandar para o Claude.
-- [x] *(Figura 11 feita em 2026-11-04: `figura-11-mapa-estante.png`, 6 de 48 ocupadas, 12,5%.)*
-- [ ] ~~Copiar os dados de exemplo~~ (já feito para a Figura 11; refazer só se for ensaiar de novo)
-- [ ] (original) Copiar os dados de exemplo (comandos em `05-programa-c/README.md`, seção "Demonstração com os dados de exemplo"), rodar `bin/portaria 1`, escolher a opção **5 (mapa da estante)** e tirar o print → **Figura 11**, salvar como `documento-final/figuras/figura-11-mapa-estante.png`.
+- [x] *(Figura 12 — mapa da estante — feita em 2026-11-04: `figura-12-mapa-estante.png`, 6 de 48 ocupadas, 12,5%.)*
+- [ ] ~~Copiar os dados de exemplo~~ (já feito para a Figura 12; refazer só se for ensaiar de novo)
+- [ ] (original) Copiar os dados de exemplo (comandos em `05-programa-c/README.md`, seção "Demonstração com os dados de exemplo"), rodar `bin/portaria 1`, escolher a opção **5 (mapa da estante)** e tirar o print → **Figura 12**, salvar como `documento-final/figuras/figura-12-mapa-estante.png`.
 - [ ] Rodar `bin/central` duas vezes e conferir se a segunda aplica 0 operações (é o que o texto do capítulo 6 afirma). Se o resultado for diferente, avisar para corrigirmos o texto.
 - [ ] Ensaiar a demonstração do início ao fim (registrar, retirar, offline, sincronizar, central, relatório) para a apresentação.
 
@@ -77,7 +77,7 @@ Revisado em 2026-11-04: **ninguém precisa ler livro inteiro**, e o grupo decidi
 
 ## 3. Para o Claude fazer (quando o grupo liberar ou mandar o resultado)
 
-- [ ] **Renderizar o PlantUML** (figuras 04 a 08): liberar a permissão de Bash para `java -jar` do PlantUML (Graphviz já está instalado) ou exportar pela extensão do VS Code para `documento-final/figuras/` com os nomes `figura-04-casos-de-uso.png`, `figura-05-classes-dominio.png`, `figura-06-atividade-registrar-encomenda.png`, `figura-07-sequencia-sincronizacao.png` e `figura-08-estados-encomenda.png`.
+- [ ] **Renderizar o PlantUML** (figuras 04 a 08): liberar a permissão de Bash para `java -jar` do PlantUML (Graphviz já está instalado) ou exportar pela extensão do VS Code para `documento-final/figuras/` com os nomes `figura-04-casos-de-uso.png`, `figura-05-classes-dominio.png`, `figura-06-atividade-registrar-encomenda.png`, `figura-07-sequencia-sincronizacao.png` e `estados-encomenda` (opcional, sem número: não é citado no capítulo 4).
 - [ ] Preencher **7.7 (resultados dos testes)**, a conclusão (objetivo 5) e a introdução com o resultado do Packet Tracer, quando o Daniel mandar.
 - [ ] Atualizar capítulos 5 e 6 se os prints mostrarem diferença do texto.
 - [ ] Aplicar os **cortes de figuras** se o Word passar de 30 páginas (lista em `documento-final/estrutura-e-paginas.md`, seção 8).
