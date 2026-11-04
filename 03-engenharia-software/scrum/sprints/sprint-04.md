@@ -71,6 +71,7 @@
 | Idioma do abstract | Inglês |
 | Retenção dos dados | 90 dias após a retirada; depois, anonimização |
 | Demonstração do programa | Será feita no computador de Daniel, levado à apresentação; não é preciso rodar `make test` nas demais máquinas (informado em 2026-11-03) |
+| Respostas da Prof.ª Eliana (informadas pelo grupo em 2026-11-04) | (1) **Introdução e conclusão entram** na contagem das 20 a 30 páginas do desenvolvimento. (2) Os cenários fictícios (organização, dados e papéis do Scrum) estão aprovados, e o texto **não precisa dizer que são fictícios**. (3) Apresentação: demonstração do programa, um Canva (slides) e o banner que o grupo vai montar. |
 | Cenários do PO e do SM | Podem ser construídos pelo grupo; a Prof.ª Eliana autorizou (informado pelo grupo em 2026-11-03) |
 | Dados do protótipo e dos indicadores | Dados simulados (fictícios), **sempre rotulados como simulação** no texto; nunca apresentados como dado medido nem como pesquisa |
 | Modelo conceitual | Sem brModelo; SGBD MySQL 8 |
