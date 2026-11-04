@@ -59,7 +59,7 @@ Numeração em ordem de aparição. Arquivos finais em `figuras/figura-NN-descri
 | 08 | Estados da encomenda (opcional) | 4 | `.../estados-encomenda.puml` | renderizar (PlantUML) |
 | 09 | DER | 5 | `04-banco-de-dados/diagramas/der.mmd` | renderizado (PNG em `figuras/`) |
 | 10 | Fluxograma do A1 | 6 | `05-programa-c/algoritmos/fluxogramas/A1.mmd` | renderizado (PNG em `figuras/`) |
-| 11 | Print do mapa da estante | 6 | executar a opção 5 do programa | **grupo** |
+| 11 | Print do mapa da estante | 6 | executar a opção 5 do programa | feito (`figura-11-mapa-estante.png`) |
 | 12 | Fluxograma do A5 | 6 | `.../fluxogramas/A5.mmd` | renderizado (PNG em `figuras/`) |
 | 13 | Topologia no Packet Tracer | 7 | montagem no simulador | feito (`figura-13-topologia.png`) |
 | 14 | Print do teste T2 (portaria alcança a API) | 7 | Packet Tracer | feito (`figura-14-teste-t2.png`) |

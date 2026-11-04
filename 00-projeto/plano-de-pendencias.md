@@ -15,7 +15,9 @@
 
 - [ ] Atualizar o repositório na branch `claude/jolly-johnson-cue2j0` (`git pull`).
 - [ ] Dentro de `05-programa-c/`, rodar `make test` (no Windows, `build.bat`). Tirar o **print do resultado** ("Todos os testes passaram") → entra no capítulo 6, seção 6.5. Se algum teste falhar na sua máquina, copiar a mensagem e mandar para o Claude.
-- [ ] Copiar os dados de exemplo (comandos em `05-programa-c/README.md`, seção "Demonstração com os dados de exemplo"), rodar `bin/portaria 1`, escolher a opção **5 (mapa da estante)** e tirar o print → **Figura 11**, salvar como `documento-final/figuras/figura-11-mapa-estante.png`.
+- [x] *(Figura 11 feita em 2026-11-04: `figura-11-mapa-estante.png`, 6 de 48 ocupadas, 12,5%.)*
+- [ ] ~~Copiar os dados de exemplo~~ (já feito para a Figura 11; refazer só se for ensaiar de novo)
+- [ ] (original) Copiar os dados de exemplo (comandos em `05-programa-c/README.md`, seção "Demonstração com os dados de exemplo"), rodar `bin/portaria 1`, escolher a opção **5 (mapa da estante)** e tirar o print → **Figura 11**, salvar como `documento-final/figuras/figura-11-mapa-estante.png`.
 - [ ] Rodar `bin/central` duas vezes e conferir se a segunda aplica 0 operações (é o que o texto do capítulo 6 afirma). Se o resultado for diferente, avisar para corrigirmos o texto.
 - [ ] Ensaiar a demonstração do início ao fim (registrar, retirar, offline, sincronizar, central, relatório) para a apresentação.
 

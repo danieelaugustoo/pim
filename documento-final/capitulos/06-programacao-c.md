@@ -117,7 +117,7 @@ A demonstração usa dados fictícios. Ao executar a central duas vezes sobre os
 
 Fonte: elaborado pelos autores (2026). Valores gerados em 29/10/2026; a coluna "Antigas" depende da data de execução.
 
-Em 29/10/2026, o mapa da estante com os mesmos dados mostrou 6 posições ocupadas de 48 (12,5%) e as pendências antigas listaram as encomendas 1 (9 dias) e 4 (14 dias). **[Figura 11 – Print do mapa da estante. Inserir após executar a opção 5 do programa.]** Na operação offline, três registros entraram na fila e foram enviados ao voltar online.
+Em 29/10/2026, o mapa da estante com os mesmos dados mostrou 6 posições ocupadas de 48 (12,5%) e as pendências antigas listaram as encomendas 1 (9 dias) e 4 (14 dias). **[Figura 11 – Mapa da estante com os dados de exemplo (opção 5 do programa). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-11-mapa-estante.png`]** Na operação offline, três registros entraram na fila e foram enviados ao voltar online.
 
 ## 6.7 Limitações
 
