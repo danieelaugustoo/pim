@@ -88,7 +88,7 @@ Os scripts, executados em ordem, criam as tabelas, carregam dados fictícios (do
 
 Fonte: elaborado pelos autores (2026), a partir de `03-consultas.sql`.
 
-**[Inserir um print de uma consulta no MySQL Workbench, como Figura, quando o grupo executar os scripts. Não está feito.]**
+**[Figura 9 – Resultado da consulta de pendências por condomínio (consulta 1 de `03-consultas.sql`), executada no MySQL 8.4 em contêiner Docker, com dados fictícios. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-09-consulta-sql.png`]**
 
 ## 5.6 Discussão sobre bancos NoSQL
 
@@ -98,4 +98,4 @@ Um banco de documentos poderia servir, em uma evolução futura, ao histórico d
 
 ## 5.7 Considerações do capítulo
 
-O banco foi modelado a partir do problema do caderno, normalizado até a terceira forma normal e implementado em MySQL com restrições que traduzem as regras de negócio. Os scripts foram executados em MySQL 8.4.13 e os resultados conferem com os do programa em C. Ficam pendentes o print de uma consulta e a verificação das referências teóricas.
+O banco foi modelado a partir do problema do caderno, normalizado até a terceira forma normal e implementado em MySQL com restrições que traduzem as regras de negócio. Os scripts foram executados em MySQL 8.4.13 e os resultados conferem com os do programa em C. Fica pendente a verificação das referências teóricas.

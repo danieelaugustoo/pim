@@ -21,7 +21,7 @@
 - Declarar logo no início que a organização é **fictícia** e que os dados de exemplo são fictícios.
 - Não adiantar resultados: a introdução apresenta, não conclui.
 - Toda estatística ou afirmação sobre o mercado precisa de fonte (`[FONTE A VERIFICAR]` até conferir).
-- Figuras: nenhuma obrigatória; se o grupo quiser, usar o fluxo ponta a ponta (Figura 16) como visão geral.
+- Figuras: nenhuma obrigatória; se o grupo quiser, usar o fluxo ponta a ponta (Figura 17) como visão geral.
 
 ## Pendências do projeto que afetam este capítulo
 

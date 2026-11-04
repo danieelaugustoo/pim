@@ -20,7 +20,7 @@
 
 | Item | Origem |
 |---|---|
-| Figura 16: fluxo ponta a ponta | `08-integracao/diagramas/fluxo-ponta-a-ponta.mmd` |
+| Figura 17: fluxo ponta a ponta | `08-integracao/diagramas/fluxo-ponta-a-ponta.mmd` |
 | Tabela: indicadores (como medir, fonte, antes, meta) | `beneficios-e-indicadores.md`, seção 3 |
 | Tabela: real × simulado | `integracao.md`, seção 4 |
 | Tabela: limitações × evolução | `limitacoes-e-evolucao.md` |
@@ -49,7 +49,7 @@ Este capítulo reúne o que foi desenvolvido nos capítulos anteriores seguindo 
 
 ## 9.1 Como os componentes se integram
 
-Acompanha-se uma encomenda fictícia que chega à unidade A-12 de um condomínio quando a portaria está sem internet (Figura 16).
+Acompanha-se uma encomenda fictícia que chega à unidade A-12 de um condomínio quando a portaria está sem internet (Figura 17).
 
 1. **Necessidade.** O problema do caderno (capítulo 2) virou requisitos e histórias de usuário (capítulo 4).
 2. **Registro.** O porteiro informa unidade, destinatário, transportadora e tamanho. O sistema escolhe a posição na estante (A1) e gera o código único (A2) (capítulo 6).
@@ -58,7 +58,7 @@ Acompanha-se uma encomenda fictícia que chega à unidade A-12 de um condomínio
 5. **Retirada.** O morador mostra o código; o sistema acha a encomenda pendente que o usa, o porteiro confirma com o morador (em até três tentativas), registra quem retirou, a data e a hora, e a posição é liberada (A3). A retirada também sobe à central.
 6. **Relatórios.** O supervisor vê as pendências com mais de 7 dias, o dia de pico e a ocupação (A6), que alimentam os indicadores.
 
-**[Figura 16 – Fluxo ponta a ponta de uma encomenda. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-16-fluxo-ponta-a-ponta.png`]**
+**[Figura 17 – Fluxo ponta a ponta de uma encomenda. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-17-fluxo-ponta-a-ponta.png`]**
 
 O Quadro 7 deixa claro o que foi construído e o que é simulado ou projetado.
 
