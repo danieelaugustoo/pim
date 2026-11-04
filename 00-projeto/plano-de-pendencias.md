@@ -24,6 +24,8 @@
 
 ### 1.3 Packet Tracer (prazo: qua 04/11 montar; qui 05/11 prints)
 
+**Andamento em 2026-11-04 (fim do dia):** Packet Tracer 9.0.1 instalado; 24 dispositivos, 20 cabos, endereços e 3 switches feitos pelo PTBuilder; 4 roteadores configurados pelo CLI e funcionando; **T1 respondeu**, ping ao gateway do condomínio 3 respondeu e DHCP da sede entregou `10.0.10.100`. **Falta:** Wi-Fi (módulo WPC300N nos 3 laptops, SSID nos 3 APs), HTTP/HTTPS no `SRV-API`, testes T2 a T15, prints (topologia, T2 e T6), salvar o `.pkt` e mandar o resultado ao Claude. Retomar em 05/11.
+
 Seguir `06-redes/packet-tracer/roteiro.md` (VPN fica só no diagrama, decisão do grupo).
 
 - [ ] Montar a topologia (sede, condomínios 1 e 3, servidor da central e switch que simula a internet).

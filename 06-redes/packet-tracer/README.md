@@ -24,4 +24,6 @@ O `ptbuilder.js` cria no Packet Tracer os 24 dispositivos, os 20 cabos, os ender
 - `SW-INTERNET` fica sem configuração.
 - Conferir, em cada roteador, `show ip interface brief` (todas up/up) e `show ip route` antes dos testes T1 a T15.
 
+**Resultado da primeira execução (2026-11-04, Packet Tracer 9.0.1):** o PTBuilder funcionou para **dispositivos, cabos, endereços dos PCs/servidores e switches**, mas rodado de uma vez o script travou e, nos **roteadores**, perdeu os comandos `interface` (os três endereços foram parar na mesma porta). Por isso: rode em partes (dispositivos, cabos, endereços, switches) e **cole os blocos dos roteadores direto no CLI** (seções 7.1 a 7.4 do roteiro), respondendo `no` à pergunta de configuração inicial na primeira vez. Depois do `write memory`, não digite mais nada no CLI (comandos como `end` e `do` fora do modo de configuração travam a tela com "Translating").
+
 O gerador não está no repositório: se o roteiro mudar, o `ptbuilder.js` precisa ser refeito.
