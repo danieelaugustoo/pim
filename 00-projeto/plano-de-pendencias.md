@@ -109,8 +109,8 @@ Cada capítulo é lido por **outro** integrante, que confere contra a definiçã
 | sáb 14/11 | Reserva, só para imprevistos (prazo 23h59) | todos |
 
 - [ ] Rodar `make test` de novo antes de congelar a versão final e anotar o resultado.
-- [ ] Criar as tags do repositório: ao fim das sprints (`v0.1.0` em diante) e a de entrega `v1.0.0`. **Nenhuma tag foi criada até agora.**
-- [ ] **Inserir o link do GitHub no capítulo 6** (decisão do grupo de usar só o link, sem apêndice; **ainda não está no texto**) e conferir se ele abre para quem corrige (repositório público ou acesso dado).
+- [ ] Criar as tags do repositório: ao fim das sprints (`v0.1.0` em diante) e a de entrega `v1.0.0`. **Em 2026-11-04 foram criadas `v0.1.0` a `v0.4.0` (sprints 0 a 3); faltam a da Sprint 4 (sex 06/11), a da Sprint 5 e a `v1.0.0` da entrega.**
+- [ ] **Conferir o link do GitHub no capítulo 6** (inserido em 2026-11-04, na seção 6.1, com marca `[CONFERIR]`): ele só funciona para quem corrige se o repositório for público ou se o acesso for concedido.
 
 ---
 
