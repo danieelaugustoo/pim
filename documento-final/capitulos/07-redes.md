@@ -135,7 +135,7 @@ Nos testes em que se esperava falta de resposta, a mensagem *Destination host un
 
 **[Figura 15 – Teste T6: o Wi-Fi de visitantes do condomínio 1 não alcança a portaria. Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-15-teste-t6.png`]**
 
-Um problema foi resolvido: executado de uma vez, o script perdeu nos roteadores os comandos de seleção de interface, e os roteadores passaram a ser configurados direto no CLI. Limitações: só o laptop de visitante do condomínio 1 foi conectado ao Wi-Fi e testado (na Figura 13, os da sede e do condomínio 3 aparecem sem conexão sem fio); VPN, HTTPS da API e desempenho não foram testados; a simulação não substitui equipamentos reais; e o resultado do T9 foi informado pelo grupo.
+Um problema foi resolvido: executado de uma vez, o script perdeu nos roteadores os comandos de seleção de interface, e os roteadores passaram a ser configurados direto no CLI. Limitações: os laptops de visitante dos três locais foram conectados ao Wi-Fi (Figura 13), mas os testes T5 a T8 foram feitos só no do condomínio 1; VPN, HTTPS da API e desempenho não foram testados; a simulação não substitui equipamentos reais; e o resultado do T9 foi informado pelo grupo.
 
 ## 7.8 Considerações do capítulo
 
