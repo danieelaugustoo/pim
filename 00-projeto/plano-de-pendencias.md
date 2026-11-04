@@ -24,7 +24,7 @@
 
 ### 1.3 Packet Tracer (prazo: qua 04/11 montar; qui 05/11 prints)
 
-**Andamento em 2026-11-04 (noite):** Packet Tracer 9.0.1; topologia montada e **T1 a T15 executados, todos como esperado**; capítulo 7, conclusão, introdução, resumo e abstract já atualizados com os resultados. **Feito depois:** HTTP/HTTPS ligados no `SRV-API` e prints do T2 (Figura 14) e do T6 (Figura 15) já no repositório. **Falta:** print da topologia (Figura 13); salvar o `.pkt` e os prints em `06-redes/packet-tracer/` e `documento-final/figuras/`; confirmar o segundo ping do T9 (CFTV → API não responde); decidir sobre o Wi-Fi dos laptops da sede e do condomínio 3 (nenhum teste depende deles).
+**Andamento em 2026-11-04 (noite):** Packet Tracer 9.0.1; topologia montada e **T1 a T15 executados, todos como esperado**; capítulo 7, conclusão, introdução, resumo e abstract já atualizados com os resultados. **Feito depois:** HTTP/HTTPS ligados no `SRV-API` e prints do T2 (Figura 14) e do T6 (Figura 15) já no repositório. **Print da topologia (Figura 13) também já no repositório. Falta:** salvar o `.pkt` e os prints em `06-redes/packet-tracer/` e `documento-final/figuras/`; confirmar o segundo ping do T9 (CFTV → API não responde); decidir sobre o Wi-Fi dos laptops da sede e do condomínio 3 (nenhum teste depende deles).
 
 Seguir `06-redes/packet-tracer/roteiro.md` (VPN fica só no diagrama, decisão do grupo).
 

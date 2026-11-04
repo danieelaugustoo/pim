@@ -48,7 +48,7 @@
 
 ## Texto do grupo
 
-> **Rascunho** redigido a partir do roteiro e de `06-redes/` (autorizado pela Prof.ª Eliana). O grupo revisa, ajusta e responde pelo conteúdo. **Os resultados da seção 7.7 vêm dos testes executados pelo grupo em 2026-11-04 no Packet Tracer 9.0.1; as Figuras 14 e 15 já estão em `figuras/`, falta o print da topologia (Figura 13).** Os conceitos de redes e nuvem precisam de fontes verificadas.
+> **Rascunho** redigido a partir do roteiro e de `06-redes/` (autorizado pela Prof.ª Eliana). O grupo revisa, ajusta e responde pelo conteúdo. **Os resultados da seção 7.7 vêm dos testes executados pelo grupo em 2026-11-04 no Packet Tracer 9.0.1; as Figuras 13 a 15 já estão em `figuras/`.** Os conceitos de redes e nuvem precisam de fontes verificadas.
 
 # 7 REDES DE COMPUTADORES E SISTEMAS DISTRIBUÍDOS
 
@@ -129,13 +129,13 @@ Fonte: elaborado pelos autores (2026), a partir da execução no Packet Tracer 9
 
 Nos testes em que se esperava falta de resposta, a mensagem *Destination host unreachable* veio do próprio gateway do local, indicando que as listas de acesso barraram o tráfego: o Wi-Fi de visitantes alcança o gateway, mas não a portaria nem a nuvem (T6 a T8), e o CFTV só fala com o seu gateway (T9). Passaram os dois testes exigidos pelo plano: a portaria alcança o servidor da central (T2, Figura 14) e o Wi-Fi de visitantes não alcança a portaria (T6, Figura 15). O teste de continuidade (T14 e T15) mostra que, sem a nuvem, a rede local da portaria segue funcionando, comportamento que o nó em C aproveita ao guardar as operações na fila até a conexão voltar (ADR-003). O enlace foi religado ao fim.
 
-**[Figura 13 – Topologia da rede (print do Packet Tracer; inserir). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-13-topologia.png`]**
+**[Figura 13 – Topologia da rede no Packet Tracer 9.0.1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-13-topologia.png`]**
 
 **[Figura 14 – Teste T2: a portaria do condomínio 1 alcança o servidor da central. Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-14-teste-t2.png`]**
 
 **[Figura 15 – Teste T6: o Wi-Fi de visitantes do condomínio 1 não alcança a portaria. Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-15-teste-t6.png`]**
 
-Um problema foi resolvido: executado de uma vez, o script perdeu nos roteadores os comandos de seleção de interface, e os roteadores passaram a ser configurados direto no CLI. Limitações: só um laptop de visitante foi testado, o do condomínio 1 `[CONFIRMAR se os da sede e do condomínio 3 foram configurados]`; VPN, HTTPS da API e desempenho não foram testados; a simulação não substitui equipamentos reais; e o resultado do T9 foi informado pelo grupo.
+Um problema foi resolvido: executado de uma vez, o script perdeu nos roteadores os comandos de seleção de interface, e os roteadores passaram a ser configurados direto no CLI. Limitações: só o laptop de visitante do condomínio 1 foi conectado ao Wi-Fi e testado (na Figura 13, os da sede e do condomínio 3 aparecem sem conexão sem fio); VPN, HTTPS da API e desempenho não foram testados; a simulação não substitui equipamentos reais; e o resultado do T9 foi informado pelo grupo.
 
 ## 7.8 Considerações do capítulo
 
