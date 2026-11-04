@@ -14,11 +14,11 @@
 > **Atenção na demonstração:** a coluna **Antigas** do relatório (e a lista de pendências antigas) depende da **data do computador**. Em 29/10 os dados de exemplo davam 2 antigas (P01) e 0 (P02); rodando em 04/11 deu 4 e 4 (total 8). O capítulo 6 já informa isso, mas na apresentação os números vão diferir do Quadro 4. Os demais valores (registradas, pendentes, retiradas, devolvidas, dia de pico, 17 operações e 14 encomendas) não mudam. Conferido em 04/11 por execução do `bin/central`.
 
 - [ ] Atualizar o repositório na branch `claude/jolly-johnson-cue2j0` (`git pull`).
-- [x] **Print do `make test` feito em 2026-11-04** (Figura 12, `figura-12-testes-automatizados.png`): no notebook do Daniel o Device Guard bloqueou o `test_codigo.exe` em algumas tentativas, e repetir o `.\build.bat test` em laço (até 10 vezes) fez os 9 testes passarem. O bloqueio é intermitente (já registrado no `sprint-01.md`). Se acontecer ao vivo na apresentação, não rodar os testes: mostrar o print.
+- [x] **Print do `make test` feito em 2026-11-04** (Figura 11, `figura-11-testes-automatizados.png`): no notebook do Daniel o Device Guard bloqueou o `test_codigo.exe` em algumas tentativas, e repetir o `.\build.bat test` em laço (até 10 vezes) fez os 9 testes passarem. O bloqueio é intermitente (já registrado no `sprint-01.md`). Se acontecer ao vivo na apresentação, não rodar os testes: mostrar o print.
 - [ ] (original, se o Device Guard não bloquear) Dentro de `05-programa-c/`, rodar `make test` (no Windows, `build.bat`). Tirar o **print do resultado** ("Todos os testes passaram") → entra no capítulo 6, seção 6.5. Se algum teste falhar na sua máquina, copiar a mensagem e mandar para o Claude.
-- [x] *(Figura 13 — mapa da estante — feita em 2026-11-04: `figura-13-mapa-estante.png`, 6 de 48 ocupadas, 12,5%.)*
-- [ ] ~~Copiar os dados de exemplo~~ (já feito para a Figura 13; refazer só se for ensaiar de novo)
-- [ ] (original) Copiar os dados de exemplo (comandos em `05-programa-c/README.md`, seção "Demonstração com os dados de exemplo"), rodar `bin/portaria 1`, escolher a opção **5 (mapa da estante)** e tirar o print → **Figura 13**, salvar como `documento-final/figuras/figura-13-mapa-estante.png`.
+- [x] *(Figura 12 — mapa da estante — feita em 2026-11-04: `figura-12-mapa-estante.png`, 6 de 48 ocupadas, 12,5%.)*
+- [ ] ~~Copiar os dados de exemplo~~ (já feito para a Figura 12; refazer só se for ensaiar de novo)
+- [ ] (original) Copiar os dados de exemplo (comandos em `05-programa-c/README.md`, seção "Demonstração com os dados de exemplo"), rodar `bin/portaria 1`, escolher a opção **5 (mapa da estante)** e tirar o print → **Figura 12**, salvar como `documento-final/figuras/figura-12-mapa-estante.png`.
 - [ ] Rodar `bin/central` duas vezes e conferir se a segunda aplica 0 operações (é o que o texto do capítulo 6 afirma). Se o resultado for diferente, avisar para corrigirmos o texto.
 - [ ] Ensaiar a demonstração do início ao fim (registrar, retirar, offline, sincronizar, central, relatório) para a apresentação.
 
@@ -37,7 +37,7 @@ Seguir `06-redes/packet-tracer/roteiro.md` (VPN fica só no diagrama, decisão d
 
 - [ ] Montar a topologia (sede, condomínios 1 e 3, servidor da central e switch que simula a internet).
 - [ ] Executar os testes **T1 a T15** e anotar **esperado × obtido** de cada um. Se algum não funcionar, anotar o erro (o Claude ajuda a corrigir o roteiro).
-- [ ] Prints obrigatórios: **topologia (Figura 14)**, **T2** portaria alcança a central (**Figura 15**) e **T6** visitantes não alcançam a portaria (**Figura 16**). Salvar o `.pkt` como `06-redes/packet-tracer/morada-central.pkt` e os prints em `documento-final/figuras/`.
+- [ ] Prints obrigatórios: **topologia (Figura 13)**, **T2** portaria alcança a central (**Figura 14**) e **T6** visitantes não alcançam a portaria (**Figura 15**). Salvar o `.pkt` como `06-redes/packet-tracer/morada-central.pkt` e os prints em `documento-final/figuras/`.
 - [ ] Anotar a **versão do Packet Tracer** (capítulo 4, seção 4.7 tem `[VERSÃO A CONFIRMAR]`).
 - [ ] Mandar para o Claude o resultado dos testes: ele preenche a seção 7.7, a conclusão e a introdução.
 
@@ -46,6 +46,8 @@ Seguir `06-redes/packet-tracer/roteiro.md` (VPN fica só no diagrama, decisão d
 ---
 
 > **Mudança de responsável (2026-11-04):** o Daniel assumiu **todas** as tarefas que estavam com o "grupo" (seções 2 e 4 abaixo, e o item "para a apresentação"). Continuam com outras pessoas apenas a **postagem e a cópia impressa** (Lucas, o líder) e a **revisão por pares**, que precisa ser de **outro integrante** (basta uma pessoa para ler os capítulos e o código na terça e quarta). Onde o texto abaixo diz "grupo", leia "Daniel".
+
+> **Atualização de 2026-11-04 (noite):** os capítulos 1 a 10, o resumo e o abstract foram reescritos (sem a palavra "fictícia", com voz mais natural) e o texto está em cerca de 30 páginas no teste do LibreOffice. **Falta de verdade:** (1) montar no **Word com o modelo da UNIP** (capa, sumário, numeração de página a partir da introdução, legendas) e conferir as páginas; (2) as **figuras 4 a 7 (UML)**; (3) resolver as **marcas `[ ... ]`** que sobraram no texto (fontes, WCAG, metas, link do GitHub); (4) **revisão por outra pessoa**; (5) similaridade, PDF e postagem pelo Lucas; (6) preparar a **apresentação** (demonstração, Canva e banner).
 
 ## 2. Para o Daniel decidir ou conferir (antes: "o grupo") (prazo: qua 04/11 a sex 06/11)
 
