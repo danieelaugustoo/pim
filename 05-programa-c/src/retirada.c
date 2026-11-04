@@ -29,54 +29,62 @@ int retirada_efetuar(Encomenda *encomenda, int estante[][NUM_PRATELEIRAS], const
 }
 
 /*
- * retirada_escolher (auxiliar interna)
- * Objetivo: pedir o id da encomenda e conferir se e uma pendente da unidade.
- * Parametros: encomendas = vetor; quantidade = tamanho usado; bloco e
- *   apartamento = unidade informada.
- * Retorno: indice da encomenda no vetor; -1 se o id nao serve; -2 se a
- *   entrada acabou.
- * Logica: le o id, localiza no vetor e confere status e unidade.
+ * retirada_buscar_codigo (auxiliar interna)
+ * Objetivo: pedir o codigo de retirada e achar a encomenda pendente que o usa,
+ *   com ate MAX_TENTATIVAS tentativas.
+ * Parametros: encomendas = vetor; quantidade = tamanho usado.
+ * Retorno: indice da encomenda no vetor; -1 se nenhuma tentativa serviu, se o
+ *   codigo esta repetido entre pendentes ou se a entrada acabou.
+ * Logica: laco de 1 a MAX_TENTATIVAS; le o codigo e procura entre as
+ *   pendentes; a cada codigo sem encomenda avisa quantas tentativas restam. Se
+ *   mais de uma pendente tem o codigo, nega a retirada (erro nos dados).
  */
-static int retirada_escolher(const Encomenda encomendas[], int quantidade, char bloco, int apartamento)
-{
-    int id;
-    int indice;
-
-    if (!util_ler_inteiro("Id da encomenda a retirar: ", 1, 999999, &id)) {
-        return -2;
-    }
-    indice = encomenda_localizar(encomendas, quantidade, id);
-    if (indice < 0 || encomendas[indice].status != STATUS_PENDENTE ||
-        encomendas[indice].bloco != bloco || encomendas[indice].apartamento != apartamento) {
-        printf("Esse id nao esta entre as pendentes da unidade %c-%d.\n", bloco, apartamento);
-        return -1;
-    }
-    return indice;
-}
-
-/*
- * retirada_pedir_codigo (auxiliar interna)
- * Objetivo: conferir o codigo, com ate MAX_TENTATIVAS tentativas.
- * Parametros: esperado = codigo da encomenda.
- * Retorno: 1 se o codigo conferiu; 0 se errou todas as tentativas ou a
- *   entrada acabou.
- * Logica: laco de 1 a MAX_TENTATIVAS; a cada erro avisa quantas restam.
- */
-static int retirada_pedir_codigo(int esperado)
+static int retirada_buscar_codigo(const Encomenda encomendas[], int quantidade)
 {
     int tentativa;
     int digitado;
+    int indice;
 
     for (tentativa = 1; tentativa <= MAX_TENTATIVAS; tentativa++) {
         if (!util_ler_inteiro("Codigo de retirada (6 digitos): ", 0, CODIGO_MAX, &digitado)) {
-            return 0;
+            return -1;
         }
-        if (codigo_conferir(digitado, esperado)) {
-            return 1;
+        indice = codigo_localizar_pendente(encomendas, quantidade, digitado);
+        if (indice >= 0) {
+            return indice;
         }
-        printf("Codigo incorreto (tentativa %d de %d).\n", tentativa, MAX_TENTATIVAS);
+        if (indice == CODIGO_DUPLICADO) {
+            printf("Codigo repetido em mais de uma pendente (erro nos dados). Retirada negada.\n");
+            return -1;
+        }
+        printf("Nenhuma encomenda pendente com esse codigo (tentativa %d de %d).\n", tentativa,
+               MAX_TENTATIVAS);
     }
-    return 0;
+    printf("Retirada negada: %d codigos sem encomenda pendente. Nenhuma encomenda foi alterada.\n",
+           MAX_TENTATIVAS);
+    return -1;
+}
+
+/*
+ * retirada_confirmar (auxiliar interna)
+ * Objetivo: fazer o porteiro conferir com o morador qual encomenda sera
+ *   entregue, antes de registrar a retirada.
+ * Parametros: encomenda = encomenda encontrada pelo codigo.
+ * Retorno: 1 se o porteiro confirmou (S); 0 se recusou (N) ou a entrada acabou.
+ * Logica: mostra a unidade, o destinatario e a posicao (sem o codigo) e le S ou
+ *   N. A confirmacao evita entregar o volume de outra pessoa quando um codigo
+ *   errado coincide com o de outra encomenda.
+ */
+static int retirada_confirmar(const Encomenda *encomenda)
+{
+    char resposta;
+
+    encomenda_mostrar_uma(encomenda);
+    if (!util_ler_letra("Confirme com o morador a unidade e o destinatario. Entregar esta encomenda? (S/N): ",
+                        "SN", &resposta)) {
+        return 0;
+    }
+    return resposta == 'S';
 }
 
 /*
@@ -87,32 +95,29 @@ static int retirada_pedir_codigo(int esperado)
  *   vetor (para o chamador enfileirar a operacao).
  * Retorno: 1 se a retirada foi registrada (o chamador deve salvar); 0 caso
  *   contrario.
- * Logica: pede a unidade e lista as pendentes dela; pede o id da encomenda;
- *   confere o codigo (ate MAX_TENTATIVAS); se conferir, pede o nome de quem
- *   retira e aplica a retirada. Depois de todas as tentativas erradas, nega a
- *   retirada e a encomenda continua PENDENTE.
+ * Logica: se nao ha pendentes, avisa e volta; pede o codigo e acha a encomenda
+ *   pendente que o usa (ate MAX_TENTATIVAS); mostra a encomenda e pede a
+ *   confirmacao do porteiro; se confirmada, pede o nome de quem retira e
+ *   aplica a retirada. Se o porteiro recusar, ou se todas as tentativas
+ *   falharem, nada e alterado e a encomenda continua PENDENTE.
  */
 int retirada_registrar(Encomenda encomendas[], int quantidade, int estante[][NUM_PRATELEIRAS],
                        int *indice)
 {
-    char bloco;
-    int apartamento;
     int escolhida;
     char nome[TAM_NOME];
 
     printf("\n--- Registrar retirada ---\n");
-    if (!encomenda_ler_unidade(&bloco, &apartamento)) {
+    if (encomenda_contar_pendentes(encomendas, quantidade) == 0) {
+        printf("Nao ha encomendas pendentes nesta portaria.\n");
         return 0;
     }
-    if (encomenda_buscar_por_unidade(encomendas, quantidade, bloco, apartamento) == 0) {
-        return 0;
-    }
-    escolhida = retirada_escolher(encomendas, quantidade, bloco, apartamento);
+    escolhida = retirada_buscar_codigo(encomendas, quantidade);
     if (escolhida < 0) {
         return 0;
     }
-    if (!retirada_pedir_codigo(encomendas[escolhida].codigo)) {
-        printf("Retirada negada. A encomenda continua pendente.\n");
+    if (!retirada_confirmar(&encomendas[escolhida])) {
+        printf("Retirada cancelada. A encomenda continua pendente.\n");
         return 0;
     }
     if (!util_ler_texto("Nome de quem retira: ", nome, TAM_NOME)) {

@@ -2,24 +2,28 @@
 title Atividade - Retirar encomenda (UC03 / A3)
 
 start
-:Porteiro informa a unidade (bloco e apartamento);
-:Sistema lista as pendencias da unidade;
-if (Ha pendencias?) then (sim)
-  :Porteiro escolhe a encomenda;
+if (Ha encomenda pendente na portaria?) then (sim)
   :tentativas = 0;
   repeat
-    :Porteiro informa o codigo dito pelo morador;
+    :Porteiro informa o codigo mostrado pelo morador;
+    :Sistema procura a encomenda PENDENTE com esse codigo;
     :tentativas = tentativas + 1;
-    backward :Informa que o codigo nao confere;
-  repeat while (Codigo errado e tentativas < 3?) is (sim) not (nao)
-  if (Codigo confere?) then (sim)
-    :Porteiro informa o nome de quem retira;
-    :Marca a encomenda como RETIRADA, com data e hora;
-    :Libera a posicao na estante;
-    :Acrescenta operacao RETIRADA na fila;
+    backward :Informa que nenhuma encomenda pendente tem o codigo;
+  repeat while (Nao achou e tentativas < 3?) is (sim) not (nao)
+  if (Achou uma encomenda?) then (sim)
+    :Sistema mostra unidade, destinatario e posicao (sem o codigo);
+    if (Porteiro confirma com o morador?) then (sim)
+      :Porteiro informa o nome de quem retira;
+      :Marca a encomenda como RETIRADA, com data e hora;
+      :Libera a posicao na estante;
+      :Acrescenta operacao RETIRADA na fila;
+    else (nao)
+      :Cancela a retirada;
+      :Encomenda continua PENDENTE;
+    endif
   else (nao)
     :Nega a retirada;
-    :Encomenda continua PENDENTE;
+    :Nada e alterado;
   endif
 else (nao)
   :Informa que nao ha pendencias;

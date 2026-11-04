@@ -59,7 +59,7 @@ Numeração em ordem de aparição no texto (renumerada em 2026-11-04). Arquivos
 | 08 | DER | 5 | `04-banco-de-dados/diagramas/der.mmd` | renderizado (`figura-08-der.png`) |
 | 09 | Fluxograma do A1 | 6 | `05-programa-c/algoritmos/fluxogramas/A1.mmd` | renderizado (`figura-09-fluxograma-a1.png`) |
 | 10 | Fluxograma do A5 | 6 | `.../fluxogramas/A5.mmd` | renderizado (`figura-10-fluxograma-a5.png`) |
-| 11 | Print dos testes automatizados | 6 | `.\build.bat test` | feito (`figura-11-testes-automatizados.png`) |
+| 11 | Print dos testes automatizados | 6 | `.\build.bat test` | feito em 2026-11-04, antes da mudança do A3 (a saída é a mesma; refazer só se quiser) |
 | 12 | Print do mapa da estante | 6 | opção 5 do programa | feito (`figura-12-mapa-estante.png`) |
 | 13 | Topologia no Packet Tracer | 7 | montagem no simulador | feito (`figura-13-topologia.png`) |
 | 14 | Print do teste T2 (portaria alcança a API) | 7 | Packet Tracer | feito (`figura-14-teste-t2.png`) |

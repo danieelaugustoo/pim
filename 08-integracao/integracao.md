@@ -22,7 +22,7 @@ Os dados de exemplo são fictícios (`05-programa-c/dados/exemplo/`).
 | 8 | Sem internet, a operação entra na fila e a portaria segue trabalhando | Sistema distribuído offline (US09, ADR-003) | `src/sincronizacao.c` |
 | 9 | Com a conexão de volta, a fila é enviada à central | Redes: VPN, API na nuvem (US10, algoritmo A4) | `06-redes/nuvem-e-sistemas-distribuidos.md`; protótipo simula por arquivos |
 | 10 | A central aplica cada operação **uma só vez** | Consolidação idempotente (US11, algoritmo A5, ADR-003) | `src/consolidacao.c` |
-| 11 | O morador chega, informa o código; o porteiro confere e entrega | Algoritmo A3 (US04, US05) | `src/retirada.c` |
+| 11 | O morador chega e mostra o código; o sistema acha a encomenda e o porteiro confirma e entrega | Algoritmo A3 (US04, US05) | `src/retirada.c` |
 | 12 | A retirada também sobe à central | A4 e A5 de novo, com a operação RETIRADA | `src/sincronizacao.c`, `src/consolidacao.c` |
 | 13 | A posição na estante é liberada | A1 e A3 (matriz) | `src/estante.c` |
 | 14 | O supervisor vê pendências antigas, pico e ocupação | Relatórios, algoritmo A6 (US12 a US14) | `src/relatorio.c`; `dados/central/relatorio-consolidado.txt` |

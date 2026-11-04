@@ -45,7 +45,7 @@ Sem copiar nada, o programa cria os arquivos vazios na primeira execução.
 | Menu | Opção | Situação |
 |---|---|---|
 | 1 | Registrar encomenda | Pronta (US01, US02, US03; guarda a operação na fila e avisa o morador) |
-| 2 | Registrar retirada | Pronta (US04; guarda a operação na fila) |
+| 2 | Registrar retirada | Pronta (US04: pede o código, acha a encomenda, pede a confirmação S/N e guarda a operação na fila) |
 | 3 | Listar pendentes | Pronta (US05) |
 | 4 | Buscar por unidade | Pronta (US05) |
 | 5 | Mapa da estante | Pronta (US12: livre/ocupada por estante e prateleira, com percentual) |
@@ -83,7 +83,7 @@ Nos arquivos de operação, `id_portaria` é numérico (P01 = 1). A matriz da es
 | `src/estante.c` | matriz de posições: alocar (A1), liberar, reconstruir, ocupação |
 | `src/codigo.c` | código de retirada de 6 dígitos, único entre as pendentes (A2) |
 | `src/encomenda.c` | criar, registrar, listar e buscar encomendas |
-| `src/retirada.c` | retirada com conferência do código e até 3 tentativas (A3) |
+| `src/retirada.c` | retirada pelo código, com confirmação S/N e até 3 tentativas (A3) |
 | `src/morador.c` | cadastro de moradores, validação do contato por canal e escolha de quem avisar |
 | `src/aviso.c` | aviso simulado por canal (APP, SMS, INTERFONE) e registro em arquivo |
 | `src/sincronizacao.c` | fila de operações, numeração `Pnn-NNNNNN` e envio para a rede (A4) |

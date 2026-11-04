@@ -91,7 +91,7 @@ retornar "sem vaga"
 
 **[Figura 9 – Fluxograma do algoritmo A1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-09-fluxograma-a1.png`]**
 
-**A2 a A4 – código, retirada e sincronização.** O código de 6 dígitos é sorteado e repetido enquanto existir em uma encomenda pendente (limite de 1000 tentativas). A retirada confere o código em até três tentativas: se confere, registra quem retira, a data e a hora e libera a posição; se não, é negada e a encomenda continua pendente. A sincronização, online, copia a fila para o registro da rede e só então a esvazia; se falhar entre as duas etapas, a repetição é segura porque a central ignora operações já aplicadas.
+**A2 a A4 – código, retirada e sincronização.** O código de 6 dígitos é sorteado e repetido enquanto existir em uma encomenda pendente (limite de 1000 tentativas). A retirada pede o código de retirada e acha a encomenda pendente que o usa, sem que o porteiro digite o id (até três tentativas); o programa mostra a unidade e o destinatário, e o porteiro confirma com o morador (S ou N). Se confirmar, registra quem retira, a data e a hora e libera a posição; se o porteiro recusar ou as tentativas acabarem, nada é alterado e a encomenda continua pendente. A sincronização, online, copia a fila para o registro da rede e só então a esvazia; se falhar entre as duas etapas, a repetição é segura porque a central ignora operações já aplicadas.
 
 **A5 – consolidação idempotente (`consolidacao_processar_portaria`).** Para cada operação do registro, a central verifica se o identificador já foi aplicado: se sim, ignora; se não, aplica o efeito e anota o identificador. Operação que não pode ser aplicada, como retirada de encomenda desconhecida, é rejeitada sem ser anotada e pode ser aplicada depois. A encomenda é identificada pelo par portaria e identificador, porque o identificador só é único dentro da portaria.
 
@@ -101,7 +101,7 @@ retornar "sem vaga"
 
 ## 6.5 Testes
 
-O protótipo tem nove conjuntos de testes automatizados (`make test`, ou `build.bat` no Windows), que cobrem utilitários, estante, código e retirada, persistência, moradores, sincronização, consolidação e relatórios. A consolidação é testada ao processar o mesmo arquivo duas vezes e com portarias distintas usando o mesmo identificador. A compilação não gerou avisos e os nove conjuntos passaram. A parte interativa da retirada foi conferida por execução manual: identificador de outra unidade recusado e retirada negada após três códigos errados. 
+O protótipo tem nove conjuntos de testes automatizados (`make test`, ou `build.bat` no Windows), que cobrem utilitários, estante, código e retirada, persistência, moradores, sincronização, consolidação e relatórios. A consolidação é testada ao processar o mesmo arquivo duas vezes e com portarias distintas usando o mesmo identificador. A compilação não gerou avisos e os nove conjuntos passaram. A parte interativa da retirada, que lê o teclado, foi conferida por execução manual com os dados de exemplo: três códigos sem encomenda pendente negam a retirada sem alterar nada, o código de uma encomenda já retirada não serve, a recusa na confirmação (N) cancela e a confirmação (S) registra a retirada e libera a posição. 
 
 **[Figura 11 – Resultado dos testes automatizados (`.\build.bat test`) no Windows. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-11-testes-automatizados.png`]**
 
@@ -124,6 +124,7 @@ Em 29/10/2026, o mapa da estante com os mesmos dados mostrou 6 posições ocupad
 ## 6.7 Limitações
 
 - A rede e o aviso ao morador são simulados (arquivos, mensagem na tela e registro em arquivo).
+- A retirada acha a encomenda só pelo código, e um código errado pode coincidir com o de outra encomenda pendente (a chance é de cerca de 1 em 9.000 para 100 pendentes); por isso há a confirmação do porteiro com o morador. O limite de três tentativas vale por atendimento: o porteiro pode abrir a retirada de novo.
 - O código de retirada é gravado em texto nos arquivos e aparece na tela do porteiro ao registrar a encomenda. No sistema completo, só o morador o receberia e o banco guardaria apenas o resumo criptográfico. O grupo manteve o protótipo assim e declara a limitação.
 - A capacidade é fixa (500 encomendas e 300 moradores por portaria) e a devolução de volumes não foi implementada: a central entende a operação, mas a portaria não a gera.
 - Os arquivos são reescritos por inteiro; fechar o programa à força durante a gravação pode deixar um arquivo incompleto.

@@ -5,6 +5,7 @@
 #include "tipos.h"
 #include "util.h"
 #include "estante.h"
+#include "codigo.h"
 #include "encomenda.h"
 #include "retirada.h"
 
@@ -93,6 +94,46 @@ static void testar_retirada(void)
     assert(strcmp(v[0].retirado_por, "Joao Teste") == 0);
 }
 
+/* US04 (A3): a retirada pelo codigo acha a encomenda certa, libera a posicao e a confirmacao
+   negada nao altera nada. */
+static void testar_retirada_por_codigo(void)
+{
+    static Encomenda v[MAX_ENCOMENDAS];
+    int n = 0;
+    int e[NUM_ESTANTES][NUM_PRATELEIRAS];
+    Encomenda d1 = dados_de('A', 12, 'P');
+    Encomenda d2 = dados_de('B', 21, 'M');
+    int codigo2;
+    int indice;
+    int estante_antes;
+
+    estante_iniciar(e);
+    assert(encomenda_criar(v, &n, e, &d1) == ENC_OK);
+    assert(encomenda_criar(v, &n, e, &d2) == ENC_OK);
+    assert(encomenda_contar_pendentes(v, n) == 2);
+    assert(estante_ocupacao(e) == 2);
+    codigo2 = v[1].codigo;
+
+    /* o codigo da segunda encomenda leva a ela, e nao a primeira */
+    indice = codigo_localizar_pendente(v, n, codigo2);
+    assert(indice == 1);
+
+    /* confirmacao negada: o porteiro nao chama retirada_efetuar, entao nada muda */
+    estante_antes = estante_ocupacao(e);
+    assert(v[indice].status == STATUS_PENDENTE);
+    assert(estante_ocupacao(e) == estante_antes);
+    assert(encomenda_contar_pendentes(v, n) == 2);
+
+    /* confirmacao aceita: retira, libera a posicao e o codigo deixa de achar a encomenda */
+    assert(retirada_efetuar(&v[indice], e, "Maria Teste") == 1);
+    assert(v[1].status == STATUS_RETIRADA);
+    assert(estante_ocupacao(e) == 1);
+    assert(encomenda_contar_pendentes(v, n) == 1);
+    assert(codigo_localizar_pendente(v, n, codigo2) == CODIGO_NAO_ENCONTRADO);
+    /* a primeira continua pendente e ainda e achada pelo seu codigo */
+    assert(codigo_localizar_pendente(v, n, v[0].codigo) == 0);
+}
+
 /* Conversao do status em texto e de volta. */
 static void testar_status(void)
 {
@@ -111,6 +152,7 @@ int main(void)
     testar_criar();
     testar_sem_vaga();
     testar_retirada();
+    testar_retirada_por_codigo();
     testar_status();
     printf("test_encomenda: OK\n");
     return 0;

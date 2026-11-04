@@ -42,9 +42,9 @@
 | Campo | Descrição |
 |---|---|
 | Ator principal | Porteiro (atendendo o morador) |
-| Pré-condição | Existe encomenda PENDENTE para a unidade |
-| Fluxo principal | 1. Porteiro informa a unidade. 2. O sistema lista as pendências. 3. Porteiro escolhe a encomenda e informa o código dito pelo morador. 4. O sistema confere o código. 5. Porteiro informa o nome de quem retira. 6. O sistema marca a encomenda como RETIRADA com data e hora, libera a posição e registra a operação RETIRADA na fila. |
-| Fluxos alternativos | 4a. Código errado: o sistema permite nova tentativa, até 3. 4b. Esgotadas as tentativas: a retirada é negada e a encomenda continua PENDENTE. |
+| Pré-condição | Existe encomenda PENDENTE na portaria |
+| Fluxo principal | 1. Porteiro informa o código de retirada mostrado pelo morador (no aviso ou impresso). 2. O sistema procura a encomenda PENDENTE que tem esse código e mostra a unidade, o destinatário e a posição (sem o código). 3. Porteiro confirma com o morador que é a encomenda dele. 4. Porteiro informa o nome de quem retira. 5. O sistema marca a encomenda como RETIRADA com data e hora, libera a posição e registra a operação RETIRADA na fila. |
+| Fluxos alternativos | 2a. Nenhuma pendente tem o código: o sistema avisa e permite nova tentativa, até 3. 2b. Esgotadas as tentativas: a retirada é negada e nada é alterado. 2c. Mais de uma pendente com o código (erro nos dados): a retirada é negada. 3a. Porteiro não confirma (N): a retirada é cancelada e a encomenda continua PENDENTE. |
 | Pós-condição | Encomenda RETIRADA (ou inalterada, em caso de negativa) |
 
 ### UC04 Consultar pendências

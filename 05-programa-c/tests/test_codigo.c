@@ -68,12 +68,47 @@ static void testar_conferir(void)
     assert(codigo_conferir(0, 0) == 0);
 }
 
+/* A3: a busca pelo codigo acha so encomenda pendente e avisa se nao ha ou se repete. */
+static void testar_localizar_pendente(void)
+{
+    Encomenda v[4] = {{0}};
+
+    v[0].status = STATUS_PENDENTE;
+    v[0].codigo = 123456;
+    v[1].status = STATUS_RETIRADA;
+    v[1].codigo = 222222;
+    v[2].status = STATUS_PENDENTE;
+    v[2].codigo = 333333;
+    v[3].status = STATUS_DEVOLVIDA;
+    v[3].codigo = 444444;
+
+    /* acha a pendente certa pelo indice */
+    assert(codigo_localizar_pendente(v, 3, 123456) == 0);
+    assert(codigo_localizar_pendente(v, 3, 333333) == 2);
+    /* codigo que nao existe ou de encomenda ja retirada ou devolvida */
+    assert(codigo_localizar_pendente(v, 4, 999999) == CODIGO_NAO_ENCONTRADO);
+    assert(codigo_localizar_pendente(v, 4, 222222) == CODIGO_NAO_ENCONTRADO);
+    assert(codigo_localizar_pendente(v, 4, 444444) == CODIGO_NAO_ENCONTRADO);
+    /* numero fora da faixa de 6 digitos e vetor vazio */
+    assert(codigo_localizar_pendente(v, 4, 0) == CODIGO_NAO_ENCONTRADO);
+    assert(codigo_localizar_pendente(v, 4, 1000000) == CODIGO_NAO_ENCONTRADO);
+    assert(codigo_localizar_pendente(v, 0, 123456) == CODIGO_NAO_ENCONTRADO);
+
+    /* o codigo de uma retirada pode ser reutilizado por uma pendente: acha a pendente */
+    v[1].codigo = 333333;
+    assert(codigo_localizar_pendente(v, 4, 333333) == 2);
+    /* duas pendentes com o mesmo codigo: erro nos dados */
+    v[1].status = STATUS_PENDENTE;
+    assert(codigo_localizar_pendente(v, 4, 333333) == CODIGO_DUPLICADO);
+}
+
 int main(void)
 {
     testar_seis_digitos();
     testar_sem_repeticao();
     testar_existe_pendente();
     testar_conferir();
+    testar_localizar_pendente();
     printf("test_codigo: OK\n");
     return 0;
 }

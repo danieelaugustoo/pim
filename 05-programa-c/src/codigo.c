@@ -99,3 +99,40 @@ int codigo_conferir(int digitado, int esperado)
 {
     return codigo_valido(esperado) && digitado == esperado;
 }
+
+/*
+ * codigo_localizar_pendente (parte do algoritmo A3)
+ * Objetivo: achar a encomenda pendente que tem o codigo informado, sem que o
+ *   porteiro precise digitar o id.
+ * Parametros: encomendas = vetor; quantidade = tamanho usado; codigo = numero
+ *   digitado.
+ * Retorno: indice da encomenda no vetor; CODIGO_NAO_ENCONTRADO se o numero
+ *   nao e um codigo valido ou nenhuma pendente o usa; CODIGO_DUPLICADO se mais
+ *   de uma pendente o usa (o A2 evita isso, mas o arquivo de dados pode ter
+ *   sido editado a mao).
+ * Logica: percorre o vetor contando as encomendas PENDENTES com o codigo e
+ *   guardando a primeira. Encomendas ja retiradas sao ignoradas, pois o A2
+ *   pode reutilizar o codigo delas.
+ */
+int codigo_localizar_pendente(const Encomenda encomendas[], int quantidade, int codigo)
+{
+    int i;
+    int achadas = 0;
+    int primeira = CODIGO_NAO_ENCONTRADO;
+
+    if (!codigo_valido(codigo)) {
+        return CODIGO_NAO_ENCONTRADO;
+    }
+    for (i = 0; i < quantidade; i++) {
+        if (encomendas[i].status == STATUS_PENDENTE && encomendas[i].codigo == codigo) {
+            if (achadas == 0) {
+                primeira = i;
+            }
+            achadas++;
+        }
+    }
+    if (achadas > 1) {
+        return CODIGO_DUPLICADO;
+    }
+    return primeira;
+}

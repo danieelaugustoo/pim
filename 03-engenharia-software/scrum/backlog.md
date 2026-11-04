@@ -9,7 +9,7 @@
 | US01 | Registrar encomenda | RF01 | 1 | Feito (falta revisão) |
 | US02 | Indicar posição na estante | RF02 | 1 | Feito (falta revisão) |
 | US03 | Código único de retirada | RF03 | 1 | Feito (falta revisão) |
-| US04 | Registrar retirada conferindo o código | RF05 | 1 | Feito (falta revisão) |
+| US04 | Registrar retirada pelo código, com confirmação | RF05 | 1 | Feito (falta revisão); alterada em 04/11 (busca pelo código) |
 | US05 | Listar pendências e buscar por unidade | RF06 | 1 | Feito (falta revisão) |
 | US06 | Dados salvos em arquivo | RF09 (base) | 1 | Feito (falta revisão) |
 | US07 | Cadastrar moradores com canal de aviso | RF08 | 2 | Feito (falta revisão) |
@@ -44,12 +44,13 @@
 - **Dado** uma nova encomenda, **quando** é registrada, **então** recebe um código de 6 dígitos (100000 a 999999).
 - **Dado** que existem encomendas pendentes com códigos, **quando** um novo código é gerado, **então** ele é diferente de todos os códigos de encomendas pendentes.
 
-### US04 Registrar retirada conferindo o código
-**Como** porteiro, **quero** registrar a retirada conferindo o código, **para** saber quem retirou e quando.
+### US04 Registrar retirada pelo código
+**Como** porteiro, **quero** registrar a retirada achando a encomenda pelo código do morador, com confirmação, **para** saber quem retirou e quando.
 
-- **Dado** uma encomenda PENDENTE, **quando** o porteiro informa o código correto e o nome de quem retira, **então** o status passa a RETIRADA, com data, hora e nome, e a posição na estante é liberada.
-- **Dado** um código errado, **quando** o porteiro tenta, **então** o sistema permite nova tentativa, até 3 no total.
-- **Dado** 3 tentativas erradas, **quando** a última falha, **então** a retirada é negada e a encomenda continua PENDENTE.
+- **Dado** uma encomenda PENDENTE, **quando** o porteiro informa o código dela, confirma a encomenda mostrada (S) e informa o nome de quem retira, **então** o status passa a RETIRADA, com data, hora e nome, e a posição na estante é liberada. O porteiro não digita o id.
+- **Dado** um código que nenhuma encomenda pendente usa (inclusive o de uma encomenda já retirada), **quando** o porteiro tenta, **então** o sistema avisa e permite nova tentativa, até 3 no total.
+- **Dado** 3 tentativas sem encomenda pendente, **quando** a última falha, **então** a retirada é negada e nada é alterado.
+- **Dado** uma encomenda achada pelo código, **quando** o porteiro não confirma (N), **então** a retirada é cancelada e a encomenda continua PENDENTE.
 
 ### US05 Listar pendências e buscar por unidade
 **Como** porteiro, **quero** listar as pendências e buscar por unidade, **para** atender o morador no balcão.

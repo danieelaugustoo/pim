@@ -1,22 +1,22 @@
-%% A3 - Registrar retirada
+%% A3 - Registrar retirada (pelo codigo, com confirmacao)
 flowchart TD
-    I(["Inicio"]) --> U["Ler bloco e apartamento"]
-    U --> P{"A unidade tem<br/>encomenda pendente?"}
-    P -- Nao --> F(["Fim: nada a retirar"])
-    P -- Sim --> L["Listar as pendentes da unidade"]
-    L --> ID["Ler o id da encomenda"]
-    ID --> V{"O id e pendente<br/>DESSA unidade?"}
-    V -- Nao --> V1["Informar que o id nao serve"]
-    V1 --> F
-    V -- Sim --> T["tentativa = 1"]
+    I(["Inicio"]) --> P0{"Ha encomenda<br/>pendente na portaria?"}
+    P0 -- Nao --> F(["Fim: nada foi retirado"])
+    P0 -- Sim --> T["tentativa = 1"]
     T --> C{"tentativa <= MAX_TENTATIVAS (3)?"}
-    C -- Nao --> N["Informar: retirada negada<br/>(encomenda continua PENDENTE)"]
+    C -- Nao --> N["Informar: retirada negada<br/>(nada foi alterado)"]
     N --> F
     C -- Sim --> D["Ler o codigo digitado"]
-    D --> Q{"Codigo = codigo da encomenda?"}
-    Q -- Nao --> Q1["Informar: codigo incorreto<br/>tentativa = tentativa + 1"]
-    Q1 --> C
-    Q -- Sim --> NM["Ler o nome de quem retira"]
+    D --> A{"Quantas pendentes<br/>tem esse codigo?"}
+    A -- "Nenhuma" --> A1["Informar: nenhuma encomenda<br/>pendente com esse codigo<br/>tentativa = tentativa + 1"]
+    A1 --> C
+    A -- "Mais de uma" --> A2["Informar: codigo repetido<br/>(erro nos dados)"]
+    A2 --> F
+    A -- "Uma" --> M["Mostrar unidade, destinatario<br/>e posicao (sem o codigo)"]
+    M --> Q{"Porteiro confirma com<br/>o morador? (S/N)"}
+    Q -- "N" --> Q1["Informar: retirada cancelada<br/>(encomenda continua PENDENTE)"]
+    Q1 --> F
+    Q -- "S" --> NM["Ler o nome de quem retira"]
     NM --> S["status = RETIRADA<br/>retirada_em = data e hora atuais<br/>retirado_por = nome"]
     S --> LB["Liberar a posicao na matriz<br/>estante[linha][coluna] = 0"]
     LB --> OP["Portaria salva o arquivo<br/>e enfileira a operacao RETIRADA"]

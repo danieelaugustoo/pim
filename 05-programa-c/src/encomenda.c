@@ -89,6 +89,26 @@ int encomenda_localizar(const Encomenda encomendas[], int quantidade, int id)
 }
 
 /*
+ * encomenda_contar_pendentes
+ * Objetivo: saber quantas encomendas pendentes a portaria tem.
+ * Parametros: encomendas = vetor; quantidade = tamanho usado.
+ * Retorno: numero de encomendas com status PENDENTE.
+ * Logica: percorre o vetor e conta as pendentes.
+ */
+int encomenda_contar_pendentes(const Encomenda encomendas[], int quantidade)
+{
+    int i;
+    int total = 0;
+
+    for (i = 0; i < quantidade; i++) {
+        if (encomendas[i].status == STATUS_PENDENTE) {
+            total++;
+        }
+    }
+    return total;
+}
+
+/*
  * encomenda_contar_pendentes_unidade
  * Objetivo: contar quantas encomendas pendentes uma unidade tem.
  * Parametros: encomendas = vetor; quantidade = tamanho usado; bloco e
@@ -230,6 +250,20 @@ static void encomenda_imprimir_linha(const Encomenda *e)
     snprintf(posicao, sizeof posicao, "%c/%d", 'A' + e->estante, e->prateleira);
     printf("%-4d %-7s %-24.24s %-14.14s %-3c %-9s %s\n", e->id, unidade, e->destinatario,
            e->transportadora, e->tamanho, posicao, e->recebida_em);
+}
+
+/*
+ * encomenda_mostrar_uma
+ * Objetivo: mostrar uma unica encomenda para o porteiro conferir com o
+ *   morador antes de entregar. O codigo de retirada NAO e exibido (RNF04).
+ * Parametros: e = encomenda a mostrar.
+ * Retorno: nenhum.
+ * Logica: imprime o cabecalho da tabela e a linha da encomenda.
+ */
+void encomenda_mostrar_uma(const Encomenda *e)
+{
+    encomenda_imprimir_cabecalho();
+    encomenda_imprimir_linha(e);
 }
 
 /*

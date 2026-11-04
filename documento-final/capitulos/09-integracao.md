@@ -55,7 +55,7 @@ Acompanha-se uma encomenda fictícia que chega à unidade A-12 de um condomínio
 2. **Registro.** O porteiro informa unidade, destinatário, transportadora e tamanho. O sistema escolhe a posição na estante (A1) e gera o código único (A2) (capítulo 6).
 3. **Gravação e aviso.** O registro é gravado em arquivo no protótipo e, no sistema completo, no banco relacional (capítulo 5). O morador é avisado pelo canal escolhido: aplicativo, SMS ou interfone com código impresso (capítulo 8).
 4. **Operação offline e sincronização.** Sem internet, a operação entra na fila e a portaria continua trabalhando. Quando a conexão volta, a fila é enviada à central (A4), por VPN e API em HTTPS no sistema completo (capítulo 7), e a central aplica cada operação uma única vez (A5).
-5. **Retirada.** O morador informa o código; o porteiro o confere em até três tentativas, registra quem retirou, a data e a hora, e a posição é liberada (A3). A retirada também sobe à central.
+5. **Retirada.** O morador mostra o código; o sistema acha a encomenda pendente que o usa, o porteiro confirma com o morador (em até três tentativas), registra quem retirou, a data e a hora, e a posição é liberada (A3). A retirada também sobe à central.
 6. **Relatórios.** O supervisor vê as pendências com mais de 7 dias, o dia de pico e a ocupação (A6), que alimentam os indicadores.
 
 **[Figura 16 – Fluxo ponta a ponta de uma encomenda. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-16-fluxo-ponta-a-ponta.png`]**
