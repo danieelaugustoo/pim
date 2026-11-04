@@ -24,7 +24,7 @@ Baseado no `PLANO.md`, seção 11. O Desenvolvimento deve ficar **entre 20 e 30 
 
 **Desenvolvimento (capítulos 2 a 9): 3 + 3 + 4 + 4 + 4 + 4 + 2 + 2 = 26 páginas**, dentro da faixa de 20 a 30, com 4 páginas de folga para ajuste.
 
-**Dúvida a esclarecer:** se a Introdução e a Conclusão entram na contagem do "Desenvolvimento". Pelo manual, o Desenvolvimento é a parte entre elas; se o professor contar tudo, o total seria de cerca de 29,5 páginas. Confirmar com o professor.
+**Esclarecido em 2026-11-04 (Prof.ª Eliana):** a Introdução e a Conclusão **entram** na contagem das 20 a 30 páginas. Com a introdução (cap. 1), os capítulos 2 a 9 e a conclusão (cap. 10), o texto tem cerca de **10.465 palavras** (aproximadamente 32 a 35 páginas só de texto, antes das 17 figuras), então **é preciso cortar** para caber em 30 páginas. Meta: cerca de 8.000 palavras no total. A paginação real só se vê no Word.
 
 ## 2. Riscos de tamanho
 
