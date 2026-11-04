@@ -7,13 +7,13 @@
 
 | Entrega | Responsável | Prazo |
 |---|---|---|
-| Introdução, conclusão, resumo e abstract fechados com os resultados finais | [A DEFINIR] | seg 09/11 |
-| Resultados do Packet Tracer inseridos no capítulo 7 e na conclusão | [A DEFINIR] | seg 09/11 |
-| Revisão por pares dos capítulos (outro integrante) | [A DEFINIR] | ter 10/11 a qua 11/11 |
-| Tamanho do desenvolvimento conferido (20 a 30 páginas) e cortes aplicados | [A DEFINIR] | qua 11/11 |
-| Revisão ABNT e de similaridade; todas as marcas `[FONTE A VERIFICAR]`, `[A DEFINIR]` e `[A PREENCHER]` resolvidas | [A DEFINIR] | qui 12/11 |
+| Introdução, conclusão, resumo e abstract fechados com os resultados finais | Daniel Augusto Amarante da Silva | seg 09/11 |
+| Resultados do Packet Tracer inseridos no capítulo 7 e na conclusão | Daniel Augusto Amarante da Silva | seg 09/11 |
+| Revisão por pares dos capítulos (outro integrante) | Outro integrante `[A DEFINIR]` | ter 10/11 a qua 11/11 |
+| Tamanho do desenvolvimento conferido (20 a 30 páginas) e cortes aplicados | Daniel Augusto Amarante da Silva | qua 11/11 |
+| Revisão ABNT e de similaridade; todas as marcas `[FONTE A VERIFICAR]`, `Daniel Augusto Amarante da Silva` e `[A PREENCHER]` resolvidas | Daniel Augusto Amarante da Silva | qui 12/11 |
 | `referencias.md` conferido contra as citações do texto | Conferência automática feita em 2026-11-03; refazer após a revisão do grupo | qui 12/11 |
-| PDF e `.docx` finais em `documento-final/versoes/` | [A DEFINIR] | qui 12/11 |
+| PDF e `.docx` finais em `documento-final/versoes/` | Daniel Augusto Amarante da Silva | qui 12/11 |
 | Postagem pelo líder e cópia impressa ao coordenador | Lucas Ribeiro Tomiossi Kribely | sex 13/11 |
 
 ## Critérios para considerar entregue

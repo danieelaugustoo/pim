@@ -45,7 +45,9 @@ Seguir `06-redes/packet-tracer/roteiro.md` (VPN fica só no diagrama, decisão d
 
 ---
 
-## 2. Para o grupo decidir ou conferir (prazo: qua 04/11 a sex 06/11)
+> **Mudança de responsável (2026-11-04):** o Daniel assumiu **todas** as tarefas que estavam com o "grupo" (seções 2 e 4 abaixo, e o item "para a apresentação"). Continuam com outras pessoas apenas a **postagem e a cópia impressa** (Lucas, o líder) e a **revisão por pares**, que precisa ser de **outro integrante** (basta uma pessoa para ler os capítulos e o código na terça e quarta). Onde o texto abaixo diz "grupo", leia "Daniel".
+
+## 2. Para o Daniel decidir ou conferir (antes: "o grupo") (prazo: qua 04/11 a sex 06/11)
 
 ### 2.1 Fontes e leitura
 

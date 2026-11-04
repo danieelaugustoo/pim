@@ -22,19 +22,21 @@
 
 Papéis do Scrum (ver `03-engenharia-software/scrum/papeis-e-cerimonias.md`): Product Owner, Scrum Master e time de desenvolvimento.
 
-## Responsáveis por etapa (sugestão de divisão, a ajustar)
+## Responsáveis por etapa (atualizado em 2026-11-04)
+
+Decisão de 2026-11-04: **o Daniel assume a redação e o fechamento de todas as etapas**. Continuam com outras pessoas apenas a **postagem** (só o líder posta) e a **revisão por pares** (precisa ser outro integrante).
 
 | Etapa | Responsável pela redação | Revisor |
 |---|---|---|
-| 1 Organização (cap. 2) | [A DEFINIR] | [A DEFINIR] |
-| 2 Pesquisa bibliográfica e trabalhos relacionados (cap. 3) | [A DEFINIR] | [A DEFINIR] |
-| 3 Engenharia de software (cap. 4) | [A DEFINIR] | [A DEFINIR] |
-| 4 Banco de dados (cap. 5) | [A DEFINIR] | [A DEFINIR] |
-| 5 Programação em C (cap. 6) | [A DEFINIR] | [A DEFINIR] |
-| 6 Redes e Packet Tracer (cap. 7) | [A DEFINIR] | [A DEFINIR] |
-| 7 e 8 Segurança e integração (cap. 8 e 9) | [A DEFINIR] | [A DEFINIR] |
-| Introdução, conclusão, resumo e abstract | [A DEFINIR] | [A DEFINIR] |
-| Formatação ABNT e referências | [A DEFINIR] | [A DEFINIR] |
-| Postagem e cópia impressa | [A DEFINIR] (líder) | — |
+| 1 Organização (cap. 2) | Daniel | Outro integrante `[A DEFINIR]` |
+| 2 Pesquisa bibliográfica e trabalhos relacionados (cap. 3) | Daniel | Outro integrante `[A DEFINIR]` |
+| 3 Engenharia de software (cap. 4) | Daniel | Outro integrante `[A DEFINIR]` |
+| 4 Banco de dados (cap. 5) | Daniel | Outro integrante `[A DEFINIR]` |
+| 5 Programação em C (cap. 6) | Daniel | Outro integrante `[A DEFINIR]` |
+| 6 Redes e Packet Tracer (cap. 7) | Daniel | Outro integrante `[A DEFINIR]` |
+| 7 e 8 Segurança e integração (cap. 8 e 9) | Daniel | Outro integrante `[A DEFINIR]` |
+| Introdução, conclusão, resumo e abstract | Daniel | Outro integrante `[A DEFINIR]`; o abstract, alguém com bom inglês |
+| Formatação ABNT e referências | Daniel | Outro integrante `[A DEFINIR]` |
+| Postagem e cópia impressa | Lucas Ribeiro Tomiossi Kribely (líder) | — |
 
 O revisor precisa ser **outro** integrante: a definição de pronto exige revisão por pares.
