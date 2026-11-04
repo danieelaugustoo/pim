@@ -24,18 +24,18 @@
 
 ## Marcos do grupo (datas propostas a partir do prazo de 14/11/2026)
 
-As datas são **propostas** do assistente para caber no prazo, com margem de revisão e de impressão. O grupo ajusta e define os responsáveis.
+As datas são **propostas** do assistente para caber no prazo, com margem de revisão e de impressão. Em 2026-11-04 o Daniel assumiu as tarefas do grupo; a postagem continua com o líder (Lucas) e a revisão por pares precisa de outro integrante.
 
 | Marco | Data limite proposta | Responsável |
 |---|---|---|
-| Verificar as fontes pendentes (F02 a F04 e leitura das obras citadas) | qua 04/11 | [A DEFINIR] |
-| Montar e testar o Packet Tracer (T1 a T15, prints e `.pkt`) | qua 04/11 | [A DEFINIR] |
-| Renderizar diagramas e tirar os prints do programa | qui 05/11 | [A DEFINIR] |
+| Verificar as fontes pendentes (F02 a F04 e leitura das obras citadas) | qua 04/11 | Daniel Augusto Amarante da Silva |
+| Montar e testar o Packet Tracer (T1 a T15, prints e `.pkt`) | qua 04/11 | Daniel Augusto Amarante da Silva |
+| Renderizar diagramas e tirar os prints do programa | qui 05/11 | Daniel Augusto Amarante da Silva |
 | Rodar `make test` e ensaiar a demonstração no computador que será levado à apresentação (decisão do grupo, 2026-11-03: não é preciso rodar nas demais máquinas) | sex 06/11 | Daniel Augusto Amarante da Silva |
-| Revisar os capítulos 2 a 9 (rascunhos) e atualizar o que depende dos prints | sex 06/11 | [A DEFINIR] |
+| Revisar os capítulos 2 a 9 (rascunhos) e atualizar o que depende dos prints | sex 06/11 | Daniel Augusto Amarante da Silva |
 | Mensagem de retrospectiva da Sprint 4 | sex 06/11, 19h | Scrum Master |
-| Fechar introdução, conclusão, resumo e abstract | seg 09/11 | [A DEFINIR] |
-| Revisão por pares (outro integrante revisa cada capítulo) | ter 10/11 a qua 11/11 | [A DEFINIR] |
-| Revisão ABNT, de similaridade e geração do PDF | qui 12/11 | [A DEFINIR] |
+| Fechar introdução, conclusão, resumo e abstract | seg 09/11 | Daniel Augusto Amarante da Silva |
+| Revisão por pares (outro integrante revisa cada capítulo) | ter 10/11 a qua 11/11 | Outro integrante `[A DEFINIR]`; redação com Daniel Augusto Amarante da Silva |
+| Revisão ABNT, de similaridade e geração do PDF | qui 12/11 | Daniel Augusto Amarante da Silva |
 | Mensagem de retrospectiva da Sprint 5 e conferência final | sex 13/11, 19h | Scrum Master |
 | Postagem no sistema da UNIP e cópia impressa | sex 13/11 (prazo final: sáb 14/11, 23h59) | Lucas Ribeiro Tomiossi Kribely (líder) |
