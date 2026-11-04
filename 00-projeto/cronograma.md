@@ -20,6 +20,8 @@
 
 "Entregue" refere-se ao que o repositório já contém. As sprints 0 a 3 foram executadas em um ciclo único em 29/10/2026 (datas do histórico do Git); o Scrum com datas separadas começa na Sprint 4. A revisão por pares é do grupo.
 
+> O passo a passo das pendências, por pessoa e por dia, está em [`plano-de-pendencias.md`](plano-de-pendencias.md).
+
 ## Marcos do grupo (datas propostas a partir do prazo de 14/11/2026)
 
 As datas são **propostas** do assistente para caber no prazo, com margem de revisão e de impressão. O grupo ajusta e define os responsáveis.
@@ -29,7 +31,7 @@ As datas são **propostas** do assistente para caber no prazo, com margem de rev
 | Verificar as fontes pendentes (F02 a F04 e leitura das obras citadas) | qua 04/11 | [A DEFINIR] |
 | Montar e testar o Packet Tracer (T1 a T15, prints e `.pkt`) | qua 04/11 | [A DEFINIR] |
 | Renderizar diagramas e tirar os prints do programa | qui 05/11 | [A DEFINIR] |
-| Rodar `make test` e a demonstração em cada máquina | sex 06/11 | todos |
+| Rodar `make test` e ensaiar a demonstração no computador que será levado à apresentação (decisão do grupo, 2026-11-03: não é preciso rodar nas demais máquinas) | sex 06/11 | Daniel Augusto Amarante da Silva |
 | Revisar os capítulos 2 a 9 (rascunhos) e atualizar o que depende dos prints | sex 06/11 | [A DEFINIR] |
 | Mensagem de retrospectiva da Sprint 4 | sex 06/11, 19h | Scrum Master |
 | Fechar introdução, conclusão, resumo e abstract | seg 09/11 | [A DEFINIR] |
