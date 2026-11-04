@@ -95,7 +95,7 @@ Os benefícios são esperados, não medidos: menos extravios e entregas erradas,
 
 Fonte: elaborado pelos autores (2026).
 
-O protótipo já produz as pendências antigas, o dia de pico e a ocupação; com dados fictícios, o relatório consolidado mostrou 2 pendências antigas e 11 pendentes entre 14 encomendas, usados só para demonstração.
+O protótipo já produz as pendências antigas, o dia de pico e a ocupação; com dados fictícios, o relatório consolidado de 29/10/2026 mostrou 2 pendências antigas e 11 pendentes entre 14 encomendas, usados só para demonstração.
 
 ## 9.4 Discussão
 

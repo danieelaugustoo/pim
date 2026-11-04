@@ -11,6 +11,8 @@
 
 ### 1.1 Rodar o programa e tirar os prints (prazo: qui 05/11)
 
+> **Atenção na demonstração:** a coluna **Antigas** do relatório (e a lista de pendências antigas) depende da **data do computador**. Em 29/10 os dados de exemplo davam 2 antigas (P01) e 0 (P02); rodando em 04/11 deu 4 e 4 (total 8). O capítulo 6 já informa isso, mas na apresentação os números vão diferir do Quadro 4. Os demais valores (registradas, pendentes, retiradas, devolvidas, dia de pico, 17 operações e 14 encomendas) não mudam. Conferido em 04/11 por execução do `bin/central`.
+
 - [ ] Atualizar o repositório na branch `claude/jolly-johnson-cue2j0` (`git pull`).
 - [ ] Dentro de `05-programa-c/`, rodar `make test` (no Windows, `build.bat`). Tirar o **print do resultado** ("Todos os testes passaram") → entra no capítulo 6, seção 6.5. Se algum teste falhar na sua máquina, copiar a mensagem e mandar para o Claude.
 - [ ] Copiar os dados de exemplo (comandos em `05-programa-c/README.md`, seção "Demonstração com os dados de exemplo"), rodar `bin/portaria 1`, escolher a opção **5 (mapa da estante)** e tirar o print → **Figura 11**, salvar como `documento-final/figuras/figura-11-mapa-estante.png`.
