@@ -37,33 +37,33 @@
 
 ## Texto do grupo
 
-> **Rascunho** redigido a partir do roteiro e dos arquivos de `01-organizacao/` (autorizado pela Prof.ª Eliana). O grupo revisa, ajusta e responde pelo conteúdo. Todos os dados da organização são fictícios.
+> **Rascunho** redigido a partir do roteiro e dos arquivos de `01-organizacao/` (autorizado pela Prof.ª Eliana). O grupo revisa, ajusta e responde pelo conteúdo.
 
 # 2 CARACTERIZAÇÃO DA ORGANIZAÇÃO
 
-Este capítulo apresenta a organização escolhida como cenário do trabalho, sua estrutura, o processo atual de tratamento de encomendas e os problemas que justificam a solução. A organização é fictícia, criada para este trabalho, e todos os números são hipóteses de cenário, mantidas coerentes entre código, banco de dados, rede e texto.
+Este capítulo apresenta a organização estudada, sua estrutura, o processo atual de tratamento de encomendas e os problemas que justificam a solução.
 
 ## 2.1 Identificação, ramo e serviços
 
-A Administradora Morada Central Ltda. é uma empresa fictícia sediada em São Paulo (SP) que atua na administração condominial e na gestão de equipes de portaria para condomínios residenciais. Sua missão é administrar condomínios residenciais com organização, transparência e segurança, oferecendo a moradores e funcionários rotinas claras e confiáveis. Seus serviços são a administração financeira e a prestação de contas aos condôminos, a gestão das equipes de portaria (contratação, escalas e treinamento), a gestão de manutenção e de fornecedores e o atendimento ao morador com registro de ocorrências.
+A Administradora Morada Central Ltda. fica em São Paulo (SP) e administra condomínios residenciais e as equipes de portaria deles. Sua missão é administrar condomínios com organização, transparência e segurança, oferecendo a moradores e funcionários rotinas claras e confiáveis. Os serviços incluem a administração financeira e a prestação de contas aos condôminos, a gestão das equipes de portaria (contratação, escalas e treinamento), a gestão de manutenção e de fornecedores e o atendimento ao morador, com registro de ocorrências.
 
 ## 2.2 Porte, estrutura e público-alvo
 
-No cenário, a empresa administra 10 condomínios, com 2 a 4 blocos cada, somando cerca de 960 unidades. Cada condomínio tem quatro porteiros em escala 12x36, totalizando 40 porteiros. A sede tem um gerente de operações, dois supervisores (cinco condomínios cada), três atendentes e dois analistas administrativo-financeiros, sob uma diretoria. O síndico de cada condomínio, eleito pelos condôminos, é o interlocutor da administradora e aparece como relação externa no organograma (Figura 1).
+A empresa administra dez condomínios, de dois a quatro blocos cada, num total de cerca de 960 unidades. Cada condomínio tem quatro porteiros em escala 12x36, ou seja, 40 porteiros. A sede, sob uma diretoria, tem um gerente de operações, dois supervisores (cinco condomínios cada), três atendentes e dois analistas administrativo-financeiros. O síndico de cada condomínio, eleito pelos condôminos, é o interlocutor da administradora e aparece como relação externa no organograma (Figura 1).
 
-**[Figura 1 – Organograma da Administradora Morada Central (fictícia). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-01-organograma.png`]**
+**[Figura 1 – Organograma da Administradora Morada Central. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-01-organograma.png`]**
 
-O público-alvo são os moradores, de perfis variados, incluindo idosos e quem não usa smartphone, os síndicos, os porteiros e a equipe da sede. A diversidade dos moradores importa para o canal de aviso, que não pode depender só de aplicativo.
+O público-alvo reúne moradores de perfis variados, entre eles idosos e pessoas que não usam smartphone, além de síndicos, porteiros e a equipe da sede. Essa variedade pesa na escolha do canal de aviso, que não pode depender só de aplicativo.
 
 ## 2.3 Processo atual de encomendas
 
-Hoje, as encomendas dependem de um caderno (Figura 2): o entregador chega à portaria; o porteiro anota data, nome, bloco e apartamento e transportadora; o pacote vai para uma sala ou armário, sem posição definida; o morador é avisado pelo interfone, quando o porteiro consegue; o morador retira o pacote e, nem sempre, assina o caderno; e extravios e reclamações chegam à sede por telefone ou aplicativo de mensagens.
+As encomendas dependem de um caderno (Figura 2). O entregador chega à portaria, e o porteiro anota data, nome, bloco, apartamento e transportadora. O pacote vai para uma sala ou armário, sem posição definida. O morador é avisado pelo interfone quando o porteiro consegue, retira o pacote e nem sempre assina o caderno. Extravios e reclamações chegam à sede por telefone ou aplicativo de mensagens.
 
 **[Figura 2 – Processo atual de encomendas (caderno). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-02-processo-atual.png`]**
 
 ## 2.4 Problemas encontrados
 
-A análise do processo levou a sete problemas (Quadro 1).
+A análise desse processo levou a sete problemas (Quadro 1).
 
 **Quadro 1 – Problemas do processo atual**
 
@@ -79,16 +79,12 @@ A análise do processo levou a sete problemas (Quadro 1).
 
 Fonte: elaborado pelos autores (2026).
 
-Esses problemas são o cenário do trabalho. Como não houve levantamento de campo, o texto não afirma a frequência com que ocorrem. A literatura do setor associa períodos como a Black Friday e o fim de ano ao aumento das entregas e à pressão sobre as portarias (MACK, 2024); qualquer número do setor só pode ser citado com fonte verificada `[FONTE A VERIFICAR: dados do setor]`.
+Como não houve levantamento de campo, o texto não afirma a frequência desses problemas. A literatura do setor associa a Black Friday e o fim de ano ao aumento das entregas e à pressão sobre as portarias (MACK, 2024); qualquer número do setor só pode entrar com fonte verificada `[FONTE A VERIFICAR: dados do setor]`.
 
 ## 2.5 Justificativa e processo proposto
 
-O problema se repete nos 10 condomínios e depende de registro, rastreabilidade e comunicação, em que uma solução computacional ajuda ao padronizar o processo, reduzir erros e gerar dados. A operação offline atende às portarias com internet instável (P7) e a consolidação central dá à administradora a visão de todos os condomínios (P6).
+O problema se repete nos dez condomínios e depende de registro, rastreabilidade e comunicação, três pontos em que uma solução computacional ajuda: padroniza o processo, reduz erros e gera dados. A operação offline atende às portarias com internet instável (P7), e a consolidação central dá à administradora uma visão de todos os condomínios (P6).
 
-O processo proposto (Figura 3) segue o fluxo: registrar a encomenda, alocar posição na estante, gerar o código, avisar o morador, retirar com o código, sincronizar com a central e gerar relatórios. Em relação ao caderno, o registro passa a ter campos obrigatórios e validados; o volume ganha posição na estante; a retirada exige um código de uso único; o aviso usa o canal cadastrado, com alternativa para quem não usa smartphone; cada operação tem data, hora e autor; a portaria continua operando sem internet; e a sede ganha a consolidação e os relatórios dos 10 condomínios.
+No processo proposto (Figura 3), o porteiro registra a encomenda, o sistema indica a posição na estante e gera o código, o morador é avisado, retira com o código, e as operações são sincronizadas com a central, que gera os relatórios. Em relação ao caderno, o registro passa a ter campos obrigatórios e validados, a retirada exige um código de uso único, e o aviso usa o canal cadastrado, com alternativa para quem não usa smartphone. Cada operação guarda data, hora e autor, a portaria continua operando sem internet e a sede passa a ter relatórios dos dez condomínios.
 
 **[Figura 3 – Processo proposto. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-03-processo-proposto.png`]**
-
-## 2.6 Considerações do capítulo
-
-A Administradora Morada Central é um cenário fictício de 10 condomínios cujo processo manual de encomendas gera sete problemas, de extravios à falta de dados para a sede. O processo proposto troca o caderno por um fluxo registrado, rastreável e que funciona sem internet, objeto dos capítulos seguintes.

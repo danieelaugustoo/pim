@@ -24,6 +24,8 @@ Baseado no `PLANO.md`, seção 11. O Desenvolvimento deve ficar **entre 20 e 30 
 
 **Desenvolvimento (capítulos 2 a 9): 3 + 3 + 4 + 4 + 4 + 4 + 2 + 2 = 26 páginas**, dentro da faixa de 20 a 30, com 4 páginas de folga para ajuste.
 
+**Situação em 2026-11-04, depois da reescrita e dos cortes:** cerca de 10.100 palavras no texto (introdução, capítulos 2 a 9 e conclusão) e cerca de **30 páginas** da introdução à conclusão no teste com o LibreOffice (16 figuras). Confirmar no Word.
+
 **Esclarecido em 2026-11-04 (Prof.ª Eliana):** a Introdução e a Conclusão **entram** na contagem das 20 a 30 páginas. Com a introdução (cap. 1), os capítulos 2 a 9 e a conclusão (cap. 10), o texto tem cerca de **10.465 palavras** (aproximadamente 32 a 35 páginas só de texto, antes das 17 figuras), então **é preciso cortar** para caber em 30 páginas. Meta: cerca de 8.000 palavras no total. A paginação real só se vê no Word.
 
 ## 2. Riscos de tamanho
@@ -59,13 +61,14 @@ Numeração em ordem de aparição no texto (renumerada em 2026-11-04, de novo a
 | 08 | DER | 5 | `04-banco-de-dados/diagramas/der.mmd` | renderizado (`figura-08-der.png`) |
 | 09 | Print de consulta SQL (pendências por condomínio) | 5 | consulta 1 de `03-consultas.sql` no MySQL 8.4 (Docker) | feito (`figura-09-consulta-sql.png`) |
 | 10 | Fluxograma do A1 | 6 | `05-programa-c/algoritmos/fluxogramas/A1.mmd` | renderizado (`figura-10-fluxograma-a1.png`) |
-| 11 | Fluxograma do A5 | 6 | `.../fluxogramas/A5.mmd` | renderizado (`figura-11-fluxograma-a5.png`) |
-| 12 | Print dos testes automatizados | 6 | `.\build.bat test` | feito em 2026-11-04, antes da mudança do A3 (a saída é a mesma; refazer só se quiser) (`figura-12-testes-automatizados.png`) |
-| 13 | Print do mapa da estante | 6 | opção 5 do programa | feito (`figura-13-mapa-estante.png`) |
-| 14 | Topologia no Packet Tracer | 7 | montagem no simulador | feito (`figura-14-topologia.png`) |
-| 15 | Print do teste T2 (portaria alcança a API) | 7 | Packet Tracer | feito (`figura-15-teste-t2.png`) |
-| 16 | Print do teste T6 (visitantes não alcançam a portaria) | 7 | Packet Tracer | feito (`figura-16-teste-t6.png`) |
-| 17 | Fluxo ponta a ponta | 9 | `08-integracao/diagramas/fluxo-ponta-a-ponta.mmd` | renderizado (`figura-17-fluxo-ponta-a-ponta.png`) |
+| 11 | Print dos testes automatizados | 6 | `.\build.bat test` | feito em 2026-11-04, antes da mudança do A3 (a saída é a mesma; refazer só se quiser) (`figura-11-testes-automatizados.png`) |
+| 12 | Print do mapa da estante | 6 | opção 5 do programa | feito (`figura-12-mapa-estante.png`) |
+| 13 | Topologia no Packet Tracer | 7 | montagem no simulador | feito (`figura-13-topologia.png`) |
+| 14 | Print do teste T2 (portaria alcança a API) | 7 | Packet Tracer | feito (`figura-14-teste-t2.png`) |
+| 15 | Print do teste T6 (visitantes não alcançam a portaria) | 7 | Packet Tracer | feito (`figura-15-teste-t6.png`) |
+| 16 | Fluxo ponta a ponta | 9 | `08-integracao/diagramas/fluxo-ponta-a-ponta.mmd` | renderizado (`figura-16-fluxo-ponta-a-ponta.png`) |
+
+Os fluxogramas A2 a A6 (inclusive o do A5, que saiu do texto em 2026-11-04 para caber em 30 páginas) ficam no repositório, em `05-programa-c/algoritmos/fluxogramas/`.
 
 Fluxogramas A2, A3, A4 e A6 ficam em apêndice ou só no repositório.
 
