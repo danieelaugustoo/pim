@@ -23,9 +23,9 @@
 
 | Item | Origem |
 |---|---|
-| Figura 9: fluxograma do A1 (alocação na estante) | `algoritmos/fluxogramas/A1.mmd` |
-| Figura 12: print do mapa da estante | executar a opção 5 do menu |
-| Figura 10: fluxograma do A5 (consolidação idempotente) | `algoritmos/fluxogramas/A5.mmd` |
+| Figura 10: fluxograma do A1 (alocação na estante) | `algoritmos/fluxogramas/A1.mmd` |
+| Figura 13: print do mapa da estante | executar a opção 5 do menu |
+| Figura 11: fluxograma do A5 (consolidação idempotente) | `algoritmos/fluxogramas/A5.mmd` |
 | Tabela: módulos e funções principais | `05-programa-c/README.md`, "O que cada arquivo faz" |
 | Tabela: algoritmos A1 a A6 e onde estão no código | `algoritmos/pseudocodigo.md`, "Situação" |
 | Trechos de código: 1 ou 2 funções curtas (por exemplo, `estante_alocar_posicao`) | `src/estante.c` |
@@ -89,13 +89,13 @@ para k de 0 ate NUM_ESTANTES - 1:
 retornar "sem vaga"
 ```
 
-**[Figura 9 – Fluxograma do algoritmo A1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-09-fluxograma-a1.png`]**
+**[Figura 10 – Fluxograma do algoritmo A1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-10-fluxograma-a1.png`]**
 
 **A2 a A4 – código, retirada e sincronização.** O código de 6 dígitos é sorteado e repetido enquanto existir em uma encomenda pendente (limite de 1000 tentativas). A retirada pede o código de retirada e acha a encomenda pendente que o usa, sem que o porteiro digite o id (até três tentativas); o programa mostra a unidade e o destinatário, e o porteiro confirma com o morador (S ou N). Se confirmar, registra quem retira, a data e a hora e libera a posição; se o porteiro recusar ou as tentativas acabarem, nada é alterado e a encomenda continua pendente. A sincronização, online, copia a fila para o registro da rede e só então a esvazia; se falhar entre as duas etapas, a repetição é segura porque a central ignora operações já aplicadas.
 
 **A5 – consolidação idempotente (`consolidacao_processar_portaria`).** Para cada operação do registro, a central verifica se o identificador já foi aplicado: se sim, ignora; se não, aplica o efeito e anota o identificador. Operação que não pode ser aplicada, como retirada de encomenda desconhecida, é rejeitada sem ser anotada e pode ser aplicada depois. A encomenda é identificada pelo par portaria e identificador, porque o identificador só é único dentro da portaria.
 
-**[Figura 10 – Fluxograma do algoritmo A5. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-10-fluxograma-a5.png`]**
+**[Figura 11 – Fluxograma do algoritmo A5. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-11-fluxograma-a5.png`]**
 
 **A6 – relatórios.** Mapa da estante com percentual de ocupação, pendências com mais de 7 dias (exatamente 7 não alerta), registros por dia com o dia de pico (em empate, o mais cedo) e o relatório consolidado da central. As funções de cálculo recebem a data como texto, o que permite testá-las com datas fixas.
 
@@ -103,7 +103,7 @@ retornar "sem vaga"
 
 O protótipo tem nove conjuntos de testes automatizados (`make test`, ou `build.bat` no Windows), que cobrem utilitários, estante, código e retirada, persistência, moradores, sincronização, consolidação e relatórios. A consolidação é testada ao processar o mesmo arquivo duas vezes e com portarias distintas usando o mesmo identificador. A compilação não gerou avisos e os nove conjuntos passaram. A parte interativa da retirada, que lê o teclado, foi conferida por execução manual com os dados de exemplo: três códigos sem encomenda pendente negam a retirada sem alterar nada, o código de uma encomenda já retirada não serve, a recusa na confirmação (N) cancela e a confirmação (S) registra a retirada e libera a posição. 
 
-**[Figura 11 – Resultado dos testes automatizados (`.\build.bat test`) no Windows. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-11-testes-automatizados.png`]**
+**[Figura 12 – Resultado dos testes automatizados (`.\build.bat test`) no Windows. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-12-testes-automatizados.png`]**
 
 ## 6.6 Demonstração
 
@@ -119,7 +119,7 @@ A demonstração usa dados fictícios. Ao executar a central duas vezes sobre os
 
 Fonte: elaborado pelos autores (2026). Valores gerados em 29/10/2026; a coluna "Antigas" depende da data de execução.
 
-Em 29/10/2026, o mapa da estante com os mesmos dados mostrou 6 posições ocupadas de 48 (12,5%) e as pendências antigas listaram as encomendas 1 (9 dias) e 4 (14 dias). **[Figura 12 – Mapa da estante com os dados de exemplo (opção 5 do programa). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-12-mapa-estante.png`]** Na operação offline, três registros entraram na fila e foram enviados ao voltar online.
+Em 29/10/2026, o mapa da estante com os mesmos dados mostrou 6 posições ocupadas de 48 (12,5%) e as pendências antigas listaram as encomendas 1 (9 dias) e 4 (14 dias). **[Figura 13 – Mapa da estante com os dados de exemplo (opção 5 do programa). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-13-mapa-estante.png`]** Na operação offline, três registros entraram na fila e foram enviados ao voltar online.
 
 ## 6.7 Limitações
 

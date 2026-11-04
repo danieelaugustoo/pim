@@ -22,9 +22,9 @@
 
 | Item | Origem |
 |---|---|
-| Figura 13: topologia (print do Packet Tracer) | montagem do grupo; rascunho em `diagramas/topologia.mmd` |
-| Figura 14: print do teste "portaria alcança o servidor central" | `packet-tracer/roteiro.md` (teste T2, `print-t02-portaria-api.png`) |
-| Figura 15: print do teste "Wi-Fi de visitantes não alcança a portaria" | `packet-tracer/roteiro.md` (teste T6, `print-t06-visitante-portaria.png`) |
+| Figura 14: topologia (print do Packet Tracer) | montagem do grupo; rascunho em `diagramas/topologia.mmd` |
+| Figura 15: print do teste "portaria alcança o servidor central" | `packet-tracer/roteiro.md` (teste T2, `print-t02-portaria-api.png`) |
+| Figura 16: print do teste "Wi-Fi de visitantes não alcança a portaria" | `packet-tracer/roteiro.md` (teste T6, `print-t06-visitante-portaria.png`) |
 | Tabela: resumo do endereçamento (sede, condomínio-modelo, nuvem) | `enderecamento-ip.md` |
 | Tabela: VLANs | `vlans.md` |
 | Tabela: matriz de fluxos permitidos | `seguranca-infraestrutura.md` |
@@ -48,7 +48,7 @@
 
 ## Texto do grupo
 
-> **Rascunho** redigido a partir do roteiro e de `06-redes/` (autorizado pela Prof.ª Eliana). O grupo revisa, ajusta e responde pelo conteúdo. **Os resultados da seção 7.7 vêm dos testes executados pelo grupo em 2026-11-04 no Packet Tracer 9.0.1; as Figuras 13 a 15 já estão em `figuras/`.** Os conceitos de redes e nuvem precisam de fontes verificadas.
+> **Rascunho** redigido a partir do roteiro e de `06-redes/` (autorizado pela Prof.ª Eliana). O grupo revisa, ajusta e responde pelo conteúdo. **Os resultados da seção 7.7 vêm dos testes executados pelo grupo em 2026-11-04 no Packet Tracer 9.0.1; as Figuras 14 a 16 já estão em `figuras/`.** Os conceitos de redes e nuvem precisam de fontes verificadas.
 
 # 7 REDES DE COMPUTADORES E SISTEMAS DISTRIBUÍDOS
 
@@ -58,9 +58,9 @@ Este capítulo apresenta o projeto da rede que sustenta a solução: topologia, 
 
 A rede tem três tipos de local: a sede (local 0), os dez condomínios (locais 1 a 10) e a nuvem. Dentro de cada local a topologia é em estrela: um roteador com função de firewall, um switch gerenciável com VLANs (802.1Q) e um ponto de acesso Wi-Fi (TANENBAUM; WETHERALL, 2011; KUROSE; ROSS, 2013). O roteador é o gateway de cada VLAN, roteia entre elas, aplica as regras de acesso e é a ponta da rede privada virtual (VPN). Nos condomínios ficam o computador da portaria, a impressora térmica, o gravador e as câmeras de CFTV; na sede, os computadores e a impressora do administrativo e do atendimento.
 
-Entre os locais, a topologia é hub-and-spoke: a nuvem é o centro e cada local é uma ponta, ligada por uma VPN IPsec sobre a internet do próprio local, o que dá onze túneis. Os dados de moradores e de encomendas não trafegam em claro, e um novo condomínio é apenas mais uma ponta, com nova faixa de endereços e nova VPN, sem mudar o código. A Figura 13 mostra a topologia.
+Entre os locais, a topologia é hub-and-spoke: a nuvem é o centro e cada local é uma ponta, ligada por uma VPN IPsec sobre a internet do próprio local, o que dá onze túneis. Os dados de moradores e de encomendas não trafegam em claro, e um novo condomínio é apenas mais uma ponta, com nova faixa de endereços e nova VPN, sem mudar o código. A Figura 14 mostra a topologia.
 
-**[Figura 13 – Topologia da rede. Inserir o print do Packet Tracer; rascunho em `06-redes/diagramas/topologia.mmd`. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-13-topologia.png`]**
+**[Figura 14 – Topologia da rede. Inserir o print do Packet Tracer; rascunho em `06-redes/diagramas/topologia.mmd`. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-14-topologia.png`]**
 
 A portaria não depende da internet: os dados ficam em arquivo local e as operações esperam na fila, que é reenviada, sem duplicar registros, quando a conexão volta. O aviso por aplicativo ou SMS depende da nuvem, e nesse caso o interfone com código impresso cobre a falha. O switch, o roteador e o computador da portaria são pontos únicos de falha, tratados com contingência (troca do equipamento, configuração salva, formulário em papel e nobreak).
 
@@ -127,15 +127,15 @@ Os quinze testes do roteiro foram executados em 04/11/2026 e todos deram o resul
 
 Fonte: elaborado pelos autores (2026), a partir da execução no Packet Tracer 9.0.1.
 
-Nos testes em que se esperava falta de resposta, a mensagem *Destination host unreachable* veio do próprio gateway do local, indicando que as listas de acesso barraram o tráfego: o Wi-Fi de visitantes alcança o gateway, mas não a portaria nem a nuvem (T6 a T8), e o CFTV só fala com o seu gateway (T9). Passaram os dois testes exigidos pelo plano: a portaria alcança o servidor da central (T2, Figura 14) e o Wi-Fi de visitantes não alcança a portaria (T6, Figura 15). O teste de continuidade (T14 e T15) mostra que, sem a nuvem, a rede local da portaria segue funcionando, comportamento que o nó em C aproveita ao guardar as operações na fila até a conexão voltar (ADR-003). O enlace foi religado ao fim.
+Nos testes em que se esperava falta de resposta, a mensagem *Destination host unreachable* veio do próprio gateway do local, indicando que as listas de acesso barraram o tráfego: o Wi-Fi de visitantes alcança o gateway, mas não a portaria nem a nuvem (T6 a T8), e o CFTV só fala com o seu gateway (T9). Passaram os dois testes exigidos pelo plano: a portaria alcança o servidor da central (T2, Figura 15) e o Wi-Fi de visitantes não alcança a portaria (T6, Figura 16). O teste de continuidade (T14 e T15) mostra que, sem a nuvem, a rede local da portaria segue funcionando, comportamento que o nó em C aproveita ao guardar as operações na fila até a conexão voltar (ADR-003). O enlace foi religado ao fim.
 
-**[Figura 13 – Topologia da rede no Packet Tracer 9.0.1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-13-topologia.png`]**
+**[Figura 14 – Topologia da rede no Packet Tracer 9.0.1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-14-topologia.png`]**
 
-**[Figura 14 – Teste T2: a portaria do condomínio 1 alcança o servidor da central. Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-14-teste-t2.png`]**
+**[Figura 15 – Teste T2: a portaria do condomínio 1 alcança o servidor da central. Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-15-teste-t2.png`]**
 
-**[Figura 15 – Teste T6: o Wi-Fi de visitantes do condomínio 1 não alcança a portaria. Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-15-teste-t6.png`]**
+**[Figura 16 – Teste T6: o Wi-Fi de visitantes do condomínio 1 não alcança a portaria. Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-16-teste-t6.png`]**
 
-Um problema foi resolvido: executado de uma vez, o script perdeu nos roteadores os comandos de seleção de interface, e os roteadores passaram a ser configurados direto no CLI. Limitações: os laptops de visitante dos três locais foram conectados ao Wi-Fi (Figura 13), mas os testes T5 a T8 foram feitos só no do condomínio 1; VPN, HTTPS da API e desempenho não foram testados; e a simulação não substitui equipamentos reais.
+Um problema foi resolvido: executado de uma vez, o script perdeu nos roteadores os comandos de seleção de interface, e os roteadores passaram a ser configurados direto no CLI. Limitações: os laptops de visitante dos três locais foram conectados ao Wi-Fi (Figura 14), mas os testes T5 a T8 foram feitos só no do condomínio 1; VPN, HTTPS da API e desempenho não foram testados; e a simulação não substitui equipamentos reais.
 
 ## 7.8 Considerações do capítulo
 
