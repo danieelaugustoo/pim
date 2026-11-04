@@ -109,7 +109,17 @@ Cada capítulo é lido por **outro** integrante, que confere contra a definiçã
 | sáb 14/11 | Reserva, só para imprevistos (prazo 23h59) | todos |
 
 - [ ] Rodar `make test` de novo antes de congelar a versão final e anotar o resultado.
-- [ ] Criar as tags do repositório: ao fim das sprints (`v0.1.0` em diante) e a de entrega `v1.0.0`. **Em 2026-11-04 foram criadas `v0.1.0` a `v0.4.0` (sprints 0 a 3); faltam a da Sprint 4 (sex 06/11), a da Sprint 5 e a `v1.0.0` da entrega.**
+- [ ] **Criar as tags do repositório** (convenção: uma por sprint, `v0.1.0` em diante, e `v1.0.0` na entrega). Nenhuma tag está no GitHub: o acesso da sessão do Claude não permite enviar tags. Rodar na máquina do Daniel, dentro do repositório atualizado, os comandos abaixo (os hashes são os commits em que cada sprint foi registrada) e depois `git push origin --tags`:
+
+```bash
+git tag -a v0.1.0 36376ca -m "Sprint 0: base do projeto, Etapas 1 a 3"
+git tag -a v0.2.0 2a9b371 -m "Sprint 1: portaria funcionando (US01-US06) e banco de dados"
+git tag -a v0.3.0 0f0452d -m "Sprint 2: sistema distribuido (US07-US11) e redes"
+git tag -a v0.4.0 7d01558 -m "Sprint 3: relatorios e qualidade (US12-US15)"
+git push origin --tags
+```
+
+  Faltam ainda a tag da Sprint 4 (`v0.5.0`, sex 06/11), a da Sprint 5 e a `v1.0.0` da entrega.
 - [ ] **Conferir o link do GitHub no capítulo 6** (inserido em 2026-11-04, na seção 6.1, com marca `[CONFERIR]`): ele só funciona para quem corrige se o repositório for público ou se o acesso for concedido.
 
 ---
