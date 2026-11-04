@@ -78,7 +78,7 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
 | Arquitetura da rede | `06-redes/arquitetura-e-topologia.md` | `07-redes.md` | Feito |
-| Topologia | `06-redes/arquitetura-e-topologia.md` + `06-redes/diagramas/topologia.mmd` + print do Packet Tracer em `06-redes/packet-tracer/` | `07-redes.md` | Em andamento |
+| Topologia | `06-redes/arquitetura-e-topologia.md` + `06-redes/diagramas/topologia.mmd` + print do Packet Tracer em `06-redes/packet-tracer/` (laboratório montado e 15 testes executados em 2026-11-04; falta o print) | `07-redes.md` | Em andamento |
 | Equipamentos | `06-redes/equipamentos.md` | `07-redes.md` | Feito |
 | Endereçamento IP | `06-redes/enderecamento-ip.md` | `07-redes.md` | Feito |
 | VLANs | `06-redes/vlans.md` | `07-redes.md` | Feito |

@@ -48,7 +48,7 @@
 
 ## Texto do grupo
 
-> **Rascunho** redigido a partir do roteiro e de `06-redes/` (autorizado pela Prof.ª Eliana). O grupo revisa, ajusta e responde pelo conteúdo. **A seção 7.7 (resultados dos testes) está vazia de propósito**: depende de o grupo montar a topologia no Packet Tracer e executar os testes. Os conceitos de redes e nuvem precisam de fontes verificadas.
+> **Rascunho** redigido a partir do roteiro e de `06-redes/` (autorizado pela Prof.ª Eliana). O grupo revisa, ajusta e responde pelo conteúdo. **Os resultados da seção 7.7 vêm dos testes executados pelo grupo em 2026-11-04 no Packet Tracer 9.0.1; faltam os prints das Figuras 13 a 15.** Os conceitos de redes e nuvem precisam de fontes verificadas.
 
 # 7 REDES DE COMPUTADORES E SISTEMAS DISTRIBUÍDOS
 
@@ -99,14 +99,40 @@ Complementam essas regras a VPN IPsec entre cada local e a nuvem, HTTPS/TLS na A
 
 ## 7.6 Laboratório no Packet Tracer
 
-O laboratório reproduz a sede, dois condomínios (1 e 3) e um servidor que representa a nuvem, com um switch simulando a internet entre os roteadores, em uma faixa de endereços reservada para documentação (203.0.113.0/24), definida na RFC 5737 (ARKKO; COTTON; VEGODA, 2010). Inclui VLANs, roteamento entre VLANs, DHCP, listas de acesso e rotas, com um roteiro de quinze testes. Os comandos foram conferidos por script quanto a endereços e regras, mas **ainda não foram executados no simulador**.
+O laboratório, no Cisco Packet Tracer 9.0.1, reproduz a sede, dois condomínios (1 e 3) e um servidor que representa a nuvem, com um switch simulando a internet entre os roteadores, em uma faixa de endereços reservada para documentação (203.0.113.0/24), definida na RFC 5737 (ARKKO; COTTON; VEGODA, 2010). Inclui VLANs, roteamento entre VLANs, DHCP, listas de acesso e rotas. Dispositivos, cabos, endereços fixos e switches foram criados por um script gerado do roteiro (extensão PTBuilder), e os roteadores foram configurados colando os comandos direto no CLI. A VPN não foi configurada no simulador, por decisão do grupo.
 
 ## 7.7 Resultados dos testes
 
-**[A PREENCHER depois de montar o laboratório. Para cada teste do roteiro (T1 a T15), registrar o resultado esperado e o obtido, com print.]** Os dois testes exigidos pelo plano são: a portaria alcança o servidor da central (T2, Figura 14) e o Wi-Fi de visitantes não alcança a portaria (T6, Figura 15). Os demais verificam roteamento entre VLANs, DHCP, isolamento do CFTV e do banco, o segundo condomínio e o comportamento sem a ligação com a nuvem.
+Os quinze testes do roteiro foram executados em 04/11/2026 e todos deram o resultado esperado (Quadro 6). Usam o `ping`, portanto verificam conectividade e regras de acesso, não aplicações.
 
-**[Figura 14 – Teste T2: a portaria alcança o servidor da central. Figura 15 – Teste T6: o Wi-Fi de visitantes não alcança a portaria. Inserir os prints.]**
+**Quadro 6 – Resultado dos testes no Packet Tracer**
+
+| Teste | Origem e ação | Esperado | Obtido |
+|---|---|---|---|
+| T1 | Portaria C01 → gateway | Responde | Respondeu |
+| T2 | Portaria C01 → API | Responde | Respondeu |
+| T3 | Portaria C01 → banco | Não | Inalcançável |
+| T4 | Portaria C01 → portaria C03 | Não | Inalcançável |
+| T5 | Visitante C01: IP por DHCP | `10.1.30.100` a `.199` | `10.1.30.100` |
+| T6 | Visitante C01 → portaria C01 | Não | Inalcançável |
+| T7 | Visitante C01 → API | Não | Inalcançável |
+| T8 | Visitante C01 → gateway | Responde | Respondeu |
+| T9 | CFTV C01 → gateway e → API | Gateway sim, API não | Conforme esperado |
+| T10 | Administrativo da sede → API | Responde | Respondeu |
+| T11 | API → banco | Responde | Respondeu |
+| T12 | Atendimento da sede: IP por DHCP | `10.0.20.100` a `.199` | `10.0.20.100` |
+| T13 | Portaria C03 → API e → portaria C01 | API sim, C01 não | Conforme esperado |
+| T14 | Portaria C01 → API, sem o enlace WAN | Não | Inalcançável |
+| T15 | Portaria C01 → impressora e gateway, sem o enlace WAN | Respondem | Responderam |
+
+Fonte: elaborado pelos autores (2026), a partir da execução no Packet Tracer 9.0.1.
+
+Nos testes em que se esperava falta de resposta, a mensagem *Destination host unreachable* veio do próprio gateway do local, indicando que as listas de acesso barraram o tráfego: o Wi-Fi de visitantes alcança o gateway, mas não a portaria nem a nuvem (T6 a T8), e o CFTV só fala com o seu gateway (T9). Passaram os dois testes exigidos pelo plano: a portaria alcança o servidor da central (T2, Figura 14) e o Wi-Fi de visitantes não alcança a portaria (T6, Figura 15). O teste de continuidade (T14 e T15) mostra que, sem a nuvem, a rede local da portaria segue funcionando, comportamento que o nó em C aproveita ao guardar as operações na fila até a conexão voltar (ADR-003). O enlace foi religado ao fim.
+
+**[Figura 13 – Topologia da rede (print do Packet Tracer). Figura 14 – Teste T2: a portaria alcança o servidor da central. Figura 15 – Teste T6: o Wi-Fi de visitantes não alcança a portaria. Inserir os prints.]**
+
+Um problema foi resolvido: executado de uma vez, o script perdeu nos roteadores os comandos de seleção de interface, e os roteadores passaram a ser configurados direto no CLI. Limitações: só um laptop de visitante foi testado, o do condomínio 1 `[CONFIRMAR se os da sede e do condomínio 3 foram configurados]`; VPN, HTTPS da API e desempenho não foram testados; a simulação não substitui equipamentos reais; e o resultado do T9 foi informado pelo grupo.
 
 ## 7.8 Considerações do capítulo
 
-O projeto combina segmentação por VLAN, regras de acesso e VPN com uma nuvem como ponto comum, de modo que a portaria funcione sem internet e a central consolide os dados. Estão em aberto os testes no simulador, a cotação dos equipamentos e a verificação das referências teóricas.
+O projeto combina segmentação por VLAN, regras de acesso e VPN com uma nuvem como ponto comum, de modo que a portaria funcione sem internet e a central consolide os dados. No simulador, os quinze testes deram o resultado esperado. Estão em aberto a cotação dos equipamentos, a VPN fora do diagrama e a verificação das referências teóricas.

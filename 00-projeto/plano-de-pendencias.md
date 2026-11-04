@@ -24,7 +24,7 @@
 
 ### 1.3 Packet Tracer (prazo: qua 04/11 montar; qui 05/11 prints)
 
-**Andamento em 2026-11-04 (fim do dia):** Packet Tracer 9.0.1 instalado; 24 dispositivos, 20 cabos, endereços e 3 switches feitos pelo PTBuilder; 4 roteadores configurados pelo CLI e funcionando; **T1 respondeu**, ping ao gateway do condomínio 3 respondeu e DHCP da sede entregou `10.0.10.100`. **Falta:** Wi-Fi (módulo WPC300N nos 3 laptops, SSID nos 3 APs), HTTP/HTTPS no `SRV-API`, testes T2 a T15, prints (topologia, T2 e T6), salvar o `.pkt` e mandar o resultado ao Claude. Retomar em 05/11.
+**Andamento em 2026-11-04 (noite):** Packet Tracer 9.0.1; topologia montada e **T1 a T15 executados, todos como esperado**; capítulo 7, conclusão, introdução, resumo e abstract já atualizados com os resultados. **Falta:** HTTP/HTTPS no `SRV-API`; **prints** da topologia (Figura 13), do T2 (Figura 14) e do T6 (Figura 15); salvar o `.pkt` e os prints em `06-redes/packet-tracer/` e `documento-final/figuras/`; confirmar o segundo ping do T9 (CFTV → API não responde); decidir sobre o Wi-Fi dos laptops da sede e do condomínio 3 (nenhum teste depende deles).
 
 Seguir `06-redes/packet-tracer/roteiro.md` (VPN fica só no diagrama, decisão do grupo).
 
