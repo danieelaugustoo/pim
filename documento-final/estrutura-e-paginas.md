@@ -62,8 +62,8 @@ Numeração em ordem de aparição. Arquivos finais em `figuras/figura-NN-descri
 | 11 | Print do mapa da estante | 6 | executar a opção 5 do programa | **grupo** |
 | 12 | Fluxograma do A5 | 6 | `.../fluxogramas/A5.mmd` | renderizado (PNG em `figuras/`) |
 | 13 | Topologia no Packet Tracer | 7 | montagem no simulador | **grupo** |
-| 14 | Print do teste T2 (portaria alcança a API) | 7 | Packet Tracer | **grupo** |
-| 15 | Print do teste T6 (visitantes não alcançam a portaria) | 7 | Packet Tracer | **grupo** |
+| 14 | Print do teste T2 (portaria alcança a API) | 7 | Packet Tracer | feito (`figura-14-teste-t2.png`) |
+| 15 | Print do teste T6 (visitantes não alcançam a portaria) | 7 | Packet Tracer | feito (`figura-15-teste-t6.png`) |
 | 16 | Fluxo ponta a ponta | 9 | `08-integracao/diagramas/fluxo-ponta-a-ponta.mmd` | renderizado (PNG em `figuras/`) |
 
 Fluxogramas A2, A3, A4 e A6 ficam em apêndice ou só no repositório.
