@@ -42,13 +42,22 @@ Seguir `06-redes/packet-tracer/roteiro.md` (VPN fica só no diagrama, decisão d
 
 ### 2.1 Fontes e leitura
 
-- [ ] **F02, F03 e F04** (Condomínios SC): abrir no navegador e conferir se existem e o que dizem (`02-pesquisa/fontes.md`, seção 4). Só entram no trabalho se verificadas.
-- [ ] **MACK (2024)**, citada nos capítulos 1, 2 e 3: conferir a matéria e a data de acesso em `referencias.md`.
-- [ ] **Ler os livros citados** e conferir os trechos usados: Schwaber e Sutherland (guia do Scrum), Elmasri e Navathe, Heuser, Sadalage e Fowler, Deitel e Deitel, Forbellone e Eberspächer, Tanenbaum e Wetherall, Kurose e Ross, Tanenbaum e Van Steen, Mell e Grance. Nenhum foi aberto pelo Claude (só dados de catálogo).
-- [ ] Capítulo 3, seção 3.5: escrever, **com as próprias palavras**, a síntese de cada tema, com página nas citações diretas. É a parte mais autoral e a que mais pesa no avaliador.
-- [ ] Capítulo 3, seção 3.6: pesquisar **produtos reais** de cada categoria (aplicativos de gestão condominial, armários inteligentes, portaria remota), preencher `02-pesquisa/trabalhos-relacionados.md` com a fonte de cada célula e só então afirmar o que a proposta tem de diferente (capítulos 3 e 9). Sem fonte, nenhum produto deve ser citado.
-- [ ] Marcas `[FONTE A VERIFICAR]`: referência de UML (cap. 4), referência metodológica se o professor exigir (cap. 3), dados do setor (cap. 2), VLSM (cap. 7), documentos de direitos humanos (cap. 8), prazos legais de retenção (cap. 8).
-- [ ] Conferir o **texto oficial** dos artigos da LGPD e da LBI citados no capítulo 8 (art. 6º, 16, 18 e 41 da LGPD; art. 63 da LBI).
+Revisado em 2026-11-04: **ninguém precisa ler livro inteiro**. O texto usa os livros só para afirmações gerais de manual, e o que se confere é o **sumário** de cada obra.
+
+- [x] ~~F02, F03 e F04 (Condomínios SC)~~: **dispensadas**, nenhum capítulo as cita. Só voltam à lista se o grupo decidir usá-las.
+- [x] **MACK (2024)**, citada nos capítulos 1, 2 e 3: já verificada (artigo de opinião do Diário do Comércio, 28/11/2024). Falta só conferir a data de acesso em `referencias.md`.
+- [ ] **Conferir o sumário dos livros citados** (cerca de 2 minutos cada; se a UNIP tem biblioteca virtual, dá para ver lá) e confirmar que o tema afirmado no texto está lá:
+  - Elmasri e Navathe: modelo relacional (chaves e restrições) e normalização (caps. 3 e 5);
+  - Heuser: normalização, 1FN a 3FN (caps. 3 e 5);
+  - Sadalage e Fowler: modelos NoSQL de documentos e chave-valor (caps. 3 e 5);
+  - Deitel e Deitel; Forbellone e Eberspächer: programação em C, lógica e algoritmos (caps. 3 e 6);
+  - Tanenbaum e Wetherall; Kurose e Ross: topologia em estrela, VLANs e redes locais (cap. 7);
+  - Tanenbaum e Van Steen: definição de sistema distribuído (caps. 3 e 7).
+  **Se alguma obra não puder ser conferida, tirar a citação dela** (o Claude faz a limpeza no texto e no `referencias.md`) e manter a frase sem fonte. É melhor ter menos referências, todas conferidas.
+- [ ] Documentos abertos na internet, já verificados (Guia do Scrum 2020, RFC 5737, NIST SP 800-145 e FIPS 180-4, WCAG 2.2): nada a ler, só conferir o **texto oficial** dos artigos da LGPD e da LBI citados no capítulo 8 (art. 6º, 16, 18 e 41 da LGPD; art. 63 da LBI), cerca de 10 minutos.
+- [ ] Capítulo 3, seção 3.5: escrever, **com as próprias palavras**, 1 ou 2 frases de síntese para cada um dos 5 ou 6 temas (Scrum, bancos de dados, C e algoritmos, redes e nuvem, proteção de dados e acessibilidade). É a parte mais autoral do trabalho.
+- [ ] Capítulo 3, seção 3.6: pesquisar **produtos reais** de cada categoria (aplicativos de gestão condominial, armários inteligentes, portaria remota), preencher `02-pesquisa/trabalhos-relacionados.md` com a fonte de cada célula e só então afirmar o que a proposta tem de diferente (capítulos 3 e 9). Sem fonte, nenhum produto deve ser citado. **Se o tempo apertar**, manter a seção como descrição da comparação e não afirmar diferencial frente a produtos reais.
+- [ ] Marcas `[FONTE A VERIFICAR]`: referência de UML (cap. 4), referência metodológica se o professor exigir (cap. 3), dados do setor (cap. 2), VLSM (cap. 7), documentos de direitos humanos (cap. 8), prazos legais de retenção (cap. 8). **Alternativa para cada uma:** buscar a fonte ou tirar a afirmação.
 
 ### 2.2 Decisões
 
@@ -132,7 +141,7 @@ git push origin --tags
 |---|---|
 | Packet Tracer não fica pronto | Capítulo 7 só com o projeto; declarar que os testes não foram executados; tirar "simulação de rede" da introdução |
 | Passar de 30 páginas no Word | Cortar figuras e juntar prints (`estrutura-e-paginas.md`, seção 8) |
-| Fontes F02 a F04 não verificadas | Não citar; o capítulo 2 já funciona sem elas |
+| Livro que não puder ser conferido | Tirar a citação e manter a frase sem fonte (o Claude faz a limpeza) |
 | Trabalhos relacionados sem pesquisa | Manter a seção 3.6 como metodologia da comparação e não afirmar diferencial frente a produtos reais |
 | Pouco tempo para a revisão por pares | Priorizar capítulos 3, 4 e 6, os mais densos |
 | Alto índice de similaridade | Reescrever com palavras próprias os trechos que o software marcar; nunca copiar de fonte, de colega ou de IA sem reescrita |
