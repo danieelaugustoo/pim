@@ -60,16 +60,16 @@ Acompanha-se uma encomenda fictícia que chega à unidade A-12 de um condomínio
 
 **[Figura 16 – Fluxo ponta a ponta de uma encomenda. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-16-fluxo-ponta-a-ponta.png`]**
 
-O Quadro 6 deixa claro o que foi construído e o que é simulado ou projetado.
+O Quadro 7 deixa claro o que foi construído e o que é simulado ou projetado.
 
-**Quadro 6 – O que é real e o que é simulado**
+**Quadro 7 – O que é real e o que é simulado**
 
 | Parte | Situação |
 |---|---|
 | Registro, estante, código, retirada, fila, consolidação e relatórios | Funcionando e testados no protótipo em C |
 | Aviso ao morador e rede entre portaria e central | Simulados (tela, arquivos) |
 | Banco MySQL | Scripts executados em servidor de teste; o protótipo não se conecta a ele |
-| Rede física (VLANs, ACL) | Projetada; laboratório no Packet Tracer `[ATUALIZAR após a montagem]` |
+| Rede física (VLANs, ACL) | Projetada e testada no Packet Tracer 9.0.1 (15 testes, todos como esperado) |
 | VPN | Apenas no diagrama |
 
 Fonte: elaborado pelos autores (2026).
@@ -82,9 +82,9 @@ O treinamento dos porteiros é curto, com uma cartilha de uma página: registrar
 
 ## 9.3 Benefícios esperados e indicadores
 
-Os benefícios são esperados, não medidos: menos extravios e entregas erradas, menos tempo de busca e de registro, moradores avisados mais rápido, operação contínua sem internet, visão única dos dez condomínios, cobrança de retirada pelos alertas de pendências antigas e melhor dimensionamento da equipe. Os indicadores propostos estão no Quadro 7. Sem levantamento de campo, a linha de base ("antes") seria medida no piloto, e as metas ainda precisam ser definidas.
+Os benefícios são esperados, não medidos: menos extravios e entregas erradas, menos tempo de busca e de registro, moradores avisados mais rápido, operação contínua sem internet, visão única dos dez condomínios, cobrança de retirada pelos alertas de pendências antigas e melhor dimensionamento da equipe. Os indicadores propostos estão no Quadro 8. Sem levantamento de campo, a linha de base ("antes") seria medida no piloto, e as metas ainda precisam ser definidas.
 
-**Quadro 7 – Indicadores propostos**
+**Quadro 8 – Indicadores propostos**
 
 | Indicador | Como medir | Antes | Meta |
 |---|---|---|---|
@@ -103,7 +103,7 @@ A comparação com soluções existentes (aplicativos de gestão condominial, ar
 
 ## 9.5 Limitações
 
-No protótipo, a rede e o aviso são simulados, não há interface gráfica, login nem perfis, o código de retirada fica em texto e é visível na tela do porteiro, a capacidade é fixa e os dados são fictícios. No projeto, os comandos da rede ainda precisam ser testados no simulador, equipamentos e custos não foram cotados, não houve levantamento de campo e a devolução de volumes não foi implementada.
+No protótipo, a rede e o aviso são simulados, não há interface gráfica, login nem perfis, o código de retirada fica em texto e é visível na tela do porteiro, a capacidade é fixa e os dados são fictícios. No projeto, a rede foi testada só no simulador (sem a VPN), equipamentos e custos não foram cotados, não houve levantamento de campo e a devolução de volumes não foi implementada.
 
 ## 9.6 Evolução futura
 

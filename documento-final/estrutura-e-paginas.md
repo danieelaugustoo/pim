@@ -79,8 +79,9 @@ Numeração em ordem de aparição (renumerados em 2026-11-03, após os cortes).
 | 3 Resultados de consultas SQL (dados fictícios) | 5 | `04-banco-de-dados/sql/03-consultas.sql` |
 | 4 Relatório consolidado (dados fictícios) | 6 | `05-programa-c/` (central) |
 | 5 Regras de acesso principais | 7 | `06-redes/seguranca-infraestrutura.md` |
-| 6 O que é real e o que é simulado | 9 | `08-integracao/` |
-| 7 Indicadores propostos | 9 | `08-integracao/beneficios-e-indicadores.md` |
+| 6 Resultado dos testes no Packet Tracer (T1 a T15) | 7 | `06-redes/packet-tracer/roteiro.md` |
+| 7 O que é real e o que é simulado | 9 | `08-integracao/` |
+| 8 Indicadores propostos | 9 | `08-integracao/beneficios-e-indicadores.md` |
 
 Ficam só no repositório, citados no texto: matriz de trabalhos relacionados (`02-pesquisa/trabalhos-relacionados.md`), ADRs, módulos e algoritmos, VLANs, testes T1 a T15 (se couberem, entram no capítulo 7 com o resultado esperado × obtido) e dados pessoais × finalidade.
 
@@ -109,12 +110,12 @@ Contagem de palavras da seção "Texto do grupo" de cada capítulo (inclui o avi
 | 4 Engenharia de software | 1.699 | 1.279 | 4 |
 | 5 Banco de dados | 1.385 | 1.129 | 4 |
 | 6 Programação em C | 1.944 | 1.258 | 4 |
-| 7 Redes | 1.488 | 1.208 | 4 |
+| 7 Redes | 1.488 | 1.634 | 4 |
 | 8 Segurança e acessibilidade | 1.134 | 866 | 2 |
-| 9 Integração | 1.406 | 1.079 | 2 |
+| 9 Integração | 1.406 | 1.082 | 2 |
 | 10 Conclusão | 561 | 565 | ~1,5 |
 
-O desenvolvimento (capítulos 2 a 9) passou de cerca de **11.350** para cerca de **8.690 palavras** (aproximadamente 26 a 29 páginas de texto, **mais** as figuras). Ainda pode passar de 30 páginas depois de inseridas as 16 figuras: confirmar no Word. Nos cortes, o texto dos capítulos foi reescrito de forma mais curta, **sem tirar fatos nem números**, e cinco quadros que repetiam o que está no repositório viraram frase (módulos e algoritmos do cap. 6, ADRs, sprints e ferramentas do cap. 4, VLANs e riscos e dados pessoais do cap. 8, matriz de trabalhos relacionados do cap. 3 e evoluções do cap. 9). Os quadros foram renumerados de 1 a 7. Nenhuma figura foi retirada.
+O desenvolvimento (capítulos 2 a 9) passou de cerca de **11.350** para cerca de **9.140 palavras** (aproximadamente 28 a 30 páginas de texto, **mais** as figuras; o capítulo 7 cresceu com os resultados dos testes do Packet Tracer). Ainda pode passar de 30 páginas depois de inseridas as 16 figuras: confirmar no Word. Nos cortes, o texto dos capítulos foi reescrito de forma mais curta, **sem tirar fatos nem números**, e cinco quadros que repetiam o que está no repositório viraram frase (módulos e algoritmos do cap. 6, ADRs, sprints e ferramentas do cap. 4, VLANs e riscos e dados pessoais do cap. 8, matriz de trabalhos relacionados do cap. 3 e evoluções do cap. 9). Os quadros foram renumerados de 1 a 8. Nenhuma figura foi retirada.
 
 **Cortes ainda possíveis, se o Word mostrar mais de 30 páginas (decisão do grupo):**
 1. Reduzir figuras: manter as de maior valor (organograma, casos de uso, DER, fluxograma do A1, topologia, os dois prints do Packet Tracer, fluxo ponta a ponta) e juntar ou cortar as demais, renumerando as figuras restantes.

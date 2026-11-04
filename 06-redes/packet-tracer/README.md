@@ -4,7 +4,7 @@
 
 **Exigências do manual que atende (Etapa 6):** topologia (print do Packet Tracer) e os resultados dos testes de rede apresentados no capítulo de redes.
 
-**Situação:** o roteiro está pronto, mas a montagem, os testes e os prints são do grupo e ainda não foram feitos. Nomes sugeridos: `morada-central.pkt` e `print-t01-gateway.png` a `print-t15-sem-wan-local.png` (lista completa no roteiro). Os prints que entrarem no trabalho são copiados para `documento-final/figuras/`.
+**Situação (2026-11-04):** laboratório montado no Packet Tracer 9.0.1 e testes T1 a T15 executados, todos como esperado (resultados em `documento-final/capitulos/07-redes.md`). Faltam salvar o `.pkt` e os prints no repositório. Nomes sugeridos: `morada-central.pkt` e `print-t01-gateway.png` a `print-t15-sem-wan-local.png` (lista completa no roteiro). Os prints que entrarem no trabalho são copiados para `documento-final/figuras/`.
 
 ## Atalho opcional: script PTBuilder (`ptbuilder.js`)
 
