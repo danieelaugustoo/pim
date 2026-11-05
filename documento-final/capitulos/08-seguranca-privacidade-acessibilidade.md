@@ -61,7 +61,7 @@ O protótipo tem limitações declaradas. Ele não tem login nem perfis, os arqu
 
 A solução considera os moradores que não usam smartphone. O canal interfone permite que o porteiro avise por telefone interno e entregue o código impresso, e cada morador escolhe o seu canal no cadastro. A retirada exige o mesmo código de todos, o que dá tratamento igual a quem tem e a quem não tem smartphone. Isso conversa com a Lei Brasileira de Inclusão (Lei nº 13.146/2015), cujo art. 63 torna obrigatória a acessibilidade nos sítios da internet mantidos por empresas com sede ou representação comercial no País ou por órgãos de governo (BRASIL, 2015).
 
-Para as telas do sistema completo, recomenda-se seguir as diretrizes WCAG, do W3C, que têm os níveis A, AA e AAA (WORLD WIDE WEB CONSORTIUM, 2024) `[definir o nível adotado]`. Isso inclui contraste adequado, fonte ampliável, navegação por teclado, compatibilidade com leitores de tela e avisos que não dependam só de cor ou som. O protótipo, de console, não tem esses recursos. Como o aviso por aplicativo ou SMS depende da nuvem, o interfone cobre a falha de internet.
+Para as telas do sistema completo, recomenda-se seguir as diretrizes WCAG, do W3C, que têm os níveis A, AA e AAA (WORLD WIDE WEB CONSORTIUM, 2024). O nível proposto é o AA, intermediário entre o mínimo e o mais rigoroso. Isso inclui contraste adequado, fonte ampliável, navegação por teclado, compatibilidade com leitores de tela e avisos que não dependam só de cor ou som. O protótipo, de console, não tem esses recursos. Como o aviso por aplicativo ou SMS depende da nuvem, o interfone cobre a falha de internet.
 
 ## 8.4 Ética, impactos sociais e direitos humanos
 
