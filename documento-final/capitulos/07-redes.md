@@ -82,55 +82,32 @@ A solução é um sistema distribuído (TANENBAUM; VAN STEEN, 2007), com nós de
 
 ## 7.5 Segurança da infraestrutura
 
-A segurança segue os princípios do menor privilégio, da defesa em camadas, do padrão "negar" e do registro de eventos. As regras de acesso principais, propostas pelo projeto, estão no Quadro 5.
-
-**Quadro 5 – Regras de acesso principais**
-
-| Origem | Pode acessar | Não pode acessar |
-|---|---|---|
-| VLAN 10 (portaria) | A API na nuvem (HTTPS, pela VPN) | CFTV, visitantes, gerência, outras portarias, internet |
-| VLAN 20 (CFTV) | Apenas a própria VLAN | Todo o resto |
-| VLAN 30 (visitantes) | A internet | Portaria, gerência, nuvem e rede interna |
-| VLAN 99 (gerência) | Equipamentos de rede (SSH, a partir da sede) | Demais VLANs |
-
-Fonte: elaborado pelos autores (2026).
+A segurança segue os princípios do menor privilégio, da defesa em camadas, do padrão "negar" e do registro de eventos. Pelas regras de acesso propostas, a portaria (VLAN 10) só alcança a API na nuvem, por HTTPS pela VPN, e não alcança o CFTV, os visitantes, a gerência, outras portarias nem a internet. O CFTV (VLAN 20) fala apenas com a própria VLAN, os visitantes (VLAN 30) só chegam à internet, e a gerência (VLAN 99) administra os equipamentos de rede por SSH, a partir da sede.
 
 O projeto prevê ainda a VPN IPsec entre cada local e a nuvem, HTTPS/TLS na API, autenticação em dois fatores no painel, gerência por SSH (nunca Telnet) restrita à VLAN de gerência, logs de auditoria e cópias de segurança pela regra 3-2-1. O banco só é acessível pela API. A VPN ficou apenas no diagrama, sem configuração no simulador, por decisão do grupo.
 
 ## 7.6 Laboratório no Packet Tracer
 
-O laboratório reproduz a sede, dois condomínios (1 e 3) e um servidor que representa a nuvem. Um switch simula a internet entre os roteadores, numa faixa de endereços reservada para documentação (203.0.113.0/24), definida na RFC 5737 (ARKKO; COTTON; VEGODA, 2010). Há VLANs, roteamento entre VLANs, DHCP, listas de acesso e rotas. Dispositivos, cabos, endereços fixos e switches foram criados por um script gerado do roteiro (extensão PTBuilder), e os roteadores foram configurados direto no CLI.
+O laboratório reproduz a sede, dois condomínios (1 e 3) e um servidor que representa a nuvem. Um switch simula a internet entre os roteadores, numa faixa de endereços reservada para documentação (203.0.113.0/24), definida na RFC 5737 (ARKKO; COTTON; VEGODA, 2010). Há VLANs, roteamento entre VLANs, DHCP, listas de acesso e rotas. Dispositivos, cabos, endereços fixos e switches foram criados por um script gerado do roteiro (extensão PTBuilder), e os roteadores foram configurados direto no CLI, porque o script perdeu os comandos que selecionam a interface.
 
 ## 7.7 Resultados dos testes
 
-Os quinze testes do roteiro foram executados em 04/11/2026 e todos deram o resultado esperado (Quadro 6). Eles usam o `ping`, portanto verificam conectividade e regras de acesso, e não aplicações.
+Os quinze testes do roteiro foram executados em 04/11/2026 e todos deram o resultado esperado (Quadro 5). Eles usam o `ping`, portanto verificam conectividade e regras de acesso, e não aplicações.
 
-**Quadro 6 – Resultado dos testes no Packet Tracer**
+**Quadro 5 – Resultado dos testes no Packet Tracer**
 
-| Teste | Origem e ação | Esperado | Obtido |
-|---|---|---|---|
-| T1 | Portaria C01 → gateway | Responde | Respondeu |
-| T2 | Portaria C01 → API | Responde | Respondeu |
-| T3 | Portaria C01 → banco | Não | Inalcançável |
-| T4 | Portaria C01 → portaria C03 | Não | Inalcançável |
-| T5 | Visitante C01: IP por DHCP | `10.1.30.100` a `.199` | `10.1.30.100` |
-| T6 | Visitante C01 → portaria C01 | Não | Inalcançável |
-| T7 | Visitante C01 → API | Não | Inalcançável |
-| T8 | Visitante C01 → gateway | Responde | Respondeu |
-| T9 | CFTV C01 → gateway e → API | Gateway sim, API não | Conforme esperado |
-| T10 | Administrativo da sede → API | Responde | Respondeu |
-| T11 | API → banco | Responde | Respondeu |
-| T12 | Atendimento da sede: IP por DHCP | `10.0.20.100` a `.199` | `10.0.20.100` |
-| T13 | Portaria C03 → API e → portaria C01 | API sim, C01 não | Conforme esperado |
-| T14 | Portaria C01 → API, sem o enlace WAN | Não | Inalcançável |
-| T15 | Portaria C01 → impressora e gateway, sem o enlace WAN | Respondem | Responderam |
+| Grupo | Testes | Resultado |
+|---|---|---|
+| Comunicação permitida | T1, T2, T8, T10, T11 | Todos responderam |
+| Tráfego barrado | T3, T4, T6, T7 | Todos inalcançáveis |
+| DHCP | T5, T12 | `10.1.30.100` e `10.0.20.100`, dentro da faixa `.100` a `.199` |
+| Regras combinadas | T9, T13 | CFTV: gateway sim, API não. Portaria C03: API sim, portaria C01 não |
+| Sem o enlace WAN | T14, T15 | T14: API inalcançável. T15: impressora e gateway responderam |
 
 Fonte: elaborado pelos autores (2026), a partir da execução no Packet Tracer 9.0.1.
 
-Nos testes em que se esperava falta de resposta, a mensagem *Destination host unreachable* veio do próprio gateway do local, sinal de que as listas de acesso barraram o tráfego. O Wi-Fi de visitantes alcança o gateway, mas não a portaria nem a nuvem (T6 a T8), e o CFTV só fala com o seu gateway (T9). Os dois testes exigidos pelo plano passaram: a portaria alcança o servidor da central (T2, Figura 14) e o Wi-Fi de visitantes não alcança a portaria (T6, Figura 15). No teste de continuidade (T14 e T15), a rede local da portaria continuou funcionando sem a nuvem, que é o comportamento em que o nó em C se apoia ao guardar as operações na fila até a conexão voltar (ADR-003). O enlace foi religado ao fim.
+Nos testes em que se esperava falta de resposta, a mensagem *Destination host unreachable* veio do próprio gateway do local, sinal de que as listas de acesso barraram o tráfego. O Wi-Fi de visitantes alcança o gateway, mas não a portaria nem a nuvem (T6 a T8), e o CFTV só fala com o seu gateway (T9). Os dois testes exigidos pelo plano passaram: a portaria alcança o servidor da central (T2, à esquerda na Figura 14) e o Wi-Fi de visitantes não alcança a portaria (T6, à direita). No teste de continuidade (T14 e T15), a rede local da portaria continuou funcionando sem a nuvem, que é o comportamento em que o nó em C se apoia ao guardar as operações na fila até a conexão voltar (ADR-003). O enlace foi religado ao fim.
 
-**[Figura 14 – Teste T2: a portaria do condomínio 1 alcança o servidor da central. Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-14-teste-t2.png`]**
+**[Figura 14 – Testes T2 (à esquerda: a portaria do condomínio 1 alcança o servidor da central) e T6 (à direita: o Wi-Fi de visitantes do condomínio 1 não alcança a portaria). Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-14-testes-t2-t6.png`]**
 
-**[Figura 15 – Teste T6: o Wi-Fi de visitantes do condomínio 1 não alcança a portaria. Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-15-teste-t6.png`]**
-
-O script, executado de uma vez, perdeu nos roteadores os comandos que selecionam a interface, e por isso eles foram configurados direto no CLI. Os laptops de visitante dos três locais foram conectados ao Wi-Fi (Figura 13), mas os testes T5 a T8 foram feitos só no do condomínio 1. A VPN, o HTTPS da API e o desempenho não foram testados, e a simulação não substitui equipamentos reais.
+Os testes T5 a T8 foram feitos só no laptop de visitante do condomínio 1. A VPN, o HTTPS da API e o desempenho não foram testados, e a simulação não substitui equipamentos reais.

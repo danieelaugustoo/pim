@@ -26,6 +26,8 @@ Baseado no `PLANO.md`, seção 11. O Desenvolvimento deve ficar **entre 20 e 30 
 
 **Situação em 2026-11-04, depois da reescrita e dos cortes:** cerca de 10.100 palavras no texto (introdução, capítulos 2 a 9 e conclusão) e cerca de **30 páginas** da introdução à conclusão no teste com o LibreOffice (16 figuras). Confirmar no Word.
 
+**Situação em 2026-11-05 (cortes pedidos pelo Daniel):** a tabela de regras de acesso (cap. 7) virou frase, o quadro dos testes de rede foi agrupado em 5 linhas, os prints T2 e T6 viraram uma só figura (14), o fluxo ponta a ponta passou a ser a Figura 15 e foram enxutos os capítulos 2 a 10, perto de 700 palavras a menos. Como as figuras agora são desenhadas em tamanho legível (até 16 cm de largura), o teste do LibreOffice mostra **cerca de 29 páginas** da introdução à conclusão, com as quatro figuras UML ainda como caixas de 11,5 x 7 cm. Margem pequena: confirmar no Word.
+
 **Esclarecido em 2026-11-04 (Prof.ª Eliana):** a Introdução e a Conclusão **entram** na contagem das 20 a 30 páginas. Com a introdução (cap. 1), os capítulos 2 a 9 e a conclusão (cap. 10), o texto tem cerca de **10.465 palavras** (aproximadamente 32 a 35 páginas só de texto, antes das 17 figuras), então **é preciso cortar** para caber em 30 páginas. Meta: cerca de 8.000 palavras no total. A paginação real só se vê no Word.
 
 ## 2. Riscos de tamanho
@@ -47,26 +49,27 @@ Baseado no `PLANO.md`, seção 11. O Desenvolvimento deve ficar **entre 20 e 30 
 
 ## 4. Lista de figuras
 
-Numeração em ordem de aparição no texto (renumerada em 2026-11-04, de novo ao incluir o print do SQL como Figura 9). Arquivos finais em `figuras/figura-NN-descricao.png`. Os diagramas Mermaid foram renderizados em 2026-10-31 com o mermaid-cli 11.4.2; **conferir visualmente** antes de usar. Os diagramas PlantUML (figuras 04 a 07) **ainda não foram renderizados**. O diagrama de estados da encomenda (`estados-encomenda.puml`) é opcional e **não é citado** no capítulo 4; se for incluído, todas as figuras seguintes precisam ser renumeradas.
+Numeração em ordem de aparição no texto (renumerada em 2026-11-04 e em 2026-11-05, quando os prints T2 e T6 viraram uma só figura, a 14). Arquivos finais em `figuras/figura-NN-descricao.png`. Os diagramas Mermaid foram renderizados em 2026-10-31 com o mermaid-cli 11.4.2; **conferir visualmente** antes de usar. Os diagramas PlantUML (figuras 04 a 07) **ainda não foram renderizados**. O diagrama de estados da encomenda (`estados-encomenda.puml`) é opcional e **não é citado** no capítulo 4; se for incluído, todas as figuras seguintes precisam ser renumeradas.
 
 | Nº | Figura | Capítulo | Origem | Situação |
 |---|---|---|---|---|
 | 01 | Organograma | 2 | `01-organizacao/diagramas/organograma.mmd` | renderizado |
-| 02 | Processo atual (caderno) | 2 | `01-organizacao/diagramas/processo-atual.mmd` | renderizado |
-| 03 | Processo proposto | 2 | `01-organizacao/diagramas/processo-proposto.mmd` | renderizado |
+| 02 | Processo atual (caderno) | 2 | `figuras/fontes/fluxogramas_grade.py` (versão compacta de `processo-atual.mmd`) | renderizado (`figura-02-processo-atual.png`) |
+| 03 | Processo proposto | 2 | `figuras/fontes/fluxogramas_grade.py` (versão compacta de `processo-proposto.mmd`) | renderizado (`figura-03-processo-proposto.png`) |
 | 04 | Casos de uso | 4 | `03-engenharia-software/diagramas/casos-de-uso.puml` | renderizar (PlantUML) |
 | 05 | Classes de domínio | 4 | `.../classes-dominio.puml` | renderizar (PlantUML) |
 | 06 | Atividade: registrar encomenda | 4 | `.../atividade-registrar-encomenda.puml` | renderizar (PlantUML) |
 | 07 | Sequência da sincronização | 4 | `.../sequencia-sincronizacao.puml` | renderizar (PlantUML) |
 | 08 | DER | 5 | `04-banco-de-dados/diagramas/der.mmd` | renderizado (`figura-08-der.png`) |
 | 09 | Print de consulta SQL (pendências por condomínio) | 5 | consulta 1 de `03-consultas.sql` no MySQL 8.4 (Docker) | feito (`figura-09-consulta-sql.png`) |
-| 10 | Fluxograma do A1 | 6 | `05-programa-c/algoritmos/fluxogramas/A1.mmd` | renderizado (`figura-10-fluxograma-a1.png`) |
+| 10 | Fluxograma do A1 | 6 | `figuras/fontes/fluxogramas_grade.py` (versão compacta de `A1.mmd`) | renderizado (`figura-10-fluxograma-a1.png`) |
 | 11 | Print dos testes automatizados | 6 | `.\build.bat test` | feito em 2026-11-04, antes da mudança do A3 (a saída é a mesma; refazer só se quiser) (`figura-11-testes-automatizados.png`) |
 | 12 | Print do mapa da estante | 6 | opção 5 do programa | feito (`figura-12-mapa-estante.png`) |
 | 13 | Topologia no Packet Tracer | 7 | montagem no simulador | feito (`figura-13-topologia.png`) |
-| 14 | Print do teste T2 (portaria alcança a API) | 7 | Packet Tracer | feito (`figura-14-teste-t2.png`) |
-| 15 | Print do teste T6 (visitantes não alcançam a portaria) | 7 | Packet Tracer | feito (`figura-15-teste-t6.png`) |
-| 16 | Fluxo ponta a ponta | 9 | `08-integracao/diagramas/fluxo-ponta-a-ponta.mmd` | renderizado (`figura-16-fluxo-ponta-a-ponta.png`) |
+| 14 | Prints dos testes T2 (portaria alcança a API) e T6 (visitantes não alcançam a portaria), lado a lado | 7 | Packet Tracer | feito (`figura-14-testes-t2-t6.png`) |
+| 15 | Fluxo ponta a ponta | 9 | `figuras/fontes/fluxogramas_grade.py` | renderizado (`figura-15-fluxo-ponta-a-ponta.png`) |
+
+**Fluxogramas das Figuras 2, 3, 10 e 15 (2026-11-05):** as versões verticais do Mermaid ficavam com 2 a 3 cm de largura no documento e o texto não dava para ler. As versões do documento são gradeadas (4 colunas, 16 cm de largura), geradas por `figuras/fontes/fluxogramas_grade.py` (SVG) e `figuras/fontes/svg_para_png.js` (PNG). Os `.mmd` continuam como fonte dos fluxogramas verticais do repositório.
 
 Os fluxogramas A2 a A6 (inclusive o do A5, que saiu do texto em 2026-11-04 para caber em 30 páginas) ficam no repositório, em `05-programa-c/algoritmos/fluxogramas/`.
 

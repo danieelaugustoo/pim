@@ -57,7 +57,7 @@ Este capítulo descreve como a solução foi especificada, projetada e organizad
 
 ## 4.1 Requisitos
 
-O levantamento partiu do cenário da Administradora Morada Central (capítulo 2) e dos sete problemas identificados nele: extravios e entregas à pessoa errada (P1), falta de rastreabilidade (P2), sobrecarga do porteiro nos picos (P3), aviso falho ao morador (P4), acúmulo de volumes (P5), ausência de dados para a sede planejar equipe e espaço (P6) e internet instável em parte das portarias (P7). Sem levantamento de campo, os requisitos derivam do cenário e da análise do processo atual, e não de entrevistas com usuários, o que limita o trabalho.
+O levantamento partiu do cenário da Administradora Morada Central e dos sete problemas identificados no capítulo 2 (P1 a P7). Sem levantamento de campo, os requisitos derivam do cenário e da análise do processo atual, e não de entrevistas com usuários, o que limita o trabalho.
 
 Foram definidos 12 requisitos funcionais (Quadro 2) e 8 não funcionais.
 
@@ -90,7 +90,7 @@ Os requisitos se agrupam em oito casos de uso: registrar encomenda (UC01), avisa
 
 ## 4.3 Modelagem
 
-A modelagem usou a UML `[FONTE A VERIFICAR: referência sobre UML]`. O modelo de domínio (Figura 5) organiza condomínio, bloco, unidade, morador, funcionário e encomenda, com três enumerações: status (pendente, retirada ou devolvida), canal de aviso (aplicativo, SMS ou interfone) e tipo de operação (registro, retirada ou devolução). O diagrama de atividade (Figura 6) mostra o registro, da validação dos dados ao aviso ao morador, passando pela escolha da posição, pela geração do código e pela inclusão na fila de sincronização. O diagrama de sequência (Figura 7) mostra que a portaria só envia a fila quando está online e que a central aplica cada operação uma única vez.
+A modelagem usou a UML `[FONTE A VERIFICAR: referência sobre UML]`. O modelo de domínio (Figura 5) organiza condomínio, bloco, unidade, morador, funcionário e encomenda, com enumerações de status, canal de aviso e tipo de operação. O diagrama de atividade (Figura 6) mostra o registro, da validação dos dados ao aviso ao morador, e o de sequência (Figura 7), que a portaria só envia a fila quando está online e que a central aplica cada operação uma única vez.
 
 **[Figura 5 – Modelo de domínio. Figura 6 – Atividade: registrar encomenda. Figura 7 – Sequência: sincronização e consolidação. Fonte: elaboradas pelos autores (2026). Arquivos: `figuras/figura-05-classes-dominio.png`, `figura-06-atividade-registrar-encomenda.png`, `figura-07-sequencia-sincronizacao.png`]**
 
@@ -98,11 +98,11 @@ A modelagem usou a UML `[FONTE A VERIFICAR: referência sobre UML]`. O modelo de
 
 O sistema completo tem duas partes. Em cada condomínio fica um nó de portaria, que opera sem internet, com armazenamento local e fila de sincronização. O servidor central, com API e banco relacional, recebe as operações em lotes e alimenta o painel da administradora. O protótipo representa essas partes com dois executáveis, `portaria` e `central`, e usa arquivos no lugar do banco e da rede. O nó tem camadas (console, regras de negócio, persistência e fila), e cada camada só chama a de baixo.
 
-As decisões foram registradas como ADR no repositório: banco MySQL 8 no servidor central (ADR-001), arquivos CSV em ASCII no protótipo (ADR-002), sincronização assíncrona com operações idempotentes (ADR-003), Scrum simplificado (ADR-004), diagramas como código (ADR-005) e endereçamento 10.X.Y.0/24 (ADR-006). A mais importante é a ADR-003. Como parte das portarias tem internet instável (P7), cada evento vira uma operação de identificador único, guardada na fila, e a central ignora os identificadores já aplicados, de modo que reenviar um lote não duplica registros.
+As decisões foram registradas como ADR no repositório: banco MySQL 8 no servidor central (ADR-001), arquivos CSV em ASCII no protótipo (ADR-002), sincronização assíncrona com operações idempotentes (ADR-003), Scrum simplificado (ADR-004), diagramas como código (ADR-005) e endereçamento 10.X.Y.0/24 (ADR-006). A mais importante é a ADR-003. Como parte das portarias tem internet instável, cada evento vira uma operação de identificador único, guardada na fila, e a central ignora os identificadores já aplicados, de modo que reenviar um lote não duplica registros.
 
 ## 4.5 Processo de desenvolvimento
 
-O desenvolvimento seguiu o Scrum simplificado, que organiza o trabalho em ciclos com inspeção e adaptação e define os papéis de Product Owner, Scrum Master e Developers (SCHWABER; SUTHERLAND, 2020). O grupo tem cinco integrantes. Lucas Ribeiro Tomiossi Kribely é o Product Owner e o líder responsável pela postagem final, Daniel Augusto Amarante da Silva é o Scrum Master, e os demais formam o time de desenvolvimento. A revisão e a retrospectiva de cada sprint saem por mensagem escrita no grupo, às sextas, às 19h, e ficam registradas no arquivo da sprint.
+O desenvolvimento seguiu o Scrum simplificado, que organiza o trabalho em ciclos com inspeção e adaptação e define os papéis de Product Owner, Scrum Master e Developers (SCHWABER; SUTHERLAND, 2020). Dos cinco integrantes, Lucas Ribeiro Tomiossi Kribely é o Product Owner e o líder responsável pela postagem final, Daniel Augusto Amarante da Silva é o Scrum Master, e os demais formam o time de desenvolvimento. A revisão e a retrospectiva de cada sprint saem por mensagem escrita no grupo, às sextas, às 19h, e ficam registradas no arquivo da sprint.
 
 As sprints 0 a 3 rodaram em um ciclo único em 29/10/2026 (datas do histórico do Git) e produziram a base do projeto, a portaria, o sistema distribuído e os relatórios. A sprint 4 vai de 29/10 a 06/11 e a sprint 5, de 07/11 a 13/11, ambas dedicadas ao documento e à entrega. O backlog tem 16 histórias de usuário, com critérios no formato Dado, Quando, Então. As 15 primeiras foram implementadas. A US16, opcional, trata da devolução de volumes e ficou como evolução futura, porque depende de um prazo que ainda não foi definido.
 

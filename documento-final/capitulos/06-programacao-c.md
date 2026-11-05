@@ -69,13 +69,13 @@ O código segue o padrão C99, usa só a biblioteca padrão e compila com `-Wall
 
 ## 6.3 Estruturas de programação
 
-As condicionais validam as entradas, como o tamanho P, M ou G, e despacham o menu por `switch`. As repetições mantêm o laço do menu, percorrem os arquivos linha a linha, varrem a matriz da estante e permitem até três tentativas de código.
+As condicionais validam as entradas, como o tamanho P, M ou G, e despacham o menu por `switch`. As repetições mantêm o laço do menu, percorrem os arquivos e a matriz da estante e permitem até três tentativas de código.
 
 Os dados ficam em vetores de encomendas (até 500 por portaria) e de moradores (até 300) e na matriz `estante[4][12]`. Cada linha da matriz é a estante de um bloco (A a D), cada coluna é uma prateleira, e a célula guarda o identificador da encomenda ou zero. As prateleiras 10 e 11 são reservadas a volumes grandes. A matriz não é gravada: ao abrir o programa, ela é reconstruída a partir das encomendas pendentes, o que mantém uma única fonte de verdade. Os dados persistem em arquivos CSV separados por ponto e vírgula. Ao sincronizar, a portaria copia a fila de operações para um registro em uma pasta de rede simulada, que a central lê, e o número de cada operação (como `P01-000123`) nunca se repete.
 
 ## 6.4 Algoritmos
 
-Seis algoritmos foram documentados com pseudocódigo e fluxograma em `05-programa-c/algoritmos/`. Os principais são os seguintes.
+Seis algoritmos foram documentados com pseudocódigo e fluxograma em `05-programa-c/algoritmos/`, onde estão os fluxogramas de A2 a A6. Os principais são os seguintes.
 
 A alocação na estante (A1, `estante_alocar_posicao`) parte da estante do bloco da unidade e procura a primeira prateleira livre da faixa adequada ao tamanho do volume. Se essa estante estiver cheia, tenta as seguintes em ordem circular, e, se todas estiverem cheias, informa que não há vaga.
 
@@ -91,16 +91,15 @@ retornar "sem vaga"
 
 **[Figura 10 – Fluxograma do algoritmo A1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-10-fluxograma-a1.png`]**
 
-Os algoritmos A2 a A4 cuidam do código, da retirada e da sincronização. O código de 6 dígitos é sorteado e o sorteio se repete enquanto o número existir em uma encomenda pendente, com limite de 1000 tentativas. Na retirada, o porteiro digita o código, e o programa acha a encomenda pendente que o usa, sem pedir o id, em até três tentativas. Em seguida mostra a unidade e o destinatário, e o porteiro confirma com o morador (S ou N). Se confirmar, o programa registra quem retira, a data e a hora e libera a posição. Se o porteiro recusar ou as tentativas acabarem, nada muda e a encomenda continua pendente. Na sincronização, com a portaria online, a fila é copiada para o registro da rede e só depois esvaziada. Se algo falhar entre as duas etapas, repetir é seguro, porque a central ignora as operações já aplicadas.
+Os algoritmos A2 a A4 cuidam do código, da retirada e da sincronização. O código de 6 dígitos é sorteado e o sorteio se repete enquanto o número existir em uma encomenda pendente, com limite de 1000 tentativas. Na retirada, o porteiro digita o código, e o programa acha a encomenda pendente que o usa, em até três tentativas, e mostra a unidade e o destinatário. Se o porteiro confirmar com o morador (S), o programa registra quem retira, a data e a hora e libera a posição. Se recusar (N) ou as tentativas acabarem, nada muda e a encomenda continua pendente. Na sincronização, com a portaria online, a fila é copiada para o registro da rede e só depois esvaziada. Se algo falhar entre as duas etapas, repetir é seguro, porque a central ignora as operações já aplicadas.
 
-O A5 (`consolidacao_processar_portaria`) faz a consolidação idempotente. Para cada operação do registro, a central confere se o identificador já foi aplicado. Se foi, ignora. Se não, aplica o efeito e anota o identificador. Uma operação que não pode ser aplicada, como a retirada de uma encomenda desconhecida, é rejeitada sem ser anotada e pode ser aplicada depois. A encomenda é identificada pelo par portaria e identificador, porque o identificador só é único dentro da portaria. O fluxograma do A5, como os dos demais algoritmos, está em `05-programa-c/algoritmos/fluxogramas/`.
-
+O A5 (`consolidacao_processar_portaria`) faz a consolidação idempotente. Para cada operação do registro, a central confere se o identificador já foi aplicado. Se foi, ignora. Se não, aplica o efeito e anota o identificador. Uma operação que não pode ser aplicada, como a retirada de uma encomenda desconhecida, é rejeitada sem ser anotada e pode ser aplicada depois. A encomenda é identificada pelo par portaria e identificador, porque o identificador só é único dentro da portaria.
 
 O A6 reúne os relatórios: o mapa da estante com o percentual de ocupação, as pendências com mais de 7 dias (exatamente 7 não gera alerta), os registros por dia com o dia de pico (em caso de empate, o mais cedo) e o relatório consolidado da central. As funções de cálculo recebem a data como texto, o que permite testá-las com datas fixas.
 
 ## 6.5 Testes
 
-O protótipo tem nove conjuntos de testes automatizados (`make test`, ou `build.bat` no Windows) que cobrem utilitários, estante, código e retirada, persistência, moradores, sincronização, consolidação e relatórios. A consolidação é testada processando o mesmo arquivo duas vezes e com portarias diferentes usando o mesmo identificador. A compilação não gerou avisos e os nove conjuntos passaram (Figura 11). A parte interativa da retirada lê o teclado e foi conferida por execução manual com os dados de exemplo. Três códigos sem encomenda pendente negam a retirada sem alterar nada, o código de uma encomenda já retirada não serve, a recusa na confirmação (N) cancela e a confirmação (S) registra a retirada e libera a posição.
+O protótipo tem nove conjuntos de testes automatizados (`make test`, ou `build.bat` no Windows) que cobrem utilitários, estante, código e retirada, persistência, moradores, sincronização, consolidação e relatórios. A consolidação é testada processando o mesmo arquivo duas vezes e com portarias diferentes usando o mesmo identificador. A compilação não gerou avisos e os nove conjuntos passaram (Figura 11). A parte interativa da retirada lê o teclado e foi conferida por execução manual com os dados de exemplo: três códigos sem encomenda pendente negam a retirada, o código de uma encomenda já retirada não serve, a recusa (N) cancela e a confirmação (S) registra a retirada.
 
 **[Figura 11 – Resultado dos testes automatizados (`.\build.bat test`) no Windows. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-11-testes-automatizados.png`]**
 
@@ -126,6 +125,6 @@ Com os mesmos dados, o mapa da estante mostrou em 29/10/2026 seis posições ocu
 
 A rede e o aviso ao morador são simulados, com arquivos, mensagem na tela e registro em arquivo. O código de retirada é gravado em texto nos arquivos e aparece na tela do porteiro ao registrar a encomenda; no sistema completo, só o morador o receberia e o banco guardaria apenas o resumo criptográfico. O grupo manteve o protótipo assim e declara a limitação.
 
-Como a retirada acha a encomenda só pelo código, um código errado pode coincidir com o de outra encomenda pendente, com chance de cerca de 1 em 9.000 para 100 pendentes. A confirmação do porteiro com o morador existe por esse motivo. O limite de três tentativas vale por atendimento, e o porteiro pode abrir a retirada de novo.
+Como a retirada acha a encomenda só pelo código, um código errado pode coincidir com o de outra encomenda pendente, com chance de cerca de 1 em 9.000 para 100 pendentes, e por isso o porteiro confirma com o morador. O limite de três tentativas vale por atendimento.
 
 A capacidade é fixa, com 500 encomendas e 300 moradores por portaria. A devolução de volumes não foi implementada: a central entende a operação, mas a portaria não a gera. Os arquivos são reescritos por inteiro, e fechar o programa à força durante a gravação pode deixar um arquivo incompleto. O programa foi compilado e testado no Windows e também em Linux, com `gcc` (2026-10-31).

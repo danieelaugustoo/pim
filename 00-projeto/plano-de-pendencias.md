@@ -37,7 +37,7 @@ Seguir `06-redes/packet-tracer/roteiro.md` (VPN fica só no diagrama, decisão d
 
 - [ ] Montar a topologia (sede, condomínios 1 e 3, servidor da central e switch que simula a internet).
 - [ ] Executar os testes **T1 a T15** e anotar **esperado × obtido** de cada um. Se algum não funcionar, anotar o erro (o Claude ajuda a corrigir o roteiro).
-- [ ] Prints obrigatórios: **topologia (Figura 13)**, **T2** portaria alcança a central (**Figura 14**) e **T6** visitantes não alcançam a portaria (**Figura 15**). Salvar o `.pkt` como `06-redes/packet-tracer/morada-central.pkt` e os prints em `documento-final/figuras/`.
+- [ ] Prints obrigatórios: **topologia (Figura 13)**, **T2** portaria alcança a central e **T6** visitantes não alcançam a portaria (juntos na **Figura 14**). Salvar o `.pkt` como `06-redes/packet-tracer/morada-central.pkt` e os prints em `documento-final/figuras/`.
 - [ ] Anotar a **versão do Packet Tracer** (capítulo 4, seção 4.7 tem `[VERSÃO A CONFIRMAR]`).
 - [ ] Mandar para o Claude o resultado dos testes: ele preenche a seção 7.7, a conclusão e a introdução.
 
@@ -46,6 +46,8 @@ Seguir `06-redes/packet-tracer/roteiro.md` (VPN fica só no diagrama, decisão d
 ---
 
 > **Mudança de responsável (2026-11-04):** o Daniel assumiu **todas** as tarefas que estavam com o "grupo" (seções 2 e 4 abaixo, e o item "para a apresentação"). Continuam com outras pessoas apenas a **postagem e a cópia impressa** (Lucas, o líder) e a **revisão por pares**, que precisa ser de **outro integrante** (basta uma pessoa para ler os capítulos e o código na terça e quarta). Onde o texto abaixo diz "grupo", leia "Daniel".
+
+> **Atualização de 2026-11-05:** cortes aplicados (ver `documento-final/estrutura-e-paginas.md`); o teste do LibreOffice dá cerca de 29 páginas da introdução à conclusão com as figuras em tamanho legível. A menção ao Claude Code no capítulo 4 foi retirada por decisão do Daniel. As Figuras 2, 3, 10 e 15 foram redesenhadas em grade, porque as versões verticais não davam para ler.
 
 > **Atualização de 2026-11-04 (noite):** os capítulos 1 a 10, o resumo e o abstract foram reescritos (sem a palavra "fictícia", com voz mais natural) e o texto está em cerca de 30 páginas no teste do LibreOffice. **Falta de verdade:** (1) montar no **Word com o modelo da UNIP** (capa, sumário, numeração de página a partir da introdução, legendas) e conferir as páginas; (2) as **figuras 4 a 7 (UML)**; (3) resolver as **marcas `[ ... ]`** que sobraram no texto (fontes, WCAG, metas, link do GitHub); (4) **revisão por outra pessoa**; (5) similaridade, PDF e postagem pelo Lucas; (6) preparar a **apresentação** (demonstração, Canva e banner).
 

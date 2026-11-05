@@ -61,7 +61,7 @@ O modelo tem onze entidades: condomínio, bloco, unidade, morador, funcionário,
 
 **[Figura 8 – Diagrama entidade-relacionamento (DER). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-08-der.png`]**
 
-Seis regras orientam o modelo. O canal de aviso é aplicativo, SMS ou interfone, e os dois primeiros exigem contato. O status é pendente, retirada ou devolvida. Uma encomenda tem no máximo uma retirada e uma posição guarda no máximo uma encomenda pendente. O identificador da encomenda é único dentro da portaria, e cada operação de sincronização é aplicada uma única vez.
+As regras do modelo são: o canal de aviso é aplicativo, SMS ou interfone, e os dois primeiros exigem contato; o status é pendente, retirada ou devolvida; uma encomenda tem no máximo uma retirada, e uma posição guarda no máximo uma encomenda pendente; o identificador da encomenda é único dentro da portaria; e cada operação de sincronização é aplicada uma única vez.
 
 ## 5.3 Normalização
 
@@ -77,7 +77,7 @@ O modelo físico, em MySQL 8, tem onze tabelas e 44 restrições nomeadas com os
 
 ## 5.5 Comandos SQL e resultados
 
-Os scripts, executados em ordem, criam as tabelas, carregam dados de exemplo (dois condomínios e duas portarias), reúnem as consultas e criam visões e índices. Rodaram sem erro em um servidor MySQL 8.4.13, em contêiner Docker. As consultas tratam de pendências por condomínio, pendências com mais de 7 dias, tempo médio entre chegada e retirada, dia de pico, ocupação da estante, histórico de uma unidade, auditoria, consistência dos dados e aplicação idempotente de uma operação de sincronização. Com a data de referência fixada em 29/10/2026, os resultados do Quadro 3 coincidem com os do relatório do programa em C.
+Os scripts, executados em ordem, criam as tabelas, carregam dados de exemplo (dois condomínios e duas portarias), reúnem as consultas e criam visões e índices. Rodaram sem erro em um servidor MySQL 8.4.13, em contêiner Docker. As consultas tratam de pendências, tempo médio de retirada, dia de pico, ocupação da estante, histórico de uma unidade, auditoria, consistência dos dados e aplicação idempotente de uma operação de sincronização. Com a data de referência fixada em 29/10/2026, os resultados do Quadro 3 coincidem com os do relatório do programa em C.
 
 **Quadro 3 – Resultados de consultas com dados de exemplo**
 
@@ -96,4 +96,4 @@ Fonte: elaborado pelos autores (2026), a partir de `03-consultas.sql`.
 
 Foram comparados o modelo relacional (MySQL), o de documentos (por exemplo, MongoDB) e o de chave-valor (por exemplo, Redis) (SADALAGE; FOWLER, 2013). As entidades do sistema são muito relacionadas e as regras de integridade são essenciais, o que favorece o modelo relacional, com transações e restrições garantidas pelo próprio banco. As consultas de relatório, com agregações, junções e janelas de tempo, também são naturais em SQL.
 
-Um banco de documentos poderia servir, numa evolução futura, ao histórico de avisos, porque os campos variam conforme o canal (o aplicativo guarda o identificador do dispositivo, e o SMS, o provedor e o identificador da mensagem), e o repositório traz um exemplo de documento JSON para esse caso. Um banco chave-valor apoiaria dados temporários, mas o escopo atual não o exige. Um segundo banco teria de ser operado e protegido, e só se justificaria com mais volume e variedade de avisos, sob as mesmas regras de privacidade e retenção (capítulo 8).
+Um banco de documentos poderia servir, numa evolução futura, ao histórico de avisos, porque os campos variam conforme o canal (o aplicativo guarda o identificador do dispositivo, e o SMS, o provedor e o identificador da mensagem). Um banco chave-valor apoiaria dados temporários, mas o escopo atual não o exige. Um segundo banco teria de ser operado e protegido, e só se justificaria com mais volume e variedade de avisos, sob as mesmas regras de privacidade e retenção (capítulo 8).
