@@ -45,7 +45,7 @@ Este capítulo apresenta a organização estudada, sua estrutura, o processo atu
 
 ## 2.1 Identificação, ramo e serviços
 
-A Administradora Morada Central Ltda. fica em São Paulo (SP) e administra condomínios residenciais e as equipes de portaria deles. Sua missão é administrar condomínios com organização, transparência e segurança, oferecendo a moradores e funcionários rotinas claras e confiáveis. Os serviços incluem a administração financeira e a prestação de contas aos condôminos, a gestão das equipes de portaria (contratação, escalas e treinamento), a gestão de manutenção e de fornecedores e o atendimento ao morador, com registro de ocorrências.
+A Administradora Morada Central Ltda. fica em São Paulo (SP) e administra condomínios residenciais e as equipes de portaria deles. Sua missão é administrar condomínios com organização, transparência e segurança, oferecendo a moradores e funcionários rotinas claras e confiáveis. Os serviços incluem a administração financeira e a prestação de contas aos condôminos, a gestão das equipes de portaria, a gestão de manutenção e de fornecedores e o atendimento ao morador.
 
 ## 2.2 Porte, estrutura e público-alvo
 

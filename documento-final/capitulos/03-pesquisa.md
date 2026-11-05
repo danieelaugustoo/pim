@@ -55,13 +55,13 @@ O objetivo geral é desenvolver e documentar uma solução computacional para a 
 
 ## 3.3 Justificativa
 
-Do lado social, a solução busca reduzir os conflitos entre moradores, porteiros e síndicos causados por encomendas perdidas ou entregues à pessoa errada, e tornar mais previsível a carga do porteiro. O crescimento das compras on-line e a concentração de entregas em datas como a Black Friday pressionam as portarias (MACK, 2024) `[FONTE A VERIFICAR: dados de crescimento do comércio eletrônico no Brasil]`. Do lado técnico, o problema reúne engenharia de software ágil, banco de dados, programação estruturada, redes e sistemas distribuídos em um caso concreto. A lacuna explorada é a combinação de funcionamento sem internet, aviso alternativo para quem não usa smartphone e consolidação de vários condomínios. Só se pode afirmar que as soluções existentes não a oferecem depois da pesquisa de trabalhos relacionados (seção 3.6). O recorte é viável no prazo porque um protótipo em C, com rede simulada, representa o sistema completo.
+Do lado social, a solução busca reduzir os conflitos entre moradores, porteiros e síndicos causados por encomendas perdidas ou entregues à pessoa errada, e tornar mais previsível a carga do porteiro. O crescimento das compras on-line e a concentração de entregas em datas como a Black Friday pressionam as portarias (MACK, 2024) `[FONTE A VERIFICAR: dados de crescimento do comércio eletrônico no Brasil]`. Do lado técnico, o problema reúne engenharia de software ágil, banco de dados, programação estruturada, redes e sistemas distribuídos em um caso concreto. A lacuna explorada é a combinação de funcionamento sem internet, aviso alternativo para quem não usa smartphone e consolidação de vários condomínios, o que só se pode afirmar das soluções existentes depois da pesquisa da seção 3.6. Um protótipo em C, com rede simulada, torna o recorte viável no prazo.
 
 ## 3.4 Metodologia
 
 A pesquisa é aplicada, de objetivo exploratório e abordagem qualitativa, e os dados quantitativos vêm dos testes e das verificações do protótipo `[FONTE A VERIFICAR: referência metodológica, se o professor exigir]`. Os procedimentos foram a pesquisa bibliográfica, a análise do cenário e do processo atual, o desenvolvimento de um protótipo com Scrum, em sprints registradas em arquivos, e a verificação por testes automatizados, execução com dados de exemplo, scripts SQL e testes de rede.
 
-O grupo dispensou o levantamento de campo (questionário a porteiros e síndicos), que não era obrigatório. Por isso os requisitos não têm dados de respondentes reais, e o texto não afirma a frequência dos problemas nem as preferências dos moradores. O "antes" dos indicadores precisaria ser medido em um piloto (capítulo 9). Também limitam o trabalho a rede e o aviso simulados e o fato de os benefícios serem esperados, e não medidos.
+O grupo dispensou o levantamento de campo, que não era obrigatório. Por isso os requisitos não têm dados de respondentes reais, e o texto não afirma a frequência dos problemas nem as preferências dos moradores. O "antes" dos indicadores precisaria ser medido em um piloto (capítulo 9).
 
 ## 3.5 Fundamentação teórica
 
@@ -83,4 +83,4 @@ A comparação considera quatro categorias de solução: caderno ou planilha (a 
 
 ## 3.7 Diferenciais da proposta
 
-Os diferenciais abaixo são características da proposta, e não exclusividades de mercado, o que só poderia ser dito depois da seção 3.6: operação offline com sincronização sem duplicidade; posição na estante definida automaticamente pelo bloco e pelo tamanho do volume; aviso em vários canais, com código impresso para quem não usa smartphone; consolidação de vários condomínios em um relatório único; e dados de pico para dimensionar a equipe. No protótipo, o aviso e a rede são simulados e não há interface gráfica.
+Os diferenciais abaixo são características da proposta, e não exclusividades de mercado, o que só poderia ser dito depois da seção 3.6: operação offline com sincronização sem duplicidade; posição na estante definida automaticamente pelo bloco e pelo tamanho do volume; aviso em vários canais, com código impresso para quem não usa smartphone; consolidação de vários condomínios em um relatório único; e dados de pico para dimensionar a equipe.

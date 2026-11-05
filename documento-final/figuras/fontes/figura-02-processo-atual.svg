@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1492" height="720" viewBox="0 0 1492 720" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><marker id="s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="1492" height="720" fill="white"/>
+<path d="M336,86 L412,86" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M708,86 L784,86" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M1080,86 L1150,86" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M1304,162 L1304,206" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<text x="1312" y="191" font-size="20" font-weight="bold" fill="#222" text-anchor="start" paint-order="stroke" stroke="white" stroke-width="5">Sim</text>
+<path d="M1304,162 L1304,184 L932,184 L932,206" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<text x="940" y="202" font-size="20" font-weight="bold" fill="#222" text-anchor="start" paint-order="stroke" stroke="white" stroke-width="5">Não</text>
+<path d="M1304,318 L1304,350 L1118,350 L1118,382" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M932,318 L932,350 L1118,350 L1118,382" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M970,438 L714,438" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M560,514 L560,536 L188,536 L188,558" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<text x="196" y="554" font-size="20" font-weight="bold" fill="#222" text-anchor="start" paint-order="stroke" stroke="white" stroke-width="5">Sim</text>
+<path d="M560,514 L560,558" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<text x="568" y="543" font-size="20" font-weight="bold" fill="#222" text-anchor="start" paint-order="stroke" stroke="white" stroke-width="5">Nem sempre</text>
+<path d="M708,614 L784,614" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<rect x="40.0" y="30.0" width="296" height="112" rx="56.0" fill="#dcefe0" stroke="#3c7a4a" stroke-width="2.4"/>
+<text x="188.0" y="80" font-size="22" text-anchor="middle" fill="#111">Entregador chega</text>
+<text x="188.0" y="107" font-size="22" text-anchor="middle" fill="#111">à portaria</text>
+<rect x="412.0" y="30.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="560.0" y="67" font-size="22" text-anchor="middle" fill="#111">Porteiro anota:</text>
+<text x="560.0" y="94" font-size="22" text-anchor="middle" fill="#111">data, nome, bloco/apto</text>
+<text x="560.0" y="121" font-size="22" text-anchor="middle" fill="#111">e transportadora</text>
+<rect x="784.0" y="30.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="932.0" y="67" font-size="22" text-anchor="middle" fill="#111">Pacote vai para sala</text>
+<text x="932.0" y="94" font-size="22" text-anchor="middle" fill="#111">ou armário (sem</text>
+<text x="932.0" y="121" font-size="22" text-anchor="middle" fill="#111">posição definida)</text>
+<polygon points="1304.0,10.0 1458.0,86.0 1304.0,162.0 1150.0,86.0" fill="#fff4d6" stroke="#8a6d1d" stroke-width="2.4"/>
+<text x="1304.0" y="80" font-size="22" text-anchor="middle" fill="#111">Consegue avisar</text>
+<text x="1304.0" y="107" font-size="22" text-anchor="middle" fill="#111">pelo interfone?</text>
+<rect x="784.0" y="206.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="932.0" y="256" font-size="22" text-anchor="middle" fill="#111">Morador não é avisado</text>
+<text x="932.0" y="283" font-size="22" text-anchor="middle" fill="#111">(descobre depois)</text>
+<rect x="1156.0" y="206.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="1304.0" y="270" font-size="22" text-anchor="middle" fill="#111">Morador é avisado</text>
+<rect x="970.0" y="382.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="1118.0" y="432" font-size="22" text-anchor="middle" fill="#111">Morador retira</text>
+<text x="1118.0" y="459" font-size="22" text-anchor="middle" fill="#111">o pacote</text>
+<polygon points="560.0,362.0 714.0,438.0 560.0,514.0 406.0,438.0" fill="#fff4d6" stroke="#8a6d1d" stroke-width="2.4"/>
+<text x="560.0" y="432" font-size="22" text-anchor="middle" fill="#111">Assina o</text>
+<text x="560.0" y="459" font-size="22" text-anchor="middle" fill="#111">caderno?</text>
+<rect x="40.0" y="558.0" width="296" height="112" rx="56.0" fill="#dcefe0" stroke="#3c7a4a" stroke-width="2.4"/>
+<text x="188.0" y="622" font-size="22" text-anchor="middle" fill="#111">Retirada registrada</text>
+<rect x="412.0" y="558.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="560.0" y="608" font-size="22" text-anchor="middle" fill="#111">Retirada</text>
+<text x="560.0" y="635" font-size="22" text-anchor="middle" fill="#111">sem registro</text>
+<rect x="784.0" y="558.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="932.0" y="595" font-size="22" text-anchor="middle" fill="#111">Extravio ou reclamação</text>
+<text x="932.0" y="622" font-size="22" text-anchor="middle" fill="#111">por telefone ou</text>
+<text x="932.0" y="649" font-size="22" text-anchor="middle" fill="#111">WhatsApp, para a sede</text>
+</svg>

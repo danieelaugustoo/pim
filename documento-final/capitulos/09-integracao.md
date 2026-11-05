@@ -20,7 +20,7 @@
 
 | Item | Origem |
 |---|---|
-| Figura 16: fluxo ponta a ponta | `08-integracao/diagramas/fluxo-ponta-a-ponta.mmd` |
+| Figura 15: fluxo ponta a ponta | `08-integracao/diagramas/fluxo-ponta-a-ponta.mmd` |
 | Tabela: indicadores (como medir, fonte, antes, meta) | `beneficios-e-indicadores.md`, seção 3 |
 | Tabela: real × simulado | `integracao.md`, seção 4 |
 | Tabela: limitações × evolução | `limitacoes-e-evolucao.md` |
@@ -49,7 +49,7 @@ Este capítulo reúne o que foi desenvolvido nos capítulos anteriores seguindo 
 
 ## 9.1 Como os componentes se integram
 
-Considere uma encomenda que chega à unidade A-12 de um condomínio quando a portaria está sem internet (Figura 16).
+Considere uma encomenda que chega à unidade A-12 de um condomínio quando a portaria está sem internet (Figura 15).
 
 1. O problema do caderno (capítulo 2) virou requisitos e histórias de usuário (capítulo 4).
 2. O porteiro informa unidade, destinatário, transportadora e tamanho. O sistema escolhe a posição na estante (A1) e gera o código único (A2) (capítulo 6).
@@ -58,11 +58,11 @@ Considere uma encomenda que chega à unidade A-12 de um condomínio quando a por
 5. O morador mostra o código. O sistema acha a encomenda pendente que o usa, o porteiro confirma com o morador (em até três tentativas), registra quem retirou, a data e a hora, e a posição é liberada (A3). A retirada também sobe à central.
 6. O supervisor vê as pendências com mais de 7 dias, o dia de pico e a ocupação (A6), que alimentam os indicadores.
 
-**[Figura 16 – Fluxo ponta a ponta de uma encomenda. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-16-fluxo-ponta-a-ponta.png`]**
+**[Figura 15 – Fluxo ponta a ponta de uma encomenda. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-15-fluxo-ponta-a-ponta.png`]**
 
-O Quadro 7 separa o que foi construído do que é simulado ou projetado.
+O Quadro 6 separa o que foi construído do que é simulado ou projetado.
 
-**Quadro 7 – O que está construído e o que é simulado**
+**Quadro 6 – O que está construído e o que é simulado**
 
 | Parte | Situação |
 |---|---|
@@ -76,15 +76,15 @@ Fonte: elaborado pelos autores (2026).
 
 ## 9.2 Plano de implantação
 
-Propõe-se uma implantação em ondas, com um condomínio-piloto por duas semanas antes de levar a solução aos dez condomínios. A escolha do piloto, os prazos e os responsáveis cabem à administradora. A preparação inclui a infraestrutura mínima (computador com nobreak, rede conforme as VLANs, acesso à central e cópias de segurança) e o cadastro dos moradores e de seus canais de aviso. No primeiro dia, as pendências que ainda estão no caderno são lançadas no sistema, para que a estante e o sistema comecem iguais. Nos primeiros dias, com o caderno ainda em uso, mede-se a linha de base dos indicadores.
+Propõe-se uma implantação em ondas, com um condomínio-piloto por duas semanas antes de levar a solução aos dez condomínios. A escolha do piloto, os prazos e os responsáveis cabem à administradora. A preparação inclui a infraestrutura mínima (computador com nobreak, rede conforme as VLANs, acesso à central e cópias de segurança) e o cadastro dos moradores e de seus canais de aviso. No primeiro dia, as pendências do caderno são lançadas no sistema, e nos primeiros dias, com o caderno ainda em uso, mede-se a linha de base dos indicadores.
 
-O treinamento dos porteiros é curto, com uma cartilha de uma página, e os moradores recebem um comunicado sobre o código, o canal de aviso e a alternativa para quem não usa smartphone. Se o computador falhar, os registros vão para um formulário de papel e são lançados depois. A expansão só acontece se, ao fim do piloto, os porteiros registrarem sem recorrer ao caderno, a estante e o mapa coincidirem e os indicadores não piorarem.
+O treinamento dos porteiros é curto, com uma cartilha de uma página, e os moradores recebem um comunicado sobre o código, o canal de aviso e a alternativa para quem não usa smartphone. Se o computador falhar, os registros vão para um formulário de papel. A expansão só acontece se, ao fim do piloto, os porteiros registrarem sem recorrer ao caderno, a estante e o mapa coincidirem e os indicadores não piorarem.
 
 ## 9.3 Benefícios esperados e indicadores
 
-Os benefícios são esperados e não foram medidos: menos extravios e entregas erradas, menos tempo de busca e de registro, moradores avisados mais rápido, operação contínua sem internet, uma visão única dos dez condomínios, cobrança de retirada pelos alertas de pendências antigas e melhor dimensionamento da equipe. O Quadro 8 traz os indicadores propostos. Sem levantamento de campo, a linha de base seria medida no piloto, e as metas ainda precisam ser definidas.
+Os benefícios são esperados e não foram medidos: menos extravios e entregas erradas, menos tempo de busca e de registro, moradores avisados mais rápido, operação contínua sem internet, uma visão única dos dez condomínios, cobrança de retirada pelos alertas de pendências antigas e melhor dimensionamento da equipe. O Quadro 7 traz os indicadores propostos. Sem levantamento de campo, a linha de base seria medida no piloto, e as metas ainda precisam ser definidas.
 
-**Quadro 8 – Indicadores propostos**
+**Quadro 7 – Indicadores propostos**
 
 | Indicador | Como medir | Antes | Meta |
 |---|---|---|---|
@@ -95,7 +95,7 @@ Os benefícios são esperados e não foram medidos: menos extravios e entregas e
 
 Fonte: elaborado pelos autores (2026).
 
-O protótipo já produz as pendências antigas, o dia de pico e a ocupação. Com dados de exemplo, o relatório consolidado de 29/10/2026 mostrou 2 pendências antigas e 11 pendentes entre 14 encomendas, valores usados só para demonstrar o relatório.
+O protótipo já produz as pendências antigas, o dia de pico e a ocupação (capítulo 6).
 
 ## 9.4 Discussão
 
@@ -103,7 +103,7 @@ A comparação com as soluções existentes (aplicativos de gestão condominial,
 
 ## 9.5 Limitações
 
-No protótipo, a rede e o aviso são simulados, não há interface gráfica, login nem perfis, o código de retirada fica em texto e aparece na tela do porteiro, a capacidade é fixa e os testes usaram dados de exemplo. No projeto, a rede foi testada só no simulador e sem a VPN, equipamentos e custos não foram cotados, não houve levantamento de campo e a devolução de volumes não foi implementada.
+No protótipo, a rede e o aviso são simulados, não há interface gráfica, login nem perfis, o código de retirada fica em texto na tela do porteiro, a capacidade é fixa e os testes usaram dados de exemplo. No projeto, a rede foi testada só no simulador e sem a VPN, equipamentos e custos não foram cotados, não houve levantamento de campo e a devolução de volumes não foi implementada.
 
 ## 9.6 Evolução futura
 

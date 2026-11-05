@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1562" height="720" viewBox="0 0 1562 720" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><marker id="s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="1562" height="720" fill="white"/>
+<path d="M336,86 L412,86" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M708,86 L778,86" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M1086,86 L1156,86" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<text x="1121" y="77" font-size="20" font-weight="bold" fill="#222" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5">Sim</text>
+<path d="M932,162 L932,206" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<text x="940" y="191" font-size="20" font-weight="bold" fill="#222" text-anchor="start" paint-order="stroke" stroke="white" stroke-width="5">Não</text>
+<path d="M1304,142 L1304,206" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M1080,262 L1156,262" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M1304,318 L1304,362" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M1150,438 L1080,438" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<text x="1115" y="429" font-size="20" font-weight="bold" fill="#222" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5">Sim</text>
+<path d="M1304,514 L1304,558" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<text x="1312" y="543" font-size="20" font-weight="bold" fill="#222" text-anchor="start" paint-order="stroke" stroke="white" stroke-width="5">Não</text>
+<path d="M784,438 L714,438" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<path d="M406,438 L336,438" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<text x="371" y="429" font-size="20" font-weight="bold" fill="#222" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5">Sim</text>
+<path d="M560,514 L560,558" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<text x="568" y="543" font-size="20" font-weight="bold" fill="#222" text-anchor="start" paint-order="stroke" stroke="white" stroke-width="5">Não</text>
+<path d="M560,670 L560,702 L1527,702 L1527,438 L1458,438" fill="none" stroke="#333" stroke-width="2.4" marker-end="url(#s)"/>
+<rect x="40.0" y="30.0" width="296" height="112" rx="56.0" fill="#dcefe0" stroke="#3c7a4a" stroke-width="2.4"/>
+<text x="188.0" y="94" font-size="22" text-anchor="middle" fill="#111">Início</text>
+<rect x="412.0" y="30.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="560.0" y="67" font-size="22" text-anchor="middle" fill="#111">preferida = posição</text>
+<text x="560.0" y="94" font-size="22" text-anchor="middle" fill="#111">do bloco no alfabeto</text>
+<text x="560.0" y="121" font-size="22" text-anchor="middle" fill="#111">MOD NUM_ESTANTES</text>
+<polygon points="932.0,10.0 1086.0,86.0 932.0,162.0 778.0,86.0" fill="#fff4d6" stroke="#8a6d1d" stroke-width="2.4"/>
+<text x="932.0" y="94" font-size="22" text-anchor="middle" fill="#111">Tamanho = G?</text>
+<rect x="1156.0" y="30.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="1304.0" y="80" font-size="22" text-anchor="middle" fill="#111">faixa = prateleiras</text>
+<text x="1304.0" y="107" font-size="22" text-anchor="middle" fill="#111">10 a 11</text>
+<rect x="784.0" y="206.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="932.0" y="256" font-size="22" text-anchor="middle" fill="#111">faixa = prateleiras</text>
+<text x="932.0" y="283" font-size="22" text-anchor="middle" fill="#111">0 a 9</text>
+<rect x="1156.0" y="206.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="1304.0" y="270" font-size="22" text-anchor="middle" fill="#111">k = 0</text>
+<polygon points="1304.0,362.0 1458.0,438.0 1304.0,514.0 1150.0,438.0" fill="#fff4d6" stroke="#8a6d1d" stroke-width="2.4"/>
+<text x="1304.0" y="446" font-size="22" text-anchor="middle" fill="#111">k &lt; NUM_ESTANTES?</text>
+<rect x="784.0" y="382.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="932.0" y="419" font-size="22" text-anchor="middle" fill="#111">candidata =</text>
+<text x="932.0" y="446" font-size="22" text-anchor="middle" fill="#111">(preferida + k)</text>
+<text x="932.0" y="473" font-size="22" text-anchor="middle" fill="#111">MOD NUM_ESTANTES</text>
+<polygon points="560.0,362.0 714.0,438.0 560.0,514.0 406.0,438.0" fill="#fff4d6" stroke="#8a6d1d" stroke-width="2.4"/>
+<text x="560.0" y="419" font-size="22" text-anchor="middle" fill="#111">Há prateleira</text>
+<text x="560.0" y="446" font-size="22" text-anchor="middle" fill="#111">livre na faixa</text>
+<text x="560.0" y="473" font-size="22" text-anchor="middle" fill="#111">em candidata?</text>
+<rect x="40.0" y="382.0" width="296" height="112" rx="56.0" fill="#dcefe0" stroke="#3c7a4a" stroke-width="2.4"/>
+<text x="188.0" y="419" font-size="22" text-anchor="middle" fill="#111">Gravar id_encomenda</text>
+<text x="188.0" y="446" font-size="22" text-anchor="middle" fill="#111">na célula e retornar</text>
+<text x="188.0" y="473" font-size="22" text-anchor="middle" fill="#111">(candidata, prateleira)</text>
+<rect x="412.0" y="558.0" width="296" height="112" rx="9" fill="#e8eefc" stroke="#4a5d9a" stroke-width="2.4"/>
+<text x="560.0" y="622" font-size="22" text-anchor="middle" fill="#111">k = k + 1</text>
+<rect x="1156.0" y="558.0" width="296" height="112" rx="56.0" fill="#dcefe0" stroke="#3c7a4a" stroke-width="2.4"/>
+<text x="1304.0" y="608" font-size="22" text-anchor="middle" fill="#111">Retornar:</text>
+<text x="1304.0" y="635" font-size="22" text-anchor="middle" fill="#111">sem vaga</text>
+</svg>
