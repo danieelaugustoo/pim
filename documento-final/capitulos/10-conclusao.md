@@ -45,4 +45,4 @@ Três resultados merecem destaque. A sincronização assíncrona, com operaçõe
 
 A pergunta de pesquisa recebe, dentro do que foi verificado, uma resposta de viabilidade: é possível construir uma solução que opere sem internet e sincronize sem duplicar registros, com as regras de negócio testadas e a infraestrutura projetada. Se isso reduz de fato os extravios e o tempo dos porteiros, só um piloto na administradora poderá mostrar.
 
-Como trabalhos futuros, ficam a troca da rede simulada por uma API segura, a ligação do sistema ao banco, o aplicativo do morador, o painel de indicadores, a devolução de volumes e o controle de acesso por perfil (capítulo 9). O desenvolvimento reuniu, em um problema concreto, conhecimentos de várias disciplinas `[o grupo pode acrescentar aprendizados próprios]`.
+Como trabalhos futuros, ficam a troca da rede simulada por uma API segura, a ligação do sistema ao banco, o aplicativo do morador, o painel de indicadores, a devolução de volumes e o controle de acesso por perfil (capítulo 9). O desenvolvimento reuniu, em um problema concreto, conhecimentos de várias disciplinas.

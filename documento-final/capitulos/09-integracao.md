@@ -88,10 +88,10 @@ Os benefícios são esperados e não foram medidos: menos extravios e entregas e
 
 | Indicador | Como medir | Antes | Meta |
 |---|---|---|---|
-| Extravios por mês | Encomendas registradas como não localizadas | A medir no piloto | `[A DEFINIR]` |
-| Tempo entre chegada e retirada | Média de (retirada − recebimento) | A medir no piloto | `[A DEFINIR]` |
-| Moradores avisados em até 15 minutos | Avisos em até 15 min ÷ registros | A medir no piloto | `[A DEFINIR]` |
-| Pendências com mais de 7 dias | Relatório de pendências antigas | A medir no piloto | `[A DEFINIR]` |
+| Extravios por mês | Encomendas registradas como não localizadas | A medir no piloto | A definir no piloto |
+| Tempo entre chegada e retirada | Média de (retirada − recebimento) | A medir no piloto | A definir no piloto |
+| Moradores avisados em até 15 minutos | Avisos em até 15 min ÷ registros | A medir no piloto | A definir no piloto |
+| Pendências com mais de 7 dias | Relatório de pendências antigas | A medir no piloto | A definir no piloto |
 
 Fonte: elaborado pelos autores (2026).
 
