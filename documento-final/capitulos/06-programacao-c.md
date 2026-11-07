@@ -61,7 +61,7 @@ Este capítulo apresenta o protótipo em C que implementa o núcleo da portaria 
 
 O protótipo tem dois executáveis. O `portaria` representa o nó de uma portaria. Abre-se com o número dela (`portaria 1`), e um menu permite registrar encomendas e retiradas, listar e buscar pendências, ver o mapa da estante, cadastrar moradores, gerar relatórios, sincronizar com a central e alternar entre os modos online e offline. O `central` lê os registros enviados pelas portarias, aplica cada operação uma única vez e gera o relatório consolidado.
 
-O código é dividido em módulos (`util`, `estante`, `codigo`, `encomenda`, `retirada`, `morador`, `aviso`, `persistencia`, `sincronizacao`, `consolidacao` e `relatorio`), descritos em `05-programa-c/README.md`. Em vez de apêndice, o código completo está no repositório do projeto (https://github.com/danieelaugustoo/pim) `[CONFERIR: repositório público ou acesso concedido a quem corrige; formatar a referência conforme a ABNT]`.
+O código é dividido em módulos (`util`, `estante`, `codigo`, `encomenda`, `retirada`, `morador`, `aviso`, `persistencia`, `sincronizacao`, `consolidacao` e `relatorio`), descritos em `05-programa-c/README.md`. Em vez de apêndice, o código completo está no repositório do projeto (https://github.com/danieelaugustoo/pim)..
 
 ## 6.2 Padrões adotados
 
