@@ -71,7 +71,7 @@ O código segue o padrão C99, usa só a biblioteca padrão e compila com `-Wall
 
 As condicionais validam as entradas, como o tamanho P, M ou G, e despacham o menu por `switch`. As repetições mantêm o laço do menu, percorrem os arquivos e a matriz da estante e permitem até três tentativas de código.
 
-Os dados ficam em vetores de encomendas (até 500 por portaria) e de moradores (até 300) e na matriz `estante[4][12]`. Cada linha da matriz é a estante de um bloco (A a D), cada coluna é uma prateleira, e a célula guarda o identificador da encomenda ou zero. As prateleiras 10 e 11 são reservadas a volumes grandes. A matriz não é gravada: ao abrir o programa, ela é reconstruída a partir das encomendas pendentes, o que mantém uma única fonte de verdade. Os dados persistem em arquivos CSV separados por ponto e vírgula. Ao sincronizar, a portaria copia a fila de operações para um registro em uma pasta de rede simulada, que a central lê, e o número de cada operação (como `P01-000123`) nunca se repete.
+Os dados ficam em vetores de encomendas (até 500 por portaria) e de moradores (até 300) e na matriz `estante[4][12]`. Cada linha da matriz é a estante de um bloco (A a D), cada coluna é uma prateleira, e a célula guarda o identificador da encomenda ou zero. As prateleiras 10 e 11 são reservadas a volumes grandes. A matriz não é gravada: ao abrir o programa, ela é reconstruída a partir das encomendas pendentes. Os dados persistem em arquivos CSV separados por ponto e vírgula. Ao sincronizar, a portaria copia a fila de operações para uma pasta de rede simulada, que a central lê, e o número de cada operação (como `P01-000123`) nunca se repete.
 
 ## 6.4 Algoritmos
 
@@ -117,7 +117,7 @@ A demonstração usa dados de exemplo. Ao executar a central duas vezes sobre os
 
 Fonte: elaborado pelos autores (2026). Valores gerados em 29/10/2026; a coluna "Antigas" depende da data de execução.
 
-Com os mesmos dados, o mapa da estante mostrou em 29/10/2026 seis posições ocupadas de 48 (12,5%), e as pendências antigas listaram as encomendas 1 (9 dias) e 4 (14 dias) (Figura 10). Na operação offline, três registros entraram na fila e foram enviados quando a portaria voltou a ficar online.
+Com os mesmos dados, o mapa da estante mostrou em 29/10/2026 seis posições ocupadas de 48 (12,5%), e as pendências antigas listaram as encomendas 1 (9 dias) e 4 (14 dias) (Figura 10).
 
 **[Figura 10 – Mapa da estante com os dados de exemplo (opção 5 do programa). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-10-mapa-estante.png`]**
 
