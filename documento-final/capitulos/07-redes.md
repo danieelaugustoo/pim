@@ -58,9 +58,9 @@ Este capítulo apresenta o projeto da rede que sustenta a solução: topologia, 
 
 A rede tem três tipos de local: a sede (local 0), os dez condomínios (locais 1 a 10) e a nuvem. Dentro de cada local a topologia é em estrela, com um roteador que também faz o papel de firewall, um switch gerenciável com VLANs (802.1Q) e um ponto de acesso Wi-Fi (TANENBAUM; WETHERALL, 2011; KUROSE; ROSS, 2013). O roteador é o gateway de cada VLAN, roteia entre elas, aplica as regras de acesso e é a ponta da rede privada virtual (VPN).
 
-Entre os locais, a topologia é hub-and-spoke. A nuvem é o centro, e cada local é uma ponta ligada a ela por uma VPN IPsec sobre a internet do próprio local, o que dá onze túneis. Os dados não trafegam em claro, e um condomínio novo é só mais uma ponta, com faixa de endereços e VPN próprias, sem mudar o código. A Figura 13 mostra a topologia montada no simulador.
+Entre os locais, a topologia é hub-and-spoke. A nuvem é o centro, e cada local é uma ponta ligada a ela por uma VPN IPsec sobre a internet do próprio local, o que dá onze túneis. Os dados não trafegam em claro, e um condomínio novo é só mais uma ponta, com faixa de endereços e VPN próprias, sem mudar o código. A Figura 11 mostra a topologia montada no simulador.
 
-**[Figura 13 – Topologia da rede no Packet Tracer 9.0.1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-13-topologia.png`]**
+**[Figura 11 – Topologia da rede no Packet Tracer 9.0.1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-11-topologia.png`]**
 
 A portaria não depende da internet: os dados ficam em arquivo local e as operações esperam na fila até a conexão voltar. O aviso por aplicativo ou SMS depende da nuvem, e então o interfone com código impresso cobre a falha. O switch, o roteador e o computador da portaria são pontos únicos de falha, tratados com contingência (troca do equipamento, configuração salva, formulário em papel e nobreak).
 
@@ -106,8 +106,8 @@ Os quinze testes do roteiro foram executados em 04/11/2026 e todos deram o resul
 
 Fonte: elaborado pelos autores (2026), a partir da execução no Packet Tracer 9.0.1.
 
-Nos testes em que se esperava falta de resposta, a mensagem *Destination host unreachable* veio do próprio gateway do local, sinal de que as listas de acesso barraram o tráfego. O Wi-Fi de visitantes alcança o gateway, mas não a portaria nem a nuvem (T6 a T8), e o CFTV só fala com o seu gateway (T9). Os dois testes exigidos pelo plano passaram: a portaria alcança o servidor da central (T2, à esquerda na Figura 14) e o Wi-Fi de visitantes não alcança a portaria (T6, à direita). No teste de continuidade (T14 e T15), a rede local da portaria continuou funcionando sem a nuvem, que é o comportamento em que o nó em C se apoia ao guardar as operações na fila até a conexão voltar (ADR-003). O enlace foi religado ao fim.
+Nos testes em que se esperava falta de resposta, a mensagem *Destination host unreachable* veio do próprio gateway do local, sinal de que as listas de acesso barraram o tráfego. O Wi-Fi de visitantes alcança o gateway, mas não a portaria nem a nuvem (T6 a T8), e o CFTV só fala com o seu gateway (T9). Os dois testes exigidos pelo plano passaram: a portaria alcança o servidor da central (T2, à esquerda na Figura 12) e o Wi-Fi de visitantes não alcança a portaria (T6, à direita). No teste de continuidade (T14 e T15), a rede local da portaria continuou funcionando sem a nuvem, que é o comportamento em que o nó em C se apoia ao guardar as operações na fila até a conexão voltar (ADR-003). O enlace foi religado ao fim.
 
-**[Figura 14 – Testes T2 (à esquerda: a portaria do condomínio 1 alcança o servidor da central) e T6 (à direita: o Wi-Fi de visitantes do condomínio 1 não alcança a portaria). Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-14-testes-t2-t6.png`]**
+**[Figura 12 – Testes T2 (à esquerda: a portaria do condomínio 1 alcança o servidor da central) e T6 (à direita: o Wi-Fi de visitantes do condomínio 1 não alcança a portaria). Fonte: elaborado pelos autores (2026), Packet Tracer 9.0.1. Arquivo: `figuras/figura-12-testes-t2-t6.png`]**
 
 Os testes T5 a T8 foram feitos só no laptop de visitante do condomínio 1. A VPN, o HTTPS da API e o desempenho não foram testados, e a simulação não substitui equipamentos reais.

@@ -49,31 +49,29 @@ Baseado no `PLANO.md`, seção 11. O Desenvolvimento deve ficar **entre 20 e 30 
 
 ## 4. Lista de figuras
 
-Numeração em ordem de aparição no texto (renumerada em 2026-11-04 e em 2026-11-05, quando os prints T2 e T6 viraram uma só figura, a 14). Arquivos finais em `figuras/figura-NN-descricao.png`. Os diagramas Mermaid foram renderizados em 2026-10-31 com o mermaid-cli 11.4.2; **conferir visualmente** antes de usar. Os diagramas PlantUML (figuras 04 a 07) **ainda não foram renderizados**. O diagrama de estados da encomenda (`estados-encomenda.puml`) é opcional e **não é citado** no capítulo 4; se for incluído, todas as figuras seguintes precisam ser renumeradas.
+Numeração em ordem de aparição no texto (renumerada em 2026-11-07: as figuras UML de classes e de atividade saíram do documento para caber em 30 páginas; ficam no repositório, em `03-engenharia-software/diagramas/`). Arquivos finais em `figuras/figura-NN-descricao.png`. A exigência do manual é diagrama de casos de uso, de classes "quando aplicável" e de atividades **ou** de sequência (`PLANO.md`, seção 9), e o documento traz casos de uso e sequência.
 
-| Nº | Figura | Capítulo | Origem | Situação |
+| Nº | Figura | Capítulo | Origem | Arquivo |
 |---|---|---|---|---|
-| 01 | Organograma | 2 | `01-organizacao/diagramas/organograma.mmd` | renderizado |
-| 02 | Processo atual (caderno) | 2 | `figuras/fontes/fluxogramas_grade.py` (versão compacta de `processo-atual.mmd`) | renderizado (`figura-02-processo-atual.png`) |
-| 03 | Processo proposto | 2 | `figuras/fontes/fluxogramas_grade.py` (versão compacta de `processo-proposto.mmd`) | renderizado (`figura-03-processo-proposto.png`) |
-| 04 | Casos de uso | 4 | `03-engenharia-software/diagramas/casos-de-uso.puml` | renderizar (PlantUML) |
-| 05 | Classes de domínio | 4 | `.../classes-dominio.puml` | renderizar (PlantUML) |
-| 06 | Atividade: registrar encomenda | 4 | `.../atividade-registrar-encomenda.puml` | renderizar (PlantUML) |
-| 07 | Sequência da sincronização | 4 | `.../sequencia-sincronizacao.puml` | renderizar (PlantUML) |
-| 08 | DER | 5 | `04-banco-de-dados/diagramas/der.mmd` | renderizado (`figura-08-der.png`) |
-| 09 | Print de consulta SQL (pendências por condomínio) | 5 | consulta 1 de `03-consultas.sql` no MySQL 8.4 (Docker) | feito (`figura-09-consulta-sql.png`) |
-| 10 | Fluxograma do A1 | 6 | `figuras/fontes/fluxogramas_grade.py` (versão compacta de `A1.mmd`) | renderizado (`figura-10-fluxograma-a1.png`) |
-| 11 | Print dos testes automatizados | 6 | `.\build.bat test` | feito em 2026-11-04, antes da mudança do A3 (a saída é a mesma; refazer só se quiser) (`figura-11-testes-automatizados.png`) |
-| 12 | Print do mapa da estante | 6 | opção 5 do programa | feito (`figura-12-mapa-estante.png`) |
-| 13 | Topologia no Packet Tracer | 7 | montagem no simulador | feito (`figura-13-topologia.png`) |
-| 14 | Prints dos testes T2 (portaria alcança a API) e T6 (visitantes não alcançam a portaria), lado a lado | 7 | Packet Tracer | feito (`figura-14-testes-t2-t6.png`) |
-| 15 | Fluxo ponta a ponta | 9 | `figuras/fontes/fluxogramas_grade.py` | renderizado (`figura-15-fluxo-ponta-a-ponta.png`) |
+| 01 | Organograma | 2 | `01-organizacao/diagramas/organograma.mmd` | `figura-01-organograma.png` |
+| 02 | Processo atual (caderno) | 2 | `figuras/fontes/fluxogramas_grade.py` | `figura-02-processo-atual.png` |
+| 03 | Processo proposto | 2 | `figuras/fontes/fluxogramas_grade.py` | `figura-03-processo-proposto.png` |
+| 04 | Casos de uso | 4 | `03-engenharia-software/diagramas/casos-de-uso.puml` | `figura-04-casos-de-uso.png` |
+| 05 | Sequência da sincronização | 4 | `.../sequencia-sincronizacao.puml` | `figura-05-sequencia-sincronizacao.png` |
+| 06 | DER | 5 | `04-banco-de-dados/diagramas/der.mmd` | `figura-06-der.png` |
+| 07 | Print de consulta SQL (pendências por condomínio) | 5 | consulta 1 de `03-consultas.sql` no MySQL 8.4 (Docker) | `figura-07-consulta-sql.png` |
+| 08 | Fluxograma do A1 | 6 | `figuras/fontes/fluxogramas_grade.py` | `figura-08-fluxograma-a1.png` |
+| 09 | Print dos testes automatizados | 6 | `.\build.bat test` (2026-11-04, antes da mudança do A3; saída igual) | `figura-09-testes-automatizados.png` |
+| 10 | Print do mapa da estante | 6 | opção 5 do programa | `figura-10-mapa-estante.png` |
+| 11 | Topologia no Packet Tracer | 7 | montagem no simulador | `figura-11-topologia.png` |
+| 12 | Prints dos testes T2 e T6, lado a lado | 7 | Packet Tracer | `figura-12-testes-t2-t6.png` |
+| 13 | Fluxo ponta a ponta | 9 | `figuras/fontes/fluxogramas_grade.py` | `figura-13-fluxo-ponta-a-ponta.png` |
 
-**Fluxogramas das Figuras 2, 3, 10 e 15 (2026-11-05):** as versões verticais do Mermaid ficavam com 2 a 3 cm de largura no documento e o texto não dava para ler. As versões do documento são gradeadas (4 colunas, 16 cm de largura), geradas por `figuras/fontes/fluxogramas_grade.py` (SVG) e `figuras/fontes/svg_para_png.js` (PNG). Os `.mmd` continuam como fonte dos fluxogramas verticais do repositório.
+**Tamanhos usados no teste de páginas (LibreOffice, 2026-11-07):** largura máxima de 16 cm, altura máxima de 8,5 cm, com exceções: casos de uso (Figura 4) 10,5 x 9,5 cm, sequência (Figura 5) 14 x 13 cm e DER (Figura 6) 16 x 12,5 cm. Com isso a introdução à conclusão ficou em cerca de **29 páginas**. Figuras maiores que isso tendem a estourar as 30.
 
-Os fluxogramas A2 a A6 (inclusive o do A5, que saiu do texto em 2026-11-04 para caber em 30 páginas) ficam no repositório, em `05-programa-c/algoritmos/fluxogramas/`.
+Fluxogramas das Figuras 2, 3, 8 e 13: as versões verticais do Mermaid ficavam com 2 a 3 cm de largura no documento e o texto não dava para ler. As versões do documento são gradeadas (4 colunas), geradas por `figuras/fontes/fluxogramas_grade.py` e `figuras/fontes/svg_para_png.js`. Os `.mmd` continuam como fonte dos fluxogramas verticais.
 
-Fluxogramas A2, A3, A4 e A6 ficam em apêndice ou só no repositório.
+Os fluxogramas A2 a A6 ficam no repositório, em `05-programa-c/algoritmos/fluxogramas/`.
 
 ## 5. Lista de quadros
 

@@ -57,9 +57,9 @@ O banco central guarda entidades estáveis e muito relacionadas (condomínio, bl
 
 ## 5.2 Modelo conceitual
 
-O modelo tem onze entidades: condomínio, bloco, unidade, morador, funcionário, portaria, posição de estante, encomenda, retirada, aviso e operação de sincronização. Um condomínio tem blocos, que têm unidades, que abrigam moradores. Cada condomínio tem uma portaria, que recebe as encomendas, controla as posições de estante e origina as operações de sincronização. Uma encomenda tem destino em uma unidade, ocupa uma posição enquanto está pendente, tem no máximo uma retirada e pode gerar vários avisos (Figura 8).
+O modelo tem onze entidades: condomínio, bloco, unidade, morador, funcionário, portaria, posição de estante, encomenda, retirada, aviso e operação de sincronização. Um condomínio tem blocos, que têm unidades, que abrigam moradores. Cada condomínio tem uma portaria, que recebe as encomendas, controla as posições de estante e origina as operações de sincronização. Uma encomenda tem destino em uma unidade, ocupa uma posição enquanto está pendente, tem no máximo uma retirada e pode gerar vários avisos (Figura 6).
 
-**[Figura 8 – Diagrama entidade-relacionamento (DER). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-08-der.png`]**
+**[Figura 6 – Diagrama entidade-relacionamento (DER). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-06-der.png`]**
 
 As regras do modelo são: o canal de aviso é aplicativo, SMS ou interfone, e os dois primeiros exigem contato; o status é pendente, retirada ou devolvida; uma encomenda tem no máximo uma retirada, e uma posição guarda no máximo uma encomenda pendente; o identificador da encomenda é único dentro da portaria; e cada operação de sincronização é aplicada uma única vez.
 
@@ -90,7 +90,7 @@ Os scripts, executados em ordem, criam as tabelas, carregam dados de exemplo (do
 
 Fonte: elaborado pelos autores (2026), a partir de `03-consultas.sql`.
 
-**[Figura 9 – Resultado da consulta de pendências por condomínio (consulta 1 de `03-consultas.sql`) no MySQL 8.4 em contêiner Docker, com dados de exemplo. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-09-consulta-sql.png`]**
+**[Figura 7 – Resultado da consulta de pendências por condomínio (consulta 1 de `03-consultas.sql`) no MySQL 8.4 em contêiner Docker, com dados de exemplo. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-07-consulta-sql.png`]**
 
 ## 5.6 Discussão sobre bancos NoSQL
 

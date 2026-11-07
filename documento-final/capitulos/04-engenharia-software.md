@@ -90,9 +90,9 @@ Os requisitos se agrupam em oito casos de uso: registrar encomenda (UC01), avisa
 
 ## 4.3 Modelagem
 
-A modelagem usou a UML `[FONTE A VERIFICAR: referência sobre UML]`. O modelo de domínio (Figura 5) organiza condomínio, bloco, unidade, morador, funcionário e encomenda, com enumerações de status, canal de aviso e tipo de operação. O diagrama de atividade (Figura 6) mostra o registro, da validação dos dados ao aviso ao morador, e o de sequência (Figura 7), que a portaria só envia a fila quando está online e que a central aplica cada operação uma única vez.
+A modelagem usou a UML `[FONTE A VERIFICAR: referência sobre UML]`. O diagrama de sequência (Figura 5) mostra que a portaria só envia a fila quando está online e que a central aplica cada operação uma única vez. O modelo de domínio, com condomínio, bloco, unidade, morador, funcionário e encomenda, e o diagrama de atividade do registro de encomenda estão em `03-engenharia-software/diagramas/`, no repositório do projeto.
 
-**[Figura 5 – Modelo de domínio. Figura 6 – Atividade: registrar encomenda. Figura 7 – Sequência: sincronização e consolidação. Fonte: elaboradas pelos autores (2026). Arquivos: `figuras/figura-05-classes-dominio.png`, `figura-06-atividade-registrar-encomenda.png`, `figura-07-sequencia-sincronizacao.png`]**
+**[Figura 5 – Diagrama de sequência: sincronização e consolidação. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-05-sequencia-sincronizacao.png`]**
 
 ## 4.4 Arquitetura e decisões
 
