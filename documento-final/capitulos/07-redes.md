@@ -64,12 +64,12 @@ A rede tem três tipos de local: a sede (local 0), os dez condomínios (locais 1
 ## 7.2 Equipamentos
 
 
-Cada condomínio precisa de roteador e firewall, switch gerenciável com PoE, ponto de acesso, computador de portaria, impressora térmica, gravador, câmeras de CFTV e nobreak, e a sede tem a mesma estrutura, sem CFTV, e oito computadores. Modelos, quantidade de câmeras e custos dependem de cotação `[A COTAR]`, e o trabalho não inclui orçamento.
+Cada condomínio precisa de roteador e firewall, switch gerenciável com PoE, ponto de acesso, computador de portaria, impressora térmica, gravador, câmeras de CFTV e nobreak, e a sede tem a mesma estrutura, sem CFTV, e oito computadores. Modelos, quantidade de câmeras e custos dependem de cotação, e o trabalho não inclui orçamento.
 
 ## 7.3 Endereçamento IP e VLANs
 
 
-O endereçamento segue o padrão `10.X.Y.0/24`, em que X identifica o local (0 para a sede, 1 a 10 para os condomínios) e Y, a VLAN. O gateway termina em `.1`, os endereços fixos vão de `.10` a `.49` e o DHCP distribui de `.100` a `.199`, de modo que `10.3.10.10` é o computador da portaria do condomínio 3. São 44 redes, e um script verificou que nenhuma se sobrepõe. A nuvem usa `172.16.1.0/24` para a API e `172.16.2.0/24` para o banco. Usar uma máscara `/24` por VLAN deixa o endereço fácil de ler, ao custo de gastar mais endereços do que sub-redes menores `[FONTE A VERIFICAR: VLSM]`. As VLANs têm o mesmo número em todos os locais: 10 para a portaria (administrativo, na sede), 20 para o CFTV (atendimento), 30 para visitantes e 99 para gerência, e o roteador faz o roteamento entre elas, com uma subinterface por VLAN em um enlace tronco com o switch (router-on-a-stick).
+O endereçamento segue o padrão `10.X.Y.0/24`, em que X identifica o local (0 para a sede, 1 a 10 para os condomínios) e Y, a VLAN. O gateway termina em `.1`, os endereços fixos vão de `.10` a `.49` e o DHCP distribui de `.100` a `.199`, de modo que `10.3.10.10` é o computador da portaria do condomínio 3. São 44 redes, e um script verificou que nenhuma se sobrepõe. A nuvem usa `172.16.1.0/24` para a API e `172.16.2.0/24` para o banco. Usar uma máscara `/24` por VLAN deixa o endereço fácil de ler, ao custo de gastar mais endereços do que sub-redes menores. As VLANs têm o mesmo número em todos os locais: 10 para a portaria (administrativo, na sede), 20 para o CFTV (atendimento), 30 para visitantes e 99 para gerência, e o roteador faz o roteamento entre elas, com uma subinterface por VLAN em um enlace tronco com o switch (router-on-a-stick).
 
 ## 7.4 Computação em nuvem e sistemas distribuídos
 

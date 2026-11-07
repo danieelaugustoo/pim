@@ -78,7 +78,7 @@ A análise desse processo levou a sete problemas (Quadro 1).
 
 Fonte: elaborado pelos autores (2026).
 
-Como não houve levantamento de campo, o texto não afirma a frequência desses problemas. A literatura do setor associa a Black Friday e o fim de ano ao aumento das entregas e à pressão sobre as portarias (MACK, 2024); qualquer número do setor só pode entrar com fonte verificada `[FONTE A VERIFICAR: dados do setor]`.
+Como não houve levantamento de campo, o texto não afirma a frequência desses problemas. Um artigo de opinião do setor associa a Black Friday e o fim de ano ao aumento das entregas e à pressão sobre as portarias (MACK, 2024), e nenhum número do setor é usado neste trabalho.
 
 ## 2.5 Justificativa e processo proposto
 
