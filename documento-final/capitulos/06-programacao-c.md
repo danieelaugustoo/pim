@@ -89,7 +89,7 @@ para k de 0 ate NUM_ESTANTES - 1:
 retornar "sem vaga"
 ```
 
-**[Figura 10 – Fluxograma do algoritmo A1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-10-fluxograma-a1.png`]**
+**[Figura 8 – Fluxograma do algoritmo A1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-08-fluxograma-a1.png`]**
 
 Os algoritmos A2 a A4 cuidam do código, da retirada e da sincronização. O código de 6 dígitos é sorteado e o sorteio se repete enquanto o número existir em uma encomenda pendente, com limite de 1000 tentativas. Na retirada, o porteiro digita o código, e o programa acha a encomenda pendente que o usa, em até três tentativas, e mostra a unidade e o destinatário. Se o porteiro confirmar com o morador (S), o programa registra quem retira, a data e a hora e libera a posição. Se recusar (N) ou as tentativas acabarem, nada muda e a encomenda continua pendente. Na sincronização, com a portaria online, a fila é copiada para o registro da rede e só depois esvaziada. Se algo falhar entre as duas etapas, repetir é seguro, porque a central ignora as operações já aplicadas.
 
@@ -99,9 +99,9 @@ O A6 reúne os relatórios: o mapa da estante com o percentual de ocupação, as
 
 ## 6.5 Testes
 
-O protótipo tem nove conjuntos de testes automatizados (`make test`, ou `build.bat` no Windows) que cobrem utilitários, estante, código e retirada, persistência, moradores, sincronização, consolidação e relatórios. A consolidação é testada processando o mesmo arquivo duas vezes e com portarias diferentes usando o mesmo identificador. A compilação não gerou avisos e os nove conjuntos passaram (Figura 11). A parte interativa da retirada lê o teclado e foi conferida por execução manual com os dados de exemplo: três códigos sem encomenda pendente negam a retirada, o código de uma encomenda já retirada não serve, a recusa (N) cancela e a confirmação (S) registra a retirada.
+O protótipo tem nove conjuntos de testes automatizados (`make test`, ou `build.bat` no Windows) que cobrem utilitários, estante, código e retirada, persistência, moradores, sincronização, consolidação e relatórios. A consolidação é testada processando o mesmo arquivo duas vezes e com portarias diferentes usando o mesmo identificador. A compilação não gerou avisos e os nove conjuntos passaram (Figura 9). A parte interativa da retirada lê o teclado e foi conferida por execução manual com os dados de exemplo: três códigos sem encomenda pendente negam a retirada, o código de uma encomenda já retirada não serve, a recusa (N) cancela e a confirmação (S) registra a retirada.
 
-**[Figura 11 – Resultado dos testes automatizados (`.\build.bat test`) no Windows. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-11-testes-automatizados.png`]**
+**[Figura 9 – Resultado dos testes automatizados (`.\build.bat test`) no Windows. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-09-testes-automatizados.png`]**
 
 ## 6.6 Demonstração
 
@@ -117,9 +117,9 @@ A demonstração usa dados de exemplo. Ao executar a central duas vezes sobre os
 
 Fonte: elaborado pelos autores (2026). Valores gerados em 29/10/2026; a coluna "Antigas" depende da data de execução.
 
-Com os mesmos dados, o mapa da estante mostrou em 29/10/2026 seis posições ocupadas de 48 (12,5%), e as pendências antigas listaram as encomendas 1 (9 dias) e 4 (14 dias) (Figura 12). Na operação offline, três registros entraram na fila e foram enviados quando a portaria voltou a ficar online.
+Com os mesmos dados, o mapa da estante mostrou em 29/10/2026 seis posições ocupadas de 48 (12,5%), e as pendências antigas listaram as encomendas 1 (9 dias) e 4 (14 dias) (Figura 10). Na operação offline, três registros entraram na fila e foram enviados quando a portaria voltou a ficar online.
 
-**[Figura 12 – Mapa da estante com os dados de exemplo (opção 5 do programa). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-12-mapa-estante.png`]**
+**[Figura 10 – Mapa da estante com os dados de exemplo (opção 5 do programa). Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-10-mapa-estante.png`]**
 
 ## 6.7 Limitações
 

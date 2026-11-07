@@ -49,7 +49,7 @@ Este capítulo reúne o que foi desenvolvido nos capítulos anteriores seguindo 
 
 ## 9.1 Como os componentes se integram
 
-Considere uma encomenda que chega à unidade A-12 de um condomínio quando a portaria está sem internet (Figura 15).
+Considere uma encomenda que chega à unidade A-12 de um condomínio quando a portaria está sem internet (Figura 13).
 
 1. O problema do caderno (capítulo 2) virou requisitos e histórias de usuário (capítulo 4).
 2. O porteiro informa unidade, destinatário, transportadora e tamanho. O sistema escolhe a posição na estante (A1) e gera o código único (A2) (capítulo 6).
@@ -58,7 +58,7 @@ Considere uma encomenda que chega à unidade A-12 de um condomínio quando a por
 5. O morador mostra o código. O sistema acha a encomenda pendente que o usa, o porteiro confirma com o morador (em até três tentativas), registra quem retirou, a data e a hora, e a posição é liberada (A3). A retirada também sobe à central.
 6. O supervisor vê as pendências com mais de 7 dias, o dia de pico e a ocupação (A6), que alimentam os indicadores.
 
-**[Figura 15 – Fluxo ponta a ponta de uma encomenda. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-15-fluxo-ponta-a-ponta.png`]**
+**[Figura 13 – Fluxo ponta a ponta de uma encomenda. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-13-fluxo-ponta-a-ponta.png`]**
 
 O Quadro 6 separa o que foi construído do que é simulado ou projetado.
 
