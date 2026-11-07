@@ -108,14 +108,14 @@ toc = []
 for k, (nivel, t) in enumerate(entradas):
     p = d.add_paragraph(); p.style = d.styles['Normal']; pf = p.paragraph_format
     pf.alignment = AL.LEFT; pf.first_line_indent = Cm(0); pf.left_indent = Cm(0.0 if nivel == 1 else 0.7)
-    pf.space_before = Pt(5 if nivel == 1 else 0); pf.space_after = Pt(0); pf.line_spacing = 1.0
+    pf.space_before = Pt(3 if nivel == 1 else 0); pf.space_after = Pt(0); pf.line_spacing = 0.92
     pf.tab_stops.add_tab_stop(Cm(16.0), alignment=2, leader=1)   # direita, pontilhado
     if k == 0:
         p._p.append(run_xml('<w:fldChar w:fldCharType="begin"/>'))
         p._p.append(run_xml('<w:instrText xml:space="preserve"> TOC \\o "1-2" \\h \\z \\u </w:instrText>'))
         p._p.append(run_xml('<w:fldChar w:fldCharType="separate"/>'))
-    r = p.add_run(t); fonte(r, 'Arial', 11 if nivel == 1 else 10.5, nivel == 1)
-    r = p.add_run('\t' + str(paginas.get(t, 0))); fonte(r, 'Arial', 11 if nivel == 1 else 10.5, nivel == 1)
+    r = p.add_run(t); fonte(r, 'Arial', 10 if nivel == 1 else 9, nivel == 1)
+    r = p.add_run('\t' + str(paginas.get(t, 0))); fonte(r, 'Arial', 10 if nivel == 1 else 9, nivel == 1)
     if k == len(entradas) - 1: p._p.append(run_xml('<w:fldChar w:fldCharType="end"/>'))
     toc.append(p._p)
 ref_sum = pars[i_sum]
