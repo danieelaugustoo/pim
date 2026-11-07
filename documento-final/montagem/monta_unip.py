@@ -146,7 +146,7 @@ for el in pars[j + 1:]:
     if q.text.strip().startswith('MARCADOR') or not q.text.strip(): continue
     pf = q.paragraph_format; pf.line_spacing = 1.0; pf.first_line_indent = Cm(0); pf.left_indent = Cm(0)
     pf.alignment = AL.LEFT; pf.space_after = Pt(2); pf.space_before = Pt(0)
-    for r in q.runs: r.font.size = Pt(10)
+    for r in q.runs: r.font.size = Pt(9.5)
 
 # ---------- rodapes
 sec = d.sections

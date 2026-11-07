@@ -55,12 +55,12 @@ O objetivo geral é desenvolver e documentar uma solução computacional para a 
 ## 3.3 Justificativa
 
 
-Do lado social, a solução busca reduzir os conflitos entre moradores, porteiros e síndicos causados por encomendas perdidas ou entregues à pessoa errada, e tornar mais previsível a carga do porteiro, pressionada pelo crescimento das compras on-line (MACK, 2024) `[FONTE A VERIFICAR: dados de crescimento do comércio eletrônico no Brasil]`. Do lado técnico, o problema reúne engenharia de software ágil, banco de dados, programação estruturada, redes e sistemas distribuídos em um caso concreto, e a lacuna explorada é a combinação de funcionamento sem internet, aviso alternativo para quem não usa smartphone e consolidação de vários condomínios (seção 3.6).
+Do lado social, a solução busca reduzir os conflitos entre moradores, porteiros e síndicos causados por encomendas perdidas ou entregues à pessoa errada, e tornar mais previsível a carga do porteiro, pressionada pelas compras on-line em datas como a Black Friday (MACK, 2024). Do lado técnico, o problema reúne engenharia de software ágil, banco de dados, programação estruturada, redes e sistemas distribuídos em um caso concreto, e a lacuna explorada é a combinação de funcionamento sem internet, aviso alternativo para quem não usa smartphone e consolidação de vários condomínios (seção 3.6).
 
 ## 3.4 Metodologia
 
 
-A pesquisa é aplicada, de objetivo exploratório e abordagem qualitativa, e os dados quantitativos vêm dos testes e das verificações do protótipo `[FONTE A VERIFICAR: referência metodológica, se o professor exigir]`. Os procedimentos foram a pesquisa bibliográfica, a análise do cenário e do processo atual, o desenvolvimento de um protótipo com Scrum, em sprints registradas em arquivos, e a verificação por testes automatizados, execução com dados de exemplo, scripts SQL e testes de rede. O grupo dispensou o levantamento de campo, que não era obrigatório, e por isso o texto não afirma a frequência dos problemas nem as preferências dos moradores. O "antes" dos indicadores precisaria ser medido em um piloto (capítulo 9).
+A pesquisa é aplicada, de objetivo exploratório e abordagem qualitativa (PRODANOV; FREITAS, 2013), e os dados quantitativos vêm dos testes e das verificações do protótipo. Os procedimentos foram a pesquisa bibliográfica, a análise do cenário e do processo atual, o desenvolvimento de um protótipo com Scrum, em sprints registradas em arquivos, e a verificação por testes automatizados, execução com dados de exemplo, scripts SQL e testes de rede. O grupo dispensou o levantamento de campo, que não era obrigatório, e por isso o texto não afirma a frequência dos problemas nem as preferências dos moradores. O "antes" dos indicadores precisaria ser medido em um piloto (capítulo 9).
 
 ## 3.5 Fundamentação teórica
 

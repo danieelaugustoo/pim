@@ -69,7 +69,7 @@ Os requisitos se agrupam em oito casos de uso: registrar encomenda, avisar morad
 
 ## 4.3 Modelagem
 
-A modelagem usou a UML `[FONTE A VERIFICAR: referência sobre UML]`. O diagrama de sequência (Figura 5) mostra que a portaria só envia a fila quando está online e que a central aplica cada operação uma única vez. O modelo de domínio, com condomínio, bloco, unidade, morador, funcionário e encomenda, e o diagrama de atividade do registro de encomenda estão em `03-engenharia-software/diagramas/`, no repositório do projeto.
+A modelagem usou a UML (OBJECT MANAGEMENT GROUP, 2017). O diagrama de sequência (Figura 5) mostra que a portaria só envia a fila quando está online e que a central aplica cada operação uma única vez. O modelo de domínio, com condomínio, bloco, unidade, morador, funcionário e encomenda, e o diagrama de atividade do registro de encomenda estão em `03-engenharia-software/diagramas/`, no repositório do projeto.
 
 **[Figura 4 – Diagrama de casos de uso. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-04-casos-de-uso.png`]**
 
@@ -83,7 +83,7 @@ O sistema completo tem duas partes: em cada condomínio, um nó de portaria que 
 ## 4.5 Processo de desenvolvimento
 
 
-O desenvolvimento seguiu o Scrum simplificado (SCHWABER; SUTHERLAND, 2020). Dos cinco integrantes, Lucas Ribeiro Tomiossi Kribely é o Product Owner e o líder responsável pela postagem final, Daniel Augusto Amarante da Silva é o Scrum Master, e os demais formam o time de desenvolvimento. A revisão e a retrospectiva de cada sprint saem por mensagem escrita no grupo, às sextas, às 19h. As sprints 0 a 3 rodaram em um ciclo único em 29/10/2026 (datas do histórico do Git), e as sprints 4 e 5 foram dedicadas ao documento e à entrega. Das 16 histórias de usuário do backlog, 15 foram implementadas, e a US16, que trata da devolução de volumes, ficou como evolução futura porque depende de um prazo ainda não definido. A definição de pronto exige compilação sem avisos, testes passando, funções comentadas, critérios de aceitação atendidos e revisão por outro integrante, que ainda não terminou `[ATUALIZAR após a revisão]`.
+O desenvolvimento seguiu o Scrum simplificado (SCHWABER; SUTHERLAND, 2020). Dos cinco integrantes, Lucas Ribeiro Tomiossi Kribely é o Product Owner e o líder responsável pela postagem final, Daniel Augusto Amarante da Silva é o Scrum Master, e os demais formam o time de desenvolvimento. A revisão e a retrospectiva de cada sprint saem por mensagem escrita no grupo, às sextas, às 19h. As sprints 0 a 3 rodaram em um ciclo único em 29/10/2026 (datas do histórico do Git), e as sprints 4 e 5 foram dedicadas ao documento e à entrega. Das 16 histórias de usuário do backlog, 15 foram implementadas, e a US16, que trata da devolução de volumes, ficou como evolução futura porque depende de um prazo ainda não definido. A definição de pronto exige compilação sem avisos, testes passando, funções comentadas, critérios de aceitação atendidos e revisão por outro integrante, que foi feita na sprint 5.
 
 ## 4.6 Qualidade, testes e ferramentas
 
