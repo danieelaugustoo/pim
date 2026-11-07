@@ -51,12 +51,7 @@ Este capítulo reúne o que foi desenvolvido nos capítulos anteriores seguindo 
 
 Considere uma encomenda que chega à unidade A-12 de um condomínio quando a portaria está sem internet (Figura 13).
 
-1. O problema do caderno (capítulo 2) virou requisitos e histórias de usuário (capítulo 4).
-2. O porteiro informa unidade, destinatário, transportadora e tamanho. O sistema escolhe a posição na estante (A1) e gera o código único (A2) (capítulo 6).
-3. O registro é gravado em arquivo no protótipo e, no sistema completo, no banco relacional (capítulo 5). O morador é avisado pelo canal escolhido: aplicativo, SMS ou interfone com código impresso (capítulo 8).
-4. Sem internet, a operação entra na fila e a portaria continua trabalhando. Quando a conexão volta, a fila é enviada à central (A4), por VPN e API em HTTPS no sistema completo (capítulo 7), e a central aplica cada operação uma única vez (A5).
-5. O morador mostra o código. O sistema acha a encomenda pendente que o usa, o porteiro confirma com o morador (em até três tentativas), registra quem retirou, a data e a hora, e a posição é liberada (A3). A retirada também sobe à central.
-6. O supervisor vê as pendências com mais de 7 dias, o dia de pico e a ocupação (A6), que alimentam os indicadores.
+O problema do caderno (capítulo 2) virou requisitos e histórias de usuário (capítulo 4). O porteiro informa unidade, destinatário, transportadora e tamanho, o sistema escolhe a posição na estante (A1) e gera o código único (A2) (capítulo 6), e o registro é gravado em arquivo no protótipo e, no sistema completo, no banco relacional (capítulo 5). O morador é avisado pelo canal escolhido: aplicativo, SMS ou interfone com código impresso (capítulo 8). Sem internet, a operação entra na fila e a portaria continua trabalhando. Quando a conexão volta, a fila é enviada à central (A4), por VPN e API em HTTPS no sistema completo (capítulo 7), e a central aplica cada operação uma única vez (A5). Na retirada, o morador mostra o código, o sistema acha a encomenda pendente, o porteiro confirma com o morador (em até três tentativas) e registra quem retirou, a data e a hora, e a posição é liberada (A3). Por fim, o supervisor vê as pendências com mais de 7 dias, o dia de pico e a ocupação (A6), que alimentam os indicadores.
 
 **[Figura 13 – Fluxo ponta a ponta de uma encomenda. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-13-fluxo-ponta-a-ponta.png`]**
 
@@ -76,9 +71,7 @@ Fonte: elaborado pelos autores (2026).
 
 ## 9.2 Plano de implantação
 
-Propõe-se uma implantação em ondas, com um condomínio-piloto por duas semanas antes de levar a solução aos dez condomínios. A escolha do piloto, os prazos e os responsáveis cabem à administradora. A preparação inclui a infraestrutura mínima (computador com nobreak, rede conforme as VLANs, acesso à central e cópias de segurança) e o cadastro dos moradores e de seus canais de aviso. No primeiro dia, as pendências do caderno são lançadas no sistema, e nos primeiros dias, com o caderno ainda em uso, mede-se a linha de base dos indicadores.
-
-O treinamento dos porteiros é curto, com uma cartilha de uma página, e os moradores recebem um comunicado sobre o código, o canal de aviso e a alternativa para quem não usa smartphone. Se o computador falhar, os registros vão para um formulário de papel. A expansão só acontece se, ao fim do piloto, os porteiros registrarem sem recorrer ao caderno, a estante e o mapa coincidirem e os indicadores não piorarem.
+Propõe-se uma implantação em ondas, com um condomínio-piloto por duas semanas antes de levar a solução aos dez condomínios. A escolha do piloto, os prazos e os responsáveis cabem à administradora. A preparação inclui a infraestrutura mínima (computador com nobreak, rede conforme as VLANs, acesso à central e cópias de segurança), o cadastro dos moradores e de seus canais de aviso e, no primeiro dia, o lançamento das pendências do caderno. Nos primeiros dias, com o caderno ainda em uso, mede-se a linha de base dos indicadores. O treinamento dos porteiros é curto, com uma cartilha de uma página, e os moradores recebem um comunicado sobre o código, o canal de aviso e a alternativa para quem não usa smartphone. Se o computador falhar, os registros vão para um formulário de papel. A expansão só acontece se os porteiros registrarem sem recorrer ao caderno, a estante e o mapa coincidirem e os indicadores não piorarem.
 
 ## 9.3 Benefícios esperados e indicadores
 
@@ -107,4 +100,4 @@ No protótipo, a rede e o aviso são simulados, não há interface gráfica, log
 
 ## 9.6 Evolução futura
 
-Entre as evoluções possíveis, cada uma com seu pré-requisito, estão uma API real em HTTPS no lugar dos arquivos (exige um servidor na nuvem), a conexão ao banco MySQL, com o hash do código, e o aplicativo do morador, com avisos por aplicativo de mensagens e um QR code no aviso para agilizar a leitura do código (exigem API, autenticação e consentimento). Também ficam o painel de indicadores, os perfis com login e autenticação em dois fatores, a devolução de volumes (depende de um prazo que a administradora precisa definir), telas acessíveis (WCAG) e armários inteligentes, com revisão de privacidade.
+Entre as evoluções possíveis estão uma API real em HTTPS no lugar dos arquivos (exige um servidor na nuvem), a conexão ao banco MySQL, com o hash do código, e o aplicativo do morador, com avisos por aplicativo de mensagens e um QR code no aviso (exigem API, autenticação e consentimento). Também ficam o painel de indicadores, os perfis com login e autenticação em dois fatores, a devolução de volumes (depende de um prazo que a administradora precisa definir), telas acessíveis (WCAG) e armários inteligentes, com revisão de privacidade.

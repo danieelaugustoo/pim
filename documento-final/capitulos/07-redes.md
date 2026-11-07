@@ -62,7 +62,7 @@ Entre os locais, a topologia é hub-and-spoke. A nuvem é o centro, e cada local
 
 **[Figura 11 – Topologia da rede no Packet Tracer 9.0.1. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-11-topologia.png`]**
 
-A portaria não depende da internet: os dados ficam em arquivo local e as operações esperam na fila até a conexão voltar. O aviso por aplicativo ou SMS depende da nuvem, e então o interfone com código impresso cobre a falha. O switch, o roteador e o computador da portaria são pontos únicos de falha, tratados com contingência (troca do equipamento, configuração salva, formulário em papel e nobreak).
+A portaria não depende da internet: os dados ficam em arquivo local e as operações esperam na fila até a conexão voltar, e o interfone com código impresso cobre a falha do aviso por aplicativo ou SMS, que depende da nuvem. O switch, o roteador e o computador da portaria são pontos únicos de falha, tratados com contingência (troca do equipamento, configuração salva, formulário em papel e nobreak).
 
 ## 7.2 Equipamentos
 
