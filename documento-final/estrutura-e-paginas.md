@@ -26,6 +26,8 @@ Baseado no `PLANO.md`, seção 11. O Desenvolvimento deve ficar **entre 20 e 30 
 
 **Situação em 2026-11-04, depois da reescrita e dos cortes:** cerca de 10.100 palavras no texto (introdução, capítulos 2 a 9 e conclusão) e cerca de **30 páginas** da introdução à conclusão no teste com o LibreOffice (16 figuras). Confirmar no Word.
 
+**Apresentação (2026-11-07):** roteiro da demonstração e divisão em 5 blocos em `documento-final/apresentacao/`. Falta o grupo definir quem apresenta cada bloco; o Canva e o banner são do grupo.
+
 **Situação em 2026-11-07 (limite de 30 páginas para o arquivo inteiro):** o grupo confirmou que as 30 páginas contam tudo. Depois de cortar cerca de 1.600 palavras, dois quadros e quatro figuras, o PDF de teste tem **29 páginas no total** (capa, folha de rosto, resumo, abstract, sumário de 1 página, 23 páginas da introdução à conclusão e 1 de referências). A frase de ênfase foi retirada por ser opcional. Margem de 1 página: conferir no Word.
 
 **Situação em 2026-11-07 (modelo da UNIP):** o rascunho foi montado no modelo da UNIP (capa com logo, folha de rosto, frase de ênfase, resumo, abstract, sumário e rodapé "Elaborado pelos alunos da UNIP…" nas páginas iniciais; numeração a partir da introdução). Da introdução à conclusão: **28,8 páginas** no LibreOffice (limite de 30). Arquivos em `versoes/` e scripts em `montagem/`. A frase de ênfase é a do próprio modelo (Viktor Frankl) e o orientador está como "Prof.ª Eliana": o grupo confirma os dois.
