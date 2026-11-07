@@ -45,9 +45,8 @@ Este capítulo apresenta o problema de pesquisa, os objetivos, a justificativa, 
 
 ## 3.1 Problema de pesquisa
 
-As portarias da administradora controlam as encomendas em caderno, o que gera extravios, entregas a pessoas erradas e sobrecarga dos porteiros (capítulo 2). A pergunta do trabalho é: como uma solução computacional com operação offline e sincronização central pode reduzir extravios, entregas incorretas e o tempo que os porteiros dedicam às encomendas em uma administradora de condomínios?
 
-Neste trabalho, extravio é a encomenda recebida que não é localizada nem entregue, e entrega incorreta é a entrega a quem não é o destinatário nem o autorizado. Operação offline é registrar e entregar sem internet, e sincronização é enviar depois as operações à central, sem duplicá-las.
+As portarias da administradora controlam as encomendas em caderno, o que gera extravios, entregas a pessoas erradas e sobrecarga dos porteiros (capítulo 2). A pergunta do trabalho é: como uma solução computacional com operação offline e sincronização central pode reduzir extravios, entregas incorretas e o tempo que os porteiros dedicam às encomendas? Extravio é a encomenda recebida que não é localizada nem entregue, e entrega incorreta é a entrega a quem não é o destinatário nem o autorizado. Operação offline é registrar e entregar sem internet, e sincronização é enviar depois as operações à central, sem duplicá-las.
 
 ## 3.2 Objetivos
 
@@ -55,34 +54,24 @@ O objetivo geral é desenvolver e documentar uma solução computacional para a 
 
 ## 3.3 Justificativa
 
-Do lado social, a solução busca reduzir os conflitos entre moradores, porteiros e síndicos causados por encomendas perdidas ou entregues à pessoa errada, e tornar mais previsível a carga do porteiro. O crescimento das compras on-line e a concentração de entregas em datas como a Black Friday pressionam as portarias (MACK, 2024) `[FONTE A VERIFICAR: dados de crescimento do comércio eletrônico no Brasil]`. Do lado técnico, o problema reúne engenharia de software ágil, banco de dados, programação estruturada, redes e sistemas distribuídos em um caso concreto. A lacuna explorada é a combinação de funcionamento sem internet, aviso alternativo para quem não usa smartphone e consolidação de vários condomínios, o que a pesquisa da seção 3.6 não permite afirmar das soluções existentes. Um protótipo em C, com rede simulada, torna o recorte viável no prazo.
+
+Do lado social, a solução busca reduzir os conflitos entre moradores, porteiros e síndicos causados por encomendas perdidas ou entregues à pessoa errada, e tornar mais previsível a carga do porteiro, pressionada pelo crescimento das compras on-line (MACK, 2024) `[FONTE A VERIFICAR: dados de crescimento do comércio eletrônico no Brasil]`. Do lado técnico, o problema reúne engenharia de software ágil, banco de dados, programação estruturada, redes e sistemas distribuídos em um caso concreto, e a lacuna explorada é a combinação de funcionamento sem internet, aviso alternativo para quem não usa smartphone e consolidação de vários condomínios (seção 3.6).
 
 ## 3.4 Metodologia
 
-A pesquisa é aplicada, de objetivo exploratório e abordagem qualitativa, e os dados quantitativos vêm dos testes e das verificações do protótipo `[FONTE A VERIFICAR: referência metodológica, se o professor exigir]`. Os procedimentos foram a pesquisa bibliográfica, a análise do cenário e do processo atual, o desenvolvimento de um protótipo com Scrum, em sprints registradas em arquivos, e a verificação por testes automatizados, execução com dados de exemplo, scripts SQL e testes de rede.
 
-O grupo dispensou o levantamento de campo, que não era obrigatório. Por isso os requisitos não têm dados de respondentes reais, e o texto não afirma a frequência dos problemas nem as preferências dos moradores. O "antes" dos indicadores precisaria ser medido em um piloto (capítulo 9).
+A pesquisa é aplicada, de objetivo exploratório e abordagem qualitativa, e os dados quantitativos vêm dos testes e das verificações do protótipo `[FONTE A VERIFICAR: referência metodológica, se o professor exigir]`. Os procedimentos foram a pesquisa bibliográfica, a análise do cenário e do processo atual, o desenvolvimento de um protótipo com Scrum, em sprints registradas em arquivos, e a verificação por testes automatizados, execução com dados de exemplo, scripts SQL e testes de rede. O grupo dispensou o levantamento de campo, que não era obrigatório, e por isso o texto não afirma a frequência dos problemas nem as preferências dos moradores. O "antes" dos indicadores precisaria ser medido em um piloto (capítulo 9).
 
 ## 3.5 Fundamentação teórica
 
-O Scrum organiza o trabalho em ciclos curtos, as sprints, com inspeção e adaptação ao fim de cada uma, e define os papéis de Product Owner, Scrum Master e Developers (SCHWABER; SUTHERLAND, 2020).
 
-No banco de dados, o modelo relacional guarda os dados em tabelas ligadas por chaves e protegidas por restrições de integridade, e a normalização elimina a redundância por meio das formas normais (HEUSER, 2009; ELMASRI; NAVATHE, 2011). Os bancos NoSQL, de documentos ou de chave-valor, servem a dados de estrutura variável (SADALAGE; FOWLER, 2013). Essa base sustenta o capítulo 5.
 
-Para o programa em C, os conceitos de estruturas de controle e funções vêm de Deitel e Deitel (2011), e a construção de algoritmos, de Forbellone e Eberspächer (2005).
-
-Em redes, topologias, endereçamento e redes locais seguem Tanenbaum e Wetherall (2011) e Kurose e Ross (2013). Na computação em nuvem, Mell e Grance (2011) definem os modelos de serviço IaaS, PaaS e SaaS, e um sistema distribuído é formado por componentes independentes que cooperam trocando mensagens (TANENBAUM; VAN STEEN, 2007).
-
-A proteção de dados pessoais e a acessibilidade apoiam-se na LGPD (BRASIL, 2018), na Lei Brasileira de Inclusão (BRASIL, 2015) e nas diretrizes de acessibilidade web do W3C (WORLD WIDE WEB CONSORTIUM, 2024), aplicadas no capítulo 8.
+O Scrum organiza o trabalho em sprints, com inspeção e adaptação ao fim de cada uma (SCHWABER; SUTHERLAND, 2020). No banco de dados, o modelo relacional usa tabelas, chaves e restrições de integridade, e a normalização elimina a redundância (HEUSER, 2009; ELMASRI; NAVATHE, 2011), enquanto os bancos NoSQL servem a dados de estrutura variável (SADALAGE; FOWLER, 2013). Em C, as estruturas de controle e os algoritmos seguem Deitel e Deitel (2011) e Forbellone e Eberspächer (2005). Em redes, topologias e endereçamento seguem Tanenbaum e Wetherall (2011) e Kurose e Ross (2013), a computação em nuvem segue Mell e Grance (2011) e os sistemas distribuídos, Tanenbaum e Van Steen (2007). Privacidade e acessibilidade apoiam-se na LGPD (BRASIL, 2018), na Lei Brasileira de Inclusão (BRASIL, 2015) e nas diretrizes do W3C (WORLD WIDE WEB CONSORTIUM, 2024).
 
 ## 3.6 Trabalhos relacionados
 
-A comparação considera quatro categorias de solução: o caderno ou a planilha (a situação atual), os aplicativos de gestão condominial com módulo de encomendas, os armários inteligentes e a portaria remota. Foi feita a partir de páginas de fornecedores e de portais do setor, sem testar nenhum produto, e por isso é qualitativa.
 
-Entre os aplicativos, o ALL Condo permite que a portaria receba a encomenda, registre-a por fotos e envie ao morador um QR code para a retirada (UCONDO TECNOLOGIA, [s.d.]). Os armários inteligentes guardam as encomendas em compartimentos na área comum: o entregador deposita o volume, o morador recebe um código por aplicativo ou SMS e retira sem depender da portaria, com custo de locação, compra ou comodato, e o condomínio precisa oferecer, por exemplo, tomada e rede wifi (PEREIRA, 2021). Essa fonte é um informe publicitário de um portal do setor. Na portaria remota, uma central de monitoramento atende a portaria à distância, com câmeras e interfone, e as entregas de encomendas aparecem entre as desvantagens do modelo, que pede apoio presencial local (REZENDE, 2023).
 
-As páginas consultadas descrevem registro, aviso e retirada, mas não informam como o produto se comporta sem internet nem se a administradora consolida vários condomínios em um relatório. Isso não prova que os produtos não o façam, e a comparação de custo e de confiabilidade exigiria contato com os fornecedores.
+A comparação considera o caderno ou a planilha (a situação atual), os aplicativos de gestão condominial com módulo de encomendas, os armários inteligentes e a portaria remota, a partir de páginas de fornecedores e de portais do setor, sem testar nenhum produto. O aplicativo ALL Condo permite que a portaria receba a encomenda, registre-a por fotos e envie ao morador um QR code para a retirada (UCONDO TECNOLOGIA, [s.d.]). Nos armários inteligentes, o entregador deposita o volume, o morador recebe um código por aplicativo ou SMS e retira sem depender da portaria, com custo de locação, compra ou comodato, e o condomínio precisa oferecer tomada e rede wifi (PEREIRA, 2021), em fonte que é informe publicitário de um portal do setor. Na portaria remota, uma central atende a portaria à distância, e as entregas de encomendas aparecem entre as desvantagens do modelo, que pede apoio presencial local (REZENDE, 2023).
 
-## 3.7 Diferenciais da proposta
-
-Os diferenciais abaixo são características da proposta, e não exclusividades de mercado, como mostra a seção 3.6: operação offline com sincronização sem duplicidade; posição na estante definida automaticamente pelo bloco e pelo tamanho do volume; aviso em vários canais, com código impresso para quem não usa smartphone; consolidação de vários condomínios em um relatório único; e dados de pico para dimensionar a equipe.
+As páginas consultadas não informam o funcionamento sem internet nem a consolidação de vários condomínios, o que não prova que os produtos não o façam. Os diferenciais pretendidos da proposta são a operação offline com sincronização sem duplicidade, a posição na estante definida pelo bloco e pelo tamanho do volume, o aviso em vários canais com código impresso, a consolidação de vários condomínios e os dados de pico para dimensionar a equipe, sem pretensão de exclusividade de mercado.

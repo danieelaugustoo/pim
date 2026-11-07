@@ -29,7 +29,7 @@ def placeholder(nome,rotulo,w=690,h=420):
 def imagem(caminho,legenda):
     im=Image.open(caminho); w,h=im.size
     base=os.path.basename(caminho)
-    lim={'figura-02-processo-atual.png':(14.5,7.0),'figura-03-processo-proposto.png':(14.5,8.0),'figura-08-fluxograma-a1.png':(14.5,7.0),'figura-13-fluxo-ponta-a-ponta.png':(14.0,8.0),'figura-04-casos-de-uso.png':(10.5,9.5),'figura-05-sequencia-sincronizacao.png':(14.0,13.0),'figura-06-der.png':(16.0,11.0)}
+    lim={'figura-01-organograma.png':(10.0,6.8),'figura-02-processo-atual.png':(14.0,6.5),'figura-03-processo-proposto.png':(14.0,7.6),'figura-08-fluxograma-a1.png':(14.0,6.8),'figura-09-topologia.png':(13.0,7.4),'figura-04-casos-de-uso.png':(9.8,9.0),'figura-05-sequencia-sincronizacao.png':(12.5,11.8),'figura-06-der.png':(16.0,10.0)}
     MAXW,MAXH=lim.get(base,(min(16.0,w/60.0),8.5))
     esc=min(MAXW/(w/100.0),MAXH/(h/100.0))
     wc=w/100.0*esc; hc=h/100.0*esc
