@@ -8,7 +8,7 @@ Proposta para 5 integrantes, em **cerca de 21 minutos** (ajustar ao tempo que a 
 | 2 | **Engenharia de software ágil** (cap. 4): Scrum, papéis, requisitos, casos de uso e a sincronização | [a definir] | 3 min | Figuras 4 (casos de uso) e 5 (sequência) |
 | 3 | **Banco de dados** (cap. 5): DER, normalização, MySQL e a escolha pelo modelo relacional | [a definir] | 3 min | Figuras 6 (DER) e 7 (consulta SQL) |
 | 4 | **Programação em C e demonstração** (cap. 6), com o roteiro de `roteiro-demonstracao.md` | [a definir] | 7 min | Figura 8 (fluxograma do A1) e o programa rodando |
-| 5 | **Redes, segurança e fechamento** (cap. 7, 8, 9 e 10): topologia, VLANs, testes, privacidade, acessibilidade, limitações e conclusão | [a definir] | 5 min | Figuras 9 (topologia) e 10 (testes T2 e T6) |
+| 5 | **Redes, segurança e fechamento** (cap. 7, 8, 9 e 10): topologia, VLANs, testes, privacidade, acessibilidade, limitações e conclusão | **Daniel** (roteiro em `bloco-5-redes-daniel.md`) | 5 min | Figuras 9 (topologia) e 10 (testes T2 e T6) |
 
 ## O que cada bloco precisa dizer
 
