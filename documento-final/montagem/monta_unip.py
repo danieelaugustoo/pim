@@ -65,10 +65,6 @@ q = par('Prof.ª Eliana', False, antes=40, depois=0, recuo=RECUO, linha=1.15); b
 par('SÃO PAULO - SP', True, antes=110, depois=6)
 par('UNIP ANCHIETA 2026', True)
 
-# ---------- frase de enfase
-par('FRASE DE ÊNFASE', True, alinh=AL.LEFT, quebra=True, depois=0)
-par(FRASE, False, alinh=AL.JUSTIFY, antes=400, depois=0, recuo=RECUO, linha=1.5)
-
 # mover as paginas novas para o inicio do corpo
 for i, el in enumerate(novos): corpo.insert(i, el)
 
@@ -145,6 +141,12 @@ j = achar('REFERÊNCIAS')
 if j is not None:
     ppr = pars[j].get_or_add_pPr() if hasattr(pars[j], 'get_or_add_pPr') else None
 p_ref = Paragraph(pars[j], d._body); p_ref.paragraph_format.page_break_before = True
+for el in pars[j + 1:]:
+    q = Paragraph(el, d._body)
+    if q.text.strip().startswith('MARCADOR') or not q.text.strip(): continue
+    pf = q.paragraph_format; pf.line_spacing = 1.0; pf.first_line_indent = Cm(0); pf.left_indent = Cm(0)
+    pf.alignment = AL.LEFT; pf.space_after = Pt(2); pf.space_before = Pt(0)
+    for r in q.runs: r.font.size = Pt(10)
 
 # ---------- rodapes
 sec = d.sections

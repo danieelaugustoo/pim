@@ -182,7 +182,7 @@ def fig16():
 if __name__ == '__main__':
     saida = sys.argv[1]; os.makedirs(saida, exist_ok=True)
     figs = {'figura-02-processo-atual': fig02, 'figura-03-processo-proposto': fig03,
-            'figura-08-fluxograma-a1': fig10, 'figura-13-fluxo-ponta-a-ponta': fig16}
+            'figura-08-fluxograma-a1': fig10, 'extra-fluxo-ponta-a-ponta': fig16}
     for nome, f in figs.items():
         open(f'{saida}/{nome}.svg', 'w', encoding='utf-8').write(f().svg())
     print('SVG gerados em', saida, '- converta para PNG com svg_para_png.js')

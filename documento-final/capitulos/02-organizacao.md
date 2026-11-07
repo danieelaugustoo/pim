@@ -45,15 +45,14 @@ Este capítulo apresenta a organização estudada, sua estrutura, o processo atu
 
 ## 2.1 Identificação, ramo e serviços
 
+
 A Administradora Morada Central Ltda. fica em São Paulo (SP) e administra condomínios residenciais e as equipes de portaria deles. Sua missão é administrar condomínios com organização, transparência e segurança, oferecendo a moradores e funcionários rotinas claras e confiáveis. Os serviços incluem a administração financeira e a prestação de contas aos condôminos, a gestão das equipes de portaria, a gestão de manutenção e de fornecedores e o atendimento ao morador.
 
 ## 2.2 Porte, estrutura e público-alvo
 
-A empresa administra dez condomínios, de dois a quatro blocos cada, num total de cerca de 960 unidades. Cada condomínio tem quatro porteiros em escala 12x36, ou seja, 40 porteiros. A sede, sob uma diretoria, tem um gerente de operações, dois supervisores (cinco condomínios cada), três atendentes e dois analistas administrativo-financeiros. O síndico de cada condomínio, eleito pelos condôminos, é o interlocutor da administradora e aparece como relação externa no organograma (Figura 1).
+A empresa administra dez condomínios, de dois a quatro blocos cada, num total de cerca de 960 unidades. Cada condomínio tem quatro porteiros em escala 12x36, ou seja, 40 porteiros. A sede, sob uma diretoria, tem um gerente de operações, dois supervisores (cinco condomínios cada), três atendentes e dois analistas administrativo-financeiros. O síndico de cada condomínio, eleito pelos condôminos, é o interlocutor da administradora e aparece como relação externa no organograma (Figura 1). O público-alvo reúne moradores de perfis variados, entre eles idosos e pessoas que não usam smartphone, além de síndicos, porteiros e a equipe da sede, o que pesa na escolha do canal de aviso, que não pode depender só de aplicativo.
 
 **[Figura 1 – Organograma da Administradora Morada Central. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-01-organograma.png`]**
-
-O público-alvo reúne moradores de perfis variados, entre eles idosos e pessoas que não usam smartphone, além de síndicos, porteiros e a equipe da sede. Essa variedade pesa na escolha do canal de aviso, que não pode depender só de aplicativo.
 
 ## 2.3 Processo atual de encomendas
 
@@ -83,8 +82,7 @@ Como não houve levantamento de campo, o texto não afirma a frequência desses 
 
 ## 2.5 Justificativa e processo proposto
 
-O problema se repete nos dez condomínios e depende de registro, rastreabilidade e comunicação, três pontos em que uma solução computacional ajuda: padroniza o processo, reduz erros e gera dados. A operação offline atende às portarias com internet instável (P7), e a consolidação central dá à administradora uma visão de todos os condomínios (P6).
 
-No processo proposto (Figura 3), o porteiro registra a encomenda, o sistema indica a posição na estante e gera o código, o morador é avisado, retira com o código, e as operações são sincronizadas com a central, que gera os relatórios. Em relação ao caderno, o registro passa a ter campos obrigatórios e validados, a retirada exige um código de uso único, e o aviso usa o canal cadastrado, com alternativa para quem não usa smartphone. Cada operação guarda data, hora e autor, a portaria continua operando sem internet e a sede passa a ter relatórios dos dez condomínios.
+Os problemas se repetem nos dez condomínios e dependem de registro, rastreabilidade e comunicação, três pontos em que uma solução computacional padroniza o processo, reduz erros e gera dados. A operação offline atende às portarias com internet instável (P7), e a consolidação central dá à administradora uma visão de todos os condomínios (P6). No processo proposto (Figura 3), o porteiro registra a encomenda, o sistema indica a posição na estante e gera o código, o morador é avisado, retira com o código, e as operações são sincronizadas com a central. Em relação ao caderno, o registro passa a ter campos obrigatórios e validados, a retirada exige um código de uso único, o aviso usa o canal cadastrado, com alternativa para quem não usa smartphone, e cada operação guarda data, hora e autor.
 
 **[Figura 3 – Processo proposto. Fonte: elaborado pelos autores (2026). Arquivo: `figuras/figura-03-processo-proposto.png`]**

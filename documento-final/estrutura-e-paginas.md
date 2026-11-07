@@ -26,6 +26,8 @@ Baseado no `PLANO.md`, seção 11. O Desenvolvimento deve ficar **entre 20 e 30 
 
 **Situação em 2026-11-04, depois da reescrita e dos cortes:** cerca de 10.100 palavras no texto (introdução, capítulos 2 a 9 e conclusão) e cerca de **30 páginas** da introdução à conclusão no teste com o LibreOffice (16 figuras). Confirmar no Word.
 
+**Situação em 2026-11-07 (limite de 30 páginas para o arquivo inteiro):** o grupo confirmou que as 30 páginas contam tudo. Depois de cortar cerca de 1.600 palavras, dois quadros e quatro figuras, o PDF de teste tem **29 páginas no total** (capa, folha de rosto, resumo, abstract, sumário de 1 página, 23 páginas da introdução à conclusão e 1 de referências). A frase de ênfase foi retirada por ser opcional. Margem de 1 página: conferir no Word.
+
 **Situação em 2026-11-07 (modelo da UNIP):** o rascunho foi montado no modelo da UNIP (capa com logo, folha de rosto, frase de ênfase, resumo, abstract, sumário e rodapé "Elaborado pelos alunos da UNIP…" nas páginas iniciais; numeração a partir da introdução). Da introdução à conclusão: **28,8 páginas** no LibreOffice (limite de 30). Arquivos em `versoes/` e scripts em `montagem/`. A frase de ênfase é a do próprio modelo (Viktor Frankl) e o orientador está como "Prof.ª Eliana": o grupo confirma os dois.
 
 **Situação em 2026-11-05 (cortes pedidos pelo Daniel):** a tabela de regras de acesso (cap. 7) virou frase, o quadro dos testes de rede foi agrupado em 5 linhas, os prints T2 e T6 viraram uma só figura (14), o fluxo ponta a ponta passou a ser a Figura 15 e foram enxutos os capítulos 2 a 10, perto de 700 palavras a menos. Como as figuras agora são desenhadas em tamanho legível (até 16 cm de largura), o teste do LibreOffice mostra **cerca de 29 páginas** da introdução à conclusão, com as quatro figuras UML ainda como caixas de 11,5 x 7 cm. Margem pequena: confirmar no Word.
@@ -51,46 +53,28 @@ Baseado no `PLANO.md`, seção 11. O Desenvolvimento deve ficar **entre 20 e 30 
 
 ## 4. Lista de figuras
 
-Numeração em ordem de aparição no texto (renumerada em 2026-11-07: as figuras UML de classes e de atividade saíram do documento para caber em 30 páginas; ficam no repositório, em `03-engenharia-software/diagramas/`). Arquivos finais em `figuras/figura-NN-descricao.png`. A exigência do manual é diagrama de casos de uso, de classes "quando aplicável" e de atividades **ou** de sequência (`PLANO.md`, seção 9), e o documento traz casos de uso e sequência.
+Numeração em ordem de aparição (renumerada em 2026-11-07, quando o grupo decidiu que **o limite de 30 páginas conta o arquivo inteiro**: capa, resumo, sumário e referências incluídos). Para caber, saíram do documento as figuras de classes e de atividade (UML), o print dos testes automatizados, o mapa da estante e o fluxo ponta a ponta. Elas continuam no repositório (`03-engenharia-software/diagramas/` e `figuras/extras/`). O manual pede casos de uso, classes "quando aplicável" e atividade **ou** sequência, e o documento traz casos de uso e sequência.
 
-| Nº | Figura | Capítulo | Origem | Arquivo |
-|---|---|---|---|---|
-| 01 | Organograma | 2 | `01-organizacao/diagramas/organograma.mmd` | `figura-01-organograma.png` |
-| 02 | Processo atual (caderno) | 2 | `figuras/fontes/fluxogramas_grade.py` | `figura-02-processo-atual.png` |
-| 03 | Processo proposto | 2 | `figuras/fontes/fluxogramas_grade.py` | `figura-03-processo-proposto.png` |
-| 04 | Casos de uso | 4 | `03-engenharia-software/diagramas/casos-de-uso.puml` | `figura-04-casos-de-uso.png` |
-| 05 | Sequência da sincronização | 4 | `.../sequencia-sincronizacao.puml` | `figura-05-sequencia-sincronizacao.png` |
-| 06 | DER | 5 | `04-banco-de-dados/diagramas/der.mmd` | `figura-06-der.png` |
-| 07 | Print de consulta SQL (pendências por condomínio) | 5 | consulta 1 de `03-consultas.sql` no MySQL 8.4 (Docker) | `figura-07-consulta-sql.png` |
-| 08 | Fluxograma do A1 | 6 | `figuras/fontes/fluxogramas_grade.py` | `figura-08-fluxograma-a1.png` |
-| 09 | Print dos testes automatizados | 6 | `.\build.bat test` (2026-11-04, antes da mudança do A3; saída igual) | `figura-09-testes-automatizados.png` |
-| 10 | Print do mapa da estante | 6 | opção 5 do programa | `figura-10-mapa-estante.png` |
-| 11 | Topologia no Packet Tracer | 7 | montagem no simulador | `figura-11-topologia.png` |
-| 12 | Prints dos testes T2 e T6, lado a lado | 7 | Packet Tracer | `figura-12-testes-t2-t6.png` |
-| 13 | Fluxo ponta a ponta | 9 | `figuras/fontes/fluxogramas_grade.py` | `figura-13-fluxo-ponta-a-ponta.png` |
+| Nº | Figura | Capítulo | Arquivo |
+|---|---|---|---|
+| 01 | Organograma | 2 | `figura-01-organograma.png` |
+| 02 | Processo atual (caderno) | 2 | `figura-02-processo-atual.png` |
+| 03 | Processo proposto | 2 | `figura-03-processo-proposto.png` |
+| 04 | Casos de uso | 4 | `figura-04-casos-de-uso.png` |
+| 05 | Sequência da sincronização | 4 | `figura-05-sequencia-sincronizacao.png` |
+| 06 | DER | 5 | `figura-06-der.png` |
+| 07 | Print de consulta SQL | 5 | `figura-07-consulta-sql.png` |
+| 08 | Fluxograma do A1 | 6 | `figura-08-fluxograma-a1.png` |
+| 09 | Topologia no Packet Tracer | 7 | `figura-09-topologia.png` |
+| 10 | Prints dos testes T2 e T6, lado a lado | 7 | `figura-10-testes-t2-t6.png` |
 
-**Tamanhos usados no teste de páginas (LibreOffice, 2026-11-07):** largura máxima de 16 cm, altura máxima de 8,5 cm, com exceções: casos de uso (Figura 4) 10,5 x 9,5 cm, sequência (Figura 5) 14 x 13 cm e DER (Figura 6) 16 x 12,5 cm. Com isso a introdução à conclusão ficou em cerca de **29 páginas**. Figuras maiores que isso tendem a estourar as 30.
+Fluxogramas das Figuras 2, 3, 8: versões gradeadas geradas por `figuras/fontes/fluxogramas_grade.py` (as verticais do Mermaid ficavam ilegíveis). Os fluxogramas A2 a A6 ficam em `05-programa-c/algoritmos/fluxogramas/`.
 
-Fluxogramas das Figuras 2, 3, 8 e 13: as versões verticais do Mermaid ficavam com 2 a 3 cm de largura no documento e o texto não dava para ler. As versões do documento são gradeadas (4 colunas), geradas por `figuras/fontes/fluxogramas_grade.py` e `figuras/fontes/svg_para_png.js`. Os `.mmd` continuam como fonte dos fluxogramas verticais.
-
-Os fluxogramas A2 a A6 ficam no repositório, em `05-programa-c/algoritmos/fluxogramas/`.
+**Tamanhos usados no teste de páginas:** organograma 10 x 6,8 cm; processos e A1 com 14 cm de largura e 6,5 a 7,6 cm de altura; casos de uso 9,8 x 9 cm; sequência 12,5 x 11,8 cm; DER 16 x 10 cm; topologia 13 x 7,4 cm.
 
 ## 5. Lista de quadros
 
-Numeração em ordem de aparição (renumerados em 2026-11-03, após os cortes).
-
-| Quadro | Capítulo | Origem |
-|---|---|---|
-| 1 Problemas do processo atual (P1 a P7) | 2 | `01-organizacao/caracterizacao.md` |
-| 2 Requisitos funcionais | 4 | `03-engenharia-software/requisitos.md` |
-| 3 Resultados de consultas SQL (dados fictícios) | 5 | `04-banco-de-dados/sql/03-consultas.sql` |
-| 4 Relatório consolidado (dados fictícios) | 6 | `05-programa-c/` (central) |
-| 5 Regras de acesso principais | 7 | `06-redes/seguranca-infraestrutura.md` |
-| 6 Resultado dos testes no Packet Tracer (T1 a T15) | 7 | `06-redes/packet-tracer/roteiro.md` |
-| 7 O que é real e o que é simulado | 9 | `08-integracao/` |
-| 8 Indicadores propostos | 9 | `08-integracao/beneficios-e-indicadores.md` |
-
-Ficam só no repositório, citados no texto: matriz de trabalhos relacionados (`02-pesquisa/trabalhos-relacionados.md`), ADRs, módulos e algoritmos, VLANs, testes T1 a T15 (se couberem, entram no capítulo 7 com o resultado esperado × obtido) e dados pessoais × finalidade.
+Quadro 1: problemas do processo atual (cap. 2). Quadro 2: relatório consolidado com dados de exemplo (cap. 6). Quadro 3: resultado dos testes no Packet Tracer (cap. 7). Quadro 4: indicadores propostos (cap. 9). Os quadros de requisitos, de consultas SQL e de "construído x simulado" viraram texto em 2026-11-07.
 
 ## 6. Ordem sugerida de escrita
 
