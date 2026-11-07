@@ -7,9 +7,9 @@
 | # | Categoria | Exemplos reais |
 |---|---|---|
 | C1 | Caderno ou planilha (situação atual do estudo) | Não se aplica |
-| C2 | Aplicativos de gestão condominial com módulo de encomendas | [A PESQUISAR, com fonte] |
-| C3 | Armários inteligentes | [A PESQUISAR, com fonte] |
-| C4 | Portaria remota | [A PESQUISAR, com fonte] |
+| C2 | Aplicativos de gestão condominial com módulo de encomendas | ALL Condo (UCONDO TECNOLOGIA, [s.d.]; página da App Store lida em 07/11/2026) |
+| C3 | Armários inteligentes | Smart lockers descritos em PEREIRA (2021), SíndicoNet, coluna De Olho no Mercado (informe publicitário) |
+| C4 | Portaria remota | Descrição em REZENDE (2023), Group Software |
 | C5 | Solução proposta (nó de portaria offline + central) | Este projeto |
 
 ## 2. Critérios
@@ -44,3 +44,7 @@ A coluna C5 vem das decisões do próprio projeto, não de pesquisa externa. Já
 - Onde as outras categorias são melhores ou mais adequadas. Dizer isso com honestidade fortalece o trabalho.
 - Limites da comparação: poucos produtos analisados, dados públicos limitados, estudo de caso fictício.
 - Esta discussão alimenta o item "Discussão" do Desenvolvimento (capítulo 9).
+
+## 5. Situação em 2026-11-07
+
+Uma fonte lida por categoria (C2 a C4), só para descrever o que cada uma faz. Nenhuma das três páginas informa funcionamento sem internet nem consolidação de vários condomínios, e não há preço comparável. Por isso a matriz de seis critérios **não foi preenchida**: o texto dos capítulos 3 (seção 3.6) e 9 (seção 9.4) compara em prosa, com essas limitações declaradas. Para preencher a matriz seria preciso contato com os fornecedores.

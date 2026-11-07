@@ -99,7 +99,7 @@ O protótipo já produz as pendências antigas, o dia de pico e a ocupação (ca
 
 ## 9.4 Discussão
 
-A comparação com as soluções existentes (aplicativos de gestão condominial, armários inteligentes e portaria remota) depende de uma pesquisa com fontes verificadas `[A PREENCHER após verificar as fontes e preencher a matriz de trabalhos relacionados]`. O diferencial pretendido é reunir a operação sem internet, o aviso alternativo para quem não usa smartphone e a consolidação de vários condomínios. Isso só poderá ser afirmado em relação a produtos reais depois dessa pesquisa.
+Em relação às categorias da seção 3.6, os aplicativos e os armários inteligentes oferecem recursos que a proposta não tem, como a foto da encomenda, o QR code e a retirada sem depender da portaria. A proposta foi desenhada para três pontos que a pesquisa não encontrou descritos nas páginas consultadas: a operação da portaria sem internet, o aviso alternativo para quem não usa smartphone e a consolidação de vários condomínios em um relatório da administradora. Isso não permite afirmar que os produtos existentes não os ofereçam. A comparação tem poucas fontes, todas de divulgação comercial, e nenhum produto foi testado.
 
 ## 9.5 Limitações
 
