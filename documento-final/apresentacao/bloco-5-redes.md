@@ -1,4 +1,4 @@
-# Bloco 5: Redes, segurança e fechamento (Daniel)
+# Bloco 5: Redes, segurança e fechamento
 
 Tempo: **cerca de 5 minutos**. Figuras: **9** (topologia) e **10** (testes T2 e T6). Só use números que estão no trabalho.
 
