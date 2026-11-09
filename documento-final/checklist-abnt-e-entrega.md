@@ -2,21 +2,23 @@
 
 Baseado em `00-projeto/regras-do-pim.md` (resumo do manual do PIM II). **Se algo divergir do manual oficial da UNIP ou do modelo de trabalho da universidade, vale o manual e o modelo.** Marque cada item quando conferir no documento montado (não no rascunho em Markdown).
 
+> **Atualização de 09/11/2026:** itens marcados com o que o repositório e o Daniel confirmaram (documento de 29 páginas no Word, revisão feita pelo grupo, marcas de fonte resolvidas). **Continuam em aberto** a formatação conferida item a item no Word, a conferência das leis no texto oficial, o PDF conferido página por página, a postagem, o comprovante e a cópia impressa.
+
 ## 1. Estrutura obrigatória
 
-- [ ] Capa (modelo da UNIP)
-- [ ] Resumo (até 500 palavras) + palavras-chave (rascunho com cerca de 280 palavras, conferido em 2026-11-03; recontar no editor final)
-- [ ] Abstract (inglês, espanhol ou francês) + palavras-chave no mesmo idioma
-- [ ] Sumário (gerado pelo editor, com os títulos de capítulo e subcapítulo)
-- [ ] Introdução: objetivo da pesquisa, metodologia, breve apresentação da empresa, visão geral da proposta
-- [ ] Desenvolvimento, em capítulos e subcapítulos, com pesquisa, fundamentação, métodos, materiais, resultados e discussão
-- [ ] Conclusão: resultados claros, relação com os objetivos, retomada da proposta, principais pontos
-- [ ] Referências (ABNT)
+- [x] Capa (modelo da UNIP)
+- [x] Resumo (até 500 palavras) + palavras-chave (rascunho com cerca de 280 palavras, conferido em 2026-11-03; recontar no editor final)
+- [x] Abstract (inglês, espanhol ou francês) + palavras-chave no mesmo idioma
+- [x] Sumário (gerado pelo editor, com os títulos de capítulo e subcapítulo)
+- [x] Introdução: objetivo da pesquisa, metodologia, breve apresentação da empresa, visão geral da proposta
+- [x] Desenvolvimento, em capítulos e subcapítulos, com pesquisa, fundamentação, métodos, materiais, resultados e discussão
+- [x] Conclusão: resultados claros, relação com os objetivos, retomada da proposta, principais pontos
+- [x] Referências (ABNT)
 
 ## 2. Tamanho
 
-- [ ] Desenvolvimento entre **20 e 30 páginas** (conferir a contagem real; ver `estrutura-e-paginas.md`)
-- [ ] Definido com o professor se Introdução, Conclusão e apêndices entram na contagem
+- [x] Desenvolvimento entre **20 e 30 páginas**: o grupo adotou o limite de 30 para o **arquivo inteiro** (capa a referências); o Word mostrou 29 páginas (confirmado pelo Daniel em 09/11/2026)
+- [x] Definido com o professor: Introdução e Conclusão entram na contagem; não há apêndice (só o link do GitHub)
 
 ## 3. Formatação
 
@@ -36,11 +38,11 @@ Itens que o manual deixa em aberto ou que o grupo deve confirmar no modelo da UN
 
 ## 4. Figuras, tabelas e código
 
-- [ ] Toda figura numerada, com título acima e fonte abaixo (ABNT), e **citada no texto**
-- [ ] Toda tabela numerada, com título e fonte
+- [x] Toda figura numerada, com título acima e fonte abaixo (ABNT), e **citada no texto**
+- [x] Toda tabela numerada, com título e fonte
 - [ ] Figuras legíveis no tamanho impresso (prints de terminal e de Packet Tracer com letra legível)
-- [ ] Arquivos em `figuras/figura-NN-descricao.png`, na mesma ordem de `estrutura-e-paginas.md`
-- [ ] Diagramas renderizados a partir do código-fonte (Mermaid renderizado em 2026-10-31, falta conferir; PlantUML ainda não foi renderizado)
+- [x] Arquivos em `figuras/figura-NN-descricao.png`, na mesma ordem de `estrutura-e-paginas.md`
+- [x] Diagramas renderizados a partir do código-fonte (Mermaid, grade e PlantUML renderizados)
 - [ ] Trechos de código curtos, com fonte monoespaçada e explicação no texto
 
 ## 5. Autoria, citações e referências
@@ -49,22 +51,22 @@ Itens que o manual deixa em aberto ou que o grupo deve confirmar no modelo da UN
 - [ ] Nenhum trecho copiado de fonte, de colega ou de ferramenta de IA sem reescrita e sem citação (a UNIP usa software de similaridade: plágio integral, parcial, conceitual e autoplágio são proibidos)
 - [ ] Todo trecho reproduzido diretamente entre aspas (ou recuado, se longo), com **autor, ano e página**
 - [ ] Toda citação no texto tem a obra em `referencias.md` e toda obra listada foi citada (conferido por script em 2026-11-03 sobre os rascunhos após os cortes: 24 citações com referência e as 16 referências citadas; refazer após a revisão do grupo)
-- [ ] Todas as marcações `[FONTE A VERIFICAR]` resolvidas: fonte conferida e citada, ou a afirmação removida
-- [ ] Referências em ordem alfabética, no padrão ABNT, sem invenção de autor, ano, editora ou página
+- [x] Todas as marcações `[FONTE A VERIFICAR]` resolvidas: fonte conferida e citada, ou a afirmação removida
+- [x] Referências em ordem alfabética, no padrão ABNT, sem invenção de autor, ano, editora ou página
 - [ ] Leis citadas (LGPD, LBI) conferidas no texto oficial
-- [ ] Verificado com o professor se a UNIP tem orientação sobre o uso de IA no PIM
+- [x] Verificado com o professor se a UNIP tem orientação sobre o uso de IA no PIM
 
 ## 6. Pendências do projeto que precisam estar resolvidas antes do texto final
 
 Todas as marcações abaixo estão no repositório (`grep -rn "A DEFINIR\|A PREENCHER\|FONTE A VERIFICAR\|A COTAR" --include=*.md .`).
 
-- [ ] Prazo de entrega confirmado
-- [ ] Integrantes, RA, líder, Product Owner e Scrum Master definidos
-- [ ] Texto declara que o levantamento de campo foi dispensado (`02-pesquisa/metodologia.md`)
-- [ ] Packet Tracer montado, testes T1 a T15 executados e prints salvos
+- [x] Prazo de entrega confirmado
+- [x] Integrantes, RA, líder, Product Owner e Scrum Master definidos
+- [x] Texto declara que o levantamento de campo foi dispensado (`02-pesquisa/metodologia.md`)
+- [x] Packet Tracer montado, testes T1 a T15 executados e prints salvos
 - [ ] Fontes de `02-pesquisa/fontes.md` verificadas
-- [ ] Fluxogramas e diagramas renderizados e exportados
-- [ ] Revisão por outro integrante de cada história e de cada capítulo
+- [x] Fluxogramas e diagramas renderizados e exportados
+- [x] Revisão por outro integrante de cada história e de cada capítulo
 - [x] Decisão sobre o código de retirada exibido na tela do porteiro (manter e declarar a limitação)
 
 ## 7. Entrega

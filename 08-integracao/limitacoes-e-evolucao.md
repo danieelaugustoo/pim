@@ -23,12 +23,12 @@
 
 ### Do projeto como um todo
 
-- **Rede não testada em simulador:** o roteiro do Packet Tracer foi conferido por script quanto a endereços e regras, mas os comandos **não foram executados**; o grupo precisa montar, testar e tirar os prints (`06-redes/packet-tracer/`).
-- **Equipamentos, preços e provedor de nuvem** estão como `[A DEFINIR]` e `[A COTAR]`.
-- **Sem levantamento de campo** (dispensado pelo grupo): não há dados reais sobre a frequência do problema nem sobre o uso de smartphone pelos moradores; o problema vem do cenário fictício e da bibliografia.
+- **Rede testada só no simulador:** o laboratório foi montado no Packet Tracer 9.0.1 e os 15 testes (T1 a T15) deram o resultado esperado em 04/11/2026, mas **sem a VPN**, sem HTTPS na API e sem teste de desempenho (`06-redes/packet-tracer/`).
+- **Equipamentos, preços e provedor de nuvem** não foram definidos nem cotados: o trabalho não inclui orçamento.
+- **Sem levantamento de campo** (dispensado pelo grupo): não há dados reais sobre a frequência do problema nem sobre o uso de smartphone pelos moradores; o problema vem do cenário do estudo de caso e da bibliografia.
 - **Banco de dados:** os scripts foram executados em um MySQL de teste, mas o protótipo em C não se conecta a ele.
-- **Revisão por pares:** as histórias estão "feitas, falta revisão do grupo"; a definição de pronto exige revisão por outro integrante.
-- **Diagramas** (UML, DER, topologia, fluxogramas) estão como código e **ainda não foram renderizados**.
+- **Revisão por pares:** feita pelo grupo (informada pelo Daniel em 07/11/2026); o nome de quem revisou cada parte não foi registrado.
+- **Diagramas:** renderizados. O documento traz 10 figuras; os diagramas de classes e de atividade UML ficaram no repositório (`03-engenharia-software/diagramas/`).
 
 ## 2. Evolução futura
 

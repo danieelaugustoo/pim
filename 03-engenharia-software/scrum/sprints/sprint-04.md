@@ -90,6 +90,13 @@
 - Risco de passar de 30 páginas com 16 figuras (ver `documento-final/estrutura-e-paginas.md`).
 - Uso de IA: confirmar com o professor se a UNIP tem orientação; os capítulos são do grupo (regra 9 do `CLAUDE.md`).
 
+## Situação final em 09/11/2026
+
+- **Packet Tracer:** montado e testado em 04/11/2026 (T1 a T15, todos como esperado). O risco "Packet Tracer não instalado" acima ficou resolvido.
+- **Diagramas:** Mermaid e PlantUML renderizados; o documento usa 10 figuras (as de classes e de atividade ficaram no repositório).
+- **Retirada por código:** o programa passou a localizar a encomenda pelo código, com confirmação do porteiro (A3).
+- **Capítulos 1 a 10, resumo e abstract:** escritos e revisados; documento com 29 páginas no arquivo inteiro.
+
 ## Retrospectiva (a preencher pelo grupo)
 
 - O que funcionou:

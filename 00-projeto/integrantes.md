@@ -6,7 +6,7 @@
 **Campus:** Anchieta
 **Turma:** R/S
 **Professor orientador:** Prof.ª Eliana
-**Disciplina:** PIM II `[A CONFIRMAR o nome oficial no modelo da UNIP]`
+**Disciplina:** PIM II (Projeto Integrado Multidisciplinar), como consta na capa do modelo da UNIP
 
 > O e-mail dos integrantes não será registrado (decisão do grupo). Se o repositório ficar **público** no GitHub, nomes e RA ficam visíveis a qualquer pessoa: considerem manter o repositório privado ou remover esta tabela antes de publicar.
 
@@ -16,9 +16,9 @@
 |---|---|---|---|---|---|
 | 1 | Daniel Augusto Amarante da Silva | H900BA8 | não informado | Scrum Master (indicado em 2026-11-03) | [ ] |
 | 2 | Lucas Ribeiro Tomiossi Kribely | R990648 | não informado | Líder (postagem) e Product Owner (indicado em 2026-11-03) | [x] |
-| 3 | Pedro Urquisa Rocha | R310337 | não informado | Time de desenvolvimento `[PO/SM a definir]` | [ ] |
-| 4 | Adilson Batista do Nascimento de Lima | R129IB1 | não informado | Time de desenvolvimento `[PO/SM a definir]` | [ ] |
-| 5 | Ysaac de Souza França | R3000I4 | não informado | Time de desenvolvimento `[PO/SM a definir]` | [ ] |
+| 3 | Pedro Urquisa Rocha | R310337 | não informado | Time de desenvolvimento | [ ] |
+| 4 | Adilson Batista do Nascimento de Lima | R129IB1 | não informado | Time de desenvolvimento | [ ] |
+| 5 | Ysaac de Souza França | R3000I4 | não informado | Time de desenvolvimento | [ ] |
 
 Papéis do Scrum (ver `03-engenharia-software/scrum/papeis-e-cerimonias.md`): Product Owner, Scrum Master e time de desenvolvimento.
 
@@ -28,15 +28,27 @@ Decisão de 2026-11-04: **o Daniel assume a redação e o fechamento de todas as
 
 | Etapa | Responsável pela redação | Revisor |
 |---|---|---|
-| 1 Organização (cap. 2) | Daniel | Outro integrante `[A DEFINIR]` |
-| 2 Pesquisa bibliográfica e trabalhos relacionados (cap. 3) | Daniel | Outro integrante `[A DEFINIR]` |
-| 3 Engenharia de software (cap. 4) | Daniel | Outro integrante `[A DEFINIR]` |
-| 4 Banco de dados (cap. 5) | Daniel | Outro integrante `[A DEFINIR]` |
-| 5 Programação em C (cap. 6) | Daniel | Outro integrante `[A DEFINIR]` |
-| 6 Redes e Packet Tracer (cap. 7) | Daniel | Outro integrante `[A DEFINIR]` |
-| 7 e 8 Segurança e integração (cap. 8 e 9) | Daniel | Outro integrante `[A DEFINIR]` |
-| Introdução, conclusão, resumo e abstract | Daniel | Outro integrante `[A DEFINIR]`; o abstract, alguém com bom inglês |
-| Formatação ABNT e referências | Daniel | Outro integrante `[A DEFINIR]` |
+| 1 Organização (cap. 2) | Daniel | Revisão por outro integrante (feita, informada pelo Daniel em 07/11/2026) |
+| 2 Pesquisa bibliográfica e trabalhos relacionados (cap. 3) | Daniel | Revisão por outro integrante (feita, informada pelo Daniel em 07/11/2026) |
+| 3 Engenharia de software (cap. 4) | Daniel | Revisão por outro integrante (feita, informada pelo Daniel em 07/11/2026) |
+| 4 Banco de dados (cap. 5) | Daniel | Revisão por outro integrante (feita, informada pelo Daniel em 07/11/2026) |
+| 5 Programação em C (cap. 6) | Daniel | Revisão por outro integrante (feita, informada pelo Daniel em 07/11/2026) |
+| 6 Redes e Packet Tracer (cap. 7) | Daniel | Revisão por outro integrante (feita, informada pelo Daniel em 07/11/2026) |
+| 7 e 8 Segurança e integração (cap. 8 e 9) | Daniel | Revisão por outro integrante (feita, informada pelo Daniel em 07/11/2026) |
+| Introdução, conclusão, resumo e abstract | Daniel | Revisão por outro integrante (feita, informada pelo Daniel em 07/11/2026) |
+| Formatação ABNT e referências | Daniel | Revisão por outro integrante (feita, informada pelo Daniel em 07/11/2026) |
 | Postagem e cópia impressa | Lucas Ribeiro Tomiossi Kribely (líder) | — |
 
-O revisor precisa ser **outro** integrante: a definição de pronto exige revisão por pares.
+O revisor precisa ser **outro** integrante: a definição de pronto exige revisão por pares. O grupo informou em 07/11/2026 que a revisão dos capítulos e do código foi feita; o nome de quem revisou cada parte não foi registrado.
+
+## Apresentação (definido em 07/11/2026)
+
+| Bloco | Matéria | Quem apresenta |
+|---|---|---|
+| 1 | Pesquisa, Tecnologia e Inovação | Ysaac de Souza França |
+| 2 | Engenharia de Software Ágil | Adilson Batista do Nascimento de Lima |
+| 3 | Banco de Dados | Lucas Ribeiro Tomiossi Kribely |
+| 4 | Programação em C e demonstração | Daniel Augusto Amarante da Silva |
+| 5 | Redes, Direitos Humanos e conclusão | Pedro Urquisa Rocha |
+
+Roteiros de fala em `documento-final/apresentacao/`.
