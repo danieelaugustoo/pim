@@ -19,6 +19,8 @@ Projeto acadêmico do PIM II (curso de ADS da UNIP), feito em grupo. Organizaç�
 11. Quando alguém do grupo disser que quer aprender ou fazer uma parte sozinho, explique o conceito e dê pistas antes de entregar código pronto.
 12. Ao concluir uma tarefa, atualize `00-projeto/rastreabilidade.md` e a `sprint-NN.md` da sprint atual.
 13. Se algo no plano estiver ambíguo ou conflitar com o manual do PIM, pare e pergunte.
+14. **Commits sem marca de coautoria** (pedido do Daniel em 09/11/2026): não acrescentar `Co-Authored-By` nem outra linha de atribuição ao Claude nas mensagens de commit, e seguir assim até ele dizer o contrário.
+15. **Pendência combinada com o Daniel, só quando ele mandar:** deixar o repositório limpo, removendo o `CLAUDE.md`, qualquer pasta `.claude` e as menções ao Claude e ao uso de IA nos arquivos (como `PLANO.md`), e reescrevendo o histórico para tirar o `Co-Authored-By` dos commits antigos (exige `git push --force`; avisar antes que as tags precisam ser refeitas e que os colegas terão de clonar de novo, e fazer uma cópia de segurança antes).
 
 ## Comandos (rodar dentro de `05-programa-c/`)
 - `make`: compila `bin/portaria` e `bin/central`
