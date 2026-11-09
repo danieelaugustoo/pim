@@ -1,4 +1,4 @@
-# Plano do Projeto — PIM II (UNIP · ADS)
+# Plano do Projeto: PIM II (UNIP · ADS)
 
 **Título:** Gestão de encomendas em condomínios residenciais: registro, aviso e retirada segura de pacotes na portaria
 **Organização fictícia:** Administradora Morada Central (10 condomínios residenciais)
@@ -409,7 +409,7 @@ RF01 (requisito funcional), RNF01 (requisito não funcional), UC01 (caso de uso)
 
 Cada item com `[ ]` é uma exigência do manual. O arquivo `00-projeto/rastreabilidade.md` repete esses itens, junto com as exigências do documento (seção 11), em uma tabela com coluna de status.
 
-### 9.1 Etapa 1 — Caracterização da organização → `01-organizacao/`
+### 9.1 Etapa 1: Caracterização da organização → `01-organizacao/`
 
 - [ ] Identificação da organização → `caracterizacao.md`
 - [ ] Ramo de atuação → `caracterizacao.md`
@@ -423,7 +423,7 @@ Cada item com `[ ]` é uma exigência do manual. O arquivo `00-projeto/rastreabi
 
 **Conteúdo:** seção 4 deste plano. **Formato:** tópicos e tabelas; o texto do capítulo 2 é escrito pelo grupo.
 
-### 9.2 Etapa 2 — Pesquisa científica e inovação → `02-pesquisa/`
+### 9.2 Etapa 2: Pesquisa científica e inovação → `02-pesquisa/`
 
 - [ ] Problema de pesquisa → `problema-e-objetivos.md`
 - [ ] Objetivos → `problema-e-objetivos.md`
@@ -447,7 +447,7 @@ Cada item com `[ ]` é uma exigência do manual. O arquivo `00-projeto/rastreabi
 
 **Metodologia.** Pesquisa aplicada e exploratória, com abordagem qualitativa e alguns dados quantitativos simples. Procedimentos:
 - pesquisa bibliográfica;
-- levantamento de campo com um questionário curto para porteiros e síndicos — anônimo, sem coletar dados pessoais e explicando a finalidade acadêmica (confirmar com o professor se a UNIP exige algum termo);
+- levantamento de campo com um questionário curto para porteiros e síndicos, anônimo, sem coletar dados pessoais e explicando a finalidade acadêmica (confirmar com o professor se a UNIP exige algum termo);
 - desenvolvimento de protótipo com Scrum.
 
 **Questionário de campo (8 a 10 perguntas).** Encomendas por dia; dias e épocas de pico; tempo gasto com encomendas por turno; como o registro é feito hoje; como o morador é avisado; extravios ou entregas erradas nos últimos 3 meses; espaço de armazenamento; qualidade da internet na portaria; o que mais ajudaria.
@@ -467,7 +467,7 @@ Cada item com `[ ]` é uma exigência do manual. O arquivo `00-projeto/rastreabi
 
 **Bibliografia sugerida (conferir edição e ano na biblioteca da UNIP antes de referenciar).** Sommerville, *Engenharia de Software*; Pressman, *Engenharia de Software*; Schwaber e Sutherland, *O Guia do Scrum*; Heuser, *Projeto de Banco de Dados*; Elmasri e Navathe, *Sistemas de Banco de Dados*; Sadalage e Fowler, *NoSQL Essencial*; Tanenbaum, *Redes de Computadores*; Kurose e Ross, *Redes de Computadores e a Internet*; Tanenbaum e Van Steen, *Sistemas Distribuídos*; Deitel, *C: Como Programar*; Forbellone e Eberspächer, *Lógica de Programação*; Lei nº 13.709/2018 (LGPD); Lei nº 13.146/2015 (Lei Brasileira de Inclusão).
 
-### 9.3 Etapa 3 — Engenharia de Software → `03-engenharia-software/`
+### 9.3 Etapa 3: Engenharia de Software → `03-engenharia-software/`
 
 - [ ] Requisitos funcionais → `requisitos.md`
 - [ ] Requisitos não funcionais → `requisitos.md`
@@ -549,7 +549,7 @@ Cada história ganha critérios de aceitação no `backlog.md`, no formato "Dado
 - Quadro Kanban de apoio (GitHub Projects ou Trello) com as colunas A fazer → Fazendo → Em revisão → Pronto.
 - Definição de pronto: seção 10.
 
-### 9.4 Etapa 4 — Banco de dados → `04-banco-de-dados/`
+### 9.4 Etapa 4: Banco de dados → `04-banco-de-dados/`
 
 - [ ] Modelo conceitual → `modelo-conceitual.md` (+ brModelo, se o professor pedir a notação de Chen)
 - [ ] Diagrama Entidade-Relacionamento (DER) → `diagramas/der.mmd` + PNG
@@ -587,7 +587,7 @@ Cada história ganha critérios de aceitação no `backlog.md`, no formato "Dado
 
 **NoSQL (`nosql/`).** Comparar, para este caso, o modelo relacional, o de documentos (ex.: MongoDB) e o de chave-valor (ex.: Redis). Conclusão: relacional no núcleo (ADR-001); um banco de documentos poderia guardar o histórico de avisos, cujos campos variam conforme o canal. Incluir um documento JSON de exemplo.
 
-### 9.5 Etapa 5 — Programação estruturada em C → `05-programa-c/`
+### 9.5 Etapa 5: Programação estruturada em C → `05-programa-c/`
 
 - [ ] Algoritmos → `algoritmos/pseudocodigo.md` (A1 a A6)
 - [ ] Fluxogramas → `algoritmos/fluxogramas/` (A1 a A6, em `.mmd` + PNG)
@@ -702,7 +702,7 @@ Regras dos arquivos: datas no formato `AAAA-MM-DD HH:MM`; a primeira linha é o 
 
 **Regras do código.** C99 e apenas a biblioteca padrão (`stdio.h`, `stdlib.h`, `string.h`, `ctype.h`, `time.h`, `assert.h`); vetores e matrizes estáticos, com tamanhos em constantes; entrada com `fgets` e conversão validada (nunca `scanf("%s")`); sem `conio.h`, `windows.h` ou bibliotecas externas; comentário didático em cada função.
 
-### 9.6 Etapa 6 — Redes de computadores e sistemas distribuídos → `06-redes/`
+### 9.6 Etapa 6: Redes de computadores e sistemas distribuídos → `06-redes/`
 
 - [ ] Arquitetura da rede → `arquitetura-e-topologia.md`
 - [ ] Topologia → `arquitetura-e-topologia.md` + `diagramas/topologia.mmd` + print do Packet Tracer
@@ -756,7 +756,7 @@ Regras dos arquivos: datas no formato `AAAA-MM-DD HH:MM`; a primeira linha é o 
 
 **Packet Tracer (feito pelo grupo).** Montar a sede, 2 condomínios representativos e um servidor representando a central, com VLANs, roteamento entre VLANs e DHCP. Testes para print: a portaria alcança o servidor central; o Wi-Fi de visitantes não alcança a portaria (ACL). Se a VPN ficar complexa demais no simulador, ela pode aparecer só no diagrama.
 
-### 9.7 Etapa 7 — Direitos humanos, inclusão e segurança (versão curta) → `07-seguranca-privacidade-acessibilidade/analise.md`
+### 9.7 Etapa 7: Direitos humanos, inclusão e segurança (versão curta) → `07-seguranca-privacidade-acessibilidade/analise.md`
 
 - [ ] Acessibilidade
 - [ ] Inclusão digital
@@ -773,7 +773,7 @@ Todos os itens ficam no mesmo arquivo, para um capítulo de cerca de 2 páginas:
 - **Acessibilidade e inclusão digital.** Aviso por interfone e código impresso para quem não usa smartphone; telas do sistema completo seguindo as WCAG (contraste, fonte ampliável, compatibilidade com leitor de tela); Lei Brasileira de Inclusão (Lei nº 13.146/2015), cujo art. 63 exige acessibilidade nos sites de empresas.
 - **Ética, impactos sociais e direitos humanos.** Menos conflito entre moradores e portaria; carga de trabalho do porteiro mais previsível; os registros servem para rastrear encomendas, não para vigiar funcionários; tratamento igual para todos os moradores, com ou sem smartphone.
 
-### 9.8 Etapa 8 — Integração da solução → `08-integracao/`
+### 9.8 Etapa 8: Integração da solução → `08-integracao/`
 
 - [ ] Como os componentes se integram → `integracao.md` + `diagramas/fluxo-ponta-a-ponta.mmd`
 - [ ] Implantação (o manual inclui a implantação no percurso da solução, de "organização" até "implantação") → `implantacao.md`
@@ -871,31 +871,31 @@ O Desenvolvimento (capítulos 2 a 9) soma cerca de 26 páginas, dentro da faixa 
 
 Use um prompt por vez, revise o que foi feito e faça commit antes de seguir.
 
-**Prompt 1 — Estrutura (Sprint 0)**
+**Prompt 1: Estrutura (Sprint 0)**
 > Leia o CLAUDE.md e o PLANO.md inteiros. Crie a estrutura de pastas da seção 7, com um README.md curto em cada pasta dizendo o que ela guarda e quais exigências do manual atende. Crie também o .gitignore, o README.md da raiz e, em 00-projeto/, os arquivos regras-do-pim.md (seção 2), glossario.md (seção 8.7) e rastreabilidade.md (uma linha para cada item [ ] das seções 9 e 11, com as colunas Exigência, Arquivo, Capítulo e Status). Não escreva código C nem SQL ainda. No fim, mostre a árvore criada.
 
-**Prompt 2 — Organização, requisitos e Scrum (Sprint 0)**
+**Prompt 2: Organização, requisitos e Scrum (Sprint 0)**
 > Com base nas seções 4, 6, 9.1 e 9.3 do PLANO.md, crie os arquivos de 01-organizacao/ e de 03-engenharia-software/: requisitos, casos de uso, arquitetura, ferramentas, os seis ADRs, backlog com critérios de aceitação para cada US, papéis e cerimônias, definição de pronto e sprint-00.md. Use tópicos e tabelas, não texto corrido. Crie os diagramas listados, em PlantUML e Mermaid. Atualize a rastreabilidade.
 
-**Prompt 3 — Pesquisa (Sprint 0)**
+**Prompt 3: Pesquisa (Sprint 0)**
 > Com base na seção 9.2, crie os arquivos de 02-pesquisa/ em formato de roteiro: problema e objetivos, metodologia, questionário de campo, estrutura dos trabalhos relacionados e lista de fontes com as fontes iniciais marcadas como "a verificar". Não invente referências, autores nem dados.
 
-**Prompt 4 — Portaria funcionando (Sprint 1)**
+**Prompt 4: Portaria funcionando (Sprint 1)**
 > Implemente a Sprint 1 (US01 a US06) em 05-programa-c/, seguindo as seções 8.3 e 9.5. Antes de escrever código, mostre a lista de arquivos e funções que vai criar. Depois implemente, crie o Makefile e o build.bat, compile sem warnings, crie dados fictícios em dados/exemplo/ e os testes test_estante.c, test_codigo.c e test_util.c. No fim, explique em poucas linhas o que cada arquivo faz e atualize a sprint-01.md e a rastreabilidade.
 
-**Prompt 5 — Banco de dados (Sprints 1 e 2)**
+**Prompt 5: Banco de dados (Sprints 1 e 2)**
 > Crie o conteúdo de 04-banco-de-dados/ conforme a seção 9.4: modelo conceitual, modelo lógico, normalização a partir do caderno da portaria, dicionário de dados, DER em Mermaid, scripts SQL para MySQL 8 (criação, carga fictícia, consultas, views e índices) e o comparativo NoSQL com o exemplo em JSON. Se houver MySQL disponível, rode os scripts; se não houver, revise a sintaxe com cuidado e me avise.
 
-**Prompt 6 — Sistema distribuído (Sprint 2)**
+**Prompt 6: Sistema distribuído (Sprint 2)**
 > Implemente a Sprint 2 (US07 a US11): moradores com canal de aviso, aviso simulado, fila de sincronização, modo online/offline e o executável central com consolidação idempotente, conforme o ADR-003 e a seção 9.5. Crie o test_consolidacao.c provando que processar o mesmo log duas vezes não duplica nada. Documente os algoritmos A4 e A5 em pseudocódigo e fluxograma.
 
-**Prompt 7 — Redes (Sprint 2)**
+**Prompt 7: Redes (Sprint 2)**
 > Crie a documentação de 06-redes/ conforme a seção 9.6, com as tabelas completas de endereçamento e de VLANs da sede e dos 10 condomínios, e um roteiro passo a passo para o grupo montar a topologia no Packet Tracer.
 
-**Prompt 8 — Relatórios e qualidade (Sprint 3)**
+**Prompt 8: Relatórios e qualidade (Sprint 3)**
 > Implemente a Sprint 3 (US12 a US15; a US16 só se sobrar tempo), complete os pseudocódigos e fluxogramas de A1 a A6, rode todos os testes e crie os arquivos de 07-seguranca-privacidade-acessibilidade/ e de 08-integracao/ (incluindo o plano de implantação) em tópicos, conforme as seções 9.7 e 9.8.
 
-**Prompt 9 — Fechamento (Sprint 4)**
+**Prompt 9: Fechamento (Sprint 4)**
 > Revise o repositório inteiro contra 00-projeto/rastreabilidade.md e me diga o que falta para cada exigência do manual. Depois crie em documento-final/ o roteiro de cada capítulo (tópicos, figuras e tabelas a usar, sem redigir o texto), o estrutura-e-paginas.md e o checklist-abnt-e-entrega.md.
 
 ---

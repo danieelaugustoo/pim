@@ -1,4 +1,4 @@
-# CLAUDE.md — PIM II: Gestão de Encomendas em Condomínios
+# CLAUDE.md: PIM II: Gestão de Encomendas em Condomínios
 
 ## Contexto
 Projeto acadêmico do PIM II (curso de ADS da UNIP), feito em grupo. Organização fictícia: Administradora Morada Central, com 10 condomínios residenciais. Problema: as portarias controlam encomendas em caderno, o que gera extravios, entregas erradas e sobrecarga dos porteiros. Solução: um nó em cada portaria que funciona sem internet e um consolidador central da administradora. Tema aprovado pelo professor.
