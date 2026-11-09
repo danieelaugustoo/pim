@@ -7,6 +7,8 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 - **Capítulo:** arquivo em `documento-final/capitulos/` em que o conteúdo é redigido pelo grupo.
 - **Status:** `Pendente` (nada feito), `Em andamento`, `Feito` (arquivo pronto, falta revisão) ou `Revisado` (conferido por outro integrante). Atualizar ao concluir cada tarefa, junto com a `sprint-NN.md` da sprint atual.
 
+> **Atualização de 09/11/2026:** as linhas que estavam "Em andamento" passaram a "Feito". O grupo informou em 07/11/2026 que a revisão por outro integrante dos capítulos e do código foi feita, sem registro por linha; por isso o status "Revisado" não foi aplicado linha a linha.
+
 ## Etapa 1: Caracterização da organização
 
 | Exigência | Arquivo | Capítulo | Status |
@@ -28,9 +30,9 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 | Problema de pesquisa | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Feito |
 | Objetivos | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Feito |
 | Metodologia (levantamento de campo dispensado) | `02-pesquisa/metodologia.md` | `03-pesquisa.md` | Feito |
-| Fundamentação bibliográfica | `02-pesquisa/fundamentacao.md` + `02-pesquisa/fontes.md` | `03-pesquisa.md` | Em andamento |
-| Trabalhos relacionados | `02-pesquisa/trabalhos-relacionados.md` | `03-pesquisa.md` | Em andamento |
-| Justificativa científica | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Em andamento |
+| Fundamentação bibliográfica | `02-pesquisa/fundamentacao.md` + `02-pesquisa/fontes.md` | `03-pesquisa.md` | Feito |
+| Trabalhos relacionados | `02-pesquisa/trabalhos-relacionados.md` | `03-pesquisa.md` | Feito |
+| Justificativa científica | `02-pesquisa/problema-e-objetivos.md` | `03-pesquisa.md` | Feito |
 | Diferenciais inovadores | `02-pesquisa/diferenciais.md` | `03-pesquisa.md` | Feito |
 
 ## Etapa 3: Engenharia de Software
@@ -110,19 +112,19 @@ Liga cada exigência do manual do PIM ao arquivo do repositório que a atende, a
 | Benefícios esperados para a organização | `08-integracao/beneficios-e-indicadores.md` | `09-integracao.md` | Feito |
 | Limitações da solução | `08-integracao/limitacoes-e-evolucao.md` | `09-integracao.md` | Feito |
 | Possibilidades de evolução futura | `08-integracao/limitacoes-e-evolucao.md` | `09-integracao.md` | Feito |
-| Conclusão geral | `documento-final/capitulos/10-conclusao.md` (escrita pelo grupo) | `10-conclusao.md` | Em andamento |
+| Conclusão geral | `documento-final/capitulos/10-conclusao.md` (escrita pelo grupo) | `10-conclusao.md` | Feito |
 
 ## Documento final (seção 11)
 
 | Exigência | Arquivo | Capítulo | Status |
 |---|---|---|---|
-| Capa, Resumo, Abstract, Sumário, Introdução, Desenvolvimento, Conclusão e Referências | `documento-final/` | Todos | Em andamento |
-| Resumo conciso e objetivo, com conteúdo principal, pontos relevantes e conclusões, em até 500 palavras, seguido das palavras-chave | `documento-final/capitulos/00-resumo.md` | `00-resumo.md` | Em andamento |
-| Abstract em inglês (ou espanhol ou francês), com as palavras-chave no mesmo idioma | `documento-final/capitulos/00-abstract.md` | `00-abstract.md` | Em andamento |
-| Introdução com objetivo da pesquisa, metodologia, breve apresentação da empresa e visão geral da proposta | `documento-final/capitulos/01-introducao.md` | `01-introducao.md` | Em andamento |
-| Desenvolvimento entre 20 e 30 páginas, em capítulos e subcapítulos, apresentando pesquisa, fundamentação, métodos, materiais, resultados e discussão | `documento-final/capitulos/` (capítulos 2 a 9) + `documento-final/estrutura-e-paginas.md` | `02` a `09` | Em andamento |
-| Conclusão que apresenta os resultados de forma clara, relaciona os resultados aos objetivos, retoma a proposta inicial e destaca os principais pontos encontrados | `documento-final/capitulos/10-conclusao.md` | `10-conclusao.md` | Em andamento |
-| Referências de todas as fontes usadas, em ABNT | `documento-final/referencias.md` | Referências | Em andamento |
-| Citações conforme a ABNT; todo trecho reproduzido diretamente com a fonte citada no texto e a obra referenciada | `documento-final/capitulos/` (todos) + `documento-final/referencias.md` | Todos | Em andamento |
+| Capa, Resumo, Abstract, Sumário, Introdução, Desenvolvimento, Conclusão e Referências | `documento-final/` | Todos | Feito |
+| Resumo conciso e objetivo, com conteúdo principal, pontos relevantes e conclusões, em até 500 palavras, seguido das palavras-chave | `documento-final/capitulos/00-resumo.md` | `00-resumo.md` | Feito |
+| Abstract em inglês (ou espanhol ou francês), com as palavras-chave no mesmo idioma | `documento-final/capitulos/00-abstract.md` | `00-abstract.md` | Feito |
+| Introdução com objetivo da pesquisa, metodologia, breve apresentação da empresa e visão geral da proposta | `documento-final/capitulos/01-introducao.md` | `01-introducao.md` | Feito |
+| Desenvolvimento entre 20 e 30 páginas, em capítulos e subcapítulos, apresentando pesquisa, fundamentação, métodos, materiais, resultados e discussão | `documento-final/capitulos/` (capítulos 2 a 9) + `documento-final/estrutura-e-paginas.md` | `02` a `09` | Feito |
+| Conclusão que apresenta os resultados de forma clara, relaciona os resultados aos objetivos, retoma a proposta inicial e destaca os principais pontos encontrados | `documento-final/capitulos/10-conclusao.md` | `10-conclusao.md` | Feito |
+| Referências de todas as fontes usadas, em ABNT | `documento-final/referencias.md` | Referências | Feito |
+| Citações conforme a ABNT; todo trecho reproduzido diretamente com a fonte citada no texto e a obra referenciada | `documento-final/capitulos/` (todos) + `documento-final/referencias.md` | Todos | Feito |
 | Formatação da seção 2 (A4, margens, espaçamento, fonte, recuo, numeração) | `documento-final/checklist-abnt-e-entrega.md` | — | Feito |
 | Entrega pelo sistema de trabalhos acadêmicos da UNIP dentro do prazo, cópia impressa ao coordenador do PIM e postagem feita pelo líder | `documento-final/checklist-abnt-e-entrega.md` | — | Feito |

@@ -1,5 +1,8 @@
 # Resultados do levantamento de campo (Etapa 2)
 
+> **Não será preenchido.** O levantamento de campo foi dispensado pelo grupo em 29/10/2026 (não era obrigatório). O trabalho declara essa limitação e não usa dados de respondentes.
+
+
 > **Estrutura vazia de propósito.** O questionário ainda não foi aplicado. Nenhum número, percentual ou resposta pode ser preenchido sem coleta real. Dados de exemplo ou estimativas não entram aqui.
 
 **Status:** **dispensado pelo grupo (2026-10-29)**; não será aplicado. Este arquivo só seria preenchido se o grupo mudasse de ideia.

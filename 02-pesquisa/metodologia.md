@@ -1,5 +1,7 @@
 # Metodologia (Etapa 2)
 
+> **Nota (09/11/2026):** o levantamento de campo foi dispensado, e os campos de amostra, local, período e responsável do questionário ficam sem preenchimento. A classificação da pesquisa (aplicada, exploratória, qualitativa) usa Prodanov e Freitas (2013).
+
 > Roteiro para o capítulo 3 (métodos). O grupo redige o texto.
 
 ## 1. Classificação da pesquisa

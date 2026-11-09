@@ -1,5 +1,8 @@
 # Fundamentação bibliográfica (Etapa 2)
 
+> **Nota (09/11/2026):** as fichas abaixo não foram preenchidas em separado. A fundamentação usada está na seção 3.5 do capítulo 3 (`documento-final/capitulos/03-pesquisa.md`) e as fontes conferidas estão em `fontes.md` e `documento-final/referencias.md`.
+
+
 > Roteiro de fichamentos por tema. **Nenhum fichamento foi preenchido**: eles dependem de fontes que o grupo ainda vai ler e verificar (`fontes.md`). O texto do capítulo 3 é do grupo.
 
 ## Como preencher cada ficha
