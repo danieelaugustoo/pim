@@ -16,7 +16,7 @@
 - [ ] Atualizar o repositório na branch `claude/jolly-johnson-cue2j0` (`git pull`).
 - [x] **Print do `make test` feito em 2026-11-04** (Figura 11, `figura-11-testes-automatizados.png`): no notebook do Daniel o Device Guard bloqueou o `test_codigo.exe` em algumas tentativas, e repetir o `.\build.bat test` em laço (até 10 vezes) fez os 9 testes passarem. O bloqueio é intermitente (já registrado no `sprint-01.md`). Se acontecer ao vivo na apresentação, não rodar os testes: mostrar o print.
 - [ ] (original, se o Device Guard não bloquear) Dentro de `05-programa-c/`, rodar `make test` (no Windows, `build.bat`). Tirar o **print do resultado** ("Todos os testes passaram") → entra no capítulo 6, seção 6.5. Se algum teste falhar na sua máquina, copiar a mensagem e mandar para o Claude.
-- [x] *(Figura 12 — mapa da estante — feita em 2026-11-04: `figura-12-mapa-estante.png`, 6 de 48 ocupadas, 12,5%.)*
+- [x] *(Figura 12, mapa da estante, feita em 2026-11-04: `figura-12-mapa-estante.png`, 6 de 48 ocupadas, 12,5%.)*
 - [ ] ~~Copiar os dados de exemplo~~ (já feito para a Figura 12; refazer só se for ensaiar de novo)
 - [ ] (original) Copiar os dados de exemplo (comandos em `05-programa-c/README.md`, seção "Demonstração com os dados de exemplo"), rodar `bin/portaria 1`, escolher a opção **5 (mapa da estante)** e tirar o print → **Figura 12**, salvar como `documento-final/figuras/figura-12-mapa-estante.png`.
 - [ ] Rodar `bin/central` duas vezes e conferir se a segunda aplica 0 operações (é o que o texto do capítulo 6 afirma). Se o resultado for diferente, avisar para corrigirmos o texto.
