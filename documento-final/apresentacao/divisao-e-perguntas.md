@@ -39,3 +39,7 @@ Proposta para 5 integrantes, em **cerca de 21 minutos** (ajustar ao tempo que a 
 | Por que não houve pesquisa com porteiros e moradores? | Não era obrigatória. O texto não afirma frequência dos problemas nem preferências dos moradores. |
 | A devolução de volumes? | Não foi implementada: depende de um prazo que a administradora precisa definir (US16). |
 | Vocês usaram inteligência artificial? | Respondam a verdade: a Prof.ª Eliana autorizou o uso, e o grupo revisou o trabalho e responde pelo conteúdo e pelo código. |
+
+## Slides prontos
+
+- `slides-daniel-programacao-c.pptx`: os slides do bloco 4 (programação em C, demonstração ao vivo e um slide de reserva com a saída do programa), com a fala nas notas do orador. Pode ser aberto no PowerPoint e importado no Canva.
