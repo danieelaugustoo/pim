@@ -43,3 +43,4 @@ Proposta para 5 integrantes, em **cerca de 21 minutos** (ajustar ao tempo que a 
 ## Slides prontos
 
 - `slides-daniel-programacao-c.pptx`: os slides do bloco 4 (programação em C, demonstração ao vivo e um slide de reserva com a saída do programa), com a fala nas notas do orador. Pode ser aberto no PowerPoint e importado no Canva.
+- `slides-pim-apresentacao-completa.pptx`: o deck inteiro do grupo, enxuto (11 slides mais 1 de reserva): capa, problema, solução, engenharia de software (2), banco de dados (2), programação em C, demonstração, redes e conclusão, encerramento e reserva. Cada slide tem as notas do orador e a figura do trabalho. Falta só ajustar a identidade visual no Canva, se o grupo quiser.
