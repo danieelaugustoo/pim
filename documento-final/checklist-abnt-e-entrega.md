@@ -83,5 +83,5 @@ Todas as marcações abaixo estão no repositório (`grep -rn "A DEFINIR\|A PREE
 
 - [ ] Repositório no GitHub criado, com link no trabalho se o grupo decidir citá-lo
 - [ ] `make test` roda sem erro na máquina de apresentação
-- [ ] Todos os integrantes sabem explicar o código, o banco e a topologia (regra 7 do `CLAUDE.md`)
+- [ ] Todos os integrantes sabem explicar o código, o banco e a topologia (`PLANO.md`, seção 8.3)
 - [ ] Roteiro da demonstração: registrar, ficar offline, sincronizar, rodar a central duas vezes, ver o mapa e os relatórios

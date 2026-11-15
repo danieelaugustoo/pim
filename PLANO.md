@@ -6,7 +6,6 @@
 **Situação:** tema aprovado pelo professor
 
 > Este arquivo é a fonte de verdade do projeto: diz **o que** fazer e **onde** guardar cada coisa.
-> O `CLAUDE.md` traz as regras curtas que o Claude Code segue em toda sessão.
 > Base: resumo do manual do PIM II enviado pelo grupo. Se algo divergir do manual oficial da UNIP, vale o manual.
 
 ---
@@ -25,18 +24,15 @@
 9. Etapas do manual: o que produzir e onde guardar
 10. Plano de sprints (Scrum)
 11. Documento final (ABNT)
-12. Como começar no Claude Code (prompts prontos)
-13. Pontos a confirmar com o grupo e o professor
+12. Pontos a confirmar com o grupo e o professor
 
 ---
 
 ## 0. Como usar este plano
 
-1. Crie uma pasta vazia chamada `pim`, coloque `CLAUDE.md` e `PLANO.md` na raiz e inicialize o Git (`git init`).
-2. Abra o Claude Code nessa pasta e use os prompts da seção 12, **um por vez**. Revise o resultado e faça commit antes de passar ao próximo.
-3. Divisão de trabalho:
-   - **Claude Code:** código C, scripts SQL, diagramas como código, documentação técnica (tabelas, dicionário de dados, planos de rede) e roteiros dos capítulos.
-   - **Grupo:** texto dos capítulos do trabalho, pesquisa de campo, montagem no Packet Tracer (e no brModelo, se for exigido), revisão final e entrega.
+1. Crie uma pasta vazia chamada `pim`, coloque o `PLANO.md` na raiz e inicialize o Git (`git init`).
+2. Siga as etapas da seção 9 na ordem das sprints da seção 10, uma entrega por vez. Revise o resultado e faça commit antes de passar à próxima.
+3. Antes de começar, tenham instalado: Git; um compilador C (gcc: MinGW-w64 no Windows ou `build-essential` no Linux); MySQL 8 e MySQL Workbench (ou o SGBD da disciplina); extensões de PlantUML e Mermaid no VS Code (ou os sites oficiais das duas ferramentas para exportar os diagramas); Cisco Packet Tracer; brModelo, se o professor pedir.
 
 ---
 
@@ -67,7 +63,7 @@
 | Entrega | Pelo sistema de trabalhos acadêmicos da UNIP, dentro do prazo, mais uma cópia impressa entregue ao coordenador do PIM; não vale e-mail, Dropbox ou envio atrasado (não enviar no prazo implica reprovação) |
 | Grupo | Individual ou até 6 integrantes do mesmo curso e turma; só o líder faz a postagem e cadastra os demais |
 
-**Uso de IA neste projeto (regra do grupo, derivada da regra de autoria).** O Claude gera código, scripts, diagramas e documentação técnica. Os capítulos do trabalho são redigidos pelo grupo; o Claude pode montar roteiros de tópicos e revisar os textos. Nunca inventar fontes, autores, dados ou estatísticas. Confirmar com o professor se a UNIP tem orientação específica sobre o uso de IA.
+**Uso de IA neste projeto (regra do grupo, derivada da regra de autoria).** O grupo revisa, ajusta e responde por todo o conteúdo. Nunca inventar fontes, autores, dados ou estatísticas. Confirmar com o professor se a UNIP tem orientação específica sobre o uso de IA.
 
 ---
 
@@ -177,7 +173,6 @@ Cada decisão vira um arquivo em `03-engenharia-software/decisoes/` (contexto, d
 
 ```
 pim/
-├── CLAUDE.md                              # regras permanentes para o Claude Code
 ├── PLANO.md                               # este plano
 ├── README.md                              # visão geral, integrantes, como compilar e rodar
 ├── .gitignore
@@ -354,6 +349,7 @@ pim/
 - Pastas, arquivos e documentação em português.
 - Identificadores em C e SQL sem acento.
 - Textos do programa e dos arquivos de dados em ASCII, sem acento. Isso evita caracteres quebrados no console do Windows.
+- Dados de exemplo são sempre fictícios.
 
 ### 8.2 Pastas e arquivos
 - Letras minúsculas, palavras separadas por hífen: `casos-de-uso.md`.
@@ -367,7 +363,10 @@ pim/
 - Valores de enum com prefixo do tipo: `STATUS_PENDENTE`, `CANAL_INTERFONE`, `OP_RETIRADA`.
 - Header guard no formato `ESTANTE_H`.
 - `main` enxuto: só menu e chamadas. Toda a lógica fica em módulos testáveis.
-- Cada função tem um comentário em português com objetivo, parâmetros, retorno e a lógica em poucas linhas.
+- Cada função tem um comentário em português com objetivo, parâmetros, retorno e a lógica em poucas linhas. O grupo precisa saber explicar o código na apresentação.
+- Padrão C99 e apenas a biblioteca padrão (`stdio.h`, `stdlib.h`, `string.h`, `ctype.h`, `time.h`, `assert.h`). Sem C++, `conio.h`, `windows.h` ou bibliotecas externas. Precisa compilar sem warnings com `gcc -std=c99 -Wall -Wextra -pedantic`.
+- Programação estruturada: funções pequenas, vetores e matrizes estáticos com tamanhos em constantes de `tipos.h`.
+- Entrada do teclado com `fgets` e conversão validada. Nunca `scanf("%s")`.
 
 ### 8.4 SQL
 - Tabelas no singular, em minúsculas separadas por `_`: `encomenda`, `posicao_estante`.
@@ -796,7 +795,7 @@ Todos os itens ficam no mesmo arquivo, para um capítulo de cerca de 2 páginas:
 
 ## 10. Plano de sprints (Scrum)
 
-Sprints de 1 semana. Ajustar as datas ao prazo real em `00-projeto/cronograma.md` (ver seção 13).
+Sprints de 1 semana. Ajustar as datas ao prazo real em `00-projeto/cronograma.md` (ver seção 12).
 
 | Sprint | Meta | Entregas |
 |---|---|---|
@@ -865,42 +864,7 @@ O Desenvolvimento (capítulos 2 a 9) soma cerca de 26 páginas, dentro da faixa 
 
 ---
 
-## 12. Como começar no Claude Code (prompts prontos)
-
-**Antes de começar, tenham instalado:** Git; um compilador C (gcc: MinGW-w64 no Windows ou `build-essential` no Linux); MySQL 8 e MySQL Workbench (ou o SGBD da disciplina); extensões de PlantUML e Mermaid no VS Code (ou os sites oficiais das duas ferramentas para exportar os diagramas); Cisco Packet Tracer; brModelo, se o professor pedir.
-
-Use um prompt por vez, revise o que foi feito e faça commit antes de seguir.
-
-**Prompt 1: Estrutura (Sprint 0)**
-> Leia o CLAUDE.md e o PLANO.md inteiros. Crie a estrutura de pastas da seção 7, com um README.md curto em cada pasta dizendo o que ela guarda e quais exigências do manual atende. Crie também o .gitignore, o README.md da raiz e, em 00-projeto/, os arquivos regras-do-pim.md (seção 2), glossario.md (seção 8.7) e rastreabilidade.md (uma linha para cada item [ ] das seções 9 e 11, com as colunas Exigência, Arquivo, Capítulo e Status). Não escreva código C nem SQL ainda. No fim, mostre a árvore criada.
-
-**Prompt 2: Organização, requisitos e Scrum (Sprint 0)**
-> Com base nas seções 4, 6, 9.1 e 9.3 do PLANO.md, crie os arquivos de 01-organizacao/ e de 03-engenharia-software/: requisitos, casos de uso, arquitetura, ferramentas, os seis ADRs, backlog com critérios de aceitação para cada US, papéis e cerimônias, definição de pronto e sprint-00.md. Use tópicos e tabelas, não texto corrido. Crie os diagramas listados, em PlantUML e Mermaid. Atualize a rastreabilidade.
-
-**Prompt 3: Pesquisa (Sprint 0)**
-> Com base na seção 9.2, crie os arquivos de 02-pesquisa/ em formato de roteiro: problema e objetivos, metodologia, questionário de campo, estrutura dos trabalhos relacionados e lista de fontes com as fontes iniciais marcadas como "a verificar". Não invente referências, autores nem dados.
-
-**Prompt 4: Portaria funcionando (Sprint 1)**
-> Implemente a Sprint 1 (US01 a US06) em 05-programa-c/, seguindo as seções 8.3 e 9.5. Antes de escrever código, mostre a lista de arquivos e funções que vai criar. Depois implemente, crie o Makefile e o build.bat, compile sem warnings, crie dados fictícios em dados/exemplo/ e os testes test_estante.c, test_codigo.c e test_util.c. No fim, explique em poucas linhas o que cada arquivo faz e atualize a sprint-01.md e a rastreabilidade.
-
-**Prompt 5: Banco de dados (Sprints 1 e 2)**
-> Crie o conteúdo de 04-banco-de-dados/ conforme a seção 9.4: modelo conceitual, modelo lógico, normalização a partir do caderno da portaria, dicionário de dados, DER em Mermaid, scripts SQL para MySQL 8 (criação, carga fictícia, consultas, views e índices) e o comparativo NoSQL com o exemplo em JSON. Se houver MySQL disponível, rode os scripts; se não houver, revise a sintaxe com cuidado e me avise.
-
-**Prompt 6: Sistema distribuído (Sprint 2)**
-> Implemente a Sprint 2 (US07 a US11): moradores com canal de aviso, aviso simulado, fila de sincronização, modo online/offline e o executável central com consolidação idempotente, conforme o ADR-003 e a seção 9.5. Crie o test_consolidacao.c provando que processar o mesmo log duas vezes não duplica nada. Documente os algoritmos A4 e A5 em pseudocódigo e fluxograma.
-
-**Prompt 7: Redes (Sprint 2)**
-> Crie a documentação de 06-redes/ conforme a seção 9.6, com as tabelas completas de endereçamento e de VLANs da sede e dos 10 condomínios, e um roteiro passo a passo para o grupo montar a topologia no Packet Tracer.
-
-**Prompt 8: Relatórios e qualidade (Sprint 3)**
-> Implemente a Sprint 3 (US12 a US15; a US16 só se sobrar tempo), complete os pseudocódigos e fluxogramas de A1 a A6, rode todos os testes e crie os arquivos de 07-seguranca-privacidade-acessibilidade/ e de 08-integracao/ (incluindo o plano de implantação) em tópicos, conforme as seções 9.7 e 9.8.
-
-**Prompt 9: Fechamento (Sprint 4)**
-> Revise o repositório inteiro contra 00-projeto/rastreabilidade.md e me diga o que falta para cada exigência do manual. Depois crie em documento-final/ o roteiro de cada capítulo (tópicos, figuras e tabelas a usar, sem redigir o texto), o estrutura-e-paginas.md e o checklist-abnt-e-entrega.md.
-
----
-
-## 13. Pontos a confirmar com o grupo e o professor
+## 12. Pontos a confirmar com o grupo e o professor
 
 - Data de entrega do PIM (define a duração das sprints)
 - Integrantes, RA e papéis no Scrum (Product Owner e Scrum Master)

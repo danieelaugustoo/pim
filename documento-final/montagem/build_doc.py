@@ -1,7 +1,7 @@
 import re, os, sys, subprocess, shutil
 from PIL import Image, ImageDraw, ImageFont
 ROOT='/home/user/pim'
-W='/tmp/claude-0/-home-user-pim/1eb6241f-b33c-5a31-a9e2-e4e8ae5fb8f3/scratchpad/doc'
+W=os.environ.get('PIM_DOC_WORK','/tmp/pim-doc')
 FIG=ROOT+'/documento-final/figuras'
 CAP=ROOT+'/documento-final/capitulos'
 os.makedirs(W+'/fig',exist_ok=True)

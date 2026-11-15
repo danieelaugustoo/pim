@@ -20,7 +20,6 @@ Escrever os diagramas como código: **PlantUML** (`.puml`) para UML e **Mermaid*
 ## Justificativa
 
 - Texto puro: versionável, revisável por diff e fácil de corrigir.
-- O Claude Code consegue gerar e ajustar diagramas em texto.
 
 ## Consequências
 

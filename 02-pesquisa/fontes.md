@@ -51,7 +51,7 @@ O plano indica autores e títulos, sem edição, ano nem editora. **Conferir edi
 | Fonte sobre WCAG (acessibilidade web) | Citada no plano sem referência |
 | Fontes sobre os produtos reais da comparação (`trabalhos-relacionados.md`) | Só entram se houver fonte |
 | Fonte metodológica para classificar a pesquisa (`metodologia.md`) | A confirmar se o professor exige |
-| Orientação da UNIP sobre uso de IA e sobre termo de consentimento | Confirmar com o professor (`PLANO.md`, seção 13) |
+| Orientação da UNIP sobre uso de IA e sobre termo de consentimento | Confirmar com o professor (`PLANO.md`, seção 12) |
 
 ## 4. Registro de verificação (2026-10-29)
 

@@ -35,7 +35,7 @@
 - [ ] **Montar a topologia no Packet Tracer e executar os comandos do roteiro.** Os comandos foram conferidos por script (endereços e regras), mas **não foram executados no simulador**. Se algum for recusado na versão de vocês, anotem o comando e a mensagem.
 - [ ] Tirar os prints dos testes e salvar o `.pkt`.
 - [x] VPN IPsec: decisão do grupo (2026-10-29) de deixar só no diagrama, sem configurar no Packet Tracer.
-- [ ] Confirmar com o professor de redes o que se espera do Packet Tracer (`PLANO.md`, seção 13).
+- [ ] Confirmar com o professor de redes o que se espera do Packet Tracer (`PLANO.md`, seção 12).
 - [ ] Cotar equipamentos e escolher o provedor de nuvem, ou declarar que o trabalho não faz orçamento.
 
 ## Cuidados

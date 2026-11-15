@@ -46,7 +46,7 @@
 
 **Quem responde pelos dados:** a Administradora Morada Central é a organização que decide sobre o tratamento; definir um encarregado de contato é uma decisão da organização `[A DEFINIR; conferir a figura na LGPD]`.
 
-**Dados de exemplo do projeto** são todos fictícios (regra 10 do `CLAUDE.md`); nenhum dado real de morador foi usado.
+**Dados de exemplo do projeto** são todos fictícios (`PLANO.md`, seção 8.1); nenhum dado real de morador foi usado.
 
 ---
 

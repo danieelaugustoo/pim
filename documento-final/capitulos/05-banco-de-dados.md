@@ -36,7 +36,7 @@
 
 ## O que depende do grupo
 
-- [ ] Confirmar o SGBD da disciplina e se o professor exige o modelo conceitual no **brModelo** (`PLANO.md`, seção 13).
+- [ ] Confirmar o SGBD da disciplina e se o professor exige o modelo conceitual no **brModelo** (`PLANO.md`, seção 12).
 - [ ] Renderizar o DER e exportar o PNG.
 - [ ] Rodar os scripts na máquina de apresentação (`sql/README.md` explica) e tirar o print de uma consulta.
 - [ ] Citar teoria de normalização e de bancos só com fonte verificada.

@@ -10,13 +10,13 @@
 |---|---|---|
 | Rede simulada por arquivos | Não há comunicação real entre portaria e central; atrasos, quedas parciais e segurança do canal não são testados | `05-programa-c/README.md` |
 | Aviso ao morador simulado | Mensagem na tela e registro em arquivo; nenhum SMS ou app real | `src/aviso.c` |
-| Sem interface gráfica | Menu de console, sem acentos | `CLAUDE.md`, regra 5 |
+| Sem interface gráfica | Menu de console, sem acentos | `PLANO.md`, seção 8.1 |
 | Sem login nem perfis | Qualquer pessoa com acesso ao PC usa todas as opções | `07-.../analise.md` |
 | Código de retirada em texto e visível na tela do porteiro | Não atende por completo o RNF04 para app e SMS | `07-.../analise.md`, seção 2 |
 | Capacidade fixa (vetores estáticos) | 500 encomendas por portaria, 300 moradores, 4 estantes × 12 prateleiras | `include/tipos.h` |
 | Busca sequencial e arquivos CSV | Basta para o protótipo, não para grande volume | ADR-002 |
 | Reconstrução da estante só pelas pendentes | Se o arquivo de encomendas for perdido, a posição é perdida | `src/estante.c` |
-| Dados fictícios | Nenhum dado real foi usado ou protegido | `CLAUDE.md`, regra 10 |
+| Dados fictícios | Nenhum dado real foi usado ou protegido | `PLANO.md`, seção 8.1 |
 | Sem relatório de tempo médio de retirada | O indicador depende de cálculo manual | `beneficios-e-indicadores.md` |
 | Apagar a sequência sem apagar o log da rede faz a portaria repetir ids | A central ignora as operações repetidas | `05-programa-c/README.md` |
 | Devolução de volume (US16) não implementada | O status DEVOLVIDA existe e a central entende a operação, mas a portaria não a gera | `scrum/backlog.md` |

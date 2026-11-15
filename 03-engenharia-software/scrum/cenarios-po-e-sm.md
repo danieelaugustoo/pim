@@ -93,7 +93,7 @@ Formato do `papeis-e-cerimonias.md`: poucas linhas por pessoa, no grupo de mensa
 3. Combina que quem tem o simulador monta e roda os testes, e o C acompanha por chamada de vídeo para aprender e revisar o capítulo 7.
 4. Registra o impedimento e a solução em `sprint-NN.md`, na seção de impedimentos.
 
-**Regra ilustrada:** o SM não instala o programa por ele; remove o bloqueio redistribuindo o trabalho e mantendo a aprendizagem (regra 11 do `CLAUDE.md`).
+**Regra ilustrada:** o SM não instala o programa por ele; remove o bloqueio redistribuindo o trabalho e mantendo a aprendizagem.
 
 ### Cenário SM-3: risco de estourar o limite de páginas
 

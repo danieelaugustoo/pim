@@ -1,6 +1,6 @@
 #!/bin/bash
 # Gera o documento no modelo da UNIP em duas passagens (a 2a preenche as paginas do sumario).
-cd /tmp/claude-0/-home-user-pim/1eb6241f-b33c-5a31-a9e2-e4e8ae5fb8f3/scratchpad/doc
+cd "${PIM_DOC_WORK:-/tmp/pim-doc}"
 python3 build_doc.py >/dev/null && pandoc trabalho.md -o trabalho.docx --reference-doc=ref_abnt.docx --from markdown+pipe_tables+fenced_divs+implicit_figures && python3 pos.py trabalho.docx base.docx
 python3 monta_unip.py base.docx passo1.docx modelo/logo-unip.png - >/dev/null && soffice --headless --convert-to pdf passo1.docx >/dev/null 2>&1
 python3 paginas.py passo1.pdf passo1.docx.entradas.json paginas.json

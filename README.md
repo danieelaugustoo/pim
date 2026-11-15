@@ -65,9 +65,8 @@ Toda pasta tem um `README.md` com o que ela guarda e quais exigências do manual
 ## Documentos de referência
 
 - [`PLANO.md`](PLANO.md): fonte de verdade do projeto (escopo, arquitetura, estrutura, convenções, etapas e sprints).
-- [`CLAUDE.md`](CLAUDE.md): regras que o Claude Code segue em toda sessão.
 - [`00-projeto/rastreabilidade.md`](00-projeto/rastreabilidade.md): exigência do manual → arquivo → capítulo → status.
 
-## Autoria
+## Dados de exemplo
 
-Os capítulos do trabalho (`documento-final/capitulos/`) são redigidos pelo grupo. O Claude Code gera código, scripts, diagramas e documentação técnica. Todos os dados de exemplo são fictícios.
+Todos os dados de exemplo são fictícios.
