@@ -1,5 +1,7 @@
 # Roteiro da demonstração do programa
 
+> **Atualização de 22/11/2026:** a demonstração passou a seguir a ordem em cenas da parte 3 do `guia-de-estudo-daniel.md` (portaria primeiro, central depois), conferida na execução de 22/11. Esta versão fica como referência.
+
 Tempo previsto: **6 a 7 minutos**. Quem digita fica com o computador do Daniel (o grupo levará o notebook). As saídas abaixo foram **executadas em 07/11/2026** com os dados de exemplo; só mudam o **código de retirada** (sorteado) e as **datas** (ver "Atenção").
 
 ## Antes de entrar na sala (fazer em casa e de novo 10 minutos antes)
